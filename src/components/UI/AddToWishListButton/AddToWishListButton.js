@@ -9,16 +9,26 @@ import HeartSVG from "../SVG/HeartSVG";
 import { getWishList } from "../../../redux/selectors";
 import { addToWishList } from "../../../redux/authReducer";
 
-const AddToWishListButton = ({ isAuth, id, wishList, addToWishList }) => {
+const AddToWishListButton = ({ id, isAuth, wishList, addToWishList }) => {
   let isAdded = false;
   let style = null;
-  if (wishList && wishList.includes(id)) {
+
+  if ((wishList && wishList.includes(id)) || (Array.isArray(id) && wishList.length === id.length)) {
     isAdded = true;
     style = { opacity: 1, cursor: "inherit" };
   }
 
   const handleClick = () => {
-    addToWishList(id);
+    if (Array.isArray(id)) {
+      if (wishList.length === 0) {
+        id.map((id) => addToWishList(id));
+      } else {
+        const arrA = wishList.filter((k) => !id.includes(k));
+        const arrB = id.filter((k) => !wishList.includes(k));
+        const result = arrA.concat(arrB);
+        result.map((id) => addToWishList(id));
+      }
+    } else addToWishList(id);
   };
 
   return (
@@ -29,7 +39,11 @@ const AddToWishListButton = ({ isAuth, id, wishList, addToWishList }) => {
     >
       {isLoaded(isAuth) && !isEmpty(isAuth) && (
         <>
-          <HeartSVG width="20" height="20" color={isAdded ? "#2196f3" : "#be1622"} />
+          <HeartSVG
+            width="20"
+            height="20"
+            color={isAdded ? "#2196f3" : "#be1622"}
+          />
           {isAdded ? (
             <>
               Уже в <NavLink to="/profile?tab=wishlist">списке желаний</NavLink>

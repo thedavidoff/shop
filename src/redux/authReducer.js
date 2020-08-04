@@ -40,12 +40,9 @@ export const addToWishList = (id) => {
   return (dispatch, getState, getFirebase) => {
     const firebase = getFirebase();
     const user = firebase.auth().currentUser;
+    const ref = firebase.database().ref("users/" + user.uid + "/wishList");
 
-    firebase
-      .database()
-      .ref("users/" + user.uid + "/wishList")
-      .push()
-      .set(id);
+    ref.push().set(id);
 
     // let result = [];
     // firebase
