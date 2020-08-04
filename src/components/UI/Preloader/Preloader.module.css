@@ -1,0 +1,6 @@
+.preloader {
+  position: absolute;
+  margin: 0;
+  background: none;
+  shape-rendering: auto;
+}

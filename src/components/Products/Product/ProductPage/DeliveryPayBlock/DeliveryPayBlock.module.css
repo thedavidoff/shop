@@ -1,0 +1,27 @@
+.deliveryPayBlock {
+  display: flex;
+  justify-content: space-evenly;
+  padding: 0 15px;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  background-image: -webkit-linear-gradient(
+    top,
+    #fff 0%,
+    #fff 59%,
+    #fff8bb 100%
+  );
+  font-size: 14px;
+}
+.deliveryPayBlock h3 {
+  font-size: 14px;
+  text-align: left;
+}
+.deliveryPayBlock ul {
+  padding: 0;
+  list-style: none;
+  text-align: left;
+}
+.deliveryColumn {
+}
+.payColumn {
+}

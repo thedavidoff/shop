@@ -1,0 +1,12 @@
+.totalRating {
+  display: flex;
+}
+.starContainer {
+  position: relative;
+  width: 100%;
+}
+.star {
+  position: absolute;
+  color: red;
+  overflow: hidden;
+}

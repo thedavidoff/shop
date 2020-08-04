@@ -1,0 +1,16 @@
+.search {
+  display: flex;
+  justify-content: space-between;
+  padding: 15px;
+  width: 700px;
+  height: 70px;
+  background: #f7b485;
+  border-radius: 10px;
+  margin: 0 15px;
+}
+.search input {
+  width: 100%;
+}
+.search button {
+  cursor: pointer;
+}

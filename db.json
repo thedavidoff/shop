@@ -1,0 +1,937 @@
+{
+  "products": [
+    {
+      "id": 1,
+      "sku": 332495,
+      "category": "video_cards",
+      "inventory": [0, 2, 5],
+      "link": "graphics_card_pci-e_geforce_gt710_1gb_ddr3_msi_gt_710_1gd3h_lp",
+      "status": "есть в наличии",
+      "name": "Видеокарта PCI-E GeForce GT710 1GB DDR3 MSI (GT 710 1GD3H LP)",
+      "description": "GT710 / 1 ГБ / GDDR-3 / 64 бит / DX-12 / Частота ядра - 954 МГц / Частота памяти - 1600 МГц / DVI - 1 шт. / HDMI - 1 шт. / Блок питания - 300 Вт / 146x69x19 мм",
+      "poster": "https://img2.elmir.ua/img/505648/320/240/.jpg",
+      "preview": "https://f.428.ua/img/505648/500/400/.jpg",
+      "photoInOrder": "https://elmir.ua/img/505648/100/100/.jpg",
+      "price": 1126,
+      "warranty": 36,
+      "reviewsCount": 9,
+      "ratingsCount": 4,
+      "totalRating": 4.5,
+      "isHit": true,
+      "isNew": false
+    },
+    {
+      "id": 2,
+      "sku": 956277,
+      "category": "video_cards",
+      "inventory": [0, 0, 0],
+      "link": "graphics_card_pci-e_radeon_rx_5700_8gb_ddr6_sapphire_11294-01-20g",
+      "status": "доступно под заказ (1-5 дней)",
+      "name": "Видеокарта PCI-E Radeon RX 5700 8GB DDR6 Sapphire (11294-01-20G)",
+      "description": "RX 5700 / 8 ГБ / GDDR-6 / 256 бит / DX-12 / Частота ядра - 1750 МГц / Частота памяти - 14000 МГц / HDMI - 1 шт. / DisplayPort - 3 шт. / Блок питания - 600 Вт / поддержка VR, с бэкплейтом / 254x135x46,5 мм",
+      "poster": "https://img1.elmir.ua/img/1969239/320/240/.jpg",
+      "preview": "https://f.428.ua/img/1969239/500/400/.jpg",
+      "photoInOrder": "https://elmir.ua/img/1969239/100/100/.jpg",
+      "price": 10595,
+      "warranty": 36,
+      "reviewsCount": 1,
+      "ratingsCount": 1,
+      "totalRating": 5,
+      "isHit": false,
+      "isNew": false
+    },
+    {
+      "id": 3,
+      "sku": 963409,
+      "category": "video_cards",
+      "inventory": [10, 0, 6],
+      "link": "graphics_card_pci-e_radeon_rx_5700_xt_8gb_ddr6_powercolor_red_dragon_axrx_5700xt_8gbd6-3dhr_oc",
+      "status": "есть в наличии",
+      "name": "Видеокарта PCI-E Radeon RX 5700 XT 8GB DDR6 PowerColor Red Dragon (AXRX 5700XT 8GBD6-3DHR/OC)",
+      "description": "RX 5700 XT / 8 ГБ / GDDR-6 / 256 бит / DX-12 / Частота ядра - 1905 МГц / Частота памяти - 14000 МГц / HDMI - 1 шт. / DisplayPort - 3 шт. / Блок питания - 650 Вт / поддержка VR / 240x132x41 мм",
+      "poster": "https://img3.elmir.ua/img/1990487/320/240/.jpg",
+      "preview": "https://f.428.ua/img/1990487/500/400/.jpg",
+      "photoInOrder": "https://elmir.ua/img/1990487/100/100/.jpg",
+      "price": 12791,
+      "warranty": 36,
+      "reviewsCount": 1,
+      "ratingsCount": 1,
+      "totalRating": 5,
+      "isHit": true,
+      "isNew": true
+    },
+    {
+      "id": 4,
+      "sku": 884586,
+      "category": "video_cards",
+      "inventory": [6, 5, 0],
+      "link": "graphics_card_pci-e_geforce_gtx1660_6gb_ddr5_asus_ph-gtx1660-o6g",
+      "status": "есть в наличии",
+      "name": "Видеокарта PCI-E GeForce GTX1660 6GB DDR5 Asus (PH-GTX1660-O6G)",
+      "description": "GTX 1660 / 6 ГБ / GDDR-5 / 192 бит / DX-12 / Частота ядра - 1830 МГц / Частота памяти - 8002 МГц / DVI - 1 шт. / HDMI - 1 шт. / DisplayPort - 1 шт. / Блок питания - 450 Вт / 174x121x39 мм",
+      "poster": "https://elmir.ua/img/1747098/320/240/.jpg",
+      "preview": "https://f.428.ua/img/1747098/500/400/.jpg",
+      "photoInOrder": "https://elmir.ua/img/1747098/100/100/.jpg",
+      "price": 6967,
+      "warranty": 36,
+      "reviewsCount": 0,
+      "ratingsCount": 0,
+      "totalRating": 0,
+      "isHit": false,
+      "isNew": true
+    }
+  ],
+  "specifications": [
+    {
+      "id": 1,
+      "sku": 332495,
+      "category": "video_cards",
+      "inventory": 10,
+      "link": "graphics_card_pci-e_geforce_gt710_1gb_ddr3_msi_gt_710_1gd3h_lp",
+      "status": "есть в наличии",
+      "name": "Видеокарта PCI-E GeForce GT710 1GB DDR3 MSI (GT 710 1GD3H LP)",
+      "description": "GT710 / 1 ГБ / GDDR-3 / 64 бит / DX-12 / Частота ядра - 954 МГц / Частота памяти - 1600 МГц / DVI - 1 шт. / HDMI - 1 шт. / Блок питания - 300 Вт / 146x69x19 мм",
+      "poster": "https://img2.elmir.ua/img/505648/320/240/.jpg",
+      "photoInOrder": "https://elmir.ua/img/505648/100/100/.jpg",
+      "price": 1126,
+      "warranty": 36,
+      "reviewsCount": 9,
+      "ratingsCount": 4,
+      "totalRating": 4.5,
+      "isHit": true,
+      "isNew": false,
+      "specifications": [
+        {
+          "property": "Производитель чипа",
+          "value": "NVIDIA"
+        },
+        {
+          "property": "Модельный ряд",
+          "value": "GT710"
+        },
+        {
+          "property": "Профессиональная",
+          "value": "нет"
+        },
+        {
+          "property": "Состояние",
+          "value": "новая"
+        },
+        {
+          "property": "Объем памяти",
+          "value": "1 ГБ"
+        },
+        {
+          "property": "Тип памяти",
+          "value": "GDDR-3"
+        },
+        {
+          "property": "Шина памяти",
+          "value": "64 бит"
+        },
+        {
+          "property": "DirectX",
+          "value": "DX-12"
+        },
+        {
+          "property": "Частота ядра",
+          "value": "954 МГц"
+        },
+        {
+          "property": "Частота памяти",
+          "value": "1600 МГц"
+        },
+        {
+          "property": "Дополнительное питание",
+          "value": "нет"
+        },
+        {
+          "property": "Интерфейс подключения",
+          "value": "PCI-E х16 2.0"
+        },
+        {
+          "property": "Разъёмы подключения",
+          "value": "DVI-D, HDMI, VGA"
+        },
+        {
+          "property": "Число универсальных процессоров (SPU)",
+          "value": 192
+        },
+        {
+          "property": "Число текстурных блоков (TMU)",
+          "value": 16
+        },
+        {
+          "property": "Число блоков растеризации (ROP)",
+          "value": 8
+        },
+        {
+          "property": "Техпроцесс",
+          "value": "28 нм"
+        },
+        {
+          "property": "Энергопотребление",
+          "value": "19 Вт"
+        },
+        {
+          "property": "Блок питания",
+          "value": "300 Вт"
+        },
+        {
+          "property": "Тип охлаждения",
+          "value": "пассивное"
+        },
+        {
+          "property": "Исполнение",
+          "value": "однослотовое"
+        },
+        {
+          "property": "Габариты",
+          "value": "146x69x19 мм"
+        },
+        {
+          "property": "Сайт производителя",
+          "value": "https://www.msi.com/Graphics-card/GT-710-1GD3H-LP.html#hero-specification"
+        }
+      ],
+      "photos": [
+        {
+          "id": 1,
+          "w240": "https://e.428.ua/img/505648/240/180/.jpg",
+          "w320": "https://e.428.ua/img/505648/320/240/.jpg",
+          "w425": "https://e.428.ua/img/505648/425/319/.jpg",
+          "w480": "https://e.428.ua/img/505648/480/360/.jpg",
+          "w640": "https://e.428.ua/img/505648/640/480/.jpg",
+          "original": "https://e.428.ua/img/505648/3000/2000/ua_videokarta_pci-e_geforce_gt710_1gb_ddr3_msi_gt_710_1gd3h_lp_videokarta_pci-e_geforce_gt710_1gb_ddr3_msi_gt_710_1gd3h_lp~918~694.jpg",
+          "thumbnail": "https://e.428.ua/img/505648/50/40/i.jpg"
+        },
+        {
+          "id": 2,
+          "w240": "https://e.428.ua/img/505649/240/180/.jpg",
+          "w320": "https://e.428.ua/img/505649/320/240/.jpg",
+          "w425": "https://e.428.ua/img/505649/425/319/.jpg",
+          "w480": "https://e.428.ua/img/505649/480/360/.jpg",
+          "w640": "https://e.428.ua/img/505649/640/480/.jpg",
+          "original": "https://e.428.ua/img/505649/3000/2000/ua_videokarta_pci-e_geforce_gt710_1gb_ddr3_msi_gt_710_1gd3h_lp_videokarta_pci-e_geforce_gt710_1gb_ddr3_msi_gt_710_1gd3h_lp~720~710.jpg",
+          "thumbnail": "https://e.428.ua/img/505649/50/40/i.jpg"
+        },
+        {
+          "id": 3,
+          "w240": "https://e.428.ua/img/505650/240/180/.jpg",
+          "w320": "https://e.428.ua/img/505650/320/240/.jpg",
+          "w425": "https://e.428.ua/img/505650/425/319/.jpg",
+          "w480": "https://e.428.ua/img/505650/480/360/.jpg",
+          "w640": "https://e.428.ua/img/505650/640/480/.jpg",
+          "original": "https://a.428.ua/img/505650/3000/2000/ua_videokarta_pci-e_geforce_gt710_1gb_ddr3_msi_gt_710_1gd3h_lp_videokarta_pci-e_geforce_gt710_1gb_ddr3_msi_gt_710_1gd3h_lp~901~160.jpg",
+          "thumbnail": "https://e.428.ua/img/505650/50/40/i.jpg"
+        },
+        {
+          "id": 4,
+          "w240": "https://e.428.ua/img/505651/240/180/.jpg",
+          "w320": "https://e.428.ua/img/505651/320/240/.jpg",
+          "w425": "https://e.428.ua/img/505651/425/319/.jpg",
+          "w480": "https://e.428.ua/img/505651/480/360/.jpg",
+          "w640": "https://e.428.ua/img/505651/640/480/.jpg",
+          "original": "https://b.428.ua/img/505651/3000/2000/ua_videokarta_pci-e_geforce_gt710_1gb_ddr3_msi_gt_710_1gd3h_lp_videokarta_pci-e_geforce_gt710_1gb_ddr3_msi_gt_710_1gd3h_lp~1008~684.jpg",
+          "thumbnail": "https://e.428.ua/img/505651/50/40/i.jpg"
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "sku": 956277,
+      "category": "video_cards",
+      "inventory": 7,
+      "link": "graphics_card_pci-e_radeon_rx_5700_8gb_ddr6_sapphire_11294-01-20g",
+      "status": "доступно под заказ (1-5 дней)",
+      "name": "Видеокарта PCI-E Radeon RX 5700 8GB DDR6 Sapphire (11294-01-20G)",
+      "description": "RX 5700 / 8 ГБ / GDDR-6 / 256 бит / DX-12 / Частота ядра - 1750 МГц / Частота памяти - 14000 МГц / HDMI - 1 шт. / DisplayPort - 3 шт. / Блок питания - 600 Вт / поддержка VR, с бэкплейтом / 254x135x46,5 мм",
+      "poster": "https://img1.elmir.ua/img/1969239/320/240/.jpg",
+      "preview": "https://f.428.ua/img/1969239/500/400/.jpg",
+      "photoInOrder": "https://elmir.ua/img/1969239/100/100/.jpg",
+      "price": 10595,
+      "warranty": 36,
+      "reviewsCount": 1,
+      "ratingsCount": 1,
+      "totalRating": 5,
+      "isHit": false,
+      "isNew": false,
+      "specifications": [
+        {
+          "property": "Производитель чипа",
+          "value": "AMD"
+        },
+        {
+          "property": "Модельный ряд",
+          "value": "RX 5700"
+        },
+        {
+          "property": "Профессиональная",
+          "value": "нет"
+        },
+        {
+          "property": "Состояние",
+          "value": "новая"
+        },
+        {
+          "property": "Объем памяти",
+          "value": "8 ГБ"
+        },
+        {
+          "property": "Тип памяти",
+          "value": "GDDR-6"
+        },
+        {
+          "property": "Шина памяти",
+          "value": "256 бит"
+        },
+        {
+          "property": "DirectX",
+          "value": "DX-12"
+        },
+        {
+          "property": "Частота ядра",
+          "value": "1750 МГц"
+        },
+        {
+          "property": "Частота памяти",
+          "value": "14000 МГц"
+        },
+        {
+          "property": "Дополнительное питание",
+          "value": "6+8 pin"
+        },
+        {
+          "property": "Интерфейс подключения",
+          "value": "PCI-E х16 4.0"
+        },
+        {
+          "property": "Разъёмы подключения",
+          "value": "HDMI, 3xDisplayPort"
+        },
+        {
+          "property": "Число универсальных процессоров (SPU)",
+          "value": 2304
+        },
+        {
+          "property": "Число текстурных блоков (TMU)",
+          "value": 144
+        },
+        {
+          "property": "Число блоков растеризации (ROP)",
+          "value": 64
+        },
+        {
+          "property": "Техпроцесс",
+          "value": "7 нм"
+        },
+        {
+          "property": "Энергопотребление",
+          "value": "187 Вт"
+        },
+        {
+          "property": "Блок питания",
+          "value": "600 Вт"
+        },
+        {
+          "property": "Тип охлаждения",
+          "value": "активное"
+        },
+        {
+          "property": "Исполнение",
+          "value": "двухслотовое"
+        },
+        {
+          "property": "Габариты",
+          "value": "245x135x46,5 мм"
+        },
+        {
+          "property": "Сайт производителя",
+          "value": "https://www.sapphiretech.com/ru-ru/consumer/pulse-radeon-rx-5700-8g-gddr6"
+        }
+      ],
+      "photos": [
+        {
+          "id": 1,
+          "w240": "https://e.428.ua/img/1969239/240/180/.jpg",
+          "w320": "https://e.428.ua/img/1969239/320/240/.jpg",
+          "w425": "https://e.428.ua/img/1969239/425/319/.jpg",
+          "w480": "https://e.428.ua/img/1969239/480/360/.jpg",
+          "w640": "https://e.428.ua/img/1969239/640/480/.jpg",
+          "original": "https://e.428.ua/img/1969239/3000/2000/ua_videokarta_pci-e_radeon_rx_5700_8gb_ddr6_sapphire_11294-01-20g_videokarta_pci-e_radeon_rx_5700_8gb_ddr6_sapphire_11294-01-20g~546~300.jpg",
+          "thumbnail": "https://e.428.ua/img/1969239/50/40/i.jpg"
+        },
+        {
+          "id": 2,
+          "w240": "https://e.428.ua/img/1969240/240/180/.jpg",
+          "w320": "https://e.428.ua/img/1969240/320/240/.jpg",
+          "w425": "https://e.428.ua/img/1969240/425/319/.jpg",
+          "w480": "https://e.428.ua/img/1969240/480/360/.jpg",
+          "w640": "https://e.428.ua/img/1969240/640/480/.jpg",
+          "original": "https://e.428.ua/img/1969240/3000/2000/ua_videokarta_pci-e_radeon_rx_5700_8gb_ddr6_sapphire_11294-01-20g_videokarta_pci-e_radeon_rx_5700_8gb_ddr6_sapphire_11294-01-20g~555~407.jpg",
+          "thumbnail": "https://e.428.ua/img/1969240/50/40/i.jpg"
+        },
+        {
+          "id": 3,
+          "w240": "https://e.428.ua/img/1969241/240/180/.jpg",
+          "w320": "https://e.428.ua/img/1969241/320/240/.jpg",
+          "w425": "https://e.428.ua/img/1969241/425/319/.jpg",
+          "w480": "https://e.428.ua/img/1969241/480/360/.jpg",
+          "w640": "https://e.428.ua/img/1969241/640/480/.jpg",
+          "original": "https://e.428.ua/img/1969241/3000/2000/ua_videokarta_pci-e_radeon_rx_5700_8gb_ddr6_sapphire_11294-01-20g_videokarta_pci-e_radeon_rx_5700_8gb_ddr6_sapphire_11294-01-20g~434~421.jpg",
+          "thumbnail": "https://e.428.ua/img/1969241/50/40/i.jpg"
+        },
+        {
+          "id": 4,
+          "w240": "https://e.428.ua/img/1969242/240/180/.jpg",
+          "w320": "https://e.428.ua/img/1969242/320/240/.jpg",
+          "w425": "https://e.428.ua/img/1969242/425/319/.jpg",
+          "w480": "https://e.428.ua/img/1969242/480/360/.jpg",
+          "w640": "https://e.428.ua/img/1969242/640/480/.jpg",
+          "original": "https://e.428.ua/img/1969242/3000/2000/ua_videokarta_pci-e_radeon_rx_5700_8gb_ddr6_sapphire_11294-01-20g_videokarta_pci-e_radeon_rx_5700_8gb_ddr6_sapphire_11294-01-20g~541~178.jpg",
+          "thumbnail": "https://e.428.ua/img/1969242/50/40/i.jpg"
+        },
+        {
+          "id": 5,
+          "w240": "https://e.428.ua/img/1969243/240/180/.jpg",
+          "w320": "https://e.428.ua/img/1969243/320/240/.jpg",
+          "w425": "https://e.428.ua/img/1969243/425/319/.jpg",
+          "w480": "https://e.428.ua/img/1969243/480/360/.jpg",
+          "w640": "https://e.428.ua/img/1969243/640/480/.jpg",
+          "original": "https://e.428.ua/img/1969243/3000/2000/ua_videokarta_pci-e_radeon_rx_5700_8gb_ddr6_sapphire_11294-01-20g_videokarta_pci-e_radeon_rx_5700_8gb_ddr6_sapphire_11294-01-20g~546~312.jpg",
+          "thumbnail": "https://e.428.ua/img/1969243/50/40/i.jpg"
+        }
+      ]
+    },
+    {
+      "id": 3,
+      "sku": 963409,
+      "category": "video_cards",
+      "inventory": 5,
+      "link": "graphics_card_pci-e_radeon_rx_5700_xt_8gb_ddr6_powercolor_red_dragon_axrx_5700xt_8gbd6-3dhr_oc",
+      "status": "есть в наличии",
+      "name": "Видеокарта PCI-E Radeon RX 5700 XT 8GB DDR6 PowerColor Red Dragon (AXRX 5700XT 8GBD6-3DHR/OC)",
+      "description": "RX 5700 XT / 8 ГБ / GDDR-6 / 256 бит / DX-12 / Частота ядра - 1905 МГц / Частота памяти - 14000 МГц / HDMI - 1 шт. / DisplayPort - 3 шт. / Блок питания - 650 Вт / поддержка VR / 240x132x41 мм",
+      "poster": "https://img3.elmir.ua/img/1990487/320/240/.jpg",
+      "preview": "https://f.428.ua/img/1990487/500/400/.jpg",
+      "photoInOrder": "https://elmir.ua/img/1990487/100/100/.jpg",
+      "price": 12791,
+      "warranty": 36,
+      "reviewsCount": 1,
+      "ratingsCount": 1,
+      "totalRating": 5,
+      "isHit": true,
+      "isNew": true,
+      "specifications": [
+        {
+          "property": "Производитель чипа",
+          "value": "AMD"
+        },
+        {
+          "property": "Модельный ряд",
+          "value": "RX 5700 XT"
+        },
+        {
+          "property": "Профессиональная",
+          "value": "нет"
+        },
+        {
+          "property": "Состояние",
+          "value": "новая"
+        },
+        {
+          "property": "Объем памяти",
+          "value": "8 ГБ"
+        },
+        {
+          "property": "Тип памяти",
+          "value": "GDDR-6"
+        },
+        {
+          "property": "Шина памяти",
+          "value": "256 бит"
+        },
+        {
+          "property": "DirectX",
+          "value": "DX-12"
+        },
+        {
+          "property": "Частота ядра",
+          "value": "1905 МГц"
+        },
+        {
+          "property": "Частота памяти",
+          "value": "14000 МГц"
+        },
+        {
+          "property": "Дополнительное питание",
+          "value": "6+8 pin"
+        },
+        {
+          "property": "Интерфейс подключения",
+          "value": "PCI-E х16 4.0"
+        },
+        {
+          "property": "Разъёмы подключения",
+          "value": "HDMI (2.0b), 3хDisplayPort (1.4)"
+        },
+        {
+          "property": "Число универсальных процессоров (SPU)",
+          "value": 2560
+        },
+        {
+          "property": "Число текстурных блоков (TMU)",
+          "value": 160
+        },
+        {
+          "property": "Число блоков растеризации (ROP)",
+          "value": 64
+        },
+        {
+          "property": "Техпроцесс",
+          "value": "7 нм"
+        },
+        {
+          "property": "Энергопотребление",
+          "value": "225 Вт"
+        },
+        {
+          "property": "Блок питания",
+          "value": "650 Вт"
+        },
+        {
+          "property": "Тип охлаждения",
+          "value": "активное"
+        },
+        {
+          "property": "Особенности",
+          "value": "поддержка VR"
+        },
+        {
+          "property": "Исполнение",
+          "value": "двухслотовое"
+        },
+        {
+          "property": "Габариты",
+          "value": "240x132x41 мм"
+        },
+        {
+          "property": "Сайт производителя",
+          "value": "https://www.powercolor.com/product?id=1565953800"
+        }
+      ],
+      "photos": [
+        {
+          "id": 1,
+          "w240": "https://e.428.ua/img/1990487/240/180/.jpg",
+          "w320": "https://e.428.ua/img/1990487/320/240/.jpg",
+          "w425": "https://e.428.ua/img/1990487/425/319/.jpg",
+          "w480": "https://e.428.ua/img/1990487/480/360/.jpg",
+          "w640": "https://e.428.ua/img/1990487/640/480/.jpg",
+          "original": "https://e.428.ua/img/1990487/3000/2000/ua_videokarta_pci-e_radeon_rx_5700_xt_8gb_ddr6_powercolor_red_dragon_axrx_5700xt_8gbd6-3dhr_oc_videokarta_pci-e_radeon_rx_5700_xt_8gb_ddr6_powercolor_red_dragon_axrx_5700xt_8gbd6-3dhr_oc~659~386.jpg",
+          "thumbnail": "https://e.428.ua/img/1990487/50/40/i.jpg"
+        },
+        {
+          "id": 2,
+          "w240": "https://e.428.ua/img/1990488/240/180/.jpg",
+          "w320": "https://e.428.ua/img/1990488/320/240/.jpg",
+          "w425": "https://e.428.ua/img/1990488/425/319/.jpg",
+          "w480": "https://e.428.ua/img/1990488/480/360/.jpg",
+          "w640": "https://e.428.ua/img/1990488/640/480/.jpg",
+          "original": "https://e.428.ua/img/1990488/3000/2000/ua_videokarta_pci-e_radeon_rx_5700_xt_8gb_ddr6_powercolor_red_dragon_axrx_5700xt_8gbd6-3dhr_oc_videokarta_pci-e_radeon_rx_5700_xt_8gb_ddr6_powercolor_red_dragon_axrx_5700xt_8gbd6-3dhr_oc~569~455.jpg",
+          "thumbnail": "https://e.428.ua/img/1990488/50/40/i.jpg"
+        },
+        {
+          "id": 3,
+          "w240": "https://e.428.ua/img/1990489/240/180/.jpg",
+          "w320": "https://e.428.ua/img/1990489/320/240/.jpg",
+          "w425": "https://e.428.ua/img/1990489/425/319/.jpg",
+          "w480": "https://e.428.ua/img/1990489/480/360/.jpg",
+          "w640": "https://e.428.ua/img/1990489/640/480/.jpg",
+          "original": "https://e.428.ua/img/1990489/3000/2000/ua_videokarta_pci-e_radeon_rx_5700_xt_8gb_ddr6_powercolor_red_dragon_axrx_5700xt_8gbd6-3dhr_oc_videokarta_pci-e_radeon_rx_5700_xt_8gb_ddr6_powercolor_red_dragon_axrx_5700xt_8gbd6-3dhr_oc~838~411.jpg",
+          "thumbnail": "https://e.428.ua/img/1990489/50/40/i.jpg"
+        },
+        {
+          "id": 4,
+          "w240": "https://e.428.ua/img/1990490/240/180/.jpg",
+          "w320": "https://e.428.ua/img/1990490/320/240/.jpg",
+          "w425": "https://e.428.ua/img/1990490/425/319/.jpg",
+          "w480": "https://e.428.ua/img/1990490/480/360/.jpg",
+          "w640": "https://e.428.ua/img/1990490/640/480/.jpg",
+          "original": "https://e.428.ua/img/1990490/3000/2000/ua_videokarta_pci-e_radeon_rx_5700_xt_8gb_ddr6_powercolor_red_dragon_axrx_5700xt_8gbd6-3dhr_oc_videokarta_pci-e_radeon_rx_5700_xt_8gb_ddr6_powercolor_red_dragon_axrx_5700xt_8gbd6-3dhr_oc~818~279.jpg",
+          "thumbnail": "https://e.428.ua/img/1990490/50/40/i.jpg"
+        },
+        {
+          "id": 5,
+          "w240": "https://e.428.ua/img/1990491/240/180/.jpg",
+          "w320": "https://e.428.ua/img/1990491/320/240/.jpg",
+          "w425": "https://e.428.ua/img/1990491/425/319/.jpg",
+          "w480": "https://e.428.ua/img/1990491/480/360/.jpg",
+          "w640": "https://e.428.ua/img/1990491/640/480/.jpg",
+          "original": "https://e.428.ua/img/1990491/3000/2000/ua_videokarta_pci-e_radeon_rx_5700_xt_8gb_ddr6_powercolor_red_dragon_axrx_5700xt_8gbd6-3dhr_oc_videokarta_pci-e_radeon_rx_5700_xt_8gb_ddr6_powercolor_red_dragon_axrx_5700xt_8gbd6-3dhr_oc~497~475.jpg",
+          "thumbnail": "https://e.428.ua/img/1990491/50/40/i.jpg"
+        },
+        {
+          "id": 6,
+          "w240": "https://e.428.ua/img/1990492/240/180/.jpg",
+          "w320": "https://e.428.ua/img/1990492/320/240/.jpg",
+          "w425": "https://e.428.ua/img/1990492/425/319/.jpg",
+          "w480": "https://e.428.ua/img/1990492/480/360/.jpg",
+          "w640": "https://e.428.ua/img/1990492/640/480/.jpg",
+          "original": "https://e.428.ua/img/1990492/3000/2000/ua_videokarta_pci-e_radeon_rx_5700_xt_8gb_ddr6_powercolor_red_dragon_axrx_5700xt_8gbd6-3dhr_oc_videokarta_pci-e_radeon_rx_5700_xt_8gb_ddr6_powercolor_red_dragon_axrx_5700xt_8gbd6-3dhr_oc~502~463.jpg",
+          "thumbnail": "https://e.428.ua/img/1990492/50/40/i.jpg"
+        }
+      ]
+    },
+    {
+      "id": 4,
+      "sku": 884586,
+      "category": "video_cards",
+      "inventory": 3,
+      "link": "graphics_card_pci-e_geforce_gtx1660_6gb_ddr5_asus_ph-gtx1660-o6g",
+      "status": "есть в наличии",
+      "name": "Видеокарта PCI-E GeForce GTX1660 6GB DDR5 Asus (PH-GTX1660-O6G)",
+      "description": "GTX 1660 / 6 ГБ / GDDR-5 / 192 бит / DX-12 / Частота ядра - 1830 МГц / Частота памяти - 8002 МГц / DVI - 1 шт. / HDMI - 1 шт. / DisplayPort - 1 шт. / Блок питания - 450 Вт / 174x121x39 мм",
+      "poster": "https://elmir.ua/img/1747098/320/240/.jpg",
+      "preview": "https://f.428.ua/img/1747098/500/400/.jpg",
+      "photoInOrder": "https://elmir.ua/img/1747098/100/100/.jpg",
+      "price": 6967,
+      "warranty": 36,
+      "reviewsCount": 0,
+      "ratingsCount": 0,
+      "totalRating": 0,
+      "isHit": false,
+      "isNew": true,
+      "specifications": [
+        {
+          "property": "Производитель чипа",
+          "value": "NVIDIA"
+        },
+        {
+          "property": "Модельный ряд",
+          "value": "GTX 1660"
+        },
+        {
+          "property": "Профессиональная",
+          "value": "нет"
+        },
+        {
+          "property": "Состояние",
+          "value": "новая"
+        },
+        {
+          "property": "Объем памяти",
+          "value": "6 ГБ"
+        },
+        {
+          "property": "Тип памяти",
+          "value": "GDDR-5"
+        },
+        {
+          "property": "Шина памяти",
+          "value": "192 бит"
+        },
+        {
+          "property": "DirectX",
+          "value": "DX-12"
+        },
+        {
+          "property": "Частота ядра",
+          "value": "1830 МГц"
+        },
+        {
+          "property": "Частота памяти",
+          "value": "8002 МГц"
+        },
+        {
+          "property": "Дополнительное питание",
+          "value": "8-pin"
+        },
+        {
+          "property": "Интерфейс подключения",
+          "value": "PCI-E х16 3.0"
+        },
+        {
+          "property": "Разъёмы подключения",
+          "value": "DVI-D, HDMI 2.0b, DisplayPort 1.4"
+        },
+        {
+          "property": "Число универсальных процессоров (SPU)",
+          "value": 1408
+        },
+        {
+          "property": "Число текстурных блоков (TMU)",
+          "value": 88
+        },
+        {
+          "property": "Число блоков растеризации (ROP)",
+          "value": 48
+        },
+        {
+          "property": "Техпроцесс",
+          "value": "12 нм"
+        },
+        {
+          "property": "Энергопотребление",
+          "value": "130 Вт"
+        },
+        {
+          "property": "Блок питания",
+          "value": "450 Вт"
+        },
+        {
+          "property": "Тип охлаждения",
+          "value": "активное"
+        },
+        {
+          "property": "Исполнение",
+          "value": "двухслотовое"
+        },
+        {
+          "property": "Габариты",
+          "value": "174x121x39 мм"
+        },
+        {
+          "property": "Сайт производителя",
+          "value": "https://www.asus.com/Graphics-Cards/PH-GTX1660-O6G/specifications/"
+        }
+      ],
+      "photos": [
+        {
+          "id": 1,
+          "w240": "https://e.428.ua/img/1747098/240/180/.jpg",
+          "w320": "https://e.428.ua/img/1747098/320/240/.jpg",
+          "w425": "https://e.428.ua/img/1747098/425/319/.jpg",
+          "w480": "https://e.428.ua/img/1747098/480/360/.jpg",
+          "w640": "https://e.428.ua/img/1747098/640/480/.jpg",
+          "original": "https://a.428.ua/img/1747098/3000/2000/ua_videokarta_pci-e_geforce_gtx1660_6gb_ddr5_asus_ph-gtx1660-o6g_videokarta_pci-e_geforce_gtx1660_6gb_ddr5_asus_ph-gtx1660-o6g~837~615.jpg",
+          "thumbnail": "https://elmir.ua/img/1747098/50/40/i.jpg"
+        },
+        {
+          "id": 2,
+          "w240": "https://e.428.ua/img/1747099/240/180/.jpg",
+          "w320": "https://e.428.ua/img/1747099/320/240/.jpg",
+          "w425": "https://e.428.ua/img/1747099/425/319/.jpg",
+          "w480": "https://e.428.ua/img/1747099/480/360/.jpg",
+          "w640": "https://e.428.ua/img/1747099/640/480/.jpg",
+          "original": "https://b.428.ua/img/1747099/3000/2000/ua_videokarta_pci-e_geforce_gtx1660_6gb_ddr5_asus_ph-gtx1660-o6g_videokarta_pci-e_geforce_gtx1660_6gb_ddr5_asus_ph-gtx1660-o6g~867~707.jpg",
+          "thumbnail": "https://elmir.ua/img/1747099/50/40/i.jpg"
+        },
+        {
+          "id": 3,
+          "w240": "https://e.428.ua/img/1747100/240/180/.jpg",
+          "w320": "https://e.428.ua/img/1747100/320/240/.jpg",
+          "w425": "https://e.428.ua/img/1747100/425/319/.jpg",
+          "w480": "https://e.428.ua/img/1747100/480/360/.jpg",
+          "w640": "https://e.428.ua/img/1747100/640/480/.jpg",
+          "original": "https://e.428.ua/img/1747100/3000/2000/ua_videokarta_pci-e_geforce_gtx1660_6gb_ddr5_asus_ph-gtx1660-o6g_videokarta_pci-e_geforce_gtx1660_6gb_ddr5_asus_ph-gtx1660-o6g~819~721.jpg",
+          "thumbnail": "https://elmir.ua/img/1747100/50/40/i.jpg"
+        },
+        {
+          "id": 4,
+          "w240": "https://e.428.ua/img/1747101/240/180/.jpg",
+          "w320": "https://e.428.ua/img/1747101/320/240/.jpg",
+          "w425": "https://e.428.ua/img/1747101/425/319/.jpg",
+          "w480": "https://e.428.ua/img/1747101/480/360/.jpg",
+          "w640": "https://e.428.ua/img/1747101/640/480/.jpg",
+          "original": "https://d.428.ua/img/1747101/3000/2000/ua_videokarta_pci-e_geforce_gtx1660_6gb_ddr5_asus_ph-gtx1660-o6g_videokarta_pci-e_geforce_gtx1660_6gb_ddr5_asus_ph-gtx1660-o6g~295~867.jpg",
+          "thumbnail": "https://elmir.ua/img/1747101/50/40/i.jpg"
+        },
+        {
+          "id": 5,
+          "w240": "https://e.428.ua/img/1747102/240/180/.jpg",
+          "w320": "https://e.428.ua/img/1747102/320/240/.jpg",
+          "w425": "https://e.428.ua/img/1747102/425/319/.jpg",
+          "w480": "https://e.428.ua/img/1747102/480/360/.jpg",
+          "w640": "https://e.428.ua/img/1747102/640/480/.jpg",
+          "original": "https://e.428.ua/img/1747102/3000/2000/ua_videokarta_pci-e_geforce_gtx1660_6gb_ddr5_asus_ph-gtx1660-o6g_videokarta_pci-e_geforce_gtx1660_6gb_ddr5_asus_ph-gtx1660-o6g~873~985.jpg",
+          "thumbnail": "https://elmir.ua/img/1747102/50/40/i.jpg"
+        }
+      ]
+    }
+  ],
+  "reviews": [
+    {
+      "id": 1456096860000,
+      "reviewTo": 1,
+      "author": "Илья",
+      "date": "22.02.2016",
+      "time": "01:21",
+      "buyType": "3",
+      "comment": "На ней есть разъем для подключения вентилятора ?"
+    },
+    {
+      "id": 1456328040000,
+      "reviewTo": 1,
+      "author": "Гость",
+      "date": "24.02.2016",
+      "time": "17:34",
+      "buyType": "3",
+      "comment": "Вопрос к разработчикам. Пойдёт ли кс го на максималках? Или на разрешении 1440 на 1280 на средних"
+    },
+    {
+      "id": 1456329060000,
+      "reviewTo": 1,
+      "author": "Вуйко",
+      "date": "24.02.2016",
+      "time": "17:51",
+      "buyType": "3",
+      "comment": "А до неї є диск з драйверами?"
+    },
+    {
+      "id": 1457085600000,
+      "reviewTo": 1,
+      "author": "Бодян",
+      "date": "04.03.2016",
+      "time": "12:00",
+      "buyType": "3",
+      "advantages": "А пойдёт на неё майнкрафт 60 фпс",
+      "comment": "А подёт на неё майнкрафт 60 фпс"
+    },
+    {
+      "id": 1457729580000,
+      "reviewTo": 1,
+      "author": "Олексій",
+      "date": "11.03.2016",
+      "time": "22:53",
+      "buyType": "2",
+      "advantages": "Все супер)",
+      "disadvantages": "пока не обнаружил)",
+      "comment": "Видеокарта отличная))))))))\nПокупал недели 2 назад все супер)\nСглаживание 16х никоем образом не влияет на производительность: в WoT фпс остаеться стабильно высокий)\nДа и вообще видюшка клас) покупайте не пожалеете))))))))))"
+    },
+    {
+      "id": 1478271540000,
+      "reviewTo": 1,
+      "author": "Илья",
+      "date": "04.11.2016",
+      "time": "16:59",
+      "rating": 4,
+      "buyType": "3",
+      "comment": "Ребятушки есть вопросик. У   меня Dell OptiPlex 780 SFF (низкопрофильный), у него встроенное видео Intel GMA 4500. Хотелось бы поставить более современную карту, но есть один нюанс: блок питания всего 235 Вт. Производители рекомендуют ставить видяшку с потреблением до 25 Вт, тут написано что эта кушает 19, но БП рекомендуют от 300 Вт. Станет или нет - сам вопрос."
+    },
+    {
+      "id": 1478506500000,
+      "reviewTo": 1,
+      "author": "Илья",
+      "date": "07.11.2016",
+      "time": "10:15",
+      "rating": 5,
+      "buyType": "1",
+      "comment": "Теперь могу написать отзыв =) Спрашивал выше: станет ли в Dell OptiPlex 780 SFF c 235Вт БП - Да, без проблем. Даже можно играться в некоторые игрушки. Видяшкой доволен, спасибо!"
+    },
+    {
+      "id": 1522571460000,
+      "reviewTo": 1,
+      "author": "Vadonchik",
+      "date": "01.04.2018",
+      "time": "11:31",
+      "rating": 5,
+      "buyType": "3",
+      "comment": "Подойдёт ли эта видеокарта к процессору intel core 2 duo cpu 6400 2.13 ГГц"
+    },
+    {
+      "id": 1525106340000,
+      "reviewTo": 1,
+      "author": "Игорь",
+      "date": "30.04.2018",
+      "time": "19:39",
+      "rating": 4,
+      "buyType": "1",
+      "comment": "Простая видео карта, для офисных задач. Со своей задачей справилась на 5"
+    },
+    {
+      "id": 1574797260000,
+      "reviewTo": 2,
+      "author": "Вячеслав",
+      "date": "26.11.2019",
+      "time": "21:41",
+      "rating": 5,
+      "buyType": "1",
+      "advantages": "Карта отличная. Мощная. Тихая."
+    },
+    {
+      "id": 1578600180000,
+      "reviewTo": 3,
+      "author": "Александр",
+      "date": "09.01.2020",
+      "time": "22:03",
+      "rating": 5,
+      "buyType": "1",
+      "advantages": "+компактность\n+качество материалов и сборка\n+тишина в простое",
+      "disadvantages": "пока нет замечаний",
+      "comment": "Короче карта для своего ценового сегмента бюджетных 5700 XT крутая, реально русскоязычных обзоров не нашел, но она как по мне недооценена. Но с другой стороны, перед НГ они практически исчезли с магазинов, можно сказать еле успел купить, а это уже о чем-то говорит). Удачная покупка для оптимальной AMD-сборки."
+    }
+  ],
+  "answers": [
+    {
+      "id": 1457793780000,
+      "answerTo": 1,
+      "answerToReview": 1456096860000,
+      "author": "Представитель компании MSI",
+      "date": "12.03.2016",
+      "time": "16:43",
+      "buyType": "3",
+      "comment": "Нет"
+    },
+    {
+      "id": 1457729400000,
+      "answerTo": 1,
+      "answerToReview": 1456328040000,
+      "author": "Олексій",
+      "date": "11.03.2016",
+      "time": "22:50",
+      "buyType": "2",
+      "comment": "Норм на средних летает)\nА если кто говорит про низкой производительности: ВРАНЬЕ(\nкупил недели 2 назад и еще ниразу не пожалел об этом)"
+    },
+    {
+      "id": 1459004160000,
+      "answerTo": 1,
+      "answerToReview": 1456328040000,
+      "author": "Егор Корогод",
+      "date": "26.02.2016",
+      "time": "16:56",
+      "buyType": "3",
+      "comment": "Это - не игровая видеокарта. То есть, игры на ней пойдут, но только старые и нетребовательные. Брать эту карту имеет смысл только в том случае, если вы собираете компьютер на базе процессора, не имеющего встроенного графического ядра. Остальные же современные процессоры имеют графическое ядро, более производительное, чем данная видеокарта."
+    },
+    {
+      "id": 1457034660000,
+      "answerTo": 1,
+      "answerToReview": 1456329060000,
+      "author": "Константин",
+      "date": "03.03.2016",
+      "time": "21:51",
+      "buyType": "3",
+      "comment": "Да, диск имеется. На нем драйвера и другие дополнительные утилиты."
+    },
+    {
+      "id": 1457729220000,
+      "answerTo": 1,
+      "answerToReview": 1457085600000,
+      "author": "Олексій Гнатенко",
+      "date": "11.03.2016",
+      "time": "22:47",
+      "buyType": "2",
+      "comment": "да пойдет)))\nСмотря какой проц.\nУ меня двух'ядерный проц и фпс 60-75)\nПробывал ставить на одноядерник: пашет отлично) 50-60)"
+    },
+    {
+      "id": 1522649820000,
+      "answerTo": 1,
+      "answerToReview": 1522571460000,
+      "author": "Представитель Elmir.ua",
+      "date": "02.04.2018",
+      "time": "09:17",
+      "buyType": "3",
+      "comment": "Добрый день! Подойдет."
+    },
+    {
+      "id": 1584084840000,
+      "answerTo": 2,
+      "answerToReview": 1574797260000,
+      "author": "zloyhahol",
+      "date": "13.03.2020",
+      "time": "09:34",
+      "buyType": "3",
+      "comment": "как карточка себя ведет? Проблем никаких нет???"
+    }
+  ]
+}

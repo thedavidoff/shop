@@ -1,0 +1,22 @@
+.mainHeader {
+  display: flex;
+  justify-content: flex-end;
+  align-items: flex-end;
+  width: 100%;
+  padding: 15px;
+  background: #f78529;
+}
+.home {
+  height: 30px;
+  margin-bottom: 15px;
+}
+.orderLink {
+  text-decoration: none;
+}
+.wishList {
+  opacity: 0.7;
+  margin: 0 0 15px 15px;
+}
+.wishList:hover {
+  opacity: 1;
+}

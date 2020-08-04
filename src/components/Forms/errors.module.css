@@ -1,0 +1,22 @@
+.textarea {
+  border: 2px solid red !important;
+}
+.input {
+  position: relative;
+  border: 2px solid red !important;
+  border-radius: 4px;
+}
+.inputProfile {
+  border: 1px solid red !important;
+}
+.textareaMessage {
+  position: absolute;
+  bottom: 15px;
+  right: 0;
+  color: red;
+}
+.inputMessage {
+  font-size: 13px;
+  color: red;
+  margin: 0;
+}

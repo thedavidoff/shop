@@ -1,0 +1,43 @@
+.wishList {
+  padding: 30px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.wishList h5 {
+  font-size: 14px;
+}
+.selectActions {
+  padding: 5px 15px;
+  width: 100%;
+  background-color: #fff4ce;
+}
+.selectActions p {
+  margin: 0;
+  font-size: 14px;
+}
+.selectActions span {
+  margin: 0 15px;
+  border-bottom: 1px dashed;
+  font-size: 12px;
+  cursor: pointer;
+}
+.selectActions span:hover {
+  color: #ff7238;
+}
+.wishListTable {
+  border-top: 1px solid #bfbfbf;
+}
+.totalCost {
+  margin: 15px 0;
+  width: 100%;
+  text-align: right;
+}
+.totalCost span {
+  margin-left: 15px;
+  font-size: 18px;
+}
+.emptyWishList p {
+  font-size: 14px;
+  text-align: center;
+}

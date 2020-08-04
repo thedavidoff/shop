@@ -1,0 +1,21 @@
+.addToWishListButton {
+  height: 32px;
+  color: #000;
+  text-decoration: none;
+  opacity: 0.7;
+  cursor: pointer;
+}
+.addToWishListButton svg {
+  position: relative;
+  top: 6px;
+  margin-right: 5px;
+}
+.addToWishListButton:hover {
+  opacity: 1;
+}
+.addToWishListButton a {
+  color: #000;
+}
+.addToWishListButton a:hover {
+  color: #ff7238;
+}

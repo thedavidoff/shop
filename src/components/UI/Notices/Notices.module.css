@@ -1,0 +1,11 @@
+.notices {
+  display: flex;
+  align-items: center;
+  padding: 30px 60px 0;;
+  text-align: left;
+  font-size: 14px;
+}
+.notices svg {
+  flex-shrink: 0;
+  margin-right: 10px;
+}

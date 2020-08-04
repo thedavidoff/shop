@@ -1,0 +1,6 @@
+{
+  "/products/*": "/$1",
+  "/:resource/:id": "/:resource/:id",
+  "/posts/:category": "/posts?category=:category",
+  "/articles\\?id=:id": "/posts/:id"
+}

@@ -1,0 +1,27 @@
+.cart {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  width: 250px;
+  height: 70px;
+  background: #f7b485;
+  border-radius: 10px;
+}
+.cartText,
+.emptyCart {
+  margin: 0;
+  color: #b84d4d;
+}
+.emptyCart {
+}
+.cartContent {
+  margin: 0;
+  color: #fff;
+}
+.cartCounter {
+}
+.totalCost {
+  margin: 0;
+  color: #119b59;
+}

@@ -1,0 +1,120 @@
+.loginForm {
+  width: 100%;
+  position: absolute;
+  top: 37px;
+  padding: 15px 25px 20px;
+  border: 1px solid #000;
+  border-radius: 8px;
+  background: #fff;
+  text-align: left;
+  font-size: 14px;
+  z-index: 1000;
+}
+.loginForm h5 {
+  margin: 0 0 10px 0;
+  font-size: 14px;
+  text-align: center;
+}
+.loginForm span {
+  margin: 5px 0;
+  display: inline-block;
+}
+.loginForm input {
+  width: 100%;
+  font-size: 15px;
+  padding: 5px 10px;
+}
+.loginForm label {
+  display: flex;
+  align-items: flex-end;
+}
+.loginForm input[type="checkbox"] {
+  margin: 10px 5px 0 0;
+  height: 16px;
+  width: 16px;
+}
+.loginForm button {
+  cursor: pointer;
+  font-size: 14px;
+  padding: 5px 10px;
+}
+.loginForm button:hover {
+  color: #fff;
+  background: #000;
+  border: 2px solid #000;
+  border-radius: 3px;
+}
+.registrationButton {
+  margin-top: 20px;
+}
+.profileForm {
+  padding: 30px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: inherit;
+  border: none;
+  border-radius: 0 0 8px 8px;
+}
+.profileForm table {
+  width: 60%;
+}
+.profileForm tr {
+  display: flex;
+  margin-bottom: 10px;
+}
+.profileForm tr td {
+  width: 50%;
+  padding: 0 5px;
+}
+.profileForm tr td:first-child {
+  text-align: right;
+  vertical-align: top;
+}
+.profileForm span {
+  margin: 0;
+  color: red;
+}
+.profileForm input {
+  padding: 2px 5px;
+  border: 1px solid #000;
+  border-radius: 4px;
+  font-size: 14px;
+}
+.profileForm input:disabled {
+  color: #aeaeae;
+}
+.profileForm select {
+  width: 100%;
+  padding: 2px;
+  border: 1px solid #000;
+  border-radius: 4px;
+}
+.profileForm input[type="checkbox"] {
+  margin-top: 0;
+  position: relative;
+  top: 3px;
+}
+.loginMessageBlock {
+  margin-top: 15px;
+  font-size: 13px;
+  color: green;
+}
+.errorMessage {
+  color: red;
+  margin: 15px 0 0 0;
+}
+.profileMessageBlock {
+  text-align: center;
+}
+.profileMessageBlock .successMessage {
+  color: #2db72d;
+}
+.profileMessageBlock .errorMessage {
+  color: red;
+}
+.priceLevelInfo {
+  color: #597391;
+  font-size: 12px;
+  line-height: 1;
+}

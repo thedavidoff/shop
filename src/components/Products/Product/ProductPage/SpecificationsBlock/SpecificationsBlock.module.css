@@ -1,0 +1,25 @@
+.specificationsBlock {
+  margin-top: 30px;
+  text-align: left;
+}
+.specificationsBlock h2 {
+  padding-left: 15px;
+  font-size: 15px;
+}
+.specifications {
+  padding: 0 30px;
+  font-size: 13px;
+}
+.specifications td:first-child {
+  width: 40%;
+}
+.messageInfo {
+  display: block;
+  margin: 30px 15px;
+  padding: 0 15px;
+  background: #fff6c6;
+  color: #235da4;
+  font-size: 12px;
+  border: 1px solid #d2ddec;
+  font-style: italic;
+}

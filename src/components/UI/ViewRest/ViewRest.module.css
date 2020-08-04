@@ -1,0 +1,100 @@
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background: #000;
+  opacity: 0.8;
+  z-index: 9998;
+}
+.viewRestWindow {
+  padding-bottom: 30px;
+  position: fixed;
+  top: calc(50% - 150px);
+  left: 0;
+  margin: 0 30px;
+  width: calc(100% - 60px);
+  background: #fff;
+  border-radius: 10px;
+  z-index: 9999;
+}
+.viewRestWindow .close {
+  position: absolute;
+  top: 0;
+  right: 0;
+  cursor: pointer;
+  padding: 10px;
+  z-index: 100;
+}
+.viewRestWindow .close:hover:before {
+  color: red;
+}
+.viewRestWindow .close:before {
+  content: "×";
+  font-size: 25px;
+  line-height: 10px;
+  color: #8ca7ce;
+}
+.viewRestWindow h3,
+.viewRestWindow h4 {
+  margin: 30px 30px 15px;
+  font-weight: 500;
+  text-align: center;
+}
+.viewRestWindow h4 {
+  margin-top: 0;
+  font-weight: 700;
+}
+.viewRestWindow table {
+  width: 100%;
+  max-width: 500px;
+  margin: 0 auto;
+  border-collapse: collapse;
+}
+.viewRestWindow table tr td {
+  border: 1px solid #d2ddec;
+  line-height: 36px;
+  padding: 0 12px;
+}
+.viewRestWindow table tr td:nth-child(1) {
+  font-size: 14px;
+  font-weight: 700;
+  text-align: right;
+}
+.viewRestWindow table tr td:nth-child(2) {
+  color: #000;
+  font-size: 12px;
+  font-style: italic;
+  text-align: left;
+}
+.viewRestWindow .contacts {
+  width: 500px;
+  margin: 0 auto;
+  text-align: center;
+  padding: 20px 20px 0;
+}
+.viewRestWindow .contacts .phone {
+  margin-top: 10px;
+  position: relative;
+  display: inline-block;
+  font-size: 19px;
+  line-height: 19px;
+  color: #004b8d;
+  padding: 2px 0 0 32px;
+  height: 25px;
+  text-decoration: none;
+  width: 190px;
+  text-align: left;
+}
+.viewRestWindow .contacts .phone:hover {
+  color: #ff7238;
+}
+.viewRestWindow .contacts .phone svg {
+  position: absolute;
+  display: block;
+  left: 0;
+  top: 50%;
+  margin-top: -10px;
+  width: 20px;
+  height: 20px;
+}

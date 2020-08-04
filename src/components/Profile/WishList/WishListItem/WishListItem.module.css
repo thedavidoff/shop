@@ -1,0 +1,74 @@
+.wishListItem {
+  min-height: 155px;
+  margin-bottom: 15px;
+}
+.wishListItem td {
+  padding: 10px 15px 15px;
+  border-bottom: 1px solid #bfbfbf;
+}
+.photoBlock {
+  position: relative;
+  width: 100px;
+  height: 104px;
+}
+.new, .hit {
+  position: absolute;
+  width: 20px;
+  height: 20px;
+}
+.new {
+  bottom: -10px;
+  left: 25px;
+}
+.hit {
+  bottom: -10px;
+  left: 0;
+}
+
+.descBlock {
+  width: 100%;
+  font-size: 14px;
+}
+.descBlock p {
+  margin: 10px 0;
+}
+.descBlock a {
+  text-decoration: none;
+  color: #000;
+  font-size: 14px;
+}
+.desc {
+  font-size: 14px;
+}
+.descBlock span {
+  margin-right: 10px;
+}
+.viewRest,
+.addToCompare {
+  border-bottom: 1px dashed;
+  padding-bottom: 1px;
+  cursor: pointer;
+}
+.warranty,
+.notify,
+.reviews {
+  border-bottom: 1px solid;
+  padding-bottom: 1px;
+  cursor: pointer;
+}
+.sku {
+  color: darkgray;
+}
+
+.priceBlock {
+  text-align: center;
+}
+.price {
+  margin: 0 0 10px;
+}
+.status {
+  font-size: 12px;
+}
+.wishListItem a:hover {
+  color: #ff7238;
+}

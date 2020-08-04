@@ -1,26 +1,30 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React, { Component } from "react";
+import { connect } from "react-redux";
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+import "./App.css";
+import { productsRequest } from "./redux/homeReducer";
+import HeaderContainer from "./components/Header/HeaderContainer";
+import Sidebar from "./components/Sidebar/Sidebar";
+import Notices from "./components/UI/Notices/Notices";
+import Routes from "./Routes";
+
+class App extends Component {
+  componentDidMount() {
+    this.props.productsRequest();
+  }
+
+  render() {
+    return (
+      <div className="App">
+        <HeaderContainer />
+        <Sidebar />
+        <div className="body">
+          <Notices type="Друзья! Посещение наших магазинов возможно только в медицинской маске или респираторе. Берегите себя и окружающих!" />
+          <Routes />
+        </div>
+      </div>
+    );
+  }
 }
 
-export default App;
+export default connect(null, { productsRequest })(App);
