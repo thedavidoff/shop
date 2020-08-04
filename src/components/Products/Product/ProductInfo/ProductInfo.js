@@ -1,4 +1,4 @@
-import React  from "react";
+import React from "react";
 import ReactTooltip from "react-tooltip";
 import { HashLink as Link } from "react-router-hash-link";
 import PropTypes from "prop-types";
@@ -40,6 +40,10 @@ const ProductInfo = ({
       tooltipText = status;
   }
 
+  const handleClick = () => {
+    ReactTooltip.hide()
+  };
+
   return (
     <div className={styles.productInfo}>
       <ReactTooltip className={stylesTooltip.tooltip} />
@@ -58,6 +62,7 @@ const ProductInfo = ({
           <li
             className={styles.viewRest}
             data-tip="Посмотреть наличие товара на складах."
+            onClick={handleClick}
           >
             <ViewRest id={id} />
           </li>

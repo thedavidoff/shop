@@ -34,6 +34,7 @@ const ViewRest = ({ id, products }) => {
             className={styles.overlay}
             onClick={handleClick}
           />
+          <style>{".__react_component_tooltip.show{display:none;}"}</style>
           <div className={styles.viewRestWindow}>
             <div className={styles.close} onClick={handleClick} />
             <h3>{`Наличие товара ${product.name} по складам:`}</h3>
