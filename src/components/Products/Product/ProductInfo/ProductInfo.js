@@ -41,7 +41,7 @@ const ProductInfo = ({
   }
 
   const handleClick = () => {
-    ReactTooltip.hide()
+    ReactTooltip.hide();
   };
 
   return (
@@ -75,7 +75,7 @@ const ProductInfo = ({
           <li className={styles.reviews}>
             <Link
               smooth="true"
-              to={`/products/video_cards/${id}#reviews`}
+              to={`/shop/video_cards/${id}#reviews`}
             >{`Отзывы (${reviewsCount})`}</Link>
           </li>
           <li className={styles.addToWishList}>

@@ -34,21 +34,36 @@ const ViewRest = ({ id, products }) => {
             className={styles.overlay}
             onClick={handleClick}
           />
-          <style>{".__react_component_tooltip.show{display:none;}"}</style>
+          <style>{`.__react_component_tooltip.show{display:none;}.${styles.viewRestWindow},.${styles.overlay}{cursor:initial;}`}</style>
           <div className={styles.viewRestWindow}>
             <div className={styles.close} onClick={handleClick} />
             <h3>{`Наличие товара ${product.name} по складам:`}</h3>
             <table>
               <tbody>
-                <tr style={{background: product.inventory[0] > 0 ? "#97ff94" : "#ff9e9e"}}>
+                <tr
+                  style={{
+                    background:
+                      product.inventory[0] > 0 ? "#97ff94" : "#ff9e9e",
+                  }}
+                >
                   <td>г. Харьков, ул. Алчевских, 36</td>
                   <td>{product.inventory[0] > 0 ? "есть" : "под заказ"}</td>
                 </tr>
-                <tr style={{background: product.inventory[1] > 0 ? "#97ff94" : "#ff9e9e"}}>
+                <tr
+                  style={{
+                    background:
+                      product.inventory[1] > 0 ? "#97ff94" : "#ff9e9e",
+                  }}
+                >
                   <td>г. Харьков, пр. Независимости, 5</td>
                   <td>{product.inventory[1] > 0 ? "есть" : "под заказ"}</td>
                 </tr>
-                <tr style={{background: product.inventory[2] > 0 ? "#97ff94" : "#ff9e9e"}}>
+                <tr
+                  style={{
+                    background:
+                      product.inventory[2] > 0 ? "#97ff94" : "#ff9e9e",
+                  }}
+                >
                   <td>г. Харьков, ул. Короленко, 6</td>
                   <td>{product.inventory[2] > 0 ? "есть" : "под заказ"}</td>
                 </tr>

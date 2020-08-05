@@ -11,7 +11,6 @@ import Preloader from "../../UI/Preloader/Preloader";
 
 const Product = ({
   id,
-  product,
   product: {
     sku,
     name,
@@ -52,7 +51,7 @@ const Product = ({
         <Preview style={coordsPreview} name={name} previewSrc={previewSrc} />
       )}
       <NavLink
-        to={`/products/video_cards/${id}`}
+        to={`/shop/video_cards/${id}`}
         className={styles.productPhotoLink}
       >
         {!isShow && <Preloader />}
@@ -77,7 +76,7 @@ const Product = ({
         )}
       </NavLink>
       <NavLink
-        to={`/products/video_cards/${id}`}
+        to={`/shop/video_cards/${id}`}
         className={styles.productName}
       >
         <b>{name}</b>

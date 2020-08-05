@@ -17,12 +17,12 @@ const OrderItem = ({
   return (
     <tr id={id} className={styles.orderProduct}>
       <td className={styles.orderProductPhoto}>
-        <NavLink to={`/products/video_cards/${id}`}>
+        <NavLink to={`/shop/video_cards/${id}`}>
           <img src={photoInOrder} alt={name} />
         </NavLink>
       </td>
       <td className={styles.orderProductName}>
-        <NavLink to={`/products/video_cards/${id}`}>
+        <NavLink to={`/shop/video_cards/${id}`}>
           <b>{name}</b>
         </NavLink>
         <div className={styles.addToWishListButtonWrapper}>

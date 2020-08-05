@@ -9,6 +9,7 @@ import { Preview, previewMethods } from "../../../UI/Preview/Preview";
 import NewSVG from "../../../UI/SVG/NewSVG";
 import HitSVG from "../../../UI/SVG/HitSVG";
 import ViewRest from "../../../UI/ViewRest/ViewRest";
+import ReactTooltip from "react-tooltip";
 
 const WishListItem = ({
   productsInCart,
@@ -63,6 +64,10 @@ const WishListItem = ({
     setIsShowPreview(false);
   };
 
+  const handleClick = () => {
+    ReactTooltip.hide();
+  };
+
   return (
     <tr className={styles.wishListItem}>
       <td>
@@ -75,7 +80,7 @@ const WishListItem = ({
       </td>
       <td>
         <div className={styles.photoBlock}>
-          <NavLink to={`/products/video_cards/${id}`}>
+          <NavLink to={`/shop/video_cards/${id}`}>
             <img
               src={photoInOrder}
               alt={name}
@@ -103,7 +108,7 @@ const WishListItem = ({
         </div>
       </td>
       <td className={styles.descBlock}>
-        <NavLink to={`/products/video_cards/${id}`}>
+        <NavLink to={`/shop/video_cards/${id}`}>
           <b>{name}</b>
         </NavLink>
         <p className={styles.desc}>{description}</p>
@@ -117,6 +122,7 @@ const WishListItem = ({
           <span
             className={styles.viewRest}
             data-tip="Посмотреть наличие товара на складах."
+            onClick={handleClick}
           >
             <ViewRest id={id} />
           </span>
@@ -128,7 +134,7 @@ const WishListItem = ({
           </span>
           <NavLink
             smooth="true"
-            to={`/products/video_cards/${id}#reviews`}
+            to={`/shop/video_cards/${id}#reviews`}
             className={styles.reviews}
           >
             {`Отзывы (${reviewsCount})`}

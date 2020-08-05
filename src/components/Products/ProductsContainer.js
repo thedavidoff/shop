@@ -38,7 +38,7 @@ const ProductsContainer = (props) => {
 ProductsContainer.propTypes = {
   isFetchingProducts: PropTypes.bool,
   products: PropTypes.array,
-  productsInCart: PropTypes.array,
+  productsInCart: PropTypes.object,
 };
 
 const mapStateToProps = (state) => {

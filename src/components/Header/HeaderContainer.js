@@ -14,7 +14,7 @@ import HeartSVG from "../UI/SVG/HeartSVG";
 const HeaderContainer = (props) => {
   return (
     <header className={styles.mainHeader}>
-      <NavLink to="/products">
+      <NavLink to="/shop">
         <img src={home} className={styles.home} alt="Home" />
       </NavLink>
       <Search />

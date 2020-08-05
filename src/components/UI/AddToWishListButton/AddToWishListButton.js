@@ -59,7 +59,7 @@ const AddToWishListButton = ({ id, isAuth, wishList, addToWishList }) => {
 
 AddToWishListButton.propTypes = {
   isAuth: PropTypes.object,
-  id: PropTypes.number,
+  // id: PropTypes.number,
   wishList: PropTypes.array,
   addToWishList: PropTypes.func,
 };

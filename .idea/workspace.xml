@@ -3,10 +3,25 @@
   <component name="ChangeListManager">
     <list default="true" id="d838e675-2b75-4462-b131-7ac443757c74" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Routes.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Routes.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/api/mockProducts.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/api/mockReviews.js" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/Header/Cart/Order/Order.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Header/Cart/Order/Order.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Header/Cart/Order/Order.module.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Header/Cart/Order/Order.module.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Header/Cart/Order/ProductInOrder/OrderItem.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Header/Cart/Order/ProductInOrder/OrderItem.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Header/HeaderContainer.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Header/HeaderContainer.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Products/Product/Product.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Products/Product/Product.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Products/Product/ProductInfo/ProductInfo.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Products/Product/ProductInfo/ProductInfo.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Products/Product/ProductPage/ProductPage.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Products/Product/ProductPage/ProductPage.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Products/ProductsContainer.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Products/ProductsContainer.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Profile/WishList/WishList.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Profile/WishList/WishList.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Profile/WishList/WishListItem/WishListItem.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Profile/WishList/WishListItem/WishListItem.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Sidebar/Sidebar.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Sidebar/Sidebar.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Sidebar/Sidebar.module.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Sidebar/Sidebar.module.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/UI/AddToWishListButton/AddToWishListButton.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/UI/AddToWishListButton/AddToWishListButton.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/redux/authReducer.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/redux/authReducer.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/UI/BuyButton/BuyButton.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/UI/BuyButton/BuyButton.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/UI/ViewRest/ViewRest.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/UI/ViewRest/ViewRest.js" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -43,16 +58,16 @@
     <property name="ts.external.directory.path" value="C:\Program Files\JetBrains\WebStorm 2019.2.3\plugins\JavaScriptLanguage\jsLanguageServicesImpl\external" />
   </component>
   <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\shop\src\assets" />
+      <recent name="D:\shop\src\components\ProductCard" />
+    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="D:\shop\src\components\Profile\WishList\WishListItem" />
       <recent name="D:\shop\src\components\Forms" />
       <recent name="D:\shop\src\components\UI" />
       <recent name="D:\shop\src\components\Login\RegistrationForm" />
       <recent name="D:\shop\src\components\Login\ProfileForm" />
-    </key>
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="D:\shop\src\assets" />
-      <recent name="D:\shop\src\components\ProductCard" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -149,7 +164,8 @@
       <workItem from="1596180343482" duration="38533000" />
       <workItem from="1596276885713" duration="18560000" />
       <workItem from="1596437712826" duration="5736000" />
-      <workItem from="1596526387090" duration="31923000" />
+      <workItem from="1596526387090" duration="32472000" />
+      <workItem from="1596611833489" duration="25577000" />
     </task>
     <servers />
   </component>

@@ -43,7 +43,7 @@ const BuyButton = ({ productsInCart, id, addToCart }) => {
 };
 
 BuyButton.propTypes = {
-  productsInCart: PropTypes.array,
+  productsInCart: PropTypes.object,
   id: PropTypes.number,
   addToCart: PropTypes.func,
 };

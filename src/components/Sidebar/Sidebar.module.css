@@ -1,6 +1,55 @@
 .sidebar {
+  padding: 15px;
   float: left;
   height: 500px;
   width: 220px;
   background: cadetblue;
+  text-align: left;
+}
+.sidebar input[type="number"] {
+  -moz-appearance: textfield;
+}
+.sidebar input::-webkit-outer-spin-button,
+.sidebar input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+}
+.sidebar .priceBlock {
+  margin-bottom: 10px;
+}
+.sidebar .priceBlock input {
+  width: 87px;
+  height: 30px;
+  border: none;
+  color: #4982c0;
+  font-size: 14px;
+  line-height: 30px;
+  outline: none;
+  padding: 0 10px;
+  border-radius: 5px;
+  -moz-border-radius: 5px;
+  -webkit-border-radius: 5px;
+  -khtml-border-radius: 5px;
+}
+.rcSlider {
+  width: 93%;
+  margin: 0 auto;
+}
+.priceSubmit {
+  text-align: center;
+}
+.priceSubmit button {
+  height: 25px;
+  margin-top: 10px;
+  cursor: pointer;
+  font-size: 14px;
+  border: 1px solid #000;
+  border-radius: 3px;
+}
+.priceSubmit button:hover {
+  color: #fff;
+  background: #000;
+}
+.priceSubmit button:focus {
+  outline: none;
+  border: 1px solid #fff;
 }

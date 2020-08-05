@@ -17,6 +17,10 @@ import AddToWishListButton from "../../../UI/AddToWishListButton/AddToWishListBu
 import ViewRest from "../../../UI/ViewRest/ViewRest";
 
 const ProductPage = ({ product }) => {
+  const handleClick = () => {
+    ReactTooltip.hide()
+  };
+
   return (
     <>
       <Helmet>
@@ -24,7 +28,7 @@ const ProductPage = ({ product }) => {
         <title>{`${product && product.name} | купить`}</title>
         <link
           rel="canonical"
-          href={`http://localhost:3000/products/video_cards/${product && product.id}`}
+          href={`http://localhost:3000/shop/video_cards/${product && product.id}`}
         />
       </Helmet>
       <ReactTooltip className={stylesTooltip.tooltip} />
@@ -48,6 +52,7 @@ const ProductPage = ({ product }) => {
                 <li
                   className={styles.viewRest}
                   data-tip="Посмотреть наличие товара на складах."
+                  onClick={handleClick}
                 >
                   <ViewRest id={product.id} />
                 </li>

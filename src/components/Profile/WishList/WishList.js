@@ -59,7 +59,10 @@ const WishList = ({
   };
 
   let selectedItems;
-  if (isSelected) selectedItems = Object.keys(isSelected).filter((id) => isSelected[id] === true);
+  if (isSelected)
+    selectedItems = Object.keys(isSelected).filter(
+      (id) => isSelected[id] === true
+    );
 
   const removeSelectedItems = () => {
     removeFromWishList(selectedItems);
@@ -70,7 +73,10 @@ const WishList = ({
       <Helmet>
         <meta charSet="utf-8" />
         <title>Список желаний | Профиль</title>
-        <link rel="canonical" href="http://localhost:3000/profile?tab=wishlist" />
+        <link
+          rel="canonical"
+          href="http://localhost:3000/profile?tab=wishlist"
+        />
       </Helmet>
       <div className={styles.wishList}>
         <h5>Мой список желаний:</h5>
@@ -80,33 +86,35 @@ const WishList = ({
             <div className={styles.selectActions}>
               <p>Выберите действия с отмеченными товарами:</p>
               <span onClick={toggleSelectedAll}>Выбрать все</span>
-              <span onClick={() => addToCart(selectedItems)}>Добавить в корзину</span>
+              <span onClick={() => addToCart(selectedItems)}>
+                Добавить в корзину
+              </span>
               <span onClick={removeSelectedItems}>Удалить из списка</span>
             </div>
             <table className={styles.wishListTable}>
               <tbody>
-              {wishList.map((id) => {
-                return (
-                  <WishListItem
-                    key={id}
-                    products={productsInCart}
-                    product={products.find((product) => product.id === id)}
-                    handleCheckedItems={handleSelectedItems}
-                    isSelected={isSelected && isSelected[id]}
-                  />
-                );
-              })}
+                {wishList.map((id) => {
+                  return (
+                    <WishListItem
+                      key={id}
+                      products={productsInCart}
+                      product={products.find((product) => product.id === id)}
+                      handleCheckedItems={handleSelectedItems}
+                      isSelected={isSelected && isSelected[id]}
+                    />
+                  );
+                })}
               </tbody>
             </table>
             <div className={styles.totalCost}>
               Общая сумма:{" "}
               <span>
-              <b>{`${wishList
-                .map(
-                  (id) => products.find((product) => product.id === id).price
-                )
-                .reduce((sum, price) => (sum += price), 0)} грн`}</b>
-            </span>
+                <b>{`${wishList
+                  .map(
+                    (id) => products.find((product) => product.id === id).price
+                  )
+                  .reduce((sum, price) => sum + price, 0)} грн`}</b>
+              </span>
             </div>
           </>
         )}
@@ -126,7 +134,7 @@ const WishList = ({
 
 WishList.propTypes = {
   products: PropTypes.array,
-  productsInCart: PropTypes.array,
+  productsInCart: PropTypes.object,
   wishList: PropTypes.array,
   addToCart: PropTypes.func,
   removeFromWishList: PropTypes.func,

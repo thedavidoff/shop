@@ -61,7 +61,7 @@ const Order = (props) => {
                   <td className={styles.summary}>
                     <b>К оплате:</b>
                   </td>
-                  <td colspan="3">
+                  <td colSpan="3">
                     <b>{`${props.totalCost} грн.`}</b>
                   </td>
                 </tr>
@@ -81,7 +81,7 @@ const Order = (props) => {
 
 Order.propTypes = {
   products: PropTypes.array,
-  productsInCart: PropTypes.array,
+  productsInCart: PropTypes.object,
   changeQuantity: PropTypes.func,
   deleteCartItem: PropTypes.func,
 };
