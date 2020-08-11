@@ -43,4 +43,9 @@ export const productAPI = {
       .then((response) => response.json())
       .catch((err) => console.error("sendAnswerAPI:", err));
   },
+  getProductsFilteredByPriceAPI(min, max) {
+    return fetch(`http://localhost:3001/products?price_gte=${min}&price_lte=${max}`)
+      .then((response) => response.json())
+      .catch((err) => console.error(err));
+  },
 };

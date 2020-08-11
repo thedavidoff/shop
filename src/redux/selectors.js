@@ -62,6 +62,10 @@ export const getTotalCost = (state) => {
   if (state.firebase.profile.cart) {
     return Object.values(state.firebase.profile.cart)
       .map(({ id, quantity }) => getProductById(state, id).price * quantity)
-      .reduce((sum, price) => (sum += price), 0);
+      .reduce((sum, price) => sum + price, 0);
   }
+};
+
+export const filterProductsByPrice = (state, [min, max]) => {
+  getProducts(state).filter((product) => product.price >= min && product.price <= max);
 };

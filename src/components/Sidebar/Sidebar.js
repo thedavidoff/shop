@@ -1,14 +1,22 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
+import { connect } from "react-redux";
+import { compose } from "redux";
+import { useLocation, withRouter } from "react-router-dom";
 import { Range } from "rc-slider";
 import "rc-slider/assets/index.css";
 
 import styles from "./Sidebar.module.css";
-import handleSubmit from "redux-form/lib/handleSubmit";
+import { filterProductsByPriceRequest } from "../../redux/homeReducer";
 
-const Sidebar = (props) => {
+const Sidebar = ({ filterProductsByPriceRequest, history }) => {
+  const useQuery = () => new URLSearchParams(useLocation().search);
+  const query = useQuery();
+  const minPrice = +query.get("minPrice");
+  const maxPrice = +query.get("maxPrice");
+
   const min = 1126;
   const max = 12791;
-  const [rangeValues, setRangeValues] = useState([1126, 12791]);
+  const [rangeValues, setRangeValues] = useState([minPrice || 1126, maxPrice || 12791]);
   const [inputValues, setInputValues] = useState();
 
   const handleRangeChange = (val) => {
@@ -28,8 +36,39 @@ const Sidebar = (props) => {
     setRangeValues([rangeValues[0], +inputValues[1]]);
   };
   const handleSubmit = () => {
-    console.log(rangeValues[0], rangeValues[1])
+    rangeValues[0] > min && history.push(`/shop?minPrice=${rangeValues[0]}`);
+    rangeValues[1] < max && history.push(`/shop?maxPrice=${rangeValues[1]}`);
+    rangeValues[0] > min &&
+      rangeValues[1] < max &&
+      history.push(
+        `/shop?minPrice=${rangeValues[0]}&maxPrice=${rangeValues[1]}`
+      );
+    rangeValues[0] === min && rangeValues[1] === max && history.push("/shop");
+    filterProductsByPriceRequest([rangeValues[0], rangeValues[1]]);
   };
+
+  useEffect(() => {
+    setRangeValues(
+      minPrice || maxPrice
+        ? [
+            minPrice ? minPrice : rangeValues[0],
+            maxPrice ? maxPrice : rangeValues[1],
+          ]
+        : rangeValues
+    );
+    setInputValues(
+      minPrice || maxPrice
+        ? [
+            minPrice ? minPrice : rangeValues[0],
+            maxPrice ? maxPrice : rangeValues[1],
+          ]
+        : rangeValues
+    );
+    filterProductsByPriceRequest([
+      minPrice ? minPrice : rangeValues[0],
+      maxPrice ? maxPrice : rangeValues[1],
+    ]);
+  }, [minPrice, maxPrice]);
 
   return (
     <div className={styles.sidebar}>
@@ -38,7 +77,13 @@ const Sidebar = (props) => {
         <p>Цена, грн:</p>
         <input
           type="number"
-          value={inputValues && inputValues[0] !== min ? inputValues[0] : rangeValues[0] === min ? "" : rangeValues[0]}
+          value={
+            inputValues && inputValues[0] !== min
+              ? inputValues[0]
+              : rangeValues[0] === min
+              ? ""
+              : rangeValues[0]
+          }
           placeholder={min}
           onChange={handleMinInputChange}
           onBlur={handleMinInputBlur}
@@ -46,15 +91,19 @@ const Sidebar = (props) => {
         {" - "}
         <input
           type="number"
-          value={inputValues && inputValues[1] !== max ? inputValues[1] : rangeValues[1] === max ? "" : rangeValues[1]}
+          value={
+            inputValues && inputValues[1] !== max
+              ? inputValues[1]
+              : rangeValues[1] === max
+              ? ""
+              : rangeValues[1]
+          }
           placeholder={max}
           onChange={handleMaxInputChange}
           onBlur={handleMaxInputBlur}
         />
       </div>
       <Range
-        startPoint={0}
-        included={true}
         min={min}
         max={max}
         defaultValue={[min, max]}
@@ -69,4 +118,7 @@ const Sidebar = (props) => {
   );
 };
 
-export default Sidebar;
+export default compose(
+  withRouter,
+  connect(null, { filterProductsByPriceRequest })
+)(Sidebar);

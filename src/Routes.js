@@ -12,6 +12,9 @@ const Routes = () => {
   const query = useQuery();
   const tab = query.get("tab");
 
+  const minPrice = +query.get("minPrice");
+  const maxPrice = +query.get("maxPrice");
+
   let index;
   if (tab === "regdata") index = 0;
   if (tab === "wishlist") index = 1;
@@ -20,7 +23,7 @@ const Routes = () => {
     <Switch>
       <Redirect exact path="/" to="/shop" />
       <Route exact path="/login" render={() => <Login />} />
-      <Route exact path="/shop" render={() => <ProductsContainer />} />
+      <Route exact path="/shop" render={() => <ProductsContainer minPrice={minPrice} maxPrice={maxPrice} />} />
       <Route path="/shop/video_cards/:id" render={() => <ProductPage />} />
       <Route exact path="/order" render={() => <Order />} />
       {/*<PrivateRoute auth={auth} path="/profile" component={() => <Profile />} />*/}
