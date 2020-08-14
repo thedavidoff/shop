@@ -15,20 +15,26 @@ import Preloader from "../UI/Preloader/Preloader";
 const ProductsContainer = (props) => {
   return (
     <>
-      <div className={styles.totalCount}>{`Всего товаров: ${props.products.length}`}</div>
+      <div className={styles.totalCount}>{`Всего товаров: ${
+        props.min || props.max
+          ? props.filteredProducts.length
+          : props.products.length
+      }`}</div>
       <div className={styles.wrapper}>
         <Helmet>
           <meta charSet="utf-8" />
-          <title>{`Видеокарты ${props.minPrice || props.maxPrice ? "|" : ""}${
-            props.minPrice ? " от " + props.minPrice + " грн" : ""
-          }${props.maxPrice ? " до " + props.maxPrice + " грн" : ""}`}</title>
+          <title>{`Видеокарты ${props.min || props.max ? "|" : ""}${
+            props.min ? " от " + props.min + " грн" : ""
+          }${props.max ? " до " + props.max + " грн" : ""}`}</title>
           <link rel="canonical" href="http://localhost:3000/shop" />
         </Helmet>
         {props.isFetchingProducts ? (
           <Preloader type="products" />
         ) : (
           <Products
-            products={props.products}
+            products={
+              props.min || props.max ? props.filteredProducts : props.products
+            }
             productsInCart={props.productsInCart}
           />
         )}
@@ -40,17 +46,18 @@ const ProductsContainer = (props) => {
 ProductsContainer.propTypes = {
   isFetchingProducts: PropTypes.bool,
   products: PropTypes.array,
+  filteredProducts: PropTypes.array,
   productsInCart: PropTypes.object,
-  minPrice: PropTypes.number,
-  maxPrice: PropTypes.number,
+  min: PropTypes.number,
+  max: PropTypes.number,
 };
 
 const mapStateToProps = (state) => {
   return {
     isFetchingProducts: getIsFetchingProducts(state),
-    // products: getProducts(state),
+    products: getProducts(state),
     productsInCart: getProductsInCart(state),
-    products: state.homePage.filteredProducts,
+    filteredProducts: state.homePage.filteredProducts,
   };
 };
 

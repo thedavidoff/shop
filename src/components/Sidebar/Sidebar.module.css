@@ -6,6 +6,11 @@
   background: cadetblue;
   text-align: left;
 }
+.clearFilters {
+  color: #DCAD23;
+  font-size: 14px;
+  font-weight: 600;
+}
 .sidebar input[type="number"] {
   -moz-appearance: textfield;
 }

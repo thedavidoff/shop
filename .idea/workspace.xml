@@ -2,12 +2,14 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="d838e675-2b75-4462-b131-7ac443757c74" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/src/components/UI/Filter/Filter.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Routes.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Routes.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/api/api.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/api/api.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Products/ProductContainer.module.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Products/ProductContainer.module.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/Products/ProductsContainer.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Products/ProductsContainer.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/Sidebar/Sidebar.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Sidebar/Sidebar.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Sidebar/Sidebar.module.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Sidebar/Sidebar.module.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/UI/Preloader/Preloader.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/UI/Preloader/Preloader.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/redux/homeReducer.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/redux/homeReducer.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/redux/selectors.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/redux/selectors.js" afterDir="false" />
     </list>
@@ -156,12 +158,27 @@
       <workItem from="1596611833489" duration="26139000" />
       <workItem from="1596698841311" duration="30330000" />
       <workItem from="1597053295218" duration="2046000" />
-      <workItem from="1597152226111" duration="8062000" />
+      <workItem from="1597152226111" duration="14062000" />
+      <workItem from="1597218347162" duration="6557000" />
+      <workItem from="1597240987715" duration="3082000" />
+      <workItem from="1597300157092" duration="6219000" />
+      <workItem from="1597328657423" duration="12260000" />
+      <workItem from="1597389159784" duration="4972000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
+  </component>
+  <component name="Vcs.Log.History.Properties">
+    <option name="COLUMN_ORDER">
+      <list>
+        <option value="0" />
+        <option value="2" />
+        <option value="3" />
+        <option value="1" />
+      </list>
+    </option>
   </component>
   <component name="Vcs.Log.Tabs.Properties">
     <option name="TAB_STATES">

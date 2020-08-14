@@ -17,7 +17,7 @@ class App extends Component {
     return (
       <div className="App">
         <HeaderContainer />
-        <Sidebar />
+        <Sidebar rangePrices={this.props.rangePrices} />
         <div className="body">
           <Notices type="Друзья! Посещение наших магазинов возможно только в медицинской маске или респираторе. Берегите себя и окружающих!" />
           <Routes />
@@ -27,4 +27,10 @@ class App extends Component {
   }
 }
 
-export default connect(null, { productsRequest })(App);
+const mapStateToProps = (state) => {
+  return {
+    rangePrices: state.homePage.rangePrices,
+  };
+};
+
+export default connect(mapStateToProps, { productsRequest })(App);

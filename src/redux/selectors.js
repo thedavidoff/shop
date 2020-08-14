@@ -66,6 +66,8 @@ export const getTotalCost = (state) => {
   }
 };
 
-export const filterProductsByPrice = (state, [min, max]) => {
-  getProducts(state).filter((product) => product.price >= min && product.price <= max);
-};
+// export const getFilteredProductsByPrice = (state) => {
+//   const min = state.homePage.minPrice;
+//   const max = state.homePage.maxPrice;
+//   getProducts(state).filter((product) => product.price >= state.homePage.minPrice && product.price <= state.homePage.maxPrice);
+// };

@@ -5,6 +5,7 @@ import styles from "./Preloader.module.css";
 
 const Preloader = ({ type }) => {
   const cadetblue = "#5f9ea0";
+  const lightBlue = "#adc8c9";
   const lightOrange = "#f7b485";
 
   let s;
@@ -32,6 +33,10 @@ const Preloader = ({ type }) => {
     case "productInfo":
       s = { width: "20px", height: "20px" };
       color = cadetblue;
+      break;
+    case "filter":
+      s = { position: "relative", width: "50px", height: "50px", left: "calc(50% - 25px)" };
+      color = lightBlue;
       break;
     default:
       s = {};
