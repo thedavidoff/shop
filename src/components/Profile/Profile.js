@@ -18,6 +18,7 @@ import WishList from "./WishList/WishList";
 
 const Profile = ({
   isAuth,
+  profile,
   initialValues,
   updateProfile,
   noticeType,
@@ -66,7 +67,7 @@ const Profile = ({
                 )}
               </TabPanel>
               <TabPanel>
-                {isLoaded(isAuth) && !isEmpty(isAuth) ? (
+                {isLoaded(profile) && !isEmpty(profile) ? (
                   <WishList />
                 ) : (
                   <Preloader type="bigProfile" />
@@ -82,6 +83,7 @@ const Profile = ({
 
 Profile.propTypes = {
   isAuth: PropTypes.object,
+  profile: PropTypes.object,
   initialValues: PropTypes.object,
   updateProfile: PropTypes.func,
   noticeType: PropTypes.string,
@@ -91,6 +93,7 @@ Profile.propTypes = {
 const mapStateToProps = (state) => {
   return {
     isAuth: state.firebase.auth,
+    profile: state.firebase.profile,
     initialValues: state.auth.initialValuesForProfileForm,
     noticeType: state.auth.noticeType,
   };

@@ -27,7 +27,7 @@ const Preloader = ({ type }) => {
       color = lightOrange;
       break;
     case "bigProfile":
-      s = { position: "relative", height: "40px", top: "15px", left: "15px" };
+      s = { position: "relative", height: "50px", top: "2px", left: "0" };
       color = cadetblue;
       break;
     case "productInfo":
@@ -48,7 +48,7 @@ const Preloader = ({ type }) => {
       xmlns="http://www.w3.org/2000/svg"
       className={styles.preloader}
       style={s}
-      width="200px"
+      width={type === "bigProfile" ? "" : "200px"}
       height="200px"
       viewBox="0 0 100 100"
       preserveAspectRatio="xMidYMid"

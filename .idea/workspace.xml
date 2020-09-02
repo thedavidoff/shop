@@ -2,29 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="d838e675-2b75-4462-b131-7ac443757c74" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/codeStyles/codeStyleConfig.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/dictionaries/Eugene.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/ugolok.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/UI/Filters/FilterItems/FilterItem/FilterItem.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/UI/Filters/FilterItems/FilterItem/FilterItem.module.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/UI/Filters/FilterItems/FilterItems.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/UI/Filters/Filters.module.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/UI/SVG/TriangleDownSVG.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/UI/SVG/TriangleRightSVG.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/UI/SubmitFilterBlock/SubmitFilterBlock.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/UI/SubmitFilterBlock/SubmitFilterBlock.module.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/db.json" beforeDir="false" afterPath="$PROJECT_DIR$/db.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/api/api.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/api/api.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Products/Product/ProductPage/SpecificationsBlock/SpecificationsBlock.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Products/Product/ProductPage/SpecificationsBlock/SpecificationsBlock.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Products/ProductsContainer.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Products/ProductsContainer.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Sidebar/Sidebar.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Sidebar/Sidebar.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Sidebar/Sidebar.module.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Sidebar/Sidebar.module.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/UI/AddToWishListButton/AddToWishListButton.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/UI/AddToWishListButton/AddToWishListButton.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/UI/Filter/Filter.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/UI/Filters/Filters.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/redux/homeReducer.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/redux/homeReducer.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Profile/Profile.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Profile/Profile.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/UI/Preloader/Preloader.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/UI/Preloader/Preloader.js" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -205,7 +185,7 @@
       <workItem from="1598861832800" duration="3496000" />
       <workItem from="1598881966834" duration="7398000" />
       <workItem from="1598947238139" duration="16327000" />
-      <workItem from="1599034050568" duration="1044000" />
+      <workItem from="1599034050568" duration="3138000" />
     </task>
     <servers />
   </component>
