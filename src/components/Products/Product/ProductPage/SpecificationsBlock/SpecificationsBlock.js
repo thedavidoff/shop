@@ -10,16 +10,17 @@ const SpecificationsBlock = ({ product }) => {
       <h2 id="specs">{`Технические характеристики* ${product.name}:`}</h2>
       <table className={styles.specifications}>
         <tbody>
-          {product.specifications.map(({ property, value }, index) => {
+          {product.specifications.map((key, index) => {
+            const { property, value, hide } = Object.values(key)[0];
             let link;
             if (typeof value === "string" && value.indexOf("http") >= 0) {
               link = value;
             }
             return (
-              <tr key={index}>
-                <td>{property}</td>
-                <td>{link ? <a href={link}>{link}</a> : value}</td>
-              </tr>
+              !hide && (<tr key={index}>
+              <td>{property}</td>
+              <td>{link ? <a href={link}>{link}</a> : value}</td>
+            </tr>)
             );
           })}
         </tbody>

@@ -1,4 +1,120 @@
 {
+  "filters": [
+    {
+      "id": 1,
+      "name": "Производители",
+      "field": "brand",
+      "isOpen": true
+    },
+    {
+      "id": 2,
+      "name": "Производитель чипа",
+      "field": "chip_maker",
+      "isOpen": true
+    },
+    {
+      "id": 3,
+      "name": "Серия",
+      "field": "series",
+      "isOpen": false
+    },
+    {
+      "id": 4,
+      "name": "Модельный ряд",
+      "field": "lineup",
+      "isOpen": true
+    },
+    {
+      "id": 5,
+      "name": "Профессиональная",
+      "field": "professional",
+      "isOpen": false
+    },
+    {
+      "id": 6,
+      "name": "Объем памяти",
+      "field": "memory_size",
+      "isOpen": true
+    },
+    {
+      "id": 7,
+      "name": "Тип памяти",
+      "field": "memory_type",
+      "isOpen": true
+    },
+    {
+      "id": 8,
+      "name": "Шина памяти",
+      "field": "memory_bus",
+      "isOpen": true
+    },
+    {
+      "id": 9,
+      "name": "DirectX",
+      "field": "directX",
+      "isOpen": false
+    },
+    {
+      "id": 10,
+      "name": "Дополнительное питание",
+      "field": "power_connectors",
+      "isOpen": false
+    },
+    {
+      "id": 11,
+      "name": "D-Sub (VGA)",
+      "field": "d-sub",
+      "isOpen": false
+    },
+    {
+      "id": 12,
+      "name": "DVI",
+      "field": "dvi",
+      "isOpen": false
+    },
+    {
+      "id": 13,
+      "name": "HDMI",
+      "field": "hdmi",
+      "isOpen": false
+    },
+    {
+      "id": 14,
+      "name": "DisplayPort",
+      "field": "displayPort",
+      "isOpen": false
+    },
+    {
+      "id": 15,
+      "name": "Техпроцесс",
+      "field": "process_technology",
+      "isOpen": false
+    },
+    {
+      "id": 16,
+      "name": "Блок питания",
+      "field": "recommended_psu",
+      "isOpen": false
+    },
+    {
+      "id": 17,
+      "name": "Тип охлаждения",
+      "field": "cooling_type",
+      "isOpen": false
+    },
+    {
+      "id": 18,
+      "name": "Особенности",
+      "field": "features",
+      "isOpen": false
+    },
+    {
+      "id": 19,
+      "name": "Исполнение",
+      "field": "slot_type",
+      "isOpen": false
+    }
+  ],
   "products": [
     {
       "id": 1,
@@ -18,180 +134,94 @@
       "ratingsCount": 4,
       "totalRating": 4.5,
       "isHit": true,
-      "isNew": false
-    },
-    {
-      "id": 2,
-      "sku": 956277,
-      "category": "video_cards",
-      "inventory": [0, 0, 0],
-      "link": "graphics_card_pci-e_radeon_rx_5700_8gb_ddr6_sapphire_11294-01-20g",
-      "status": "доступно под заказ (1-5 дней)",
-      "name": "Видеокарта PCI-E Radeon RX 5700 8GB DDR6 Sapphire (11294-01-20G)",
-      "description": "RX 5700 / 8 ГБ / GDDR-6 / 256 бит / DX-12 / Частота ядра - 1750 МГц / Частота памяти - 14000 МГц / HDMI - 1 шт. / DisplayPort - 3 шт. / Блок питания - 600 Вт / поддержка VR, с бэкплейтом / 254x135x46,5 мм",
-      "poster": "https://img1.elmir.ua/img/1969239/320/240/.jpg",
-      "preview": "https://f.428.ua/img/1969239/500/400/.jpg",
-      "photoInOrder": "https://elmir.ua/img/1969239/100/100/.jpg",
-      "price": 10595,
-      "warranty": 36,
-      "reviewsCount": 1,
-      "ratingsCount": 1,
-      "totalRating": 5,
-      "isHit": false,
-      "isNew": false
-    },
-    {
-      "id": 3,
-      "sku": 963409,
-      "category": "video_cards",
-      "inventory": [10, 0, 6],
-      "link": "graphics_card_pci-e_radeon_rx_5700_xt_8gb_ddr6_powercolor_red_dragon_axrx_5700xt_8gbd6-3dhr_oc",
-      "status": "есть в наличии",
-      "name": "Видеокарта PCI-E Radeon RX 5700 XT 8GB DDR6 PowerColor Red Dragon (AXRX 5700XT 8GBD6-3DHR/OC)",
-      "description": "RX 5700 XT / 8 ГБ / GDDR-6 / 256 бит / DX-12 / Частота ядра - 1905 МГц / Частота памяти - 14000 МГц / HDMI - 1 шт. / DisplayPort - 3 шт. / Блок питания - 650 Вт / поддержка VR / 240x132x41 мм",
-      "poster": "https://img3.elmir.ua/img/1990487/320/240/.jpg",
-      "preview": "https://f.428.ua/img/1990487/500/400/.jpg",
-      "photoInOrder": "https://elmir.ua/img/1990487/100/100/.jpg",
-      "price": 12791,
-      "warranty": 36,
-      "reviewsCount": 1,
-      "ratingsCount": 1,
-      "totalRating": 5,
-      "isHit": true,
-      "isNew": true
-    },
-    {
-      "id": 4,
-      "sku": 884586,
-      "category": "video_cards",
-      "inventory": [6, 5, 0],
-      "link": "graphics_card_pci-e_geforce_gtx1660_6gb_ddr5_asus_ph-gtx1660-o6g",
-      "status": "есть в наличии",
-      "name": "Видеокарта PCI-E GeForce GTX1660 6GB DDR5 Asus (PH-GTX1660-O6G)",
-      "description": "GTX 1660 / 6 ГБ / GDDR-5 / 192 бит / DX-12 / Частота ядра - 1830 МГц / Частота памяти - 8002 МГц / DVI - 1 шт. / HDMI - 1 шт. / DisplayPort - 1 шт. / Блок питания - 450 Вт / 174x121x39 мм",
-      "poster": "https://elmir.ua/img/1747098/320/240/.jpg",
-      "preview": "https://f.428.ua/img/1747098/500/400/.jpg",
-      "photoInOrder": "https://elmir.ua/img/1747098/100/100/.jpg",
-      "price": 6967,
-      "warranty": 36,
-      "reviewsCount": 0,
-      "ratingsCount": 0,
-      "totalRating": 0,
-      "isHit": false,
-      "isNew": true
-    }
-  ],
-  "specifications": [
-    {
-      "id": 1,
-      "sku": 332495,
-      "category": "video_cards",
-      "inventory": 10,
-      "link": "graphics_card_pci-e_geforce_gt710_1gb_ddr3_msi_gt_710_1gd3h_lp",
-      "status": "есть в наличии",
-      "name": "Видеокарта PCI-E GeForce GT710 1GB DDR3 MSI (GT 710 1GD3H LP)",
-      "description": "GT710 / 1 ГБ / GDDR-3 / 64 бит / DX-12 / Частота ядра - 954 МГц / Частота памяти - 1600 МГц / DVI - 1 шт. / HDMI - 1 шт. / Блок питания - 300 Вт / 146x69x19 мм",
-      "poster": "https://img2.elmir.ua/img/505648/320/240/.jpg",
-      "photoInOrder": "https://elmir.ua/img/505648/100/100/.jpg",
-      "price": 1126,
-      "warranty": 36,
-      "reviewsCount": 9,
-      "ratingsCount": 4,
-      "totalRating": 4.5,
-      "isHit": true,
       "isNew": false,
       "specifications": [
         {
-          "property": "Производитель чипа",
-          "value": "NVIDIA"
+          "brand": { "id": 1, "property": "Производитель", "value": "MSI" }
         },
         {
-          "property": "Модельный ряд",
-          "value": "GT710"
+          "series": { "id": 2, "property": "Серия", "value": "GeForce 700" }
         },
         {
-          "property": "Профессиональная",
-          "value": "нет"
+          "chip_maker": { "id": 3, "property": "Производитель чипа", "value": "NVIDIA" }
         },
         {
-          "property": "Состояние",
-          "value": "новая"
+          "lineup": { "id": 4, "property": "Модельный ряд", "value": "GT710" }
         },
         {
-          "property": "Объем памяти",
-          "value": "1 ГБ"
+          "professional": { "id": 5, "property": "Профессиональная", "value": "нет" }
         },
         {
-          "property": "Тип памяти",
-          "value": "GDDR-3"
+          "condition": { "id": 6, "property": "Состояние", "value": "новая" }
         },
         {
-          "property": "Шина памяти",
-          "value": "64 бит"
+          "memory_size": { "id": 7, "property": "Объем памяти", "value": "1 ГБ" }
         },
         {
-          "property": "DirectX",
-          "value": "DX-12"
+          "memory_type": { "id": 8, "property": "Тип памяти", "value": "GDDR-3" }
         },
         {
-          "property": "Частота ядра",
-          "value": "954 МГц"
+          "memory_bus": { "id": 9, "property": "Шина памяти", "value": "64 бит" }
         },
         {
-          "property": "Частота памяти",
-          "value": "1600 МГц"
+          "directX": { "id": 10, "property": "DirectX", "value": "DX-12" }
         },
         {
-          "property": "Дополнительное питание",
-          "value": "нет"
+          "engine_clock": { "id": 11, "property": "Частота ядра", "value": "954 МГц" }
         },
         {
-          "property": "Интерфейс подключения",
-          "value": "PCI-E х16 2.0"
+          "memory_clock": { "id": 12, "property": "Частота памяти", "value": "1600 МГц" }
         },
         {
-          "property": "Разъёмы подключения",
-          "value": "DVI-D, HDMI, VGA"
+          "power_connectors": { "id": 13, "property": "Дополнительное питание", "value": "нет" }
         },
         {
-          "property": "Число универсальных процессоров (SPU)",
-          "value": 192
+          "interface": { "id": 14, "property": "Интерфейс подключения", "value": "PCI-E х16 2.0" }
         },
         {
-          "property": "Число текстурных блоков (TMU)",
-          "value": 16
+          "d-sub": { "id": 15, "property": "D-Sub (VGA)", "value": "есть", "hide": true }
         },
         {
-          "property": "Число блоков растеризации (ROP)",
-          "value": 8
+          "dvi": { "id": 16, "property": "DVI", "value": "1 шт.", "hide": true }
         },
         {
-          "property": "Техпроцесс",
-          "value": "28 нм"
+          "hdmi": { "id": 17, "property": "HDMI", "value": "1 шт.", "hide": true }
         },
         {
-          "property": "Энергопотребление",
-          "value": "19 Вт"
+          "displayPort": { "id": 18, "property": "DisplayPort", "value": "нет", "hide": true }
         },
         {
-          "property": "Блок питания",
-          "value": "300 Вт"
+          "output": { "id": 19, "property": "Разъёмы подключения", "value": "DVI-D, HDMI (1.4a), VGA" }
         },
         {
-          "property": "Тип охлаждения",
-          "value": "пассивное"
+          "spu": { "id": 20, "property": "Число универсальных процессоров (SPU)", "value": 192 }
         },
         {
-          "property": "Исполнение",
-          "value": "однослотовое"
+          "tmu": { "id": 21, "property": "Число текстурных блоков (TMU)", "value": 16 }
         },
         {
-          "property": "Габариты",
-          "value": "146x69x19 мм"
+          "rop": { "id": 22, "property": "Число блоков растеризации (ROP)", "value": 8 }
         },
         {
-          "property": "Сайт производителя",
-          "value": "https://www.msi.com/Graphics-card/GT-710-1GD3H-LP.html#hero-specification"
+          "process_technology": { "id": 23, "property": "Техпроцесс", "value": "28 нм" }
+        },
+        {
+          "power_consumption": { "id": 24, "property": "Энергопотребление", "value": "19 Вт" }
+        },
+        {
+          "recommended_psu": { "id": 25, "property": "Блок питания", "value": "300 Вт" }
+        },
+        {
+          "cooling_type": { "id": 26, "property": "Тип охлаждения", "value": "пассивное" }
+        },
+        {
+          "slot_type": { "id": 27, "property": "Исполнение", "value": "однослотовое" }
+        },
+        {
+          "dimensions": { "id": 28, "property": "Габариты", "value": "146x69x19 мм" }
+        },
+        {
+          "products_web_page": { "id": 29, "property": "Сайт производителя", "value": "https://www.msi.com/Graphics-card/GT-710-1GD3H-LP.html#hero-specification" }
         }
       ],
       "photos": [
@@ -241,7 +271,7 @@
       "id": 2,
       "sku": 956277,
       "category": "video_cards",
-      "inventory": 7,
+      "inventory": [0, 0, 0],
       "link": "graphics_card_pci-e_radeon_rx_5700_8gb_ddr6_sapphire_11294-01-20g",
       "status": "доступно под заказ (1-5 дней)",
       "name": "Видеокарта PCI-E Radeon RX 5700 8GB DDR6 Sapphire (11294-01-20G)",
@@ -258,96 +288,91 @@
       "isNew": false,
       "specifications": [
         {
-          "property": "Производитель чипа",
-          "value": "AMD"
+          "brand": { "id": 1, "property": "Производитель", "value": "Sapphire" }
         },
         {
-          "property": "Модельный ряд",
-          "value": "RX 5700"
+          "series": { "id": 2, "property": "Серия", "value": "Radeon RX" }
         },
         {
-          "property": "Профессиональная",
-          "value": "нет"
+          "chip_maker": { "id": 3, "property": "Производитель чипа", "value": "AMD" }
         },
         {
-          "property": "Состояние",
-          "value": "новая"
+          "lineup": { "id": 4, "property": "Модельный ряд", "value": "RX 5700" }
         },
         {
-          "property": "Объем памяти",
-          "value": "8 ГБ"
+          "professional": { "id": 5, "property": "Профессиональная", "value": "нет" }
         },
         {
-          "property": "Тип памяти",
-          "value": "GDDR-6"
+          "condition": { "id": 6, "property": "Состояние", "value": "новая" }
         },
         {
-          "property": "Шина памяти",
-          "value": "256 бит"
+          "memory_size": { "id": 7, "property": "Объем памяти", "value": "8 ГБ" }
         },
         {
-          "property": "DirectX",
-          "value": "DX-12"
+          "memory_type": { "id": 8, "property": "Тип памяти", "value": "GDDR-6" }
         },
         {
-          "property": "Частота ядра",
-          "value": "1750 МГц"
+          "memory_bus": { "id": 9, "property": "Шина памяти", "value": "256 бит" }
         },
         {
-          "property": "Частота памяти",
-          "value": "14000 МГц"
+          "directX": { "id": 10, "property": "DirectX", "value": "DX-12" }
         },
         {
-          "property": "Дополнительное питание",
-          "value": "6+8 pin"
+          "engine_clock": { "id": 11, "property": "Частота ядра", "value": "1750 МГц" }
         },
         {
-          "property": "Интерфейс подключения",
-          "value": "PCI-E х16 4.0"
+          "memory_clock": { "id": 12, "property": "Частота памяти", "value": "14000 МГц" }
         },
         {
-          "property": "Разъёмы подключения",
-          "value": "HDMI, 3xDisplayPort"
+          "power_connectors": { "id": 13, "property": "Дополнительное питание", "value": "6+8 pin" }
         },
         {
-          "property": "Число универсальных процессоров (SPU)",
-          "value": 2304
+          "interface": { "id": 14, "property": "Интерфейс подключения", "value": "PCI-E х16 4.0" }
         },
         {
-          "property": "Число текстурных блоков (TMU)",
-          "value": 144
+          "d-sub": { "id": 15, "property": "D-Sub (VGA)", "value": "нет", "hide": true }
         },
         {
-          "property": "Число блоков растеризации (ROP)",
-          "value": 64
+          "dvi": { "id": 16, "property": "DVI", "value": "нет", "hide": true }
         },
         {
-          "property": "Техпроцесс",
-          "value": "7 нм"
+          "hdmi": { "id": 17, "property": "HDMI", "value": "1 шт.", "hide": true }
         },
         {
-          "property": "Энергопотребление",
-          "value": "187 Вт"
+          "displayPort": { "id": 18, "property": "DisplayPort", "value": "3 шт.", "hide": true }
         },
         {
-          "property": "Блок питания",
-          "value": "600 Вт"
+          "output": { "id": 19, "property": "Разъёмы подключения", "value": "HDMI, 3xDisplayPort" }
         },
         {
-          "property": "Тип охлаждения",
-          "value": "активное"
+          "spu": { "id": 20, "property": "Число универсальных процессоров (SPU)", "value": 2304 }
         },
         {
-          "property": "Исполнение",
-          "value": "двухслотовое"
+          "tmu": { "id": 21, "property": "Число текстурных блоков (TMU)", "value": 144 }
         },
         {
-          "property": "Габариты",
-          "value": "245x135x46,5 мм"
+          "rop": { "id": 22, "property": "Число блоков растеризации (ROP)", "value": 64 }
         },
         {
-          "property": "Сайт производителя",
-          "value": "https://www.sapphiretech.com/ru-ru/consumer/pulse-radeon-rx-5700-8g-gddr6"
+          "process_technology": { "id": 23, "property": "Техпроцесс", "value": "7 нм" }
+        },
+        {
+          "power_consumption": { "id": 24, "property": "Энергопотребление", "value": "187 Вт" }
+        },
+        {
+          "recommended_psu": { "id": 25, "property": "Блок питания", "value": "600 Вт" }
+        },
+        {
+          "cooling_type": { "id": 26, "property": "Тип охлаждения", "value": "активное" }
+        },
+        {
+          "slot_type": { "id": 27, "property": "Исполнение", "value": "двухслотовое" }
+        },
+        {
+          "dimensions": { "id": 28, "property": "Габариты", "value": "245x135x46,5 мм" }
+        },
+        {
+          "products_web_page": { "id": 29, "property": "Сайт производителя", "value": "https://www.sapphiretech.com/ru-ru/consumer/pulse-radeon-rx-5700-8g-gddr6" }
         }
       ],
       "photos": [
@@ -407,7 +432,7 @@
       "id": 3,
       "sku": 963409,
       "category": "video_cards",
-      "inventory": 5,
+      "inventory": [10, 0, 6],
       "link": "graphics_card_pci-e_radeon_rx_5700_xt_8gb_ddr6_powercolor_red_dragon_axrx_5700xt_8gbd6-3dhr_oc",
       "status": "есть в наличии",
       "name": "Видеокарта PCI-E Radeon RX 5700 XT 8GB DDR6 PowerColor Red Dragon (AXRX 5700XT 8GBD6-3DHR/OC)",
@@ -424,100 +449,94 @@
       "isNew": true,
       "specifications": [
         {
-          "property": "Производитель чипа",
-          "value": "AMD"
+          "brand": { "id": 1, "property": "Производитель", "value": "PowerColor" }
         },
         {
-          "property": "Модельный ряд",
-          "value": "RX 5700 XT"
+          "series": { "id": 2, "property": "Серия", "value": "Radeon RX" }
         },
         {
-          "property": "Профессиональная",
-          "value": "нет"
+          "chip_maker": { "id": 3, "property": "Производитель чипа", "value": "AMD" }
         },
         {
-          "property": "Состояние",
-          "value": "новая"
+          "lineup": { "id": 4, "property": "Модельный ряд", "value": "RX 5700 XT" }
         },
         {
-          "property": "Объем памяти",
-          "value": "8 ГБ"
+          "professional": { "id": 5, "property": "Профессиональная", "value": "нет" }
         },
         {
-          "property": "Тип памяти",
-          "value": "GDDR-6"
+          "condition": { "id": 6, "property": "Состояние", "value": "новая" }
         },
         {
-          "property": "Шина памяти",
-          "value": "256 бит"
+          "memory_size": { "id": 7, "property": "Объем памяти", "value": "8 ГБ" }
         },
         {
-          "property": "DirectX",
-          "value": "DX-12"
+          "memory_type": { "id": 8, "property": "Тип памяти", "value": "GDDR-6" }
         },
         {
-          "property": "Частота ядра",
-          "value": "1905 МГц"
+          "memory_bus": { "id": 9, "property": "Шина памяти", "value": "256 бит" }
         },
         {
-          "property": "Частота памяти",
-          "value": "14000 МГц"
+          "directX": { "id": 10, "property": "DirectX", "value": "DX-12" }
         },
         {
-          "property": "Дополнительное питание",
-          "value": "6+8 pin"
+          "engine_clock": { "id": 11, "property": "Частота ядра", "value": "1905 МГц" }
         },
         {
-          "property": "Интерфейс подключения",
-          "value": "PCI-E х16 4.0"
+          "memory_clock": { "id": 12, "property": "Частота памяти", "value": "14000 МГц" }
         },
         {
-          "property": "Разъёмы подключения",
-          "value": "HDMI (2.0b), 3хDisplayPort (1.4)"
+          "power_connectors": { "id": 13, "property": "Дополнительное питание", "value": "6+8 pin" }
         },
         {
-          "property": "Число универсальных процессоров (SPU)",
-          "value": 2560
+          "interface": { "id": 14, "property": "Интерфейс подключения", "value": "PCI-E х16 4.0" }
         },
         {
-          "property": "Число текстурных блоков (TMU)",
-          "value": 160
+          "d-sub": { "id": 15, "property": "D-Sub (VGA)", "value": "нет", "hide": true }
         },
         {
-          "property": "Число блоков растеризации (ROP)",
-          "value": 64
+          "dvi": { "id": 16, "property": "DVI", "value": "нет", "hide": true }
         },
         {
-          "property": "Техпроцесс",
-          "value": "7 нм"
+          "hdmi": { "id": 17, "property": "HDMI", "value": "1 шт.", "hide": true }
         },
         {
-          "property": "Энергопотребление",
-          "value": "225 Вт"
+          "displayPort": { "id": 18, "property": "DisplayPort", "value": "3 шт.", "hide": true }
         },
         {
-          "property": "Блок питания",
-          "value": "650 Вт"
+          "output": { "id": 19, "property": "Разъёмы подключения", "value": "HDMI (2.0b), 3хDisplayPort (1.4)" }
         },
         {
-          "property": "Тип охлаждения",
-          "value": "активное"
+          "spu": { "id": 20, "property": "Число универсальных процессоров (SPU)", "value": 2560 }
         },
         {
-          "property": "Особенности",
-          "value": "поддержка VR"
+          "tmu": { "id": 21, "property": "Число текстурных блоков (TMU)", "value": 160 }
         },
         {
-          "property": "Исполнение",
-          "value": "двухслотовое"
+          "rop": { "id": 22, "property": "Число блоков растеризации (ROP)", "value": 64 }
         },
         {
-          "property": "Габариты",
-          "value": "240x132x41 мм"
+          "process_technology": { "id": 23, "property": "Техпроцесс", "value": "7 нм" }
         },
         {
-          "property": "Сайт производителя",
-          "value": "https://www.powercolor.com/product?id=1565953800"
+          "power_consumption": { "id": 24, "property": "Энергопотребление", "value": "225 Вт" }
+        },
+        {
+          "recommended_psu": { "id": 25, "property": "Блок питания", "value": "650 Вт" }
+        },
+        {
+          "cooling_type": { "id": 26, "property": "Тип охлаждения", "value": "активное" }
+        },
+        {
+          "features": { "id": 27, "property": "Особенности", "value": "поддержка VR" }
+        },
+        {
+          "slot_type": { "id": 28, "property": "Исполнение", "value": "двухслотовое" }
+        },
+        {
+          "dimensions": { "id": 29, "property": "Габариты", "value": "240x132x41 мм" }
+        },
+        {
+          "products_web_page": { "id": 30, "property": "Сайт производителя", "value": "https://www.powercolor.com/product?id=1565953800" }
         }
       ],
       "photos": [
@@ -587,7 +606,7 @@
       "id": 4,
       "sku": 884586,
       "category": "video_cards",
-      "inventory": 3,
+      "inventory": [6, 5, 0],
       "link": "graphics_card_pci-e_geforce_gtx1660_6gb_ddr5_asus_ph-gtx1660-o6g",
       "status": "есть в наличии",
       "name": "Видеокарта PCI-E GeForce GTX1660 6GB DDR5 Asus (PH-GTX1660-O6G)",
@@ -604,96 +623,91 @@
       "isNew": true,
       "specifications": [
         {
-          "property": "Производитель чипа",
-          "value": "NVIDIA"
+          "brand": { "id": 1, "property": "Производитель", "value": "Asus" }
         },
         {
-          "property": "Модельный ряд",
-          "value": "GTX 1660"
+          "series": { "id": 2, "property": "Серия", "value": "GeForce 1000" }
         },
         {
-          "property": "Профессиональная",
-          "value": "нет"
+          "chip_maker": { "id": 3, "property": "Производитель чипа", "value": "NVIDIA" }
         },
         {
-          "property": "Состояние",
-          "value": "новая"
+          "lineup": { "id": 4, "property": "Модельный ряд", "value": "GTX 1660" }
         },
         {
-          "property": "Объем памяти",
-          "value": "6 ГБ"
+          "professional": { "id": 5, "property": "Профессиональная", "value": "нет" }
         },
         {
-          "property": "Тип памяти",
-          "value": "GDDR-5"
+          "condition": { "id": 6, "property": "Состояние", "value": "новая" }
         },
         {
-          "property": "Шина памяти",
-          "value": "192 бит"
+          "memory_size": { "id": 7, "property": "Объем памяти", "value": "6 ГБ" }
         },
         {
-          "property": "DirectX",
-          "value": "DX-12"
+          "memory_type": { "id": 8, "property": "Тип памяти", "value": "GDDR-5" }
         },
         {
-          "property": "Частота ядра",
-          "value": "1830 МГц"
+          "memory_bus": { "id": 9, "property": "Шина памяти", "value": "192 бит" }
         },
         {
-          "property": "Частота памяти",
-          "value": "8002 МГц"
+          "directX": { "id": 10, "property": "DirectX", "value": "DX-12" }
         },
         {
-          "property": "Дополнительное питание",
-          "value": "8-pin"
+          "engine_clock": { "id": 11, "property": "Частота ядра", "value": "1830 МГц" }
         },
         {
-          "property": "Интерфейс подключения",
-          "value": "PCI-E х16 3.0"
+          "memory_clock": { "id": 12, "property": "Частота памяти", "value": "8002 МГц" }
         },
         {
-          "property": "Разъёмы подключения",
-          "value": "DVI-D, HDMI 2.0b, DisplayPort 1.4"
+          "power_connectors": { "id": 13, "property": "Дополнительное питание", "value": "8-pin" }
         },
         {
-          "property": "Число универсальных процессоров (SPU)",
-          "value": 1408
+          "interface": { "id": 14, "property": "Интерфейс подключения", "value": "PCI-E х16 3.0" }
         },
         {
-          "property": "Число текстурных блоков (TMU)",
-          "value": 88
+          "d-sub": { "id": 15, "property": "D-Sub (VGA)", "value": "нет", "hide": true }
         },
         {
-          "property": "Число блоков растеризации (ROP)",
-          "value": 48
+          "dvi": { "id": 16, "property": "DVI", "value": "1 шт", "hide": true }
         },
         {
-          "property": "Техпроцесс",
-          "value": "12 нм"
+          "hdmi": { "id": 17, "property": "HDMI", "value": "1 шт.", "hide": true }
         },
         {
-          "property": "Энергопотребление",
-          "value": "130 Вт"
+          "displayPort": { "id": 18, "property": "DisplayPort", "value": "1 шт.", "hide": true }
         },
         {
-          "property": "Блок питания",
-          "value": "450 Вт"
+          "output": { "id": 19, "property": "Разъёмы подключения", "value": "DVI-D, HDMI 2.0b, DisplayPort 1.4" }
         },
         {
-          "property": "Тип охлаждения",
-          "value": "активное"
+          "spu": { "id": 20, "property": "Число универсальных процессоров (SPU)", "value": 1408 }
         },
         {
-          "property": "Исполнение",
-          "value": "двухслотовое"
+          "tmu": { "id": 21, "property": "Число текстурных блоков (TMU)", "value": 88 }
         },
         {
-          "property": "Габариты",
-          "value": "174x121x39 мм"
+          "rop": { "id": 22, "property": "Число блоков растеризации (ROP)", "value": 48 }
         },
         {
-          "property": "Сайт производителя",
-          "value": "https://www.asus.com/Graphics-Cards/PH-GTX1660-O6G/specifications/"
+          "process_technology": { "id": 23, "property": "Техпроцесс", "value": "12 нм" }
+        },
+        {
+          "power_consumption": { "id": 24, "property": "Энергопотребление", "value": "130 Вт" }
+        },
+        {
+          "recommended_psu": { "id": 25, "property": "Блок питания", "value": "450 Вт" }
+        },
+        {
+          "cooling_type": { "id": 26, "property": "Тип охлаждения", "value": "активное" }
+        },
+        {
+          "slot_type": { "id": 27, "property": "Исполнение", "value": "двухслотовое" }
+        },
+        {
+          "dimensions": { "id": 28, "property": "Габариты", "value": "174x121x39 мм" }
+        },
+        {
+          "products_web_page": { "id": 29, "property": "Сайт производителя", "value": "https://www.asus.com/Graphics-Cards/PH-GTX1660-O6G/specifications/" }
         }
       ],
       "photos": [

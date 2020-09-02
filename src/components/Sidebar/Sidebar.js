@@ -3,14 +3,14 @@ import "rc-slider/assets/index.css";
 import PropTypes from "prop-types";
 
 import styles from "./Sidebar.module.css";
-import Filter from "../UI/Filter/Filter";
+import Filters from "../UI/Filters/Filters";
 import Preloader from "../UI/Preloader/Preloader";
 
 const Sidebar = ({ rangePrices }) => {
   return (
     <div className={styles.sidebar}>
       {rangePrices[0] >= 0 && rangePrices[1] > 0 ? (
-        <Filter />
+        <Filters />
       ) : (
         <Preloader type="filter" />
       )}

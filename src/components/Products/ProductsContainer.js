@@ -16,7 +16,7 @@ const ProductsContainer = (props) => {
   return (
     <>
       <div className={styles.totalCount}>{`Всего товаров: ${
-        props.min || props.max
+        (props.min || props.max) || props.filteredProducts.length
           ? props.filteredProducts.length
           : props.products.length
       }`}</div>
@@ -33,7 +33,7 @@ const ProductsContainer = (props) => {
         ) : (
           <Products
             products={
-              props.min || props.max ? props.filteredProducts : props.products
+              (props.min || props.max) || props.filteredProducts.length > 0 ? props.filteredProducts : props.products
             }
             productsInCart={props.productsInCart}
           />

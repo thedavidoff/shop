@@ -5,7 +5,7 @@ export const productAPI = {
       .catch((err) => console.error(err));
   },
   getProductAPI(id) {
-    return fetch(`http://localhost:3001/specifications?id=${id}`)
+    return fetch(`http://localhost:3001/products?id=${id}`)
       .then((response) => response.json())
       .catch((err) => console.error("getProductAPI:", err));
   },
@@ -43,9 +43,15 @@ export const productAPI = {
       .then((response) => response.json())
       .catch((err) => console.error("sendAnswerAPI:", err));
   },
-  getProductsFilteredByPriceAPI(min, max) {
-    return fetch(`http://localhost:3001/products?price_gte=${min}&price_lte=${max}`)
+  getFilterFieldsAPI() {
+    return fetch("http://localhost:3001/filters")
       .then((response) => response.json())
-      .catch((err) => console.error(err));
+      .catch((err) => console.error("getFilterFieldsAPI:", err));
   },
+
+  // getProductsFilteredByPriceAPI(min, max) {
+  //   return fetch(`http://localhost:3001/products?price_gte=${min}&price_lte=${max}`)
+  //     .then((response) => response.json())
+  //     .catch((err) => console.error(err));
+  // },
 };

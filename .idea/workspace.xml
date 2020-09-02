@@ -2,16 +2,29 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="d838e675-2b75-4462-b131-7ac443757c74" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/components/UI/Filter/Filter.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/codeStyles/codeStyleConfig.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/dictionaries/Eugene.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/assets/ugolok.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/UI/Filters/FilterItems/FilterItem/FilterItem.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/UI/Filters/FilterItems/FilterItem/FilterItem.module.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/UI/Filters/FilterItems/FilterItems.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/UI/Filters/Filters.module.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/UI/SVG/TriangleDownSVG.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/UI/SVG/TriangleRightSVG.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/UI/SubmitFilterBlock/SubmitFilterBlock.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/UI/SubmitFilterBlock/SubmitFilterBlock.module.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Routes.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Routes.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/db.json" beforeDir="false" afterPath="$PROJECT_DIR$/db.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/api/api.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/api/api.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Products/Product/ProductPage/SpecificationsBlock/SpecificationsBlock.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Products/Product/ProductPage/SpecificationsBlock/SpecificationsBlock.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/Products/ProductsContainer.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Products/ProductsContainer.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/Sidebar/Sidebar.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Sidebar/Sidebar.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/Sidebar/Sidebar.module.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Sidebar/Sidebar.module.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/UI/Preloader/Preloader.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/UI/Preloader/Preloader.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/UI/AddToWishListButton/AddToWishListButton.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/UI/AddToWishListButton/AddToWishListButton.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/UI/Filter/Filter.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/UI/Filters/Filters.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/redux/homeReducer.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/redux/homeReducer.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/redux/selectors.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/redux/selectors.js" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -26,6 +39,12 @@
     <setting file="file://$PROJECT_DIR$/src/components/Products/Product/ProductPage/Slider/Slider.js" root0="SKIP_INSPECTION" />
     <setting file="file://$PROJECT_DIR$/src/api/api.js" root0="FORCE_HIGHLIGHTING" />
   </component>
+  <component name="JsFlowSettings">
+    <service-enabled>true</service-enabled>
+    <exe-path />
+    <other-services-enabled>true</other-services-enabled>
+    <auto-save>true</auto-save>
+  </component>
   <component name="ProjectId" id="1dJtgrqdFvN2QOySrnaeYezjehe" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
     <ConfirmationsSetting value="2" id="Add" />
@@ -34,7 +53,7 @@
     <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$USER_HOME$/AppData/Roaming/npm/node_modules/prettier" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.standard" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
@@ -44,7 +63,7 @@
     <property name="nodejs_interpreter_path" value="node" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="prettierjs.PrettierConfiguration.Package" value="C:\Users\Eugene\AppData\Roaming\npm\node_modules\prettier" />
-    <property name="settings.editor.selected.configurable" value="settings.github" />
+    <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
     <property name="ts.external.directory.path" value="C:\Program Files\JetBrains\WebStorm 2019.2.3\plugins\JavaScriptLanguage\jsLanguageServicesImpl\external" />
   </component>
   <component name="RecentsManager">
@@ -163,7 +182,30 @@
       <workItem from="1597240987715" duration="3082000" />
       <workItem from="1597300157092" duration="6219000" />
       <workItem from="1597328657423" duration="12260000" />
-      <workItem from="1597389159784" duration="4972000" />
+      <workItem from="1597389159784" duration="31738000" />
+      <workItem from="1597647948519" duration="36636000" />
+      <workItem from="1597739807107" duration="27770000" />
+      <workItem from="1597824127479" duration="32318000" />
+      <workItem from="1597913090794" duration="16551000" />
+      <workItem from="1597930754098" duration="1638000" />
+      <workItem from="1597934295396" duration="14528000" />
+      <workItem from="1597989795339" duration="41680000" />
+      <workItem from="1598081386978" duration="32516000" />
+      <workItem from="1598167118976" duration="32346000" />
+      <workItem from="1598255499231" duration="36550000" />
+      <workItem from="1598358103915" duration="13791000" />
+      <workItem from="1598431088338" duration="991000" />
+      <workItem from="1598433157190" duration="14401000" />
+      <workItem from="1598517171243" duration="17836000" />
+      <workItem from="1598602964509" duration="5643000" />
+      <workItem from="1598624089904" duration="7404000" />
+      <workItem from="1598687307379" duration="2049000" />
+      <workItem from="1598704370977" duration="5968000" />
+      <workItem from="1598795034466" duration="5306000" />
+      <workItem from="1598861832800" duration="3496000" />
+      <workItem from="1598881966834" duration="7398000" />
+      <workItem from="1598947238139" duration="16327000" />
+      <workItem from="1599034050568" duration="1044000" />
     </task>
     <servers />
   </component>

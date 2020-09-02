@@ -5,10 +5,26 @@ import { compose } from "redux";
 import { connect } from "react-redux";
 import PropTypes from "prop-types";
 
-import styles from "../../Sidebar/Sidebar.module.css";
-import { filterProductsByPriceRequest } from "../../../redux/homeReducer";
+import styles from "./Filters.module.css";
+import {
+  filterProductsByPriceRequest,
+  filterRequest,
+} from "../../../redux/homeReducer";
+import FilterItems from "./FilterItems/FilterItems";
 
-const Filter = ({ rangePrices, filterProductsByPriceRequest, history }) => {
+const Filters = ({
+  filterFieldsValues,
+  updateFilterFieldsValues,
+  rangePrices,
+  filterFields,
+  isFetchingFilterFields,
+  totalFilterCount,
+  totalProductsCount,
+  selectedFilters,
+  filterProductsByPriceRequest,
+  filterRequest,
+  history,
+}) => {
   const useQuery = () => new URLSearchParams(useLocation().search);
   const query = useQuery();
   const minPrice = +query.get("minPrice");
@@ -78,7 +94,7 @@ const Filter = ({ rangePrices, filterProductsByPriceRequest, history }) => {
   }, [minPrice, maxPrice]);
 
   return (
-    <>
+    <div className={styles.filters}>
       <h4>Фильтры</h4>
       {minPrice || maxPrice ? (
         <NavLink className={styles.clearFilters} to="/shop">
@@ -126,24 +142,52 @@ const Filter = ({ rangePrices, filterProductsByPriceRequest, history }) => {
       <div className={styles.priceSubmit}>
         <button onClick={handleSubmit}>Применить</button>
       </div>
-    </>
+      {isFetchingFilterFields ? (
+        <div>Loading...</div>
+      ) : (
+        <FilterItems
+          filterFieldsValues={updateFilterFieldsValues.length ? updateFilterFieldsValues : filterFieldsValues}
+          filterFields={filterFields}
+          totalFilterCount={
+            totalFilterCount > 0 ? totalFilterCount : totalProductsCount
+          }
+          selectedFilters={selectedFilters}
+          filterRequest={filterRequest}
+        />
+      )}
+    </div>
   );
 };
 
 const mapStateToProps = (state) => {
   return {
+    filterFieldsValues: state.homePage.filterFieldsValues,
+    updateFilterFieldsValues: state.homePage.updateFilterFieldsValues,
     rangePrices: state.homePage.rangePrices,
+    filterFields: state.homePage.filterFields,
+    isFetchingFilterFields: state.homePage.isFetchingFilterFields,
+    totalFilterCount: state.homePage.filteredProducts.length,
+    totalProductsCount: state.homePage.products.length,
+    selectedFilters: state.homePage.selectedFilters,
   };
 };
 
-Filter.propTypes = {
+Filters.propTypes = {
+  filterFieldsValues: PropTypes.array,
+  updateFilterFieldsValues: PropTypes.array,
   rangePrices: PropTypes.array,
   filterProductsByPriceRequest: PropTypes.func,
+  filterFields: PropTypes.array,
+  isFetchingFilterFields: PropTypes.bool,
+  totalFilterCount: PropTypes.number,
+  totalProductsCount: PropTypes.number,
+  //selectedFilters: PropTypes.array,
 };
 
 export default compose(
   withRouter,
   connect(mapStateToProps, {
     filterProductsByPriceRequest,
+    filterRequest,
   })
-)(Filter);
+)(Filters);

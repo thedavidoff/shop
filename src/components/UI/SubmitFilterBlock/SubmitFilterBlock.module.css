@@ -1,0 +1,54 @@
+.submitFilterBlock {
+    position: absolute;
+    width: 126px;
+    height: 75px;
+    color: #41679e;
+    line-height: 20px;
+    font-size: 12px;
+    text-align: center;
+    right: -145px;
+    top: 50%;
+    margin-top: -1px;
+    border-radius: 0 5px 5px 5px;
+    background-color: #fff;
+    border: 3px solid #1E93E0;
+    box-shadow: 1px 2px 3px 2px rgba(0, 0, 0, 0.37);
+    -moz-box-shadow: 1px 2px 3px 2px rgba(0, 0, 0, 0.37);
+    -webkit-box-shadow: 1px 2px 3px 2px rgba(0, 0, 0, 0.37);
+    -khtml-box-shadow: 1px 2px 3px 2px rgba(0, 0, 0, 0.37);
+    z-index: 100;
+}
+.submitFilterBlock:after {
+    background: url("../../../assets/ugolok.png");
+    content: " ";
+    position: absolute;
+    display: block;
+    width: 16px;
+    height: 21px;
+    position: absolute;
+    left: -16px;
+    top: -3px;
+}
+.totalFilterCount {
+    display: block;
+    height: 20px;
+    margin-top: 10px;
+    margin-bottom: 5px;
+    font-size: 14px;
+}
+.submitFilterButton {
+    height: 25px;
+    margin-bottom: 15px;
+    cursor: pointer;
+    font-size: 14px;
+    border: 1px solid #000;
+    border-radius: 3px;
+}
+.submitFilterButton:hover {
+    color: #fff;
+    background: #000;
+}
+.submitFilterButton:focus {
+    outline: none;
+    border: 1px solid #fff;
+}

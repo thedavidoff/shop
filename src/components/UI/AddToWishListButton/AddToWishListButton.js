@@ -13,7 +13,10 @@ const AddToWishListButton = ({ id, isAuth, wishList, addToWishList }) => {
   let isAdded = false;
   let style = null;
 
-  if ((wishList && wishList.includes(id)) || (Array.isArray(id) && wishList.length === id.length)) {
+  if (
+    (wishList && wishList.includes(id)) ||
+    (Array.isArray(id) && id.every((item) => wishList.indexOf(item) > -1))
+  ) {
     isAdded = true;
     style = { opacity: 1, cursor: "inherit" };
   }
@@ -23,8 +26,8 @@ const AddToWishListButton = ({ id, isAuth, wishList, addToWishList }) => {
       if (wishList.length === 0) {
         id.map((id) => addToWishList(id));
       } else {
-        const arrA = wishList.filter((k) => !id.includes(k));
-        const arrB = id.filter((k) => !wishList.includes(k));
+        const arrA = wishList.filter((item) => !id.includes(item));
+        const arrB = id.filter((item) => !wishList.includes(item));
         const result = arrA.concat(arrB);
         result.map((id) => addToWishList(id));
       }

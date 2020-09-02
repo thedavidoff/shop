@@ -1,0 +1,47 @@
+.filterItemsWrapper {
+  position: relative;
+  margin-top: 15px;
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+}
+.filterItem {
+  margin-bottom: 3px;
+  position: relative;
+  background: #e3eef8;
+  background: linear-gradient(to bottom, #e3eef8 0%, #c2daef 100%);
+  height: 18px;
+  font-size: 13px;
+  line-height: 16px;
+  padding: 0 20px 0 6px;
+  cursor: pointer;
+  border-radius: 4px;
+  -moz-border-radius: 4px;
+  -webkit-border-radius: 4px;
+  color: #1f539f;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  -o-text-overflow: ellipsis;
+  -ms-text-overflow: ellipsis;
+  white-space: nowrap;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+}
+.listOfFilterFields {
+  margin: 2px 0 5px;
+  padding: 0 5px;
+  list-style: none;
+}
+.listOfFilterFields label {
+  margin-left: 3px;
+  position: relative;
+  bottom: 1px;
+  font-size: 14px;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+}
+.listOfFilterFields label:hover {
+  cursor: pointer;
+}
