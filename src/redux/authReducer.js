@@ -9,7 +9,6 @@ const SET_NOTICE_TYPE = "authReducer/SET_NOTICE_TYPE";
 
 const initialState = {
   regFailedMessage: null,
-  //updateProfileFailedMessage: null,
   initialValuesForProfileForm: null,
   noticeType: null,
   wishList: [],
@@ -280,7 +279,6 @@ export const updateProfile = (data) => {
             firebase
               .updateAuth({
                 displayName: `${data.lastName} ${data.firstName} ${data.patronymic}`,
-                phoneNumber: `${data.phone}`,
               })
               .then(() => {
                 dispatch({
@@ -296,7 +294,7 @@ export const updateProfile = (data) => {
           type: SET_NOTICE_TYPE,
           payload: "profileUpdateFailed",
         });
-        dispatch({type: SET_NOTICE_TYPE, payload: error.code});
+        dispatch({ type: SET_NOTICE_TYPE, payload: error.code });
       });
 
     // firebase

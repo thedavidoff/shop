@@ -5,8 +5,8 @@ import { useDispatch } from "react-redux";
 
 import styles from "../LoginForm/LoginForm.module.css";
 import stylesTooltip from "../../UI/Tooltip/Tooltip.module.css";
-import { email, required } from "../validate";
-import { inputProfile } from "../renderFields";
+import { email, required, gender } from "../validate";
+import {inputProfile, selectProfile} from "../renderFields";
 import Preloader from "../../UI/Preloader/Preloader";
 import Popup from "../../UI/Popup/Popup";
 import SearchCity from "../../Profile/SearchCity/SearchCity";
@@ -102,11 +102,7 @@ let ProfileForm = ({ pristine, submitting, handleSubmit, initialValues }) => {
               Пол<span>*</span>:
             </td>
             <td>
-              <Field name="gender" component="select">
-                <option value={0}>Выбрать пол</option>
-                <option value={1}>Мужской</option>
-                <option value={2}>Женский</option>
-              </Field>
+              <Field name="gender" component={selectProfile} validate={[gender]} />
               {!initialValues && <Preloader type="inputProfile" />}
             </td>
           </tr>

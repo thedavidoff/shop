@@ -2,7 +2,7 @@ import React from "react";
 
 import styles from "./errors.module.css";
 import Preloader from "../UI/Preloader/Preloader";
-import { login } from "../../redux/authReducer";
+import { Field } from "redux-form";
 
 export const textarea = ({
   input,
@@ -87,6 +87,42 @@ export const inputProfile = ({
       />
 
       {!loadedSuccess && <Preloader type="inputProfile" />}
+
+      {touched &&
+        ((hasError && (
+          <p className={styles.inputMessage}>
+            <i>{error}</i>
+          </p>
+        )) ||
+          (hasWarning && (
+            <p className={styles.inputMessage}>
+              <i>{warning}</i>
+            </p>
+          )))}
+    </>
+  );
+};
+
+export const selectProfile = ({
+  input,
+  meta: { touched, error, warning },
+}) => {
+  const hasError = touched && error;
+  const hasWarning = touched && warning;
+
+  return (
+    <>
+      <select
+        className={
+          hasError || hasWarning ? `${styles.input} ${styles.inputProfile}` : ""
+        }
+        {...input}
+        style={{ position: "relative" }}
+      >
+        <option value={0}>Выбрать пол</option>
+        <option value="male">Мужской</option>
+        <option value="female">Женский</option>
+      </select>
 
       {touched &&
         ((hasError && (

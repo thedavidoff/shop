@@ -1,5 +1,4 @@
 import { productAPI } from "../api/api";
-import {login} from "./authReducer";
 
 const TOGGLE_IS_FETCHING_PRODUCTS = "homeReducer/TOGGLE_IS_FETCHING_PRODUCTS";
 const SET_PRODUCTS = "homeReducer/SET_PRODUCTS";
