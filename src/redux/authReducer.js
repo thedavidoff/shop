@@ -9,6 +9,7 @@ const SET_NOTICE_TYPE = "authReducer/SET_NOTICE_TYPE";
 
 const initialState = {
   regFailedMessage: null,
+  //updateProfileFailedMessage: null,
   initialValuesForProfileForm: null,
   noticeType: null,
   wishList: [],
@@ -69,7 +70,7 @@ export const removeFromWishList = (ids) => {
     );
 
     if (Object.keys(wishList).length === ids.length) {
-      // удалить весь список желаний
+      // delete the whole wishlist
       firebase
         .database()
         .ref("users/" + user.uid + "/wishList")
@@ -268,28 +269,25 @@ export const updateProfile = (data) => {
     const firebase = getFirebase();
     const user = firebase.auth().currentUser;
 
-    firebase
-      .database()
-      .ref("users/" + user.uid)
-      .update({ ...data, canChangeLogin: false })
+    user
+      .updateEmail(data.email)
       .then(() => {
         firebase
-          .updateAuth({
-            displayName: `${data.lastName} ${data.firstName} ${data.patronymic}`,
-            phoneNumber: `${data.phone}`,
-          })
+          .database()
+          .ref("users/" + user.uid)
+          .update({ ...data, canChangeLogin: false })
           .then(() => {
-            dispatch({
-              type: SET_NOTICE_TYPE,
-              payload: "profileUpdateSuccess",
-            });
-          })
-          .catch((error) => {
-            console.log(error);
-            dispatch({
-              type: SET_NOTICE_TYPE,
-              payload: "profileUpdateFailed",
-            });
+            firebase
+              .updateAuth({
+                displayName: `${data.lastName} ${data.firstName} ${data.patronymic}`,
+                phoneNumber: `${data.phone}`,
+              })
+              .then(() => {
+                dispatch({
+                  type: SET_NOTICE_TYPE,
+                  payload: "profileUpdateSuccess",
+                });
+              });
           });
       })
       .catch((error) => {
@@ -298,7 +296,48 @@ export const updateProfile = (data) => {
           type: SET_NOTICE_TYPE,
           payload: "profileUpdateFailed",
         });
+        dispatch({type: SET_NOTICE_TYPE, payload: error.code});
       });
+
+    // firebase
+    //   .database()
+    //   .ref("users/" + user.uid)
+    //   .update({ ...data, canChangeLogin: false })
+    //   .then(() => {
+    //     firebase
+    //       .updateAuth({
+    //         displayName: `${data.lastName} ${data.firstName} ${data.patronymic}`,
+    //         phoneNumber: `${data.phone}`,
+    //       })
+    //       .then(() => {
+    //         user
+    //           .updateEmail(data.email)
+    //           .then(() =>
+    //             dispatch({
+    //               type: SET_NOTICE_TYPE,
+    //               payload: "profileUpdateSuccess",
+    //             })
+    //           )
+    //           .catch((error) => {
+    //             console.log(error.code);
+    //             dispatch({ type: SET_NOTICE_TYPE, payload: error.code });
+    //           });
+    //       })
+    //       .catch((error) => {
+    //         console.log(error);
+    //         dispatch({
+    //           type: SET_NOTICE_TYPE,
+    //           payload: "profileUpdateFailed",
+    //         });
+    //       });
+    //   })
+    //   .catch((error) => {
+    //     console.log(error);
+    //     dispatch({
+    //       type: SET_NOTICE_TYPE,
+    //       payload: "profileUpdateFailed",
+    //     });
+    //   });
   };
 };
 

@@ -143,85 +143,180 @@
           "series": { "id": 2, "property": "Серия", "value": "GeForce 700" }
         },
         {
-          "chip_maker": { "id": 3, "property": "Производитель чипа", "value": "NVIDIA" }
+          "chip_maker": {
+            "id": 3,
+            "property": "Производитель чипа",
+            "value": "NVIDIA"
+          }
         },
         {
           "lineup": { "id": 4, "property": "Модельный ряд", "value": "GT710" }
         },
         {
-          "professional": { "id": 5, "property": "Профессиональная", "value": "нет" }
+          "professional": {
+            "id": 5,
+            "property": "Профессиональная",
+            "value": "нет"
+          }
         },
         {
           "condition": { "id": 6, "property": "Состояние", "value": "новая" }
         },
         {
-          "memory_size": { "id": 7, "property": "Объем памяти", "value": "1 ГБ" }
+          "memory_size": {
+            "id": 7,
+            "property": "Объем памяти",
+            "value": "1 ГБ"
+          }
         },
         {
-          "memory_type": { "id": 8, "property": "Тип памяти", "value": "GDDR-3" }
+          "memory_type": {
+            "id": 8,
+            "property": "Тип памяти",
+            "value": "GDDR-3"
+          }
         },
         {
-          "memory_bus": { "id": 9, "property": "Шина памяти", "value": "64 бит" }
+          "memory_bus": {
+            "id": 9,
+            "property": "Шина памяти",
+            "value": "64 бит"
+          }
         },
         {
           "directX": { "id": 10, "property": "DirectX", "value": "DX-12" }
         },
         {
-          "engine_clock": { "id": 11, "property": "Частота ядра", "value": "954 МГц" }
+          "engine_clock": {
+            "id": 11,
+            "property": "Частота ядра",
+            "value": "954 МГц"
+          }
         },
         {
-          "memory_clock": { "id": 12, "property": "Частота памяти", "value": "1600 МГц" }
+          "memory_clock": {
+            "id": 12,
+            "property": "Частота памяти",
+            "value": "1600 МГц"
+          }
         },
         {
-          "power_connectors": { "id": 13, "property": "Дополнительное питание", "value": "нет" }
+          "power_connectors": {
+            "id": 13,
+            "property": "Дополнительное питание",
+            "value": "нет"
+          }
         },
         {
-          "interface": { "id": 14, "property": "Интерфейс подключения", "value": "PCI-E х16 2.0" }
+          "interface": {
+            "id": 14,
+            "property": "Интерфейс подключения",
+            "value": "PCI-E х16 2.0"
+          }
         },
         {
-          "d-sub": { "id": 15, "property": "D-Sub (VGA)", "value": "есть", "hide": true }
+          "d-sub": {
+            "id": 15,
+            "property": "D-Sub (VGA)",
+            "value": "есть",
+            "hide": true
+          }
         },
         {
           "dvi": { "id": 16, "property": "DVI", "value": "1 шт.", "hide": true }
         },
         {
-          "hdmi": { "id": 17, "property": "HDMI", "value": "1 шт.", "hide": true }
+          "hdmi": {
+            "id": 17,
+            "property": "HDMI",
+            "value": "1 шт.",
+            "hide": true
+          }
         },
         {
-          "displayPort": { "id": 18, "property": "DisplayPort", "value": "нет", "hide": true }
+          "displayPort": {
+            "id": 18,
+            "property": "DisplayPort",
+            "value": "нет",
+            "hide": true
+          }
         },
         {
-          "output": { "id": 19, "property": "Разъёмы подключения", "value": "DVI-D, HDMI (1.4a), VGA" }
+          "output": {
+            "id": 19,
+            "property": "Разъёмы подключения",
+            "value": "DVI-D, HDMI (1.4a), VGA"
+          }
         },
         {
-          "spu": { "id": 20, "property": "Число универсальных процессоров (SPU)", "value": 192 }
+          "spu": {
+            "id": 20,
+            "property": "Число универсальных процессоров (SPU)",
+            "value": 192
+          }
         },
         {
-          "tmu": { "id": 21, "property": "Число текстурных блоков (TMU)", "value": 16 }
+          "tmu": {
+            "id": 21,
+            "property": "Число текстурных блоков (TMU)",
+            "value": 16
+          }
         },
         {
-          "rop": { "id": 22, "property": "Число блоков растеризации (ROP)", "value": 8 }
+          "rop": {
+            "id": 22,
+            "property": "Число блоков растеризации (ROP)",
+            "value": 8
+          }
         },
         {
-          "process_technology": { "id": 23, "property": "Техпроцесс", "value": "28 нм" }
+          "process_technology": {
+            "id": 23,
+            "property": "Техпроцесс",
+            "value": "28 нм"
+          }
         },
         {
-          "power_consumption": { "id": 24, "property": "Энергопотребление", "value": "19 Вт" }
+          "power_consumption": {
+            "id": 24,
+            "property": "Энергопотребление",
+            "value": "19 Вт"
+          }
         },
         {
-          "recommended_psu": { "id": 25, "property": "Блок питания", "value": "300 Вт" }
+          "recommended_psu": {
+            "id": 25,
+            "property": "Блок питания",
+            "value": "300 Вт"
+          }
         },
         {
-          "cooling_type": { "id": 26, "property": "Тип охлаждения", "value": "пассивное" }
+          "cooling_type": {
+            "id": 26,
+            "property": "Тип охлаждения",
+            "value": "пассивное"
+          }
         },
         {
-          "slot_type": { "id": 27, "property": "Исполнение", "value": "однослотовое" }
+          "slot_type": {
+            "id": 27,
+            "property": "Исполнение",
+            "value": "однослотовое"
+          }
         },
         {
-          "dimensions": { "id": 28, "property": "Габариты", "value": "146x69x19 мм" }
+          "dimensions": {
+            "id": 28,
+            "property": "Габариты",
+            "value": "146x69x19 мм"
+          }
         },
         {
-          "products_web_page": { "id": 29, "property": "Сайт производителя", "value": "https://www.msi.com/Graphics-card/GT-710-1GD3H-LP.html#hero-specification" }
+          "products_web_page": {
+            "id": 29,
+            "property": "Сайт производителя",
+            "value": "https://www.msi.com/Graphics-card/GT-710-1GD3H-LP.html#hero-specification"
+          }
         }
       ],
       "photos": [
@@ -294,85 +389,180 @@
           "series": { "id": 2, "property": "Серия", "value": "Radeon RX" }
         },
         {
-          "chip_maker": { "id": 3, "property": "Производитель чипа", "value": "AMD" }
+          "chip_maker": {
+            "id": 3,
+            "property": "Производитель чипа",
+            "value": "AMD"
+          }
         },
         {
           "lineup": { "id": 4, "property": "Модельный ряд", "value": "RX 5700" }
         },
         {
-          "professional": { "id": 5, "property": "Профессиональная", "value": "нет" }
+          "professional": {
+            "id": 5,
+            "property": "Профессиональная",
+            "value": "нет"
+          }
         },
         {
           "condition": { "id": 6, "property": "Состояние", "value": "новая" }
         },
         {
-          "memory_size": { "id": 7, "property": "Объем памяти", "value": "8 ГБ" }
+          "memory_size": {
+            "id": 7,
+            "property": "Объем памяти",
+            "value": "8 ГБ"
+          }
         },
         {
-          "memory_type": { "id": 8, "property": "Тип памяти", "value": "GDDR-6" }
+          "memory_type": {
+            "id": 8,
+            "property": "Тип памяти",
+            "value": "GDDR-6"
+          }
         },
         {
-          "memory_bus": { "id": 9, "property": "Шина памяти", "value": "256 бит" }
+          "memory_bus": {
+            "id": 9,
+            "property": "Шина памяти",
+            "value": "256 бит"
+          }
         },
         {
           "directX": { "id": 10, "property": "DirectX", "value": "DX-12" }
         },
         {
-          "engine_clock": { "id": 11, "property": "Частота ядра", "value": "1750 МГц" }
+          "engine_clock": {
+            "id": 11,
+            "property": "Частота ядра",
+            "value": "1750 МГц"
+          }
         },
         {
-          "memory_clock": { "id": 12, "property": "Частота памяти", "value": "14000 МГц" }
+          "memory_clock": {
+            "id": 12,
+            "property": "Частота памяти",
+            "value": "14000 МГц"
+          }
         },
         {
-          "power_connectors": { "id": 13, "property": "Дополнительное питание", "value": "6+8 pin" }
+          "power_connectors": {
+            "id": 13,
+            "property": "Дополнительное питание",
+            "value": "6+8 pin"
+          }
         },
         {
-          "interface": { "id": 14, "property": "Интерфейс подключения", "value": "PCI-E х16 4.0" }
+          "interface": {
+            "id": 14,
+            "property": "Интерфейс подключения",
+            "value": "PCI-E х16 4.0"
+          }
         },
         {
-          "d-sub": { "id": 15, "property": "D-Sub (VGA)", "value": "нет", "hide": true }
+          "d-sub": {
+            "id": 15,
+            "property": "D-Sub (VGA)",
+            "value": "нет",
+            "hide": true
+          }
         },
         {
           "dvi": { "id": 16, "property": "DVI", "value": "нет", "hide": true }
         },
         {
-          "hdmi": { "id": 17, "property": "HDMI", "value": "1 шт.", "hide": true }
+          "hdmi": {
+            "id": 17,
+            "property": "HDMI",
+            "value": "1 шт.",
+            "hide": true
+          }
         },
         {
-          "displayPort": { "id": 18, "property": "DisplayPort", "value": "3 шт.", "hide": true }
+          "displayPort": {
+            "id": 18,
+            "property": "DisplayPort",
+            "value": "3 шт.",
+            "hide": true
+          }
         },
         {
-          "output": { "id": 19, "property": "Разъёмы подключения", "value": "HDMI, 3xDisplayPort" }
+          "output": {
+            "id": 19,
+            "property": "Разъёмы подключения",
+            "value": "HDMI, 3xDisplayPort"
+          }
         },
         {
-          "spu": { "id": 20, "property": "Число универсальных процессоров (SPU)", "value": 2304 }
+          "spu": {
+            "id": 20,
+            "property": "Число универсальных процессоров (SPU)",
+            "value": 2304
+          }
         },
         {
-          "tmu": { "id": 21, "property": "Число текстурных блоков (TMU)", "value": 144 }
+          "tmu": {
+            "id": 21,
+            "property": "Число текстурных блоков (TMU)",
+            "value": 144
+          }
         },
         {
-          "rop": { "id": 22, "property": "Число блоков растеризации (ROP)", "value": 64 }
+          "rop": {
+            "id": 22,
+            "property": "Число блоков растеризации (ROP)",
+            "value": 64
+          }
         },
         {
-          "process_technology": { "id": 23, "property": "Техпроцесс", "value": "7 нм" }
+          "process_technology": {
+            "id": 23,
+            "property": "Техпроцесс",
+            "value": "7 нм"
+          }
         },
         {
-          "power_consumption": { "id": 24, "property": "Энергопотребление", "value": "187 Вт" }
+          "power_consumption": {
+            "id": 24,
+            "property": "Энергопотребление",
+            "value": "187 Вт"
+          }
         },
         {
-          "recommended_psu": { "id": 25, "property": "Блок питания", "value": "600 Вт" }
+          "recommended_psu": {
+            "id": 25,
+            "property": "Блок питания",
+            "value": "600 Вт"
+          }
         },
         {
-          "cooling_type": { "id": 26, "property": "Тип охлаждения", "value": "активное" }
+          "cooling_type": {
+            "id": 26,
+            "property": "Тип охлаждения",
+            "value": "активное"
+          }
         },
         {
-          "slot_type": { "id": 27, "property": "Исполнение", "value": "двухслотовое" }
+          "slot_type": {
+            "id": 27,
+            "property": "Исполнение",
+            "value": "двухслотовое"
+          }
         },
         {
-          "dimensions": { "id": 28, "property": "Габариты", "value": "245x135x46,5 мм" }
+          "dimensions": {
+            "id": 28,
+            "property": "Габариты",
+            "value": "245x135x46,5 мм"
+          }
         },
         {
-          "products_web_page": { "id": 29, "property": "Сайт производителя", "value": "https://www.sapphiretech.com/ru-ru/consumer/pulse-radeon-rx-5700-8g-gddr6" }
+          "products_web_page": {
+            "id": 29,
+            "property": "Сайт производителя",
+            "value": "https://www.sapphiretech.com/ru-ru/consumer/pulse-radeon-rx-5700-8g-gddr6"
+          }
         }
       ],
       "photos": [
@@ -449,94 +639,201 @@
       "isNew": true,
       "specifications": [
         {
-          "brand": { "id": 1, "property": "Производитель", "value": "PowerColor" }
+          "brand": {
+            "id": 1,
+            "property": "Производитель",
+            "value": "PowerColor"
+          }
         },
         {
           "series": { "id": 2, "property": "Серия", "value": "Radeon RX" }
         },
         {
-          "chip_maker": { "id": 3, "property": "Производитель чипа", "value": "AMD" }
+          "chip_maker": {
+            "id": 3,
+            "property": "Производитель чипа",
+            "value": "AMD"
+          }
         },
         {
-          "lineup": { "id": 4, "property": "Модельный ряд", "value": "RX 5700 XT" }
+          "lineup": {
+            "id": 4,
+            "property": "Модельный ряд",
+            "value": "RX 5700 XT"
+          }
         },
         {
-          "professional": { "id": 5, "property": "Профессиональная", "value": "нет" }
+          "professional": {
+            "id": 5,
+            "property": "Профессиональная",
+            "value": "нет"
+          }
         },
         {
           "condition": { "id": 6, "property": "Состояние", "value": "новая" }
         },
         {
-          "memory_size": { "id": 7, "property": "Объем памяти", "value": "8 ГБ" }
+          "memory_size": {
+            "id": 7,
+            "property": "Объем памяти",
+            "value": "8 ГБ"
+          }
         },
         {
-          "memory_type": { "id": 8, "property": "Тип памяти", "value": "GDDR-6" }
+          "memory_type": {
+            "id": 8,
+            "property": "Тип памяти",
+            "value": "GDDR-6"
+          }
         },
         {
-          "memory_bus": { "id": 9, "property": "Шина памяти", "value": "256 бит" }
+          "memory_bus": {
+            "id": 9,
+            "property": "Шина памяти",
+            "value": "256 бит"
+          }
         },
         {
           "directX": { "id": 10, "property": "DirectX", "value": "DX-12" }
         },
         {
-          "engine_clock": { "id": 11, "property": "Частота ядра", "value": "1905 МГц" }
+          "engine_clock": {
+            "id": 11,
+            "property": "Частота ядра",
+            "value": "1905 МГц"
+          }
         },
         {
-          "memory_clock": { "id": 12, "property": "Частота памяти", "value": "14000 МГц" }
+          "memory_clock": {
+            "id": 12,
+            "property": "Частота памяти",
+            "value": "14000 МГц"
+          }
         },
         {
-          "power_connectors": { "id": 13, "property": "Дополнительное питание", "value": "6+8 pin" }
+          "power_connectors": {
+            "id": 13,
+            "property": "Дополнительное питание",
+            "value": "6+8 pin"
+          }
         },
         {
-          "interface": { "id": 14, "property": "Интерфейс подключения", "value": "PCI-E х16 4.0" }
+          "interface": {
+            "id": 14,
+            "property": "Интерфейс подключения",
+            "value": "PCI-E х16 4.0"
+          }
         },
         {
-          "d-sub": { "id": 15, "property": "D-Sub (VGA)", "value": "нет", "hide": true }
+          "d-sub": {
+            "id": 15,
+            "property": "D-Sub (VGA)",
+            "value": "нет",
+            "hide": true
+          }
         },
         {
           "dvi": { "id": 16, "property": "DVI", "value": "нет", "hide": true }
         },
         {
-          "hdmi": { "id": 17, "property": "HDMI", "value": "1 шт.", "hide": true }
+          "hdmi": {
+            "id": 17,
+            "property": "HDMI",
+            "value": "1 шт.",
+            "hide": true
+          }
         },
         {
-          "displayPort": { "id": 18, "property": "DisplayPort", "value": "3 шт.", "hide": true }
+          "displayPort": {
+            "id": 18,
+            "property": "DisplayPort",
+            "value": "3 шт.",
+            "hide": true
+          }
         },
         {
-          "output": { "id": 19, "property": "Разъёмы подключения", "value": "HDMI (2.0b), 3хDisplayPort (1.4)" }
+          "output": {
+            "id": 19,
+            "property": "Разъёмы подключения",
+            "value": "HDMI (2.0b), 3хDisplayPort (1.4)"
+          }
         },
         {
-          "spu": { "id": 20, "property": "Число универсальных процессоров (SPU)", "value": 2560 }
+          "spu": {
+            "id": 20,
+            "property": "Число универсальных процессоров (SPU)",
+            "value": 2560
+          }
         },
         {
-          "tmu": { "id": 21, "property": "Число текстурных блоков (TMU)", "value": 160 }
+          "tmu": {
+            "id": 21,
+            "property": "Число текстурных блоков (TMU)",
+            "value": 160
+          }
         },
         {
-          "rop": { "id": 22, "property": "Число блоков растеризации (ROP)", "value": 64 }
+          "rop": {
+            "id": 22,
+            "property": "Число блоков растеризации (ROP)",
+            "value": 64
+          }
         },
         {
-          "process_technology": { "id": 23, "property": "Техпроцесс", "value": "7 нм" }
+          "process_technology": {
+            "id": 23,
+            "property": "Техпроцесс",
+            "value": "7 нм"
+          }
         },
         {
-          "power_consumption": { "id": 24, "property": "Энергопотребление", "value": "225 Вт" }
+          "power_consumption": {
+            "id": 24,
+            "property": "Энергопотребление",
+            "value": "225 Вт"
+          }
         },
         {
-          "recommended_psu": { "id": 25, "property": "Блок питания", "value": "650 Вт" }
+          "recommended_psu": {
+            "id": 25,
+            "property": "Блок питания",
+            "value": "650 Вт"
+          }
         },
         {
-          "cooling_type": { "id": 26, "property": "Тип охлаждения", "value": "активное" }
+          "cooling_type": {
+            "id": 26,
+            "property": "Тип охлаждения",
+            "value": "активное"
+          }
         },
         {
-          "features": { "id": 27, "property": "Особенности", "value": "поддержка VR" }
+          "features": {
+            "id": 27,
+            "property": "Особенности",
+            "value": "поддержка VR"
+          }
         },
         {
-          "slot_type": { "id": 28, "property": "Исполнение", "value": "двухслотовое" }
+          "slot_type": {
+            "id": 28,
+            "property": "Исполнение",
+            "value": "двухслотовое"
+          }
         },
         {
-          "dimensions": { "id": 29, "property": "Габариты", "value": "240x132x41 мм" }
+          "dimensions": {
+            "id": 29,
+            "property": "Габариты",
+            "value": "240x132x41 мм"
+          }
         },
         {
-          "products_web_page": { "id": 30, "property": "Сайт производителя", "value": "https://www.powercolor.com/product?id=1565953800" }
+          "products_web_page": {
+            "id": 30,
+            "property": "Сайт производителя",
+            "value": "https://www.powercolor.com/product?id=1565953800"
+          }
         }
       ],
       "photos": [
@@ -629,85 +926,184 @@
           "series": { "id": 2, "property": "Серия", "value": "GeForce 1000" }
         },
         {
-          "chip_maker": { "id": 3, "property": "Производитель чипа", "value": "NVIDIA" }
+          "chip_maker": {
+            "id": 3,
+            "property": "Производитель чипа",
+            "value": "NVIDIA"
+          }
         },
         {
-          "lineup": { "id": 4, "property": "Модельный ряд", "value": "GTX 1660" }
+          "lineup": {
+            "id": 4,
+            "property": "Модельный ряд",
+            "value": "GTX 1660"
+          }
         },
         {
-          "professional": { "id": 5, "property": "Профессиональная", "value": "нет" }
+          "professional": {
+            "id": 5,
+            "property": "Профессиональная",
+            "value": "нет"
+          }
         },
         {
           "condition": { "id": 6, "property": "Состояние", "value": "новая" }
         },
         {
-          "memory_size": { "id": 7, "property": "Объем памяти", "value": "6 ГБ" }
+          "memory_size": {
+            "id": 7,
+            "property": "Объем памяти",
+            "value": "6 ГБ"
+          }
         },
         {
-          "memory_type": { "id": 8, "property": "Тип памяти", "value": "GDDR-5" }
+          "memory_type": {
+            "id": 8,
+            "property": "Тип памяти",
+            "value": "GDDR-5"
+          }
         },
         {
-          "memory_bus": { "id": 9, "property": "Шина памяти", "value": "192 бит" }
+          "memory_bus": {
+            "id": 9,
+            "property": "Шина памяти",
+            "value": "192 бит"
+          }
         },
         {
           "directX": { "id": 10, "property": "DirectX", "value": "DX-12" }
         },
         {
-          "engine_clock": { "id": 11, "property": "Частота ядра", "value": "1830 МГц" }
+          "engine_clock": {
+            "id": 11,
+            "property": "Частота ядра",
+            "value": "1830 МГц"
+          }
         },
         {
-          "memory_clock": { "id": 12, "property": "Частота памяти", "value": "8002 МГц" }
+          "memory_clock": {
+            "id": 12,
+            "property": "Частота памяти",
+            "value": "8002 МГц"
+          }
         },
         {
-          "power_connectors": { "id": 13, "property": "Дополнительное питание", "value": "8-pin" }
+          "power_connectors": {
+            "id": 13,
+            "property": "Дополнительное питание",
+            "value": "8-pin"
+          }
         },
         {
-          "interface": { "id": 14, "property": "Интерфейс подключения", "value": "PCI-E х16 3.0" }
+          "interface": {
+            "id": 14,
+            "property": "Интерфейс подключения",
+            "value": "PCI-E х16 3.0"
+          }
         },
         {
-          "d-sub": { "id": 15, "property": "D-Sub (VGA)", "value": "нет", "hide": true }
+          "d-sub": {
+            "id": 15,
+            "property": "D-Sub (VGA)",
+            "value": "нет",
+            "hide": true
+          }
         },
         {
           "dvi": { "id": 16, "property": "DVI", "value": "1 шт", "hide": true }
         },
         {
-          "hdmi": { "id": 17, "property": "HDMI", "value": "1 шт.", "hide": true }
+          "hdmi": {
+            "id": 17,
+            "property": "HDMI",
+            "value": "1 шт.",
+            "hide": true
+          }
         },
         {
-          "displayPort": { "id": 18, "property": "DisplayPort", "value": "1 шт.", "hide": true }
+          "displayPort": {
+            "id": 18,
+            "property": "DisplayPort",
+            "value": "1 шт.",
+            "hide": true
+          }
         },
         {
-          "output": { "id": 19, "property": "Разъёмы подключения", "value": "DVI-D, HDMI 2.0b, DisplayPort 1.4" }
+          "output": {
+            "id": 19,
+            "property": "Разъёмы подключения",
+            "value": "DVI-D, HDMI 2.0b, DisplayPort 1.4"
+          }
         },
         {
-          "spu": { "id": 20, "property": "Число универсальных процессоров (SPU)", "value": 1408 }
+          "spu": {
+            "id": 20,
+            "property": "Число универсальных процессоров (SPU)",
+            "value": 1408
+          }
         },
         {
-          "tmu": { "id": 21, "property": "Число текстурных блоков (TMU)", "value": 88 }
+          "tmu": {
+            "id": 21,
+            "property": "Число текстурных блоков (TMU)",
+            "value": 88
+          }
         },
         {
-          "rop": { "id": 22, "property": "Число блоков растеризации (ROP)", "value": 48 }
+          "rop": {
+            "id": 22,
+            "property": "Число блоков растеризации (ROP)",
+            "value": 48
+          }
         },
         {
-          "process_technology": { "id": 23, "property": "Техпроцесс", "value": "12 нм" }
+          "process_technology": {
+            "id": 23,
+            "property": "Техпроцесс",
+            "value": "12 нм"
+          }
         },
         {
-          "power_consumption": { "id": 24, "property": "Энергопотребление", "value": "130 Вт" }
+          "power_consumption": {
+            "id": 24,
+            "property": "Энергопотребление",
+            "value": "130 Вт"
+          }
         },
         {
-          "recommended_psu": { "id": 25, "property": "Блок питания", "value": "450 Вт" }
+          "recommended_psu": {
+            "id": 25,
+            "property": "Блок питания",
+            "value": "450 Вт"
+          }
         },
         {
-          "cooling_type": { "id": 26, "property": "Тип охлаждения", "value": "активное" }
+          "cooling_type": {
+            "id": 26,
+            "property": "Тип охлаждения",
+            "value": "активное"
+          }
         },
         {
-          "slot_type": { "id": 27, "property": "Исполнение", "value": "двухслотовое" }
+          "slot_type": {
+            "id": 27,
+            "property": "Исполнение",
+            "value": "двухслотовое"
+          }
         },
         {
-          "dimensions": { "id": 28, "property": "Габариты", "value": "174x121x39 мм" }
+          "dimensions": {
+            "id": 28,
+            "property": "Габариты",
+            "value": "174x121x39 мм"
+          }
         },
         {
-          "products_web_page": { "id": 29, "property": "Сайт производителя", "value": "https://www.asus.com/Graphics-Cards/PH-GTX1660-O6G/specifications/" }
+          "products_web_page": {
+            "id": 29,
+            "property": "Сайт производителя",
+            "value": "https://www.asus.com/Graphics-Cards/PH-GTX1660-O6G/specifications/"
+          }
         }
       ],
       "photos": [
@@ -946,6 +1342,820 @@
       "time": "09:34",
       "buyType": "3",
       "comment": "как карточка себя ведет? Проблем никаких нет???"
+    }
+  ],
+  "cities": [
+    {
+      "id": 1,
+      "name": "Винницкая обл",
+      "areas": [
+        {
+          "id": 1,
+          "name": "Агрономичное"
+        },
+        {
+          "id": 2,
+          "name": "Бабин"
+        },
+        {
+          "id": 3,
+          "name": "Балки"
+        },
+        {
+          "id": 4,
+          "name": "Бар"
+        },
+        {
+          "id": 5,
+          "name": "Бершадь"
+        },
+        {
+          "id": 6,
+          "name": "Бохоники"
+        },
+        {
+          "id": 7,
+          "name": "Браилов"
+        },
+        {
+          "id": 8,
+          "name": "Брацлав"
+        },
+        {
+          "id": 9,
+          "name": "Бродецкое"
+        },
+        {
+          "id": 10,
+          "name": "Великая Киреевка"
+        },
+        {
+          "id": 11,
+          "name": "Вапнярка"
+        },
+        {
+          "id": 12,
+          "name": "Великий мытник"
+        },
+        {
+          "id": 13,
+          "name": "Вендичаны"
+        },
+        {
+          "id": 14,
+          "name": "Вилы"
+        },
+        {
+          "id": 15,
+          "name": "Винница"
+        },
+        {
+          "id": 16,
+          "name": "Винницкие Хутора"
+        },
+        {
+          "id": 17,
+          "name": "Войтовка"
+        },
+        {
+          "id": 18,
+          "name": "Вороновица"
+        },
+        {
+          "id": 19,
+          "name": "Вышеольчедаев"
+        },
+        {
+          "id": 20,
+          "name": "Гавришовка"
+        },
+        {
+          "id": 21,
+          "name": "Гайсин"
+        },
+        {
+          "id": 22,
+          "name": "Глуховцы"
+        },
+        {
+          "id": 23,
+          "name": "Гнивань"
+        },
+        {
+          "id": 24,
+          "name": "Гоноривка"
+        },
+        {
+          "id": 25,
+          "name": "Городковка"
+        },
+        {
+          "id": 26,
+          "name": "Дашев"
+        },
+        {
+          "id": 27,
+          "name": "Деребчин"
+        },
+        {
+          "id": 28,
+          "name": "Джурин"
+        },
+        {
+          "id": 29,
+          "name": "Дзыговка"
+        },
+        {
+          "id": 30,
+          "name": "Жабелевка"
+        },
+        {
+          "id": 31,
+          "name": "Ждановка"
+        },
+        {
+          "id": 32,
+          "name": "Жмеринка"
+        },
+        {
+          "id": 33,
+          "name": "Журавлевка"
+        },
+        {
+          "id": 34,
+          "name": "Зарванцы"
+        },
+        {
+          "id": 35,
+          "name": "Иванов"
+        },
+        {
+          "id": 36,
+          "name": "Иллинцы"
+        },
+        {
+          "id": 37,
+          "name": "Ильинцы"
+        },
+        {
+          "id": 38,
+          "name": "Иосиповка"
+        },
+        {
+          "id": 39,
+          "name": "Казатин"
+        },
+        {
+          "id": 40,
+          "name": "Калиновка"
+        },
+        {
+          "id": 41,
+          "name": "Калиновка вторая"
+        },
+        {
+          "id": 42,
+          "name": "Каменногорка"
+        },
+        {
+          "id": 43,
+          "name": "Капустин"
+        },
+        {
+          "id": 44,
+          "name": "Кирнасивка"
+        },
+        {
+          "id": 45,
+          "name": "Клембовка"
+        },
+        {
+          "id": 46,
+          "name": "Ковалевка"
+        },
+        {
+          "id": 47,
+          "name": "Козятин"
+        },
+        {
+          "id": 48,
+          "name": "Копайгород"
+        },
+        {
+          "id": 49,
+          "name": "Корделевка"
+        },
+        {
+          "id": 50,
+          "name": "Красное"
+        },
+        {
+          "id": 51,
+          "name": "Красноселка"
+        },
+        {
+          "id": 52,
+          "name": "Крыжополь"
+        },
+        {
+          "id": 53,
+          "name": "Ладыжин"
+        },
+        {
+          "id": 54,
+          "name": "Липовец"
+        },
+        {
+          "id": 55,
+          "name": "Литин"
+        },
+        {
+          "id": 56,
+          "name": "Лука-Мелешковская"
+        },
+        {
+          "id": 57,
+          "name": "Малый мытник"
+        },
+        {
+          "id": 58,
+          "name": "Махаринцы"
+        },
+        {
+          "id": 59,
+          "name": "Михайловка"
+        },
+        {
+          "id": 60,
+          "name": "Могилев-Подольский"
+        },
+        {
+          "id": 61,
+          "name": "Могилевка"
+        },
+        {
+          "id": 62,
+          "name": "Моевка"
+        },
+        {
+          "id": 63,
+          "name": "Мурованые Куриловцы"
+        },
+        {
+          "id": 64,
+          "name": "Некрасово"
+        },
+        {
+          "id": 65,
+          "name": "Немиров"
+        },
+        {
+          "id": 66,
+          "name": "Нестерварка"
+        },
+        {
+          "id": 67,
+          "name": "Ободовка"
+        },
+        {
+          "id": 68,
+          "name": "Оратов"
+        },
+        {
+          "id": 69,
+          "name": "Песчанка"
+        },
+        {
+          "id": 70,
+          "name": "Пещанка"
+        },
+        {
+          "id": 71,
+          "name": "Писаревка"
+        },
+        {
+          "id": 72,
+          "name": "Погребище"
+        },
+        {
+          "id": 73,
+          "name": "Погребище первое"
+        },
+        {
+          "id": 74,
+          "name": "Росоша"
+        },
+        {
+          "id": 75,
+          "name": "Рудница"
+        },
+        {
+          "id": 76,
+          "name": "Поповцы"
+        },
+        {
+          "id": 77,
+          "name": "Севериновка"
+        },
+        {
+          "id": 78,
+          "name": "Селище"
+        },
+        {
+          "id": 79,
+          "name": "Ситковцы"
+        },
+        {
+          "id": 80,
+          "name": "Скоморошки"
+        },
+        {
+          "id": 81,
+          "name": "Соболевка"
+        },
+        {
+          "id": 82,
+          "name": "Сокиринцы"
+        },
+        {
+          "id": 83,
+          "name": "Соколец"
+        },
+        {
+          "id": 84,
+          "name": "Соколовка"
+        },
+        {
+          "id": 85,
+          "name": "Сосновка"
+        },
+        {
+          "id": 86,
+          "name": "Стрижавка"
+        },
+        {
+          "id": 87,
+          "name": "Студеная"
+        },
+        {
+          "id": 88,
+          "name": "Сутиски"
+        },
+        {
+          "id": 89,
+          "name": "Теплик"
+        },
+        {
+          "id": 90,
+          "name": "Тиврев"
+        },
+        {
+          "id": 91,
+          "name": "Титусовка"
+        },
+        {
+          "id": 92,
+          "name": "Томашполь"
+        },
+        {
+          "id": 93,
+          "name": "Тростянец"
+        },
+        {
+          "id": 94,
+          "name": "Тульчин"
+        },
+        {
+          "id": 95,
+          "name": "Турбов"
+        },
+        {
+          "id": 96,
+          "name": "Тывров"
+        },
+        {
+          "id": 97,
+          "name": "Тютьки"
+        },
+        {
+          "id": 98,
+          "name": "Удич"
+        },
+        {
+          "id": 99,
+          "name": "Уладовка"
+        },
+        {
+          "id": 100,
+          "name": "Уланов"
+        },
+        {
+          "id": 101,
+          "name": "Хижинцы"
+        },
+        {
+          "id": 102,
+          "name": "Хмельник"
+        },
+        {
+          "id": 103,
+          "name": "Чемерисы-Барские"
+        },
+        {
+          "id": 104,
+          "name": "Черневцы"
+        },
+        {
+          "id": 105,
+          "name": "Черномин"
+        },
+        {
+          "id": 106,
+          "name": "Чернятка"
+        },
+        {
+          "id": 107,
+          "name": "Чечельник"
+        },
+        {
+          "id": 108,
+          "name": "Шаргород"
+        },
+        {
+          "id": 109,
+          "name": "Широкая Гребля"
+        },
+        {
+          "id": 110,
+          "name": "Шпиков"
+        },
+        {
+          "id": 111,
+          "name": "Юзефо-Николаевка"
+        },
+        {
+          "id": 112,
+          "name": "Якушинцы"
+        },
+        {
+          "id": 113,
+          "name": "Ялтушков"
+        },
+        {
+          "id": 114,
+          "name": "Ямполь"
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "name": "Волынская обл",
+      "areas": [
+        {
+          "id": 1,
+          "name": "Белин"
+        },
+        {
+          "id": 2,
+          "name": "Берестечко"
+        },
+        {
+          "id": 3,
+          "name": "Боратин"
+        },
+        {
+          "id": 4,
+          "name": "Буцин"
+        },
+        {
+          "id": 5,
+          "name": "Великая Глуша"
+        },
+        {
+          "id": 6,
+          "name": "Великий Омеляник"
+        },
+        {
+          "id": 7,
+          "name": "Владимир-Волынский"
+        },
+        {
+          "id": 8,
+          "name": "Воля-Ковельская"
+        },
+        {
+          "id": 9,
+          "name": "Всеволодовка"
+        },
+        {
+          "id": 10,
+          "name": "Голобы"
+        },
+        {
+          "id": 11,
+          "name": "Городок"
+        },
+        {
+          "id": 12,
+          "name": "Горохов"
+        },
+        {
+          "id": 13,
+          "name": "Горькая Полонка"
+        },
+        {
+          "id": 14,
+          "name": "Дедычи"
+        },
+        {
+          "id": 15,
+          "name": "Дерно"
+        },
+        {
+          "id": 16,
+          "name": "Дубечно"
+        },
+        {
+          "id": 17,
+          "name": "Дубовое"
+        },
+        {
+          "id": 18,
+          "name": "Жабка"
+        },
+        {
+          "id": 19,
+          "name": "Жовтневое"
+        },
+        {
+          "id": 20,
+          "name": "Журавичи"
+        },
+        {
+          "id": 21,
+          "name": "Забороль"
+        },
+        {
+          "id": 22,
+          "name": "Залесочье"
+        },
+        {
+          "id": 23,
+          "name": "Замличи"
+        },
+        {
+          "id": 24,
+          "name": "Заречье"
+        },
+        {
+          "id": 25,
+          "name": "Зеленая"
+        },
+        {
+          "id": 26,
+          "name": "Змиенец"
+        },
+        {
+          "id": 27,
+          "name": "Иваничи"
+        },
+        {
+          "id": 28,
+          "name": "Иванычи"
+        },
+        {
+          "id": 29,
+          "name": "Камень-Каширский"
+        },
+        {
+          "id": 30,
+          "name": "Киверцы"
+        },
+        {
+          "id": 31,
+          "name": "Кияж"
+        },
+        {
+          "id": 32,
+          "name": "Ковель"
+        },
+        {
+          "id": 33,
+          "name": "Колки"
+        },
+        {
+          "id": 34,
+          "name": "Коцюры"
+        },
+        {
+          "id": 35,
+          "name": "Крупа"
+        },
+        {
+          "id": 36,
+          "name": "Кульчин"
+        },
+        {
+          "id": 37,
+          "name": "Куснища"
+        },
+        {
+          "id": 38,
+          "name": "Липины"
+        },
+        {
+          "id": 39,
+          "name": "Локачи"
+        },
+        {
+          "id": 40,
+          "name": "Луков"
+        },
+        {
+          "id": 41,
+          "name": "Луцк"
+        },
+        {
+          "id": 42,
+          "name": "Лыще"
+        },
+        {
+          "id": 43,
+          "name": "Любешов"
+        },
+        {
+          "id": 44,
+          "name": "Любитов"
+        },
+        {
+          "id": 45,
+          "name": "Люблинец"
+        },
+        {
+          "id": 46,
+          "name": "Любомль"
+        },
+        {
+          "id": 47,
+          "name": "Маневичи"
+        },
+        {
+          "id": 48,
+          "name": "Марьяновка"
+        },
+        {
+          "id": 49,
+          "name": "Маяки"
+        },
+        {
+          "id": 50,
+          "name": "Несвич"
+        },
+        {
+          "id": 51,
+          "name": "Новая Лешня"
+        },
+        {
+          "id": 52,
+          "name": "Нововолынск"
+        },
+        {
+          "id": 53,
+          "name": "Овадное"
+        },
+        {
+          "id": 54,
+          "name": "Озерцо"
+        },
+        {
+          "id": 55,
+          "name": "Олыка"
+        },
+        {
+          "id": 56,
+          "name": "Павловка"
+        },
+        {
+          "id": 57,
+          "name": "Поворск"
+        },
+        {
+          "id": 58,
+          "name": "Подгайцы"
+        },
+        {
+          "id": 59,
+          "name": "Полонка"
+        },
+        {
+          "id": 60,
+          "name": "Проходы"
+        },
+        {
+          "id": 61,
+          "name": "Радомышль"
+        },
+        {
+          "id": 62,
+          "name": "Ракита"
+        },
+        {
+          "id": 63,
+          "name": "Ратно"
+        },
+        {
+          "id": 64,
+          "name": "Ратнов"
+        },
+        {
+          "id": 65,
+          "name": "Рачин"
+        },
+        {
+          "id": 66,
+          "name": "Ровное"
+        },
+        {
+          "id": 67,
+          "name": "Рожище"
+        },
+        {
+          "id": 68,
+          "name": "Рокини"
+        },
+        {
+          "id": 69,
+          "name": "Романов"
+        },
+        {
+          "id": 70,
+          "name": "Сокиричи"
+        },
+        {
+          "id": 71,
+          "name": "Старая Выжевка"
+        },
+        {
+          "id": 72,
+          "name": "Старовойтовое"
+        },
+        {
+          "id": 73,
+          "name": "Староселье"
+        },
+        {
+          "id": 74,
+          "name": "Струмовка"
+        },
+        {
+          "id": 75,
+          "name": "Суск"
+        },
+        {
+          "id": 76,
+          "name": "Тарасово"
+        },
+        {
+          "id": 77,
+          "name": "Тишковичи"
+        },
+        {
+          "id": 78,
+          "name": "Торчин"
+        },
+        {
+          "id": 79,
+          "name": "Турийск"
+        },
+        {
+          "id": 80,
+          "name": "Устилуг"
+        },
+        {
+          "id": 81,
+          "name": "Федоровка"
+        },
+        {
+          "id": 82,
+          "name": "Цумань"
+        },
+        {
+          "id": 83,
+          "name": "Чаруков"
+        },
+        {
+          "id": 84,
+          "name": "Чемерин"
+        },
+        {
+          "id": 85,
+          "name": "Шацк"
+        },
+        {
+          "id": 86,
+          "name": "Шепель"
+        }
+      ]
     }
   ]
 }

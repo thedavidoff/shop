@@ -8,6 +8,8 @@ import KyivstarSVG from "../SVG/KyivstarSVG";
 import LifecellSVG from "../SVG/LifecellSVG";
 
 const ViewRest = ({ id, products }) => {
+  const [isOpen, setIsOpen] = useState(false);
+
   const scrollHeight = Math.max(
     document.body.scrollHeight,
     document.documentElement.scrollHeight,
@@ -16,8 +18,6 @@ const ViewRest = ({ id, products }) => {
     document.body.clientHeight,
     document.documentElement.clientHeight
   );
-
-  const [isOpen, setIsOpen] = useState(false);
 
   const handleClick = () => {
     setIsOpen(!isOpen);

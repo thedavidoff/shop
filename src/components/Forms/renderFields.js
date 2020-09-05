@@ -2,6 +2,7 @@ import React from "react";
 
 import styles from "./errors.module.css";
 import Preloader from "../UI/Preloader/Preloader";
+import { login } from "../../redux/authReducer";
 
 export const textarea = ({
   input,
@@ -11,7 +12,6 @@ export const textarea = ({
 }) => {
   const hasError = touched && error;
   const hasWarning = touched && warning;
-
   return (
     <>
       <textarea

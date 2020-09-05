@@ -13,6 +13,11 @@ const Notices = ({ type }) => {
   let color = blue;
 
   switch (type) {
+    case "warning":
+      notice =
+        "Друзья! Посещение наших магазинов возможно только в медицинской маске или респираторе. Берегите себя и окружающих!";
+      color = blue;
+      break;
     case "accessDenied":
       notice =
         "Данную страницу могут просмотреть только зарегистрированные пользователи. Войдите или зарегистрируйтесь.";
@@ -34,6 +39,20 @@ const Notices = ({ type }) => {
     case "profileUpdateFailed":
       notice = "С обновлением данных профиля что-то пошло не так...";
       color = green;
+      break;
+
+    case "auth/invalid-email":
+      notice = "Некорректный e-mail.";
+      color = red;
+      break;
+    case "auth/requires-recent-login":
+      notice =
+        "При обновлении e-mail возникли проблемы... Выйдите из своей учетной записи и войдите заново.";
+      color = red;
+      break;
+    case "auth/email-already-in-use":
+      notice = "Такой e-mail уже используется другим пользователем.";
+      color = red;
       break;
     default:
       notice = type;

@@ -2,9 +2,22 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="d838e675-2b75-4462-b131-7ac443757c74" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/src/components/Profile/SearchCity/SearchCity.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/Profile/SearchCity/SearchCity.module.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/Profile/SearchCity/SearchList.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/UI/Popup/Popup.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/UI/Popup/Popup.module.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Profile/Profile.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Profile/Profile.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/UI/Preloader/Preloader.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/UI/Preloader/Preloader.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/db.json" beforeDir="false" afterPath="$PROJECT_DIR$/db.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Forms/ProfileForm/ProfileForm.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Forms/ProfileForm/ProfileForm.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Forms/renderFields.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Forms/renderFields.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/UI/Notices/Notices.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/UI/Notices/Notices.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/UI/SVG/InfoSVG.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/UI/SVG/InfoSVG.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/UI/ViewRest/ViewRest.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/UI/ViewRest/ViewRest.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/redux/authReducer.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/redux/authReducer.js" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -185,7 +198,10 @@
       <workItem from="1598861832800" duration="3496000" />
       <workItem from="1598881966834" duration="7398000" />
       <workItem from="1598947238139" duration="16327000" />
-      <workItem from="1599034050568" duration="3138000" />
+      <workItem from="1599034050568" duration="26714000" />
+      <workItem from="1599117106242" duration="26950000" />
+      <workItem from="1599215134684" duration="17184000" />
+      <workItem from="1599296108894" duration="2906000" />
     </task>
     <servers />
   </component>

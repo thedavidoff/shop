@@ -1,14 +1,36 @@
-import React from "react";
-import { Field, reduxForm } from "redux-form";
+import React, {useEffect, useState} from "react";
+import { Field, reduxForm, autofill } from "redux-form";
 import ReactTooltip from "react-tooltip";
+import { useDispatch } from "react-redux";
 
 import styles from "../LoginForm/LoginForm.module.css";
 import stylesTooltip from "../../UI/Tooltip/Tooltip.module.css";
 import { email, required } from "../validate";
 import { inputProfile } from "../renderFields";
 import Preloader from "../../UI/Preloader/Preloader";
+import Popup from "../../UI/Popup/Popup";
+import SearchCity from "../../Profile/SearchCity/SearchCity";
 
 let ProfileForm = ({ pristine, submitting, handleSubmit, initialValues }) => {
+  let [newCity, setNewCity] = useState("");
+  let [isClose, setIsClose] = useState(false);
+
+  const dispatch = useDispatch();
+
+  const handleSelectCity = (e) => {
+    setNewCity(e.target.innerHTML);
+    setIsClose(!isClose);
+    dispatch(autofill("ProfileForm", "city", e.target.innerHTML));
+  };
+
+  useEffect(() => {
+    setIsClose(false);
+  }, [isClose]);
+
+  const handleClick = () => {
+    ReactTooltip.hide();
+  };
+
   return (
     <form
       onSubmit={handleSubmit}
@@ -99,7 +121,9 @@ let ProfileForm = ({ pristine, submitting, handleSubmit, initialValues }) => {
                 component={inputProfile}
                 loadedSuccess={initialValues}
               />
-              <div className={styles.priceLevelInfo}>Данная сумма является весьма примерной и не является фискальной.</div>
+              <div className={styles.priceLevelInfo}>
+                Данная сумма является весьма примерной и не является фискальной.
+              </div>
             </td>
           </tr>
           <tr data-tip="Данная сумма является весьма примерной и не является фискальной. В ней учитываються лишь успешные заказы через сайт c этого аккаунта.">
@@ -182,10 +206,19 @@ let ProfileForm = ({ pristine, submitting, handleSubmit, initialValues }) => {
             <td>
               <Field
                 name="city"
-                type="text"
+                type="hidden"
                 component={inputProfile}
                 loadedSuccess={initialValues}
               />
+              <div onClick={handleClick}>
+                <Popup text={newCity || (initialValues && initialValues.city)} isClose={isClose}>
+                  <SearchCity
+                    city={initialValues && initialValues.city}
+                    newCity={newCity}
+                    handleSelectCity={handleSelectCity}
+                  />
+                </Popup>
+              </div>
             </td>
           </tr>
           <tr>

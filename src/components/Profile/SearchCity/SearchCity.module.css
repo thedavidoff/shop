@@ -1,0 +1,48 @@
+.searchCity {
+}
+.searchCity h3 {
+  font-size: 18px;
+  font-weight: bold;
+}
+.searchCity p {
+  margin: 0;
+}
+.searchCity input {
+  position: relative;
+  padding: 5px 10px;
+  font-size: 18px;
+}
+.cityFastSelect {
+  display: flex;
+  flex-wrap: wrap;
+  list-style: none;
+  margin-bottom: 0;
+  padding: 0;
+}
+.cityFastSelect li {
+  margin: 5px 10px 5px 0;
+  font-size: 16px;
+  border-bottom: 1px dashed;
+}
+.cityFastSelect li:hover {
+  cursor: pointer;
+  color: #ff7238;
+}
+.searchList {
+  position: absolute;
+  display: inline-block;
+  margin: -19px 0 0 0;
+  padding: 0;
+  list-style: none;
+  background: #fff;
+  font-size: 16px;
+  border: 1px solid cadetblue;
+}
+.searchList li {
+  padding: 3px 5px;
+}
+.searchList li:hover {
+  cursor: pointer;
+  color: #fff;
+  background: cadetblue;
+}

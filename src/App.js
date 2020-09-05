@@ -19,7 +19,7 @@ class App extends Component {
         <HeaderContainer />
         <Sidebar rangePrices={this.props.rangePrices} />
         <div className="body">
-          <Notices type="Друзья! Посещение наших магазинов возможно только в медицинской маске или респираторе. Берегите себя и окружающих!" />
+          <Notices type="warning" />
           <Routes />
         </div>
       </div>
