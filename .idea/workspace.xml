@@ -5,8 +5,7 @@
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/Forms/ProfileForm/ProfileForm.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Forms/ProfileForm/ProfileForm.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/Forms/renderFields.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Forms/renderFields.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Forms/validate.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Forms/validate.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/redux/authReducer.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/redux/authReducer.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/UI/Filters/FilterItems/FilterItem/FilterItem.module.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/UI/Filters/FilterItems/FilterItem/FilterItem.module.css" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -190,7 +189,8 @@
       <workItem from="1599034050568" duration="26714000" />
       <workItem from="1599117106242" duration="26950000" />
       <workItem from="1599215134684" duration="17184000" />
-      <workItem from="1599296108894" duration="9986000" />
+      <workItem from="1599296108894" duration="12014000" />
+      <workItem from="1599470023089" duration="2637000" />
     </task>
     <servers />
   </component>

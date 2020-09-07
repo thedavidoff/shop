@@ -1,4 +1,4 @@
-import React, {useEffect, useState} from "react";
+import React, { useEffect, useState } from "react";
 import { Field, reduxForm, autofill } from "redux-form";
 import ReactTooltip from "react-tooltip";
 import { useDispatch } from "react-redux";
@@ -6,7 +6,7 @@ import { useDispatch } from "react-redux";
 import styles from "../LoginForm/LoginForm.module.css";
 import stylesTooltip from "../../UI/Tooltip/Tooltip.module.css";
 import { email, required, gender } from "../validate";
-import {inputProfile, selectProfile} from "../renderFields";
+import { inputProfile, selectProfile } from "../renderFields";
 import Preloader from "../../UI/Preloader/Preloader";
 import Popup from "../../UI/Popup/Popup";
 import SearchCity from "../../Profile/SearchCity/SearchCity";
@@ -102,7 +102,11 @@ let ProfileForm = ({ pristine, submitting, handleSubmit, initialValues }) => {
               Пол<span>*</span>:
             </td>
             <td>
-              <Field name="gender" component={selectProfile} validate={[gender]} />
+              <Field
+                name="gender"
+                component={selectProfile}
+                validate={[gender]}
+              />
               {!initialValues && <Preloader type="inputProfile" />}
             </td>
           </tr>
@@ -207,7 +211,14 @@ let ProfileForm = ({ pristine, submitting, handleSubmit, initialValues }) => {
                 loadedSuccess={initialValues}
               />
               <div onClick={handleClick}>
-                <Popup text={newCity || (initialValues && initialValues.city)} isClose={isClose}>
+                <Popup
+                  text={
+                    newCity ||
+                    (initialValues && initialValues.city) ||
+                    (initialValues && !initialValues.city && "Выберите город")
+                  }
+                  isClose={isClose}
+                >
                   <SearchCity
                     city={initialValues && initialValues.city}
                     newCity={newCity}

@@ -2,7 +2,6 @@ import React from "react";
 
 import styles from "./errors.module.css";
 import Preloader from "../UI/Preloader/Preloader";
-import { Field } from "redux-form";
 
 export const textarea = ({
   input,

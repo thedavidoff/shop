@@ -3,7 +3,7 @@
   margin-top: 15px;
   display: flex;
   flex-direction: column;
-  align-items: start;
+  align-items: flex-start;
 }
 .filterItem {
   margin-bottom: 3px;
