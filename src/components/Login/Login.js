@@ -3,7 +3,7 @@ import { NavLink } from "react-router-dom";
 import { connect } from "react-redux";
 import { isLoaded, isEmpty } from "react-redux-firebase";
 import ReactTooltip from "react-tooltip";
-import PropTypes from "prop-types";
+import * as PropTypes from "prop-types";
 
 import styles from "./Login.module.css";
 import stylesTooltip from "../UI/Tooltip/Tooltip.module.css";
@@ -14,6 +14,7 @@ import Preloader from "../UI/Preloader/Preloader";
 
 const Login = ({
   isAuth,
+  isAnonymous,
   userName,
   authErrorMessage,
   regFailedMessage,
@@ -38,7 +39,7 @@ const Login = ({
 
   return (
     <div className={styles.loginBlock}>
-      {isLoaded(isAuth) && !isEmpty(isAuth) && userName ? (
+      {isLoaded(isAuth) && !isEmpty(isAuth) && !isAnonymous ? (
         <>
           <ReactTooltip className={stylesTooltip.tooltip} />
           <button className={styles.loginBlockButton} onClick={logout}>
@@ -56,7 +57,7 @@ const Login = ({
             Профиль
           </NavLink>
         </>
-      ) : isLoaded(isAuth) && isEmpty(isAuth) ? (
+      ) : isLoaded(isAuth) || isEmpty(isAuth) || isAnonymous ? (
         <>
           <button
             className={styles.loginBlockButton}
@@ -94,12 +95,13 @@ Login.propTypes = {
   regFailedMessage: PropTypes.string,
   login: PropTypes.func,
   logout: PropTypes.func,
-  registration: PropTypes.func
+  registration: PropTypes.func,
 };
 
 const mapStateToProps = (state) => {
   return {
     isAuth: state.firebase.auth,
+    isAnonymous: state.firebase.auth.isAnonymous,
     authErrorMessage: state.auth.authErrorMessage,
     regFailedMessage: state.auth.regFailedMessage,
     userName: state.firebase.auth.displayName,

@@ -9,7 +9,7 @@ export const getProducts = (state) => {
 };
 export const getWishList = (state) => {
   let result = [];
-  if (state.firebase.profile.wishList) {
+  if (!state.firebase.profile.isEmpty && state.firebase.profile.wishList) {
     Object.values(state.firebase.profile.wishList).forEach((id) =>
       result.push(id)
     );
@@ -47,10 +47,10 @@ export const getIsOpenReviewFormId = (state) => {
 };
 
 export const getProductsInCart = (state) => {
-  return state.firebase.profile.cart;
+  return !state.firebase.profile.isEmpty ? state.firebase.profile.cart : null;
 };
 export const getCountInCart = (state) => {
-  if (state.firebase.profile.cart) {
+  if (!state.firebase.profile.isEmpty && state.firebase.profile.cart) {
     return Object.values(state.firebase.profile.cart).reduce(
       (acc, { quantity }) => acc + quantity,
       0
@@ -59,7 +59,7 @@ export const getCountInCart = (state) => {
 };
 
 export const getTotalCost = (state) => {
-  if (state.firebase.profile.cart) {
+  if (!state.firebase.profile.isEmpty && state.firebase.profile.cart) {
     return Object.values(state.firebase.profile.cart)
       .map(({ id, quantity }) => getProductById(state, id).price * quantity)
       .reduce((sum, price) => sum + price, 0);

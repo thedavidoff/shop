@@ -29,6 +29,7 @@ class App extends Component {
 
 const mapStateToProps = (state) => {
   return {
+    isAuth: state.firebase.auth,
     rangePrices: state.homePage.rangePrices,
   };
 };

@@ -1,17 +1,16 @@
 import { stopSubmit } from "redux-form";
 
 const SET_REGISTRATION_FAILED = "authReducer/SET_REGISTRATION_FAILED";
-
 const SET_INITIAL_VALUES_FOR_PROFILE_FORM =
   "authReducer/SET_INITIAL_VALUES_FOR_PROFILE_FORM";
-
 const SET_NOTICE_TYPE = "authReducer/SET_NOTICE_TYPE";
+const SET_CART = "authReducer/SET_CART";
 
 const initialState = {
   regFailedMessage: null,
   initialValuesForProfileForm: null,
   noticeType: null,
-  wishList: [],
+  cart: [],
 };
 
 const authReducer = (state = initialState, { type, payload }) => {
@@ -30,6 +29,11 @@ const authReducer = (state = initialState, { type, payload }) => {
       return {
         ...state,
         noticeType: payload,
+      };
+    case SET_CART:
+      return {
+        ...state,
+        cart: [...payload],
       };
     default:
       return state;
@@ -60,7 +64,11 @@ export const removeFromWishList = (ids) => {
   return (dispatch, getState, getFirebase) => {
     const firebase = getFirebase();
     const user = firebase.auth().currentUser;
-    const wishList = getState().firebase.profile.wishList;
+    const ref = firebase.database().ref("users/" + user.uid + "/wishList");
+
+    let wishList;
+    ref.once("value", (snap) => (wishList = snap.val()));
+
     const result = Object.fromEntries(
       Object.entries(wishList).map(([key, value]) => {
         ids.map((id) => (+id === value ? (value = null) : value));
@@ -70,16 +78,10 @@ export const removeFromWishList = (ids) => {
 
     if (Object.keys(wishList).length === ids.length) {
       // delete the whole wishlist
-      firebase
-        .database()
-        .ref("users/" + user.uid + "/wishList")
-        .remove();
+      ref.remove();
     }
 
-    firebase
-      .database()
-      .ref("users/" + user.uid + "/wishList")
-      .update(result);
+    ref.update(result);
   };
 };
 
@@ -87,6 +89,7 @@ export const setInitialValuesForProfileForm = () => {
   return (dispatch, getState, getFirebase) => {
     const firebase = getFirebase();
     const user = firebase.auth().currentUser;
+
     if (user) {
       firebase
         .database()
@@ -101,12 +104,28 @@ export const setInitialValuesForProfileForm = () => {
   };
 };
 
+let credential;
+
 export const login = ({ email, password }) => {
   return (dispatch, getState, getFirebase) => {
     const firebase = getFirebase();
+    const user = firebase.auth().currentUser;
+    const ref = firebase.database().ref("users/" + user.uid + "/cart");
+
+    let cart;
+    ref.once("value", (snap) => (cart = snap.val()));
+
     firebase
       .auth()
       .signInWithEmailAndPassword(email, password)
+      .then((user) => {
+        const ref = firebase.database().ref("users/" + user.user.uid + "/cart");
+        if (cart) {
+          ref.remove();
+          ref.update(cart);
+        }
+        dispatch({ type: SET_CART, payload: null });
+      })
       .catch((error) => {
         if (error.code === "auth/invalid-email") {
           dispatch(
@@ -154,17 +173,22 @@ export const login = ({ email, password }) => {
 export const logout = () => {
   return (dispatch, getState, getFirebase) => {
     const firebase = getFirebase();
+    const user = firebase.auth().currentUser;
+    const ref = firebase.database().ref("users/" + user.uid + "/cart");
+
+    let cart;
+    ref.once("value", (snap) => (cart = snap.val()));
 
     firebase
       .auth()
       .signOut()
-      .then(() => {
+      .then(async () => {
         dispatch({ type: SET_INITIAL_VALUES_FOR_PROFILE_FORM, payload: null });
         dispatch({ type: SET_NOTICE_TYPE, payload: null });
+        dispatch({ type: SET_CART, payload: cart ? Object.values(cart) : [] });
       })
       .catch((error) => {
-        console.log(error.code);
-        console.log(error.message);
+        console.log(error);
       });
   };
 };
@@ -172,94 +196,186 @@ export const logout = () => {
 export const registration = ({ email, password }) => {
   return (dispatch, getState, getFirebase) => {
     const firebase = getFirebase();
-
+    const anonUser = firebase.auth().currentUser;
+    const anonCart = getState().firebase.profile.cart;
+    const anonWishList = getState().firebase.profile.wishList;
     let countUsers = Date.now();
+
     firebase
       .database()
       .ref("users/")
-      .once(
-        "value",
-        (snapshot) => (countUsers = snapshot.numChildren() + 1 + "")
-      );
+      .once("value", (snap) => (countUsers = snap.numChildren() + ""));
 
-    firebase
-      .auth()
-      .createUserWithEmailAndPassword(email, password)
-      .then(() => {
-        dispatch({ type: SET_NOTICE_TYPE, payload: "regSuccess" });
+    credential = firebase.auth.EmailAuthProvider.credential(email, password);
 
-        firebase
-          .updateAuth({
-            displayName: `User_${countUsers.slice(
-              countUsers.length - 10,
-              countUsers.length
-            )}`,
-          })
-          .then(() => {
-            firebase
-              .database()
-              .ref("users/" + firebase.auth().currentUser.uid)
-              .set({
-                amountOfPurchases: 0,
-                callBackWithAnOperatorRating: false,
-                city: "",
-                duplicateSmsViberToEmail: false,
-                email: email,
-                firstName: "",
-                gender: 0,
-                lastName: "",
-                login: `User_${countUsers}`,
-                patronymic: "",
-                phone: "",
-                priceLevel: "Розничный",
-                receiveEmailAboutOrders: true,
-                canChangeLogin: true,
-              });
-          });
-      })
-      .catch((error) => {
-        dispatch({ type: SET_REGISTRATION_FAILED, payload: error.code });
-        if (error.code === "auth/email-already-in-use") {
-          dispatch(
-            stopSubmit("RegistrationForm", {
-              email: "Пользователь с таким E-mail уже существует",
-              _error: "Возможно Вы уже регистрировались у нас?",
+    anonUser &&
+      anonUser
+        .linkWithCredential(credential)
+        .then((usercred) => {
+          let user = usercred.user;
+          const ref = firebase.database().ref("users/" + user.uid + "/cart");
+          const wishList = firebase
+            .database()
+            .ref("users/" + user.uid + "/wishList");
+          console.log("Anonymous account successfully upgraded", user);
+
+          dispatch({ type: SET_NOTICE_TYPE, payload: "regSuccess" });
+          firebase
+            .updateAuth({
+              displayName: `User_${countUsers.slice(
+                countUsers.length - 10,
+                countUsers.length
+              )}`,
             })
-          );
-        }
-        if (error.code === "auth/invalid-email") {
-          dispatch(
-            stopSubmit("RegistrationForm", {
-              email: "Неверный E-mail",
-              password: true,
-              _error: "Проверьте правильность ввода",
-            })
-          );
-        }
-        if (error.code === "auth/operation-not-allowed") {
-          dispatch(
-            stopSubmit("RegistrationForm", {
-              email: true,
-              password: true,
-              _error:
-                "Включите учетные записи электронной почты и паролей в консоли Firebase на вкладке Auth.",
-            })
-          );
-        }
-        if (error.code === "auth/weak-password") {
-          dispatch(
-            stopSubmit("RegistrationForm", {
-              password: "Пароль слишком прост",
-              _error: "Придумайте пароль сложнее",
-            })
-          );
-        }
-        if (error.code === "auth/too-many-requests") {
-          dispatch(
-            stopSubmit("RegistrationForm", { _error: "Слишком много запросов" })
-          );
-        }
-      });
+            .then(() => {
+              firebase
+                .database()
+                .ref("users/" + user.uid)
+                .set({
+                  amountOfPurchases: 0,
+                  callBackWithAnOperatorRating: false,
+                  city: "",
+                  duplicateSmsViberToEmail: false,
+                  email: email,
+                  firstName: "",
+                  gender: 0,
+                  lastName: "",
+                  login: `User_${countUsers}`,
+                  patronymic: "",
+                  phone: "",
+                  priceLevel: "Розничный",
+                  receiveEmailAboutOrders: true,
+                  canChangeLogin: true,
+                });
+              anonCart && ref.update(anonCart);
+              anonWishList && wishList.update(anonWishList);
+            });
+        })
+        .catch((error) => {
+          console.log("Error upgrading anonymous account", error);
+          dispatch({ type: SET_REGISTRATION_FAILED, payload: error.code });
+          if (error.code === "auth/email-already-in-use") {
+            dispatch(
+              stopSubmit("RegistrationForm", {
+                email: "Пользователь с таким E-mail уже существует",
+                _error: "Возможно Вы уже регистрировались у нас?",
+              })
+            );
+          }
+          if (error.code === "auth/invalid-email") {
+            dispatch(
+              stopSubmit("RegistrationForm", {
+                email: "Неверный E-mail",
+                password: true,
+                _error: "Проверьте правильность ввода",
+              })
+            );
+          }
+          if (error.code === "auth/operation-not-allowed") {
+            dispatch(
+              stopSubmit("RegistrationForm", {
+                email: true,
+                password: true,
+                _error:
+                  "Включите учетные записи электронной почты и паролей в консоли Firebase на вкладке Auth.",
+              })
+            );
+          }
+          if (error.code === "auth/weak-password") {
+            dispatch(
+              stopSubmit("RegistrationForm", {
+                password: "Пароль слишком прост",
+                _error: "Придумайте пароль сложнее",
+              })
+            );
+          }
+          if (error.code === "auth/too-many-requests") {
+            dispatch(
+              stopSubmit("RegistrationForm", {
+                _error: "Слишком много запросов",
+              })
+            );
+          }
+        });
+
+    // firebase
+    //   .auth()
+    //   .createUserWithEmailAndPassword(email, password)
+    //   .then(() => {
+    //     dispatch({ type: SET_NOTICE_TYPE, payload: "regSuccess" });
+    //
+    //     firebase
+    //       .updateAuth({
+    //         displayName: `User_${countUsers.slice(
+    //           countUsers.length - 10,
+    //           countUsers.length
+    //         )}`,
+    //       })
+    //       .then(() => {
+    //         firebase
+    //           .database()
+    //           .ref("users/" + firebase.auth().currentUser.uid)
+    //           .set({
+    //             amountOfPurchases: 0,
+    //             callBackWithAnOperatorRating: false,
+    //             city: "",
+    //             duplicateSmsViberToEmail: false,
+    //             email: email,
+    //             firstName: "",
+    //             gender: 0,
+    //             lastName: "",
+    //             login: `User_${countUsers}`,
+    //             patronymic: "",
+    //             phone: "",
+    //             priceLevel: "Розничный",
+    //             receiveEmailAboutOrders: true,
+    //             canChangeLogin: true,
+    //           });
+    //       });
+    //   })
+    //   .catch((error) => {
+    //     dispatch({ type: SET_REGISTRATION_FAILED, payload: error.code });
+    //     if (error.code === "auth/email-already-in-use") {
+    //       dispatch(
+    //         stopSubmit("RegistrationForm", {
+    //           email: "Пользователь с таким E-mail уже существует",
+    //           _error: "Возможно Вы уже регистрировались у нас?",
+    //         })
+    //       );
+    //     }
+    //     if (error.code === "auth/invalid-email") {
+    //       dispatch(
+    //         stopSubmit("RegistrationForm", {
+    //           email: "Неверный E-mail",
+    //           password: true,
+    //           _error: "Проверьте правильность ввода",
+    //         })
+    //       );
+    //     }
+    //     if (error.code === "auth/operation-not-allowed") {
+    //       dispatch(
+    //         stopSubmit("RegistrationForm", {
+    //           email: true,
+    //           password: true,
+    //           _error:
+    //             "Включите учетные записи электронной почты и паролей в консоли Firebase на вкладке Auth.",
+    //         })
+    //       );
+    //     }
+    //     if (error.code === "auth/weak-password") {
+    //       dispatch(
+    //         stopSubmit("RegistrationForm", {
+    //           password: "Пароль слишком прост",
+    //           _error: "Придумайте пароль сложнее",
+    //         })
+    //       );
+    //     }
+    //     if (error.code === "auth/too-many-requests") {
+    //       dispatch(
+    //         stopSubmit("RegistrationForm", { _error: "Слишком много запросов" })
+    //       );
+    //     }
+    //   });
   };
 };
 

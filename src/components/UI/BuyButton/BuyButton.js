@@ -8,7 +8,6 @@ import { getProductsInCart } from "../../../redux/selectors";
 import { addToCart } from "../../../redux/cartReducer";
 
 const BuyButton = ({ productsInCart, id, addToCart }) => {
-  // const product = productsInCart.find((product) => product.id === id);
   let product;
   if (productsInCart) product = Object.values(productsInCart).find(product => product.id === id);
 

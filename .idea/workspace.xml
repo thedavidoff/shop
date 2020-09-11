@@ -2,10 +2,17 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="d838e675-2b75-4462-b131-7ac443757c74" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/dictionaries/Eugene.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dictionaries/Eugene.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Forms/ProfileForm/ProfileForm.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Forms/ProfileForm/ProfileForm.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Forms/renderFields.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Forms/renderFields.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/UI/Filters/FilterItems/FilterItem/FilterItem.module.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/UI/Filters/FilterItems/FilterItem/FilterItem.module.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Login/Login.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Login/Login.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Profile/Profile.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Profile/Profile.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/UI/AddToWishListButton/AddToWishListButton.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/UI/AddToWishListButton/AddToWishListButton.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/UI/BuyButton/BuyButton.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/UI/BuyButton/BuyButton.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/redux/authReducer.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/redux/authReducer.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/redux/cartReducer.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/redux/cartReducer.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/redux/selectors.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/redux/selectors.js" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -190,7 +197,11 @@
       <workItem from="1599117106242" duration="26950000" />
       <workItem from="1599215134684" duration="17184000" />
       <workItem from="1599296108894" duration="12014000" />
-      <workItem from="1599470023089" duration="2637000" />
+      <workItem from="1599470023089" duration="9733000" />
+      <workItem from="1599559750779" duration="21188000" />
+      <workItem from="1599638070196" duration="24285000" />
+      <workItem from="1599723379196" duration="20640000" />
+      <workItem from="1599816879705" duration="8797000" />
     </task>
     <servers />
   </component>

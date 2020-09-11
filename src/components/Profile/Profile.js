@@ -3,8 +3,8 @@ import { connect, useDispatch } from "react-redux";
 import { isEmpty, isLoaded } from "react-redux-firebase";
 import { Tab, TabList, TabPanel, Tabs } from "react-tabs";
 import { NavLink } from "react-router-dom";
-import PropTypes from "prop-types";
 import Helmet from "react-helmet";
+import * as PropTypes from "prop-types";
 
 import styles from "./Profile.module.css";
 import ProfileForm from "../Forms/ProfileForm/ProfileForm";
@@ -35,7 +35,10 @@ const Profile = ({
       <Helmet>
         <meta charSet="utf-8" />
         <title>Общие | Профиль</title>
-        <link rel="canonical" href="http://localhost:3000/profile?tab=regdata" />
+        <link
+          rel="canonical"
+          href="http://localhost:3000/profile?tab=regdata"
+        />
       </Helmet>
       {noticeType && <Notices type={noticeType} />}
       {isLoaded(isAuth) && isEmpty(isAuth) ? (
@@ -87,7 +90,7 @@ Profile.propTypes = {
   initialValues: PropTypes.object,
   updateProfile: PropTypes.func,
   noticeType: PropTypes.string,
-  index: PropTypes.number
+  index: PropTypes.number,
 };
 
 const mapStateToProps = (state) => {
