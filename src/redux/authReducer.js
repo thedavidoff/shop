@@ -109,20 +109,46 @@ let credential;
 export const login = ({ email, password }) => {
   return (dispatch, getState, getFirebase) => {
     const firebase = getFirebase();
-    const user = firebase.auth().currentUser;
-    const ref = firebase.database().ref("users/" + user.uid + "/cart");
+    //const user = firebase.auth().currentUser;
+    //const refCart = firebase.database().ref("users/" + user.uid + "/cart");
+    //const refWishList = firebase.database().ref("users/" + user.uid + "/wishList");
 
-    let cart;
-    ref.once("value", (snap) => (cart = snap.val()));
+    let anonCart;
+    let anonWishList;
+    firebase
+      .database()
+      .ref("users/" + firebase.auth().currentUser.uid + "/cart")
+      .once("value", (snap) => (anonCart = snap.val()));
+    firebase
+      .database()
+      .ref("users/" + firebase.auth().currentUser.uid + "/wishList")
+      .once("value", (snap) => (anonWishList = snap.val()));
 
     firebase
       .auth()
       .signInWithEmailAndPassword(email, password)
       .then((user) => {
-        const ref = firebase.database().ref("users/" + user.user.uid + "/cart");
-        if (cart) {
-          ref.remove();
-          ref.update(cart);
+        const refCart = firebase
+          .database()
+          .ref("users/" + user.user.uid + "/cart");
+        const refWishList = firebase
+          .database()
+          .ref("users/" + user.user.uid + "/wishList");
+
+        if (anonCart) {
+          refCart.remove();
+          refCart.update(anonCart);
+        }
+        if (anonWishList) {
+          refWishList.once("value", (snap) =>
+            Object.values(anonWishList)
+              .filter((i) =>
+                snap.val()
+                  ? !Object.values(snap.val()).includes(i)
+                  : anonWishList
+              )
+              .map((id) => refWishList.push().set(id))
+          );
         }
         dispatch({ type: SET_CART, payload: null });
       })
@@ -217,7 +243,7 @@ export const registration = ({ email, password }) => {
           const wishList = firebase
             .database()
             .ref("users/" + user.uid + "/wishList");
-          console.log("Anonymous account successfully upgraded", user);
+          //console.log("Anonymous account successfully upgraded", user);
 
           dispatch({ type: SET_NOTICE_TYPE, payload: "regSuccess" });
           firebase

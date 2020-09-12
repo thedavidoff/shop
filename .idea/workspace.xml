@@ -2,17 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="d838e675-2b75-4462-b131-7ac443757c74" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/dictionaries/Eugene.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dictionaries/Eugene.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Login/Login.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Login/Login.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Profile/Profile.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Profile/Profile.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/UI/AddToWishListButton/AddToWishListButton.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/UI/AddToWishListButton/AddToWishListButton.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/UI/BuyButton/BuyButton.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/UI/BuyButton/BuyButton.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/redux/authReducer.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/redux/authReducer.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/redux/cartReducer.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/redux/cartReducer.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/redux/selectors.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/redux/selectors.js" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -55,16 +46,16 @@
     <property name="ts.external.directory.path" value="C:\Program Files\JetBrains\WebStorm 2019.2.3\plugins\JavaScriptLanguage\jsLanguageServicesImpl\external" />
   </component>
   <component name="RecentsManager">
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="D:\shop\src\assets" />
-      <recent name="D:\shop\src\components\ProductCard" />
-    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="D:\shop\src\components\Profile\WishList\WishListItem" />
       <recent name="D:\shop\src\components\Forms" />
       <recent name="D:\shop\src\components\UI" />
       <recent name="D:\shop\src\components\Login\RegistrationForm" />
       <recent name="D:\shop\src\components\Login\ProfileForm" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\shop\src\assets" />
+      <recent name="D:\shop\src\components\ProductCard" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -201,7 +192,8 @@
       <workItem from="1599559750779" duration="21188000" />
       <workItem from="1599638070196" duration="24285000" />
       <workItem from="1599723379196" duration="20640000" />
-      <workItem from="1599816879705" duration="8797000" />
+      <workItem from="1599816879705" duration="19193000" />
+      <workItem from="1599894478408" duration="8427000" />
     </task>
     <servers />
   </component>
