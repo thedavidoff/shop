@@ -6,6 +6,7 @@ import PhoneSVG from "../SVG/PhoneSVG";
 import VodafoneSVG from "../SVG/VodafoneSVG";
 import KyivstarSVG from "../SVG/KyivstarSVG";
 import LifecellSVG from "../SVG/LifecellSVG";
+import { getProducts } from "../../../redux/selectors";
 
 const ViewRest = ({ id, products }) => {
   const [isOpen, setIsOpen] = useState(false);
@@ -98,7 +99,7 @@ const ViewRest = ({ id, products }) => {
 
 const mapStateToProps = (state) => {
   return {
-    products: state.homePage.products,
+    products: getProducts(state),
   };
 };
 

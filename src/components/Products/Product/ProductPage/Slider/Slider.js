@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import PropTypes from "prop-types";
+import * as PropTypes from "prop-types";
 
 import styles from "./Slider.module.css";
 import Preloader from "../../../../UI/Preloader/Preloader";

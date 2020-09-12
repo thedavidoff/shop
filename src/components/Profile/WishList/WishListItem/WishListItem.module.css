@@ -11,7 +11,8 @@
   width: 100px;
   height: 104px;
 }
-.new, .hit {
+.new,
+.hit {
   position: absolute;
   width: 20px;
   height: 20px;
@@ -40,23 +41,31 @@
 .desc {
   font-size: 14px;
 }
-.descBlock span {
+.viewRest {
+  display: inline-block;
   margin-right: 10px;
 }
-.viewRest,
-.addToCompare {
+.addToCompare,
+.viewRest span {
   border-bottom: 1px dashed;
   padding-bottom: 1px;
   cursor: pointer;
 }
+.viewRest:hover,
+.addToCompare:hover,
+.notify:hover {
+  color: #ff7238;
+}
 .warranty,
 .notify,
 .reviews {
+  margin-right: 10px;
   border-bottom: 1px solid;
   padding-bottom: 1px;
   cursor: pointer;
 }
 .sku {
+  margin-right: 10px;
   color: darkgray;
 }
 

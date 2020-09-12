@@ -1,5 +1,5 @@
 import React from "react";
-import PropTypes from "prop-types";
+import * as PropTypes from "prop-types";
 
 const HeartSVG = ({ width = "30", height = "30", color = "#be1622" }) => {
   return (

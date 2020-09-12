@@ -1,5 +1,5 @@
 import React  from "react";
-import PropTypes from "prop-types";
+import * as PropTypes from "prop-types";
 
 import styles from "../ProductPage/ProductPage.module.css";
 import ReviewForm from "../../../Forms/ReviewForm/ReviewForm";

@@ -229,13 +229,13 @@ let ProfileForm = ({ pristine, submitting, handleSubmit, initialValues }) => {
             </td>
           </tr>
           <tr>
-            <td></td>
+            <td />
             <td>
               <span>*</span> - обязательно
             </td>
           </tr>
           <tr>
-            <td></td>
+            <td />
             <td>
               <button disabled={pristine || submitting}>Сохранить</button>
             </td>

@@ -15,14 +15,20 @@ import {
 import Preloader from "../UI/Preloader/Preloader";
 import Notices from "../UI/Notices/Notices";
 import WishList from "./WishList/WishList";
+import {
+  getInitialValues,
+  getIsAuth,
+  getNoticeType,
+  getProfile,
+} from "../../redux/selectors";
 
 const Profile = ({
   isAuth,
   profile,
   initialValues,
-  updateProfile,
   noticeType,
   index,
+  updateProfile,
 }) => {
   const dispatch = useDispatch();
 
@@ -88,17 +94,17 @@ Profile.propTypes = {
   isAuth: PropTypes.object,
   profile: PropTypes.object,
   initialValues: PropTypes.object,
-  updateProfile: PropTypes.func,
   noticeType: PropTypes.string,
   index: PropTypes.number,
+  updateProfile: PropTypes.func,
 };
 
 const mapStateToProps = (state) => {
   return {
-    isAuth: state.firebase.auth,
-    profile: state.firebase.profile,
-    initialValues: state.auth.initialValuesForProfileForm,
-    noticeType: state.auth.noticeType,
+    isAuth: getIsAuth(state),
+    profile: getProfile(state),
+    initialValues: getInitialValues(state),
+    noticeType: getNoticeType(state),
   };
 };
 

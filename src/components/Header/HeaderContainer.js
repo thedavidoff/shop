@@ -1,7 +1,7 @@
 import React from "react";
 import { connect } from "react-redux";
 import { NavLink } from "react-router-dom";
-import PropTypes from 'prop-types';
+import * as PropTypes from 'prop-types';
 
 import styles from "./Header.module.css";
 import home from "./../../assets/home.png";

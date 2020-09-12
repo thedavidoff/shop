@@ -41,6 +41,10 @@
 }
 .notify {
 }
+.viewRest:hover,
+.addToCompare:hover {
+  color: #ff7238;
+}
 .price {
   padding-bottom: 5px;
   color: #c20000;

@@ -1,7 +1,7 @@
 import React from "react";
 import { connect } from "react-redux";
 import { NavLink } from "react-router-dom";
-import PropTypes from "prop-types";
+import * as PropTypes from "prop-types";
 
 import styles from "./AddToWishListButton.module.css";
 import HeartSVG from "../SVG/HeartSVG";
@@ -58,7 +58,10 @@ const AddToWishListButton = ({ id, wishList, addToWishList }) => {
 };
 
 AddToWishListButton.propTypes = {
-  // id: PropTypes.number,
+  id: PropTypes.oneOfType([
+    PropTypes.number,
+    PropTypes.array
+  ]),
   wishList: PropTypes.array,
   addToWishList: PropTypes.func,
 };

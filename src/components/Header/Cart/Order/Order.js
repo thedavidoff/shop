@@ -1,6 +1,6 @@
 import React from "react";
 import { connect } from "react-redux";
-import PropTypes from "prop-types";
+import * as PropTypes from "prop-types";
 import Helmet from "react-helmet";
 
 import styles from "./Order.module.css";
@@ -32,12 +32,12 @@ const Order = (props) => {
             <table className={styles.productTable}>
               <thead>
                 <tr>
-                  <td></td>
-                  <td></td>
+                  <td />
+                  <td />
                   <td>Кол-во</td>
                   <td>Цена</td>
                   <td>Сумма</td>
-                  <td></td>
+                  <td />
                 </tr>
               </thead>
               <tbody>
@@ -56,8 +56,8 @@ const Order = (props) => {
                   );
                 })}
                 <tr className={styles.productTableFooter}>
-                  <td></td>
-                  <td></td>
+                  <td />
+                  <td />
                   <td className={styles.summary}>
                     <b>К оплате:</b>
                   </td>

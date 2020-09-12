@@ -1,5 +1,5 @@
 import React from "react";
-import PropTypes from "prop-types";
+import * as PropTypes from "prop-types";
 
 import styles from "./SpecificationsBlock.module.css";
 
@@ -42,7 +42,7 @@ const SpecificationsBlock = ({ product }) => {
 };
 
 SpecificationsBlock.propTypes = {
-  product: PropTypes.PropTypes.shape({
+  product: PropTypes.shape({
     name: PropTypes.string,
     specifications: PropTypes.array,
   }),

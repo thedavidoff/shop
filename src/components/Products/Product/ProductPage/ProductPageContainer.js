@@ -2,7 +2,7 @@ import React, { Component } from "react";
 import { connect } from "react-redux";
 import { compose } from "redux";
 import { withRouter } from "react-router-dom";
-import PropTypes from "prop-types";
+import * as PropTypes from "prop-types";
 
 import styles from "../../ProductContainer.module.css";
 import { getIsFetchingProduct, getProduct } from "../../../../redux/selectors";
@@ -18,7 +18,7 @@ class ProductPageContainer extends Component {
   render() {
     return (
       <div className={styles.wrapper}>
-        <div className={styles.productPage}>
+        <div>
           {this.props.isFetchingProduct ? (
             <Preloader type="productPage" />
           ) : (
@@ -31,9 +31,9 @@ class ProductPageContainer extends Component {
 }
 
 ProductPageContainer.propTypes = {
-  productRequest: PropTypes.func,
   isFetchingProduct: PropTypes.bool,
-  product: PropTypes.array
+  product: PropTypes.array,
+  productRequest: PropTypes.func,
 };
 
 const mapStateToProps = (state) => {

@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { connect } from "react-redux";
 import ReactTooltip from "react-tooltip";
-import PropTypes from "prop-types";
+import * as PropTypes from "prop-types";
 import Helmet from "react-helmet";
 
 import styles from "./WishList.module.css";

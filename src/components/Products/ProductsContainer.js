@@ -1,6 +1,6 @@
 import React from "react";
 import { connect } from "react-redux";
-import PropTypes from "prop-types";
+import * as PropTypes from "prop-types";
 import Helmet from "react-helmet";
 
 import styles from "./ProductContainer.module.css";
@@ -8,6 +8,7 @@ import Products from "./Products";
 import {
   getIsFetchingProducts,
   getProducts,
+  getFilteredProducts,
   getProductsInCart,
 } from "../../redux/selectors";
 import Preloader from "../UI/Preloader/Preloader";
@@ -16,7 +17,7 @@ const ProductsContainer = (props) => {
   return (
     <>
       <div className={styles.totalCount}>{`Всего товаров: ${
-        (props.min || props.max) || props.filteredProducts.length
+        props.min || props.max || props.filteredProducts.length
           ? props.filteredProducts.length
           : props.products.length
       }`}</div>
@@ -33,7 +34,9 @@ const ProductsContainer = (props) => {
         ) : (
           <Products
             products={
-              (props.min || props.max) || props.filteredProducts.length > 0 ? props.filteredProducts : props.products
+              props.min || props.max || props.filteredProducts.length > 0
+                ? props.filteredProducts
+                : props.products
             }
             productsInCart={props.productsInCart}
           />
@@ -56,8 +59,8 @@ const mapStateToProps = (state) => {
   return {
     isFetchingProducts: getIsFetchingProducts(state),
     products: getProducts(state),
+    filteredProducts: getFilteredProducts(state),
     productsInCart: getProductsInCart(state),
-    filteredProducts: state.homePage.filteredProducts,
   };
 };
 

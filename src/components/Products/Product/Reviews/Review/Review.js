@@ -1,6 +1,6 @@
 import React from "react";
 import StarRatingComponent from "react-star-rating-component";
-import PropTypes from "prop-types";
+import * as PropTypes from "prop-types";
 
 import styles from "../../ProductPage/ProductPage.module.css";
 import ReviewAnswerForm from "../../../../Forms/ReviewAnswerForm/ReviewAnswerForm";

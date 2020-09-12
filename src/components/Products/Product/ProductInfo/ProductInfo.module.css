@@ -31,6 +31,11 @@
   padding-bottom: 1px;
   cursor: pointer;
 }
+.viewRest:hover,
+.addToCompare:hover,
+.addToWishList:hover {
+  color: #ff7238;
+}
 .addToWishList {
   font-size: 13px;
 }

@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { NavHashLink as NavLink } from "react-router-hash-link";
-import PropTypes from "prop-types";
+import * as PropTypes from "prop-types";
 
 import styles from "./WishListItem.module.css";
 import Rating from "../../../UI/Rating/Rating";
@@ -118,14 +118,14 @@ const WishListItem = ({
             className={styles.warranty}
           >{`Гарантия: ${warranty} мес.`}</span>
         </p>
-        <p>
-          <span
+        <div style={{margin: "10px 0"}}>
+          <div
             className={styles.viewRest}
             data-tip="Посмотреть наличие товара на складах."
             onClick={handleClick}
           >
             <ViewRest id={id} />
-          </span>
+          </div>
           <span
             className={styles.notify}
             data-tip="Уведомить об изменении наличия или цены на e-mail."
@@ -139,7 +139,7 @@ const WishListItem = ({
           >
             {`Отзывы (${reviewsCount})`}
           </NavLink>
-        </p>
+        </div>
         <span className={styles.sku}>{`Код товара: ${sku}`}</span>
         <span className={styles.addToCompare}>Добавить к сравнению</span>
       </td>

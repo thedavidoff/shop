@@ -99,7 +99,7 @@ export const changeQuantity = (value, id) => {
     const user = firebase.auth().currentUser;
     const ref = firebase.database().ref("users/" + user.uid + "/cart");
 
-    let cart;
+    let cart = null;
     ref.once("value", (snap) => (cart = snap.val()));
 
     const result = Object.fromEntries(
@@ -133,7 +133,7 @@ export const deleteCartItem = (ids) => {
     const user = firebase.auth().currentUser;
     const ref = firebase.database().ref("users/" + user.uid + "/cart");
 
-    let cart;
+    let cart = null;
     ref.once("value", (snap) => (cart = snap.val()));
 
     const result = Object.fromEntries(

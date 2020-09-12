@@ -66,7 +66,7 @@ export const removeFromWishList = (ids) => {
     const user = firebase.auth().currentUser;
     const ref = firebase.database().ref("users/" + user.uid + "/wishList");
 
-    let wishList;
+    let wishList = null;
     ref.once("value", (snap) => (wishList = snap.val()));
 
     const result = Object.fromEntries(
@@ -109,9 +109,6 @@ let credential;
 export const login = ({ email, password }) => {
   return (dispatch, getState, getFirebase) => {
     const firebase = getFirebase();
-    //const user = firebase.auth().currentUser;
-    //const refCart = firebase.database().ref("users/" + user.uid + "/cart");
-    //const refWishList = firebase.database().ref("users/" + user.uid + "/wishList");
 
     let anonCart;
     let anonWishList;

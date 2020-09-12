@@ -1,7 +1,7 @@
 import React  from "react";
 import StarRatingComponent from "react-star-rating-component";
 import ReactTooltip from "react-tooltip";
-import PropTypes from "prop-types";
+import * as PropTypes from "prop-types";
 
 import styles from "./Rating.module.css";
 import stylesTooltip from "../Tooltip/Tooltip.module.css";

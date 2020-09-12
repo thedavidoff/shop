@@ -1,7 +1,8 @@
-import React, {useEffect, useState} from "react";
+import React, { useEffect, useState } from "react";
 import { connect } from "react-redux";
 
 import styles from "./Popup.module.css";
+import { getProducts } from "../../../redux/selectors";
 
 const Popup = ({ text, isClose, children }) => {
   const [isOpen, setIsOpen] = useState(false);
@@ -39,7 +40,7 @@ const Popup = ({ text, isClose, children }) => {
 
 const mapStateToProps = (state) => {
   return {
-    products: state.homePage.products,
+    products: getProducts(state),
   };
 };
 

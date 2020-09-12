@@ -1,7 +1,7 @@
 import React from "react";
 import { HashLink as Link } from "react-router-hash-link";
 import ReactTooltip from "react-tooltip";
-import PropTypes from "prop-types";
+import * as PropTypes from "prop-types";
 import Helmet from "react-helmet";
 
 import styles from "./ProductPage.module.css";
@@ -115,7 +115,7 @@ const ProductPage = ({ product }) => {
 };
 
 ProductPage.propTypes = {
-  product: PropTypes.PropTypes.shape({
+  product: PropTypes.shape({
     name: PropTypes.string,
     warranty: PropTypes.number,
     totalRating: PropTypes.number,

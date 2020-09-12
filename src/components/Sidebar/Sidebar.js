@@ -1,6 +1,6 @@
 import React from "react";
 import "rc-slider/assets/index.css";
-import PropTypes from "prop-types";
+import * as PropTypes from "prop-types";
 
 import styles from "./Sidebar.module.css";
 import Filters from "../UI/Filters/Filters";

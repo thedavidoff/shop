@@ -1,5 +1,5 @@
 import React from "react";
-import PropTypes from "prop-types";
+import * as PropTypes from "prop-types";
 
 import styles from "../../../../ProductPage/ProductPage.module.css";
 
@@ -26,7 +26,7 @@ const Answer = ({ answer }) => {
 };
 
 Answer.propTypes = {
-  answer: PropTypes.PropTypes.shape({
+  answer: PropTypes.shape({
     id: PropTypes.number,
     author: PropTypes.string,
     date: PropTypes.string,

@@ -11,6 +11,13 @@ import RegistrationForm from "../Forms/RegistrationForm/RegistrationForm";
 import LoginForm from "../Forms/LoginForm/LoginForm";
 import { login, logout, registration } from "../../redux/authReducer";
 import Preloader from "../UI/Preloader/Preloader";
+import {
+  getAuthErrorMessage,
+  getIsAnonymous,
+  getIsAuth,
+  getRegFailedMessage,
+  getUserName,
+} from "../../redux/selectors";
 
 const Login = ({
   isAuth,
@@ -23,18 +30,18 @@ const Login = ({
   registration,
 }) => {
   const [isOpenLoginForm, setIsOpenLoginForm] = useState(false);
-  const [isOpenRegistrationForm, setIsOpenRegistrationForm] = useState(false);
+  const [isOpenRegForm, setIsOpenRegForm] = useState(false);
 
   const toggleIsOpenLoginForm = () => {
     setIsOpenLoginForm(true);
-    setIsOpenRegistrationForm(false);
+    setIsOpenRegForm(false);
     isOpenLoginForm && setIsOpenLoginForm(false);
   };
 
   const toggleIsOpenRegistrationForm = () => {
-    setIsOpenRegistrationForm(true);
+    setIsOpenRegForm(true);
     setIsOpenLoginForm(false);
-    isOpenRegistrationForm && setIsOpenRegistrationForm(false);
+    isOpenRegForm && setIsOpenRegForm(false);
   };
 
   return (
@@ -74,7 +81,7 @@ const Login = ({
           >
             Зарегистрироваться
           </button>
-          {isOpenRegistrationForm && (
+          {isOpenRegForm && (
             <RegistrationForm
               onSubmit={registration}
               regFailedMessage={regFailedMessage}
@@ -90,6 +97,7 @@ const Login = ({
 
 Login.propTypes = {
   isAuth: PropTypes.object,
+  isAnonymous: PropTypes.bool,
   userName: PropTypes.string,
   authErrorMessage: PropTypes.string,
   regFailedMessage: PropTypes.string,
@@ -100,13 +108,11 @@ Login.propTypes = {
 
 const mapStateToProps = (state) => {
   return {
-    isAuth: state.firebase.auth,
-    isAnonymous: state.firebase.auth.isAnonymous,
-    authErrorMessage: state.auth.authErrorMessage,
-    regFailedMessage: state.auth.regFailedMessage,
-    userName: state.firebase.auth.displayName,
-    isShowRegistrationSuccessMessage:
-      state.auth.isShowRegistrationSuccessMessage,
+    isAuth: getIsAuth(state),
+    isAnonymous: getIsAnonymous(state),
+    userName: getUserName(state),
+    authErrorMessage: getAuthErrorMessage(state),
+    regFailedMessage: getRegFailedMessage(state),
   };
 };
 

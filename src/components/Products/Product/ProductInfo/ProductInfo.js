@@ -1,7 +1,7 @@
 import React from "react";
 import ReactTooltip from "react-tooltip";
 import { HashLink as Link } from "react-router-hash-link";
-import PropTypes from "prop-types";
+import * as PropTypes from "prop-types";
 
 import styles from "./ProductInfo.module.css";
 import stylesTooltip from "./../../../UI/Tooltip/Tooltip.module.css";

@@ -2,7 +2,7 @@ import React from "react";
 
 import styles from "./Notices.module.css";
 import InfoSVG from "../SVG/InfoSVG";
-import PropTypes from "prop-types";
+import * as PropTypes from "prop-types";
 
 const Notices = ({ type }) => {
   const red = "red";

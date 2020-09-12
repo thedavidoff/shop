@@ -1,7 +1,7 @@
 import React from "react";
 import { NavLink } from "react-router-dom";
 import { connect } from "react-redux";
-import PropTypes from "prop-types";
+import * as PropTypes from "prop-types";
 
 import styles from "./BuyButton.module.css";
 import { getProductsInCart } from "../../../redux/selectors";

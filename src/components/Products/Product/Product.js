@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { NavLink } from "react-router-dom";
-import PropTypes from "prop-types";
+import * as PropTypes from "prop-types";
 
 import styles from "./Product.module.css";
 import { Preview, previewMethods } from "../../UI/Preview/Preview";

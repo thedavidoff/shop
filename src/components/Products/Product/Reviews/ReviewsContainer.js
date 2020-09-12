@@ -2,7 +2,7 @@ import React, { Component } from "react";
 import { compose } from "redux";
 import { connect } from "react-redux";
 import { withRouter } from "react-router-dom";
-import PropTypes from "prop-types";
+import * as PropTypes from "prop-types";
 
 import styles from "../ProductPage/ProductPage.module.css";
 import {

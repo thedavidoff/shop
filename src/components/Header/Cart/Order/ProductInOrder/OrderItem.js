@@ -2,8 +2,8 @@ import React from "react";
 
 import styles from "../Order.module.css";
 import { NavLink } from "react-router-dom";
-import PropTypes from "prop-types";
 import AddToWishListButton from "../../../../UI/AddToWishListButton/AddToWishListButton";
+import * as PropTypes from "prop-types";
 
 const OrderItem = ({
   id,
@@ -45,7 +45,6 @@ const OrderItem = ({
       </td>
       <td className={styles.orderDeleteProduct}>
         <button
-          className={styles.deleteButton}
           onClick={() => deleteCartItem(id)}
         >
           Удалить
