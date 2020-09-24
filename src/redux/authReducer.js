@@ -76,10 +76,7 @@ export const removeFromWishList = (ids) => {
       })
     );
 
-    if (Object.keys(wishList).length === ids.length) {
-      // delete the whole wishlist
-      ref.remove();
-    }
+    if (Object.keys(wishList).length === ids.length) ref.remove();
 
     ref.update(result);
   };
@@ -106,7 +103,7 @@ export const setInitialValuesForProfileForm = () => {
 
 let credential;
 
-export const login = ({ email, password }) => {
+export const login = ({ email, password, ...rememberMe }) => {
   return (dispatch, getState, getFirebase) => {
     const firebase = getFirebase();
 
@@ -120,6 +117,15 @@ export const login = ({ email, password }) => {
       .database()
       .ref("users/" + firebase.auth().currentUser.uid + "/wishList")
       .once("value", (snap) => (anonWishList = snap.val()));
+
+    firebase
+      .auth()
+      .setPersistence(
+        rememberMe
+          ? firebase.auth.Auth.Persistence.LOCAL
+          : firebase.auth.Auth.Persistence.SESSION
+      )
+      .catch((error) => console.log(error));
 
     firebase
       .auth()
@@ -234,13 +240,12 @@ export const registration = ({ email, password }) => {
     anonUser &&
       anonUser
         .linkWithCredential(credential)
-        .then((usercred) => {
-          let user = usercred.user;
+        .then((userCred) => {
+          let user = userCred.user;
           const ref = firebase.database().ref("users/" + user.uid + "/cart");
           const wishList = firebase
             .database()
             .ref("users/" + user.uid + "/wishList");
-          //console.log("Anonymous account successfully upgraded", user);
 
           dispatch({ type: SET_NOTICE_TYPE, payload: "regSuccess" });
           firebase
@@ -275,11 +280,10 @@ export const registration = ({ email, password }) => {
             });
         })
         .catch((error) => {
-          console.log("Error upgrading anonymous account", error);
           dispatch({ type: SET_REGISTRATION_FAILED, payload: error.code });
           if (error.code === "auth/email-already-in-use") {
             dispatch(
-              stopSubmit("RegistrationForm", {
+              stopSubmit("RegForm", {
                 email: "Пользователь с таким E-mail уже существует",
                 _error: "Возможно Вы уже регистрировались у нас?",
               })
@@ -287,7 +291,7 @@ export const registration = ({ email, password }) => {
           }
           if (error.code === "auth/invalid-email") {
             dispatch(
-              stopSubmit("RegistrationForm", {
+              stopSubmit("RegForm", {
                 email: "Неверный E-mail",
                 password: true,
                 _error: "Проверьте правильность ввода",
@@ -296,7 +300,7 @@ export const registration = ({ email, password }) => {
           }
           if (error.code === "auth/operation-not-allowed") {
             dispatch(
-              stopSubmit("RegistrationForm", {
+              stopSubmit("RegForm", {
                 email: true,
                 password: true,
                 _error:
@@ -306,7 +310,7 @@ export const registration = ({ email, password }) => {
           }
           if (error.code === "auth/weak-password") {
             dispatch(
-              stopSubmit("RegistrationForm", {
+              stopSubmit("RegForm", {
                 password: "Пароль слишком прост",
                 _error: "Придумайте пароль сложнее",
               })
@@ -314,7 +318,7 @@ export const registration = ({ email, password }) => {
           }
           if (error.code === "auth/too-many-requests") {
             dispatch(
-              stopSubmit("RegistrationForm", {
+              stopSubmit("RegForm", {
                 _error: "Слишком много запросов",
               })
             );
@@ -360,7 +364,7 @@ export const registration = ({ email, password }) => {
     //     dispatch({ type: SET_REGISTRATION_FAILED, payload: error.code });
     //     if (error.code === "auth/email-already-in-use") {
     //       dispatch(
-    //         stopSubmit("RegistrationForm", {
+    //         stopSubmit("RegForm", {
     //           email: "Пользователь с таким E-mail уже существует",
     //           _error: "Возможно Вы уже регистрировались у нас?",
     //         })
@@ -368,7 +372,7 @@ export const registration = ({ email, password }) => {
     //     }
     //     if (error.code === "auth/invalid-email") {
     //       dispatch(
-    //         stopSubmit("RegistrationForm", {
+    //         stopSubmit("RegForm", {
     //           email: "Неверный E-mail",
     //           password: true,
     //           _error: "Проверьте правильность ввода",
@@ -377,7 +381,7 @@ export const registration = ({ email, password }) => {
     //     }
     //     if (error.code === "auth/operation-not-allowed") {
     //       dispatch(
-    //         stopSubmit("RegistrationForm", {
+    //         stopSubmit("RegForm", {
     //           email: true,
     //           password: true,
     //           _error:
@@ -387,7 +391,7 @@ export const registration = ({ email, password }) => {
     //     }
     //     if (error.code === "auth/weak-password") {
     //       dispatch(
-    //         stopSubmit("RegistrationForm", {
+    //         stopSubmit("RegForm", {
     //           password: "Пароль слишком прост",
     //           _error: "Придумайте пароль сложнее",
     //         })
@@ -395,7 +399,7 @@ export const registration = ({ email, password }) => {
     //     }
     //     if (error.code === "auth/too-many-requests") {
     //       dispatch(
-    //         stopSubmit("RegistrationForm", { _error: "Слишком много запросов" })
+    //         stopSubmit("RegForm", { _error: "Слишком много запросов" })
     //       );
     //     }
     //   });

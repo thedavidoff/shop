@@ -12,6 +12,7 @@
 }
 .orderLink {
   text-decoration: none;
+  text-transform: inherit;
 }
 .wishList {
   opacity: 0.7;

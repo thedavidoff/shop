@@ -1,6 +1,6 @@
 import { productAPI } from "../api/api";
 
-const TOGGLE_IS_FETCHING_PRODUCTS = "homeReducer/TOGGLE_IS_FETCHING_PRODUCTS";
+const TOGGLE_IS_LOADED = "homeReducer/TOGGLE_IS_LOADED";
 const SET_PRODUCTS = "homeReducer/SET_PRODUCTS";
 const SET_RANGE_PRICES = "homeReducer/SET_RANGE_PRICES";
 const SET_FILTERED_PRODUCTS = "homeReducer/SET_FILTERED_PRODUCTS";
@@ -13,7 +13,7 @@ const SET_UPDATE_FILTER_FIELDS_VALUES =
   "homeReducer/SET_UPDATE_FILTER_FIELDS_VALUES";
 
 const initialState = {
-  isFetchingProducts: false,
+  isLoaded: false,
   products: [],
   rangePrices: [0, 0],
   filteredProducts: [],
@@ -26,10 +26,10 @@ const initialState = {
 
 const homeReducer = (state = initialState, { type, payload }) => {
   switch (type) {
-    case TOGGLE_IS_FETCHING_PRODUCTS:
+    case TOGGLE_IS_LOADED:
       return {
         ...state,
-        isFetchingProducts: payload,
+        isLoaded: payload,
       };
     case SET_PRODUCTS:
       return {
@@ -94,11 +94,10 @@ const sortFunc = (a, b) => {
 
 export const productsRequest = () => {
   return async (dispatch) => {
-    dispatch({ type: TOGGLE_IS_FETCHING_PRODUCTS, payload: true });
     const products = await productAPI.getProductsAPI();
     dispatch({ type: SET_PRODUCTS, payload: products });
     dispatch({ type: SET_RANGE_PRICES });
-    dispatch({ type: TOGGLE_IS_FETCHING_PRODUCTS, payload: false });
+    dispatch({ type: TOGGLE_IS_LOADED, payload: true });
 
     dispatch({ type: TOGGLE_IS_FETCHING_FILTER_FIELDS, payload: true });
     const filterFields = await productAPI.getFilterFieldsAPI();

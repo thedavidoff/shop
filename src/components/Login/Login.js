@@ -1,95 +1,164 @@
-import React, { useState } from "react";
-import { NavLink } from "react-router-dom";
+import React from "react";
 import { connect } from "react-redux";
+import { Link } from "react-router-dom";
 import { isLoaded, isEmpty } from "react-redux-firebase";
-import ReactTooltip from "react-tooltip";
+import {
+  makeStyles,
+  Button,
+  Typography,
+  Popper,
+  ClickAwayListener,
+  Paper,
+  Fade,
+} from "@material-ui/core";
 import * as PropTypes from "prop-types";
 
-import styles from "./Login.module.css";
-import stylesTooltip from "../UI/Tooltip/Tooltip.module.css";
-import RegistrationForm from "../Forms/RegistrationForm/RegistrationForm";
 import LoginForm from "../Forms/LoginForm/LoginForm";
+import RegForm from "../Forms/RegForm/RegForm";
 import { login, logout, registration } from "../../redux/authReducer";
-import Preloader from "../UI/Preloader/Preloader";
-import {
-  getAuthErrorMessage,
-  getIsAnonymous,
-  getIsAuth,
-  getRegFailedMessage,
-  getUserName,
-} from "../../redux/selectors";
+import { getIsAnonymous, getIsAuth, getUserName } from "../../redux/selectors";
+import DarkTooltip from "../UI/Tooltip/DakTooltip";
+
+const useStyles = makeStyles((theme) => ({
+  root: {
+    position: "relative",
+    display: "flex",
+    alignItems: "flex-start",
+    justifyContent: "space-between",
+    flexBasis: 311,
+    paddingBottom: 16,
+  },
+  button: {
+    backgroundColor: theme.palette.primary.main,
+    color: "#fff",
+    textTransform: "none",
+    padding: "0 10px",
+    fontSize: 14,
+    "&:hover": { backgroundColor: theme.palette.primary.dark },
+  },
+  displayName: {
+    marginTop: 2,
+    padding: "0 5px",
+    fontSize: 13,
+  },
+}));
 
 const Login = ({
   isAuth,
   isAnonymous,
   userName,
-  authErrorMessage,
-  regFailedMessage,
   login,
   logout,
   registration,
 }) => {
-  const [isOpenLoginForm, setIsOpenLoginForm] = useState(false);
-  const [isOpenRegForm, setIsOpenRegForm] = useState(false);
+  const classes = useStyles();
 
-  const toggleIsOpenLoginForm = () => {
-    setIsOpenLoginForm(true);
-    setIsOpenRegForm(false);
-    isOpenLoginForm && setIsOpenLoginForm(false);
+  const [loginAnchor, setLoginAnchor] = React.useState(null);
+  const [regAnchor, setRegAnchor] = React.useState(null);
+
+  const handleLogout = () => {
+    logout();
+    setLoginAnchor(null);
   };
-
-  const toggleIsOpenRegistrationForm = () => {
-    setIsOpenRegForm(true);
-    setIsOpenLoginForm(false);
-    isOpenRegForm && setIsOpenRegForm(false);
+  const handleOpenLoginForm = (event) => {
+    setLoginAnchor(loginAnchor ? null : event.currentTarget);
+  };
+  const handleOpenRegForm = (event) => {
+    setRegAnchor(regAnchor ? null : event.currentTarget);
+  };
+  const handleClickAwayLoginForm = () => {
+    setLoginAnchor(null);
+  };
+  const handleClickAwayRegForm = () => {
+    setRegAnchor(null);
   };
 
   return (
-    <div className={styles.loginBlock}>
+    <div className={classes.root}>
       {isLoaded(isAuth) && !isEmpty(isAuth) && !isAnonymous ? (
         <>
-          <ReactTooltip className={stylesTooltip.tooltip} />
-          <button className={styles.loginBlockButton} onClick={logout}>
+          <Button
+            size="small"
+            variant="contained"
+            className={classes.button}
+            onClick={handleLogout}
+          >
             Выйти
-          </button>
-          <div className={styles.displayName} data-tip={userName}>
-            {userName && userName.length > 13
-              ? userName.slice(0, 13) + "..."
-              : userName}
-          </div>
-          <NavLink
-            className={styles.loginBlockProfileLink}
+          </Button>
+          <DarkTooltip title={userName} placement="bottom">
+            <Typography className={classes.displayName}>
+              {userName && userName.length > 19
+                ? userName.slice(0, 19) + "..."
+                : userName}
+            </Typography>
+          </DarkTooltip>
+          <Button
+            size="small"
+            variant="contained"
+            component={Link}
             to="/profile?tab=regdata"
+            className={classes.button}
           >
             Профиль
-          </NavLink>
-        </>
-      ) : isLoaded(isAuth) || isEmpty(isAuth) || isAnonymous ? (
-        <>
-          <button
-            className={styles.loginBlockButton}
-            onClick={toggleIsOpenLoginForm}
-          >
-            Войти
-          </button>
-          {isOpenLoginForm && (
-            <LoginForm onSubmit={login} authErrorMessage={authErrorMessage} />
-          )}
-          <button
-            className={styles.loginBlockButton}
-            onClick={toggleIsOpenRegistrationForm}
-          >
-            Зарегистрироваться
-          </button>
-          {isOpenRegForm && (
-            <RegistrationForm
-              onSubmit={registration}
-              regFailedMessage={regFailedMessage}
-            />
-          )}
+          </Button>
         </>
       ) : (
-        <Preloader type="login" />
+        <>
+          <Button
+            id="loginForm"
+            size="small"
+            aria-describedby="loginForm"
+            variant="contained"
+            color="primary"
+            className={classes.button}
+            onClick={handleOpenLoginForm}
+          >
+            Войти
+          </Button>
+          <Popper
+            open={!!loginAnchor}
+            anchorEl={loginAnchor}
+            placement="bottom-start"
+            transition
+          >
+            {({ TransitionProps }) => (
+              <ClickAwayListener onClickAway={handleClickAwayLoginForm}>
+                <Fade {...TransitionProps} timeout={350}>
+                  <Paper elevation={15}>
+                    <LoginForm onSubmit={login} />
+                  </Paper>
+                </Fade>
+              </ClickAwayListener>
+            )}
+          </Popper>
+          <Button
+            id="regForm"
+            size="small"
+            aria-describedby="regForm"
+            variant="contained"
+            color="primary"
+            className={classes.button}
+            onClick={handleOpenRegForm}
+          >
+            Зарегистрироваться
+          </Button>
+          <Popper
+            open={!!regAnchor}
+            anchorEl={regAnchor}
+            placement="bottom-end"
+            transition
+          >
+            {({ TransitionProps }) => (
+              <ClickAwayListener onClickAway={handleClickAwayRegForm}>
+                <Fade {...TransitionProps} timeout={350}>
+                  <Paper elevation={15}>
+                    <RegForm onSubmit={registration} />
+                  </Paper>
+                </Fade>
+              </ClickAwayListener>
+            )}
+          </Popper>
+        </>
       )}
     </div>
   );
@@ -99,8 +168,6 @@ Login.propTypes = {
   isAuth: PropTypes.object,
   isAnonymous: PropTypes.bool,
   userName: PropTypes.string,
-  authErrorMessage: PropTypes.string,
-  regFailedMessage: PropTypes.string,
   login: PropTypes.func,
   logout: PropTypes.func,
   registration: PropTypes.func,
@@ -111,8 +178,6 @@ const mapStateToProps = (state) => {
     isAuth: getIsAuth(state),
     isAnonymous: getIsAnonymous(state),
     userName: getUserName(state),
-    authErrorMessage: getAuthErrorMessage(state),
-    regFailedMessage: getRegFailedMessage(state),
   };
 };
 

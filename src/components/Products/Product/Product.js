@@ -1,13 +1,68 @@
 import React, { useState } from "react";
 import { NavLink } from "react-router-dom";
+import {
+  makeStyles,
+  Grid,
+  Card,
+  CardMedia,
+  Typography,
+  Link,
+} from "@material-ui/core";
 import * as PropTypes from "prop-types";
 
-import styles from "./Product.module.css";
 import { Preview, previewMethods } from "../../UI/Preview/Preview";
 import ProductInfo from "./ProductInfo/ProductInfo";
 import HitSVG from "../../UI/SVG/HitSVG";
 import NewSVG from "../../UI/SVG/NewSVG";
-import Preloader from "../../UI/Preloader/Preloader";
+
+const useStyles = makeStyles((theme) => ({
+  root: {
+    width: 300,
+    padding: 15,
+    textAlign: "left",
+    overflow: "visible",
+  },
+  media: {
+    width: "100%",
+    marginBottom: 30,
+  },
+  hit: {
+    position: "absolute",
+    width: 20,
+    height: 20,
+    bottom: 0,
+    left: 0,
+  },
+  new: {
+    position: "absolute",
+    width: 20,
+    height: 20,
+    bottom: 0,
+    left: 25,
+  },
+  name: {
+    fontWeight: "bold",
+    textDecoration: "none",
+    color: "#000",
+    "&:hover": {
+      textDecoration: "none",
+      color: theme.palette.secondary.main,
+    },
+  },
+  photoLink: {
+    display: "flex",
+    position: "relative",
+    height: 233,
+    marginBottom: 5,
+  },
+  description: {
+    marginTop: 20,
+    fontSize: 14,
+  },
+  skeleton: {
+    backgroundColor: "rgba(0, 0, 0, 0.2)",
+  },
+}));
 
 const Product = ({
   id,
@@ -23,17 +78,18 @@ const Product = ({
     reviewsCount,
     ratingsCount,
     totalRating,
-    isNew,
     isHit,
+    isNew,
   },
 }) => {
+  const classes = useStyles();
   const [isShow, setIsShow] = useState(false);
   const loadSuccess = () => setIsShow(true);
 
-  const [positionStyle, setPositionStyle] = useState(null);
-  const [previewSrc, setPreviewSrc] = useState(null);
+  const [positionStyle, setPositionStyle] = useState();
+  const [previewSrc, setPreviewSrc] = useState();
   const [isShowPreview, setIsShowPreview] = useState(false);
-  const [coordsPreview, setCoordsPreview] = useState(null);
+  const [coordsPreview, setCoordsPreview] = useState();
   const showPreview = (e) => {
     setPositionStyle({ position: "relative" });
     setPreviewSrc(preview);
@@ -46,53 +102,57 @@ const Product = ({
   };
 
   return (
-    <div className={styles.productCard} id={id} style={positionStyle}>
-      {isShowPreview && (
-        <Preview style={coordsPreview} name={name} previewSrc={previewSrc} />
-      )}
-      <NavLink
-        to={`/shop/video_cards/${id}`}
-        className={styles.productPhotoLink}
-      >
-        {!isShow && <Preloader />}
-        <img
-          src={poster}
-          alt={name}
-          className={styles.productPhoto}
-          style={isShow ? { display: "block" } : { display: "none" }}
-          onMouseOver={showPreview}
-          onMouseOut={hidePreview}
-          onLoad={loadSuccess}
+    <Grid item style={{ margin: 10 }}>
+      <Card className={classes.root} id={id} style={positionStyle} elevation={15}>
+        {isShowPreview && (
+          <Preview style={coordsPreview} name={name} previewSrc={previewSrc} />
+        )}
+        <Link
+          component={NavLink}
+          to={`/shop/video_cards/${id}`}
+          className={classes.photoLink}
+        >
+          <CardMedia
+            component="img"
+            alt={name}
+            image={poster}
+            className={classes.media}
+            style={isShow ? { display: "block" } : { display: "none" }}
+            onMouseOver={showPreview}
+            onMouseOut={hidePreview}
+            onLoad={loadSuccess}
+          />
+          {isHit && (
+            <span className={classes.hit} data-tip="Хит продаж">
+              <HitSVG />
+            </span>
+          )}
+          {isNew && (
+            <span className={classes.new} data-tip="Новинка">
+              <NewSVG />
+            </span>
+          )}
+        </Link>
+        <Link
+          component={NavLink}
+          to={`/shop/video_cards/${id}`}
+          className={classes.name}
+        >
+          {name}
+        </Link>
+        <Typography className={classes.description}>{description}</Typography>
+        <ProductInfo
+          id={id}
+          price={price}
+          warranty={warranty}
+          reviewsCount={reviewsCount}
+          sku={sku}
+          totalRating={totalRating}
+          ratingsCount={ratingsCount}
+          status={status}
         />
-        {isNew && (
-          <span className={styles.new} data-tip="Новинка.">
-            <NewSVG />
-          </span>
-        )}
-        {isHit && (
-          <span className={styles.hit} data-tip="Хит продаж.">
-            <HitSVG />
-          </span>
-        )}
-      </NavLink>
-      <NavLink
-        to={`/shop/video_cards/${id}`}
-        className={styles.productName}
-      >
-        <b>{name}</b>
-      </NavLink>
-      <div className={styles.productDesc}>{description}</div>
-      <ProductInfo
-        price={price}
-        warranty={warranty}
-        reviewsCount={reviewsCount}
-        sku={sku}
-        totalRating={totalRating}
-        ratingsCount={ratingsCount}
-        id={id}
-        status={status}
-      />
-    </div>
+      </Card>
+    </Grid>
   );
 };
 
@@ -109,8 +169,8 @@ Product.propTypes = {
   reviewsCount: PropTypes.number,
   ratingsCount: PropTypes.number,
   totalRating: PropTypes.number,
-  isNew: PropTypes.bool,
   isHit: PropTypes.bool,
+  isNew: PropTypes.bool,
 };
 
 export default Product;

@@ -1,9 +1,9 @@
 import React from "react";
 import { Field, reduxForm } from "redux-form";
+import { makeStyles, Typography, Button } from "@material-ui/core";
 
 import { email, minLength6 } from "../validate";
-import { checkbox, input } from "../renderFields";
-import { makeStyles, Typography, Button } from "@material-ui/core";
+import { input } from "../renderFields";
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -16,6 +16,7 @@ const useStyles = makeStyles((theme) => ({
     textAlign: "center",
   },
   button: {
+    marginTop: 24,
     backgroundColor: theme.palette.primary.main,
     color: "#fff",
     textTransform: "none",
@@ -31,14 +32,12 @@ const useStyles = makeStyles((theme) => ({
   },
 }));
 
-let LoginForm = ({ error, pristine, submitting, handleSubmit }) => {
+let RegForm = ({ error, pristine, submitting, handleSubmit }) => {
   const classes = useStyles();
 
   return (
     <form onSubmit={handleSubmit} className={classes.root}>
-      <Typography className={classes.typography}>
-        Вход в личный кабинет:
-      </Typography>
+      <Typography className={classes.typography}>Регистрация:</Typography>
       <Field
         id="email"
         name="email"
@@ -51,16 +50,11 @@ let LoginForm = ({ error, pristine, submitting, handleSubmit }) => {
         id="password"
         name="password"
         type="password"
-        label="Пароль:"
+        label="Придумайте пароль"
         component={input}
         validate={[minLength6]}
       />
-      <Field
-        id="rememberMe"
-        name="rememberMe"
-        label="Запомнить меня"
-        component={checkbox}
-      />{" "}
+
       <Button
         variant="contained"
         size="small"
@@ -68,7 +62,7 @@ let LoginForm = ({ error, pristine, submitting, handleSubmit }) => {
         className={classes.button}
         disabled={pristine || submitting}
       >
-        Войти
+        Зарегистрироваться
       </Button>
       {error ? (
         <Typography className={classes.error}>{error}</Typography>
@@ -77,10 +71,10 @@ let LoginForm = ({ error, pristine, submitting, handleSubmit }) => {
   );
 };
 
-LoginForm = reduxForm({
-  form: "LoginForm",
+RegForm = reduxForm({
+  form: "RegForm",
   enableReinitialize: true,
   keepDirtyOnReinitialize: true,
-})(LoginForm);
+})(RegForm);
 
-export default LoginForm;
+export default RegForm;

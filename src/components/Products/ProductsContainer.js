@@ -1,27 +1,40 @@
 import React from "react";
 import { connect } from "react-redux";
-import * as PropTypes from "prop-types";
+import { Grid, Typography } from "@material-ui/core";
 import Helmet from "react-helmet";
+import * as PropTypes from "prop-types";
 
-import styles from "./ProductContainer.module.css";
 import Products from "./Products";
 import {
-  getIsFetchingProducts,
+  getIsLoaded,
   getProducts,
   getFilteredProducts,
-  getProductsInCart,
 } from "../../redux/selectors";
-import Preloader from "../UI/Preloader/Preloader";
+import SkeletonCard from "../UI/SkeletonCard/SkeletonCard";
+import { makeStyles } from "@material-ui/core/styles";
+
+const useStyles = makeStyles(() => ({
+  root: {
+    display: "flex",
+    flexWrap: "wrap",
+    padding: 30,
+  },
+  totalCount: {
+    padding: "30px 45px 0",
+  },
+}));
 
 const ProductsContainer = (props) => {
+  const classes = useStyles();
+
   return (
     <>
-      <div className={styles.totalCount}>{`Всего товаров: ${
+      <Typography className={classes.totalCount}>{`Всего товаров: ${
         props.min || props.max || props.filteredProducts.length
           ? props.filteredProducts.length
           : props.products.length
-      }`}</div>
-      <div className={styles.wrapper}>
+      }`}</Typography>
+      <div className={classes.root}>
         <Helmet>
           <meta charSet="utf-8" />
           <title>{`Видеокарты ${props.min || props.max ? "|" : ""}${
@@ -29,38 +42,39 @@ const ProductsContainer = (props) => {
           }${props.max ? " до " + props.max + " грн" : ""}`}</title>
           <link rel="canonical" href="http://localhost:3000/shop" />
         </Helmet>
-        {props.isFetchingProducts ? (
-          <Preloader type="products" />
-        ) : (
-          <Products
-            products={
-              props.min || props.max || props.filteredProducts.length > 0
-                ? props.filteredProducts
-                : props.products
-            }
-            productsInCart={props.productsInCart}
-          />
-        )}
+        <Grid container>
+          {props.isLoaded ? (
+            <Products
+              products={
+                props.min || props.max || props.filteredProducts.length > 0
+                  ? props.filteredProducts
+                  : props.products
+              }
+            />
+          ) : (
+            Array(36)
+              .fill(undefined, undefined, undefined)
+              .map((item, index) => <SkeletonCard key={index} />)
+          )}
+        </Grid>
       </div>
     </>
   );
 };
 
 ProductsContainer.propTypes = {
-  isFetchingProducts: PropTypes.bool,
+  isLoaded: PropTypes.bool,
   products: PropTypes.array,
   filteredProducts: PropTypes.array,
-  productsInCart: PropTypes.object,
   min: PropTypes.number,
   max: PropTypes.number,
 };
 
 const mapStateToProps = (state) => {
   return {
-    isFetchingProducts: getIsFetchingProducts(state),
+    isLoaded: getIsLoaded(state),
     products: getProducts(state),
     filteredProducts: getFilteredProducts(state),
-    productsInCart: getProductsInCart(state),
   };
 };
 

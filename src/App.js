@@ -1,4 +1,5 @@
-import React, { Component } from "react";
+import React, { useEffect } from "react";
+import { makeStyles, Grid, Container } from "@material-ui/core";
 import { connect } from "react-redux";
 
 import "./App.css";
@@ -8,24 +9,35 @@ import Sidebar from "./components/Sidebar/Sidebar";
 import Notices from "./components/UI/Notices/Notices";
 import Routes from "./Routes";
 
-class App extends Component {
-  componentDidMount() {
-    this.props.productsRequest();
-  }
+const useStyles = makeStyles(() => ({
+  sidebar: {
+    minWidth: 220,
+    flexBasis: 220,
+  },
+}));
 
-  render() {
-    return (
-      <div className="App">
-        <HeaderContainer />
-        <Sidebar rangePrices={this.props.rangePrices} />
-        <div className="body">
+const App = ({ rangePrices, productsRequest }) => {
+  useEffect(() => {
+    productsRequest();
+  }, [productsRequest]);
+
+  const classes = useStyles();
+
+  return (
+    <Container maxWidth="xl" disableGutters>
+      <HeaderContainer />
+      <Grid container>
+        <Grid item className={classes.sidebar}>
+          <Sidebar rangePrices={rangePrices} />
+        </Grid>
+        <Grid item xs>
           <Notices type="warning" />
           <Routes />
-        </div>
-      </div>
-    );
-  }
-}
+        </Grid>
+      </Grid>
+    </Container>
+  );
+};
 
 const mapStateToProps = (state) => {
   return {

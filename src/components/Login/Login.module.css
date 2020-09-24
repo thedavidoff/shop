@@ -2,7 +2,9 @@
   position: relative;
   display: flex;
   align-items: flex-start;
-  justify-content: space-evenly;
+  justify-content: space-between;
+  flex-basis: 310px;
+  padding-bottom: 15px;
 }
 .loginBlockButton {
   height: 25px;
@@ -42,7 +44,7 @@
 .registrationMessageBlock {
   width: 100%;
   position: absolute;
-  top: 37px;
+  top: 39px;
   padding: 25px;
   border: 1px solid #000;
   border-radius: 8px;
@@ -68,6 +70,7 @@
 .displayName {
   margin-top: 3px;
   font-size: 13px;
+  color: #fff;
 }
 .tooltip {
   position: absolute;

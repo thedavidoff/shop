@@ -1,8 +1,8 @@
 export const getProductById = (state, id) => {
   return state.homePage.products.find((product) => product.id === id);
 };
-export const getIsFetchingProducts = (state) => {
-  return state.homePage.isFetchingProducts;
+export const getIsLoaded = (state) => {
+  return state.homePage.isLoaded;
 };
 export const getProducts = (state) => {
   return state.homePage.products;

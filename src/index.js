@@ -1,13 +1,15 @@
 import React from "react";
-import ReactDOM from "react-dom";
+import * as ReactDOM from "react-dom";
 import { Provider } from "react-redux";
 import { BrowserRouter } from "react-router-dom";
 import { getFirebase, ReactReduxFirebaseProvider } from "react-redux-firebase";
+import { ThemeProvider } from "@material-ui/core/styles";
 import * as serviceWorker from "./serviceWorker";
 
 import "./index.css";
 import App from "./App";
 import store from "./redux/store";
+import ScrollToTop from "./components/Utils/ScrollToTop";
 
 import {
   firebaseConfig as fbConfig,
@@ -16,6 +18,7 @@ import {
 import firebase from "firebase/app";
 import "firebase/auth";
 import "firebase/database";
+import theme from "./theme";
 
 firebase.initializeApp(fbConfig);
 
@@ -28,7 +31,11 @@ ReactDOM.render(
           config={rrfConfig}
           dispatch={store.dispatch}
         >
-          <App />
+          <ThemeProvider theme={theme}>
+            <ScrollToTop>
+              <App />
+            </ScrollToTop>
+          </ThemeProvider>
         </ReactReduxFirebaseProvider>
       </Provider>
     </BrowserRouter>
@@ -41,7 +48,7 @@ getFirebase()
   .onAuthStateChanged(async (user) => {
     if (user && user.isAnonymous) {
       const ref = firebase.database().ref("users/" + user.uid + "/cart");
-      Object.values(store.getState().auth.cart).map(item => ref.push(item));
+      Object.values(store.getState().auth.cart).map((item) => ref.push(item));
     }
     if (!user) await getFirebase().auth().signInAnonymously();
   });

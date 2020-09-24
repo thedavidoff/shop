@@ -1,15 +1,31 @@
 import React, { useState } from "react";
 import * as PropTypes from "prop-types";
 
-import styles from "./Preview.module.css";
 import Preloader from "../Preloader/Preloader";
+import { makeStyles, Paper } from "@material-ui/core";
+
+const useStyles = makeStyles(() => ({
+  root: {
+    display: "flex",
+    justifyContent: "center",
+    alignItems: "center",
+    position: "absolute",
+    width: 532,
+    height: 432,
+    padding: 15,
+    border: "1px solid #ccc",
+    zIndex: 1000
+  },
+}));
 
 export const Preview = ({ previewSrc, name, style }) => {
+  const classes = useStyles();
+
   const [isShow, setIsShow] = useState(false);
   const loadSuccess = () => setIsShow(true);
 
   return (
-    <div className={styles.preview} style={style}>
+    <Paper elevation={15} className={classes.root} style={style}>
       {!isShow && <Preloader />}
       <img
         src={previewSrc}
@@ -17,7 +33,7 @@ export const Preview = ({ previewSrc, name, style }) => {
         onLoad={loadSuccess}
         style={isShow ? { display: "block" } : { display: "none" }}
       />
-    </div>
+    </Paper>
   );
 };
 
@@ -35,15 +51,15 @@ export const previewMethods = {
     if (e.currentTarget) {
       if (e.currentTarget.x < 532) {
         if (top + 432 > height) {
-          return { top: -(top + 432 - height + 15) + "px", left: "315px" };
+          return { top: -(top + 432 - height + 15) + "px", left: 320 }; // 432 - height of preview block
         } else {
-          return { top: 0, left: "315px" };
+          return { top: 0, left: 320 };
         }
       } else {
         if (top + 432 > height) {
-          return { top: -(top + 432 - height + 15) + "px", right: "315px" };
+          return { top: -(top + 432 - height + 15) + "px", right: 320 };
         } else {
-          return { top: 0, right: "315px" };
+          return { top: 0, right: 320 };
         }
       }
     }
@@ -54,9 +70,9 @@ export const previewMethods = {
 
     if (e.currentTarget) {
       if (top + 432 > height) {
-        return { top: -(top + 432 - height + 30) + "px", left: "130px" };
+        return { top: -(top + 432 - height + 30) + "px", left: 130 };
       } else {
-        return { top: 0, left: "130px" };
+        return { top: 0, left: 130 };
       }
     }
   },

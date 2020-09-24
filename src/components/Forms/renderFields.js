@@ -1,7 +1,9 @@
 import React from "react";
+import { TextField, FormControlLabel } from "@material-ui/core";
 
 import styles from "./errors.module.css";
 import Preloader from "../UI/Preloader/Preloader";
+import Checkbox from "../UI/Checkbox/Checkbox";
 
 export const textarea = ({
   input,
@@ -35,27 +37,47 @@ export const textarea = ({
 };
 
 export const input = ({
-  input,
-  type,
-  placeholder,
   id,
-  meta: { touched, error, warning },
+  name,
+  type,
+  label,
+  meta: { touched, invalid, error },
+  input,
 }) => {
-  const hasError = touched && error;
-  const hasWarning = touched && warning;
   return (
     <>
-      <input
-        className={hasError || hasWarning ? `${styles.input}` : ""}
-        {...input}
-        type={type}
-        placeholder={placeholder}
+      <TextField
         id={id}
+        name={name}
+        type={type}
+        label={label}
+        error={touched && invalid}
+        helperText={touched && error}
+        size="small"
+        variant="outlined"
+        style={{ marginTop: 24 }}
+        {...input}
       />
-      {touched &&
-        ((hasError && <p className={styles.inputMessage}>{error}</p>) ||
-          (hasWarning && <p className={styles.inputMessage}>{warning}</p>))}
     </>
+  );
+};
+
+export const checkbox = ({ id, name, label, input }) => {
+  return (
+    <FormControlLabel
+      control={
+        <Checkbox
+          size="small"
+          color="primary"
+          defaultChecked
+          id={id}
+          name={name}
+          onChange={input.onChange}
+        />
+      }
+      style={{ margin: "13px 0" }}
+      label={label}
+    />
   );
 };
 
@@ -102,10 +124,7 @@ export const inputProfile = ({
   );
 };
 
-export const selectProfile = ({
-  input,
-  meta: { touched, error, warning },
-}) => {
+export const selectProfile = ({ input, meta: { touched, error, warning } }) => {
   const hasError = touched && error;
   const hasWarning = touched && warning;
 

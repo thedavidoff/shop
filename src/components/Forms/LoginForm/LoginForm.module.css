@@ -1,49 +1,41 @@
 .loginForm {
-  width: 100%;
-  position: absolute;
-  top: 37px;
-  padding: 15px 25px 20px;
-  border: 1px solid #000;
-  border-radius: 8px;
-  background: #fff;
-  text-align: left;
-  font-size: 14px;
-  z-index: 1000;
+  max-width: 250px;
+  padding: 16px 24px 20px;
 }
 .loginForm h5 {
   margin: 0 0 10px 0;
   font-size: 14px;
   text-align: center;
 }
-.loginForm span {
-  margin: 5px 0;
-  display: inline-block;
-}
-.loginForm input {
-  width: 100%;
-  font-size: 15px;
-  padding: 5px 10px;
-}
-.loginForm label {
-  display: flex;
-  align-items: flex-end;
-}
-.loginForm input[type="checkbox"] {
-  margin: 10px 5px 0 0;
-  height: 16px;
-  width: 16px;
-}
-.loginForm button {
-  cursor: pointer;
-  font-size: 14px;
-  padding: 5px 10px;
-}
-.loginForm button:hover {
-  color: #fff;
-  background: #000;
-  border: 2px solid #000;
-  border-radius: 3px;
-}
+/*.loginForm span {*/
+/*  margin: 5px 0;*/
+/*  display: inline-block;*/
+/*}*/
+/*.loginForm input {*/
+/*  width: 100%;*/
+/*  font-size: 15px;*/
+/*  padding: 5px 10px;*/
+/*}*/
+/*.loginForm label {*/
+/*  display: flex;*/
+/*  align-items: flex-end;*/
+/*}*/
+/*.loginForm input[type="checkbox"] {*/
+/*  margin: 10px 5px 0 0;*/
+/*  height: 16px;*/
+/*  width: 16px;*/
+/*}*/
+/*.loginForm button {*/
+/*  cursor: pointer;*/
+/*  font-size: 14px;*/
+/*  padding: 5px 10px;*/
+/*}*/
+/*.loginForm button:hover {*/
+/*  color: #fff;*/
+/*  background: #000;*/
+/*  border: 2px solid #000;*/
+/*  border-radius: 3px;*/
+/*}*/
 .registrationButton {
   margin-top: 20px;
 }

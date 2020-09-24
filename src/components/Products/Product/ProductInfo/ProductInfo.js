@@ -1,14 +1,74 @@
 import React from "react";
 import ReactTooltip from "react-tooltip";
-import { HashLink as Link } from "react-router-hash-link";
+import { HashLink } from "react-router-hash-link";
+import {
+  makeStyles,
+  Grid,
+  List,
+  ListItem,
+  Link,
+  Typography,
+} from "@material-ui/core";
 import * as PropTypes from "prop-types";
 
-import styles from "./ProductInfo.module.css";
 import stylesTooltip from "./../../../UI/Tooltip/Tooltip.module.css";
 import Rating from "../../../UI/Rating/Rating";
 import BuyButton from "../../../UI/BuyButton/BuyButton";
 import AddToWishListButton from "../../../UI/AddToWishListButton/AddToWishListButton";
 import ViewRest from "../../../UI/ViewRest/ViewRest";
+
+const useStyles = makeStyles((theme) => ({
+  root: {
+    marginTop: 15,
+  },
+  skeleton: {
+    backgroundColor: "rgba(0, 0, 0, 0.2)",
+  },
+  price: {
+    marginBottom: 15,
+    fontSize: 22,
+    fontWeight: "bold",
+  },
+  list: {
+    padding: 0,
+  },
+  warranty: {
+    fontSize: 14,
+    lineHeight: 1,
+    cursor: "default",
+  },
+  listItem: {
+    marginBottom: 8,
+    padding: 0,
+    fontSize: 14,
+    lineHeight: 1,
+  },
+  span: {
+    paddingBottom: 1,
+    fontSize: 14,
+    lineHeight: 1,
+    borderBottom: "1px dashed",
+    cursor: "pointer",
+    "&:hover": {
+      color: theme.palette.secondary.main,
+    },
+  },
+  reviews: {
+    color: "#000",
+    textDecoration: "underline",
+    cursor: "pointer",
+    "&:hover": {
+      color: theme.palette.secondary.main,
+    },
+  },
+  sku: {
+    color: "darkgray",
+  },
+  status: {
+    fontSize: 13,
+    textAlign: "center",
+  },
+}));
 
 const ProductInfo = ({
   price,
@@ -20,6 +80,8 @@ const ProductInfo = ({
   id,
   status,
 }) => {
+  const classes = useStyles();
+
   let tooltipText;
   switch (status) {
     case "есть в наличии":
@@ -44,61 +106,64 @@ const ProductInfo = ({
     ReactTooltip.hide();
   };
 
-  return (
-    <div className={styles.productInfo}>
-      <ReactTooltip className={stylesTooltip.tooltip} />
+  const ForwardLink = React.forwardRef((props, ref) => (
+    <HashLink {...props} innerRef={ref} />
+  ));
 
-      <div
-        className={`${styles.productInfoColumn} ${styles.productInfoLeftColumn}`}
-      >
-        <div className={styles.productPrice}>
-          <b>{`${price} грн`}</b>
-        </div>
-        <ul>
-          <li
-            className={styles.warranty}
-            data-tip="Мы даем такой срок гарантии, который можем безоговорочно обеспечить, не вводя клиента в заблуждение и не заманивая нереальными гарантийными сроками."
-          >{`Гарантия: ${warranty} мес.`}</li>
-          <li
-            className={styles.viewRest}
-            data-tip="Посмотреть наличие товара на складах."
+  return (
+    <Grid container className={classes.root}>
+      <ReactTooltip className={stylesTooltip.tooltip} />
+      <Grid item xs>
+        <Typography className={classes.price}>{`${price} грн`}</Typography>
+        <List className={classes.list}>
+          <ListItem className={classes.listItem} disableGutters>
+            <Typography
+              component="span"
+              className={classes.warranty}
+              data-tip="Мы даем такой срок гарантии, который можем безоговорочно обеспечить, не вводя клиента в заблуждение и не заманивая нереальными гарантийными сроками."
+            >
+              {`Гарантия: ${warranty} мес.`}
+            </Typography>
+          </ListItem>
+          <ListItem
+            className={classes.listItem}
             onClick={handleClick}
+            disableGutters
           >
             <ViewRest id={id} />
-          </li>
-          <li
-            className={styles.notify}
-            data-tip="Уведомить об изменении наличия или цены на e-mail."
-          >
-            Уведомить
-          </li>
-          <li className={styles.reviews}>
+          </ListItem>
+          <ListItem className={classes.listItem} disableGutters>
             <Link
-              smooth="true"
+              component={ForwardLink}
+              smooth
               to={`/shop/video_cards/${id}#reviews`}
+              className={classes.reviews}
             >{`Отзывы (${reviewsCount})`}</Link>
-          </li>
-          <li className={styles.addToWishList}>
+          </ListItem>
+          <ListItem className={classes.listItem} disableGutters>
             <AddToWishListButton id={id} />
-          </li>
-          <li className={styles.sku}>{`Код товара: ${sku}`}</li>
-          <li className={styles.addToCompare}>
-            <span>Добавить к сравнению</span>
-          </li>
-        </ul>
-      </div>
-      <div
-        className={`${styles.productInfoColumn} ${styles.productInfoRightColumn}`}
-      >
+          </ListItem>
+          <ListItem
+            className={`${classes.listItem} ${classes.sku}`}
+            disableGutters
+          >{`Код товара: ${sku}`}</ListItem>
+          <ListItem className={classes.listItem} disableGutters>
+            <Typography component="span" className={classes.span}>
+              Добавить к сравнению
+            </Typography>
+          </ListItem>
+        </List>
+      </Grid>
+      <Grid item style={{ flexBasis: 100 }}>
         {totalRating > 0 && (
           <Rating totalRating={totalRating} ratingsCount={ratingsCount} />
         )}
         <BuyButton id={id} />
-        <div className={styles.status} data-tip={tooltipText}>
+        <Typography className={classes.status} data-tip={tooltipText}>
           {status}
-        </div>
-      </div>
-    </div>
+        </Typography>
+      </Grid>
+    </Grid>
   );
 };
 

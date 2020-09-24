@@ -1,13 +1,32 @@
 import React from "react";
-
-import styles from "./Notices.module.css";
-import InfoSVG from "../SVG/InfoSVG";
+import { makeStyles, Typography } from "@material-ui/core";
 import * as PropTypes from "prop-types";
 
+import InfoSVG from "../SVG/InfoSVG";
+
+const useStyles = makeStyles(() => ({
+  root: {
+    display: "flex",
+    alignItems: "center",
+    margin: "30px 60px 0",
+    fontSize: 14,
+    lineHeight: 1,
+    "& svg": {
+      flexShrink: 0
+    }
+  },
+  typography: {
+    fontSize: 14,
+    marginLeft: 10
+  }
+}));
+
 const Notices = ({ type }) => {
-  const red = "red";
-  const green = "green";
-  const blue = "#2196f3";
+  const classes = useStyles();
+
+  const red = "#d32f2f";
+  const green = "#388e3c";
+  const blue = "#1976d2";
 
   let notice;
   let color = blue;
@@ -16,7 +35,7 @@ const Notices = ({ type }) => {
     case "warning":
       notice =
         "Друзья! Посещение наших магазинов возможно только в медицинской маске или респираторе. Берегите себя и окружающих!";
-      color = blue;
+      color = green;
       break;
     case "accessDenied":
       notice =
@@ -59,9 +78,9 @@ const Notices = ({ type }) => {
   }
 
   return (
-    <div className={styles.notices}>
+    <div className={classes.root}>
       <InfoSVG color={color} />
-      {notice}
+      <Typography className={classes.typography}>{notice}</Typography>
     </div>
   );
 };

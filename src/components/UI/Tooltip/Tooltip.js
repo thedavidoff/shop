@@ -1,18 +1,7 @@
 import * as PropTypes from "prop-types";
 
 export const tooltipMethods = {
-  // show(e) {
-  //   const width = window.innerWidth;
-  //   const widthTooltip = 250;
-  //   if (e.pageX < width - widthTooltip - 20 - 30) {
-  //     return { top: e.pageY + 20 + "px", left: e.pageX + 20 + "px" };
-  //   } else {
-  //     return {
-  //       top: e.pageY + 20 + "px",
-  //       left: e.pageX - widthTooltip - 20 + "px",
-  //     };
-  //   }
-  // },
+
   rating(totalRating, ratingsCount) {
     let rating;
     ratingsCount === 1 ? (rating = "оценки") : (rating = "оценок");
