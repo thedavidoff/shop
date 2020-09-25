@@ -1,15 +1,110 @@
 import React, { useState } from "react";
-import { NavHashLink as NavLink } from "react-router-hash-link";
+import { NavLink } from "react-router-dom";
+import { HashLink } from "react-router-hash-link";
+import ReactTooltip from "react-tooltip";
+import {
+  makeStyles,
+  TableRow,
+  TableCell,
+  Link,
+  Typography,
+  Box,
+} from "@material-ui/core";
 import * as PropTypes from "prop-types";
 
-import styles from "./WishListItem.module.css";
+import { PrimaryColorCheckbox } from "../../../UI/Checkbox/Checkbox";
+import { Preview, previewMethods } from "../../../UI/Preview/Preview";
+import ViewRest from "../../../UI/ViewRest/ViewRest";
 import Rating from "../../../UI/Rating/Rating";
 import BuyButton from "../../../UI/BuyButton/BuyButton";
-import { Preview, previewMethods } from "../../../UI/Preview/Preview";
-import NewSVG from "../../../UI/SVG/NewSVG";
+import DarkTooltip from "../../../UI/Tooltip/DarkTooltip";
 import HitSVG from "../../../UI/SVG/HitSVG";
-import ViewRest from "../../../UI/ViewRest/ViewRest";
-import ReactTooltip from "react-tooltip";
+import NewSVG from "../../../UI/SVG/NewSVG";
+
+const useStyles = makeStyles((theme) => ({
+  checkbox: {
+    "&>span": {
+      paddingLeft: 9,
+    },
+    "&>span:hover": {
+      backgroundColor: "rgba(0, 0, 0, .15)",
+    },
+  },
+  photoLink: {
+    position: "relative",
+    display: "block",
+  },
+  new: {
+    position: "absolute",
+    width: 20,
+    height: 20,
+    bottom: -10,
+    left: 25,
+  },
+  hit: {
+    position: "absolute",
+    width: 20,
+    height: 20,
+    bottom: -10,
+    left: 0,
+  },
+  descBlock: {
+    "&>a": {
+      fontSize: 14,
+      color: "#000",
+      "&:hover": {
+        color: theme.palette.secondary.main,
+      },
+    },
+  },
+  box: {
+    margin: "5px 0",
+    "& span": {
+      marginRight: 10,
+    },
+  },
+  desc: {
+    margin: "10px 0",
+    fontSize: 14,
+  },
+  warranty: {
+    fontSize: 14,
+    lineHeight: 1,
+    cursor: "default",
+  },
+  reviews: {
+    color: "#000",
+    textDecoration: "underline",
+    cursor: "pointer",
+    "&:hover": {
+      color: theme.palette.secondary.main,
+    },
+  },
+  sku: {
+    fontSize: 14,
+    lineHeight: 1,
+    color: "darkgray",
+  },
+  addToCompare: {
+    fontSize: 14,
+    lineHeight: 1,
+    borderBottom: "1px dashed",
+    cursor: "pointer",
+    "&:hover": {
+      color: theme.palette.secondary.main,
+    },
+  },
+  priceBlock: {
+    textAlign: "center",
+  },
+  price: {
+    margin: "0 0 10px",
+  },
+  status: {
+    fontSize: 12,
+    lineHeight: 1.3,
+  },
+}));
 
 const WishListItem = ({
   productsInCart,
@@ -32,6 +127,8 @@ const WishListItem = ({
   isSelected,
   handleCheckedItems,
 }) => {
+  const classes = useStyles();
+
   let tooltipText;
   switch (status) {
     case "есть в наличии":
@@ -68,34 +165,41 @@ const WishListItem = ({
     ReactTooltip.hide();
   };
 
+  const ForwardLink = React.forwardRef((props, ref) => (
+    <HashLink {...props} innerRef={ref} />
+  ));
+
   return (
-    <tr className={styles.wishListItem}>
-      <td>
-        <input
-          type="checkbox"
+    <TableRow key={id}>
+      <TableCell align="center" className={classes.checkbox}>
+        <PrimaryColorCheckbox
+          size="small"
+          color="primary"
+          id={id + ""}
+          checked={!!isSelected}
           onChange={handleCheckedItems}
-          checked={isSelected || ""}
-          id={id}
         />
-      </td>
-      <td>
-        <div className={styles.photoBlock}>
-          <NavLink to={`/shop/video_cards/${id}`}>
-            <img
-              src={photoInOrder}
-              alt={name}
-              onMouseOver={showPreview}
-              onMouseOut={hidePreview}
-            />
-          </NavLink>
-          {isNew && (
-            <span className={styles.new} data-tip="Новинка.">
-              <NewSVG />
+      </TableCell>
+      <TableCell>
+        <Link
+          component={NavLink}
+          to={`/shop/video_cards/${id}`}
+          className={classes.photoLink}
+        >
+          <img
+            src={photoInOrder}
+            alt={name}
+            onMouseOver={showPreview}
+            onMouseOut={hidePreview}
+          />
+          {isHit && (
+            <span className={classes.hit} data-tip="Хит продаж">
+              <HitSVG />
             </span>
           )}
-          {isHit && (
-            <span className={styles.hit} data-tip="Хит продаж.">
-              <HitSVG />
+          {isNew && (
+            <span className={classes.new} data-tip="Новинка">
+              <NewSVG />
             </span>
           )}
           {isShowPreview && (
@@ -105,57 +209,52 @@ const WishListItem = ({
               previewSrc={previewSrc}
             />
           )}
-        </div>
-      </td>
-      <td className={styles.descBlock}>
-        <NavLink to={`/shop/video_cards/${id}`}>
+        </Link>
+      </TableCell>
+      <TableCell className={classes.descBlock}>
+        <Link component={NavLink} to={`/shop/video_cards/${id}`}>
           <b>{name}</b>
-        </NavLink>
-        <p className={styles.desc}>{description}</p>
-        <p>
-          <span
+        </Link>
+        <Typography className={classes.desc}>{description}</Typography>
+        <Box className={classes.box}>
+          <Typography
+            component="span"
             data-tip="Мы даем такой срок гарантии, который можем безоговорочно обеспечить, не вводя клиента в заблуждение и не заманивая нереальными гарантийными сроками."
-            className={styles.warranty}
-          >{`Гарантия: ${warranty} мес.`}</span>
-        </p>
-        <div style={{margin: "10px 0"}}>
-          <div
-            className={styles.viewRest}
-            data-tip="Посмотреть наличие товара на складах."
-            onClick={handleClick}
-          >
-            <ViewRest id={id} />
-          </div>
-          <span
-            className={styles.notify}
-            data-tip="Уведомить об изменении наличия или цены на e-mail."
-          >
-            Уведомить
-          </span>
-          <NavLink
-            smooth="true"
+            className={classes.warranty}
+          >{`Гарантия: ${warranty} мес.`}</Typography>
+        </Box>
+        <Box className={classes.box} onClick={handleClick}>
+          <ViewRest id={id} />
+          <Link
+            component={ForwardLink}
+            smooth
             to={`/shop/video_cards/${id}#reviews`}
-            className={styles.reviews}
-          >
-            {`Отзывы (${reviewsCount})`}
-          </NavLink>
-        </div>
-        <span className={styles.sku}>{`Код товара: ${sku}`}</span>
-        <span className={styles.addToCompare}>Добавить к сравнению</span>
-      </td>
-      <td className={styles.priceBlock}>
+            className={classes.reviews}
+          >{`Отзывы (${reviewsCount})`}</Link>
+        </Box>
+        <Box className={classes.box}>
+          <Typography
+            component="span"
+            className={classes.sku}
+          >{`Код товара: ${sku}`}</Typography>
+          <Typography component="span" className={classes.addToCompare}>
+            Добавить к сравнению
+          </Typography>
+        </Box>
+      </TableCell>
+      <TableCell className={classes.priceBlock}>
         {ratingsCount > 0 && (
           <Rating totalRating={totalRating} ratingsCount={ratingsCount} />
         )}
-        <p className={styles.price}>
+        <Typography className={classes.price}>
           <b>{`${price} грн`}</b>
-        </p>
+        </Typography>
         <BuyButton productsInCart={productsInCart} id={id} />
-        <div className={styles.status} data-tip={tooltipText}>
-          {status}
-        </div>
-      </td>
-    </tr>
+        <DarkTooltip title={tooltipText} placement="left">
+          <Typography className={classes.status}>{status}</Typography>
+        </DarkTooltip>
+      </TableCell>
+    </TableRow>
   );
 };
 

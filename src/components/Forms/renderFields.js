@@ -3,7 +3,7 @@ import { TextField, FormControlLabel } from "@material-ui/core";
 
 import styles from "./errors.module.css";
 import Preloader from "../UI/Preloader/Preloader";
-import Checkbox from "../UI/Checkbox/Checkbox";
+import { RememberMeCheckbox } from "../UI/Checkbox/Checkbox";
 
 export const textarea = ({
   input,
@@ -66,7 +66,7 @@ export const checkbox = ({ id, name, label, input }) => {
   return (
     <FormControlLabel
       control={
-        <Checkbox
+        <RememberMeCheckbox
           size="small"
           color="primary"
           defaultChecked

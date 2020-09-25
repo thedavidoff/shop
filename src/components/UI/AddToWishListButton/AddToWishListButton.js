@@ -1,13 +1,12 @@
 import React from "react";
 import { connect } from "react-redux";
 import { NavLink } from "react-router-dom";
-import { makeStyles, Link } from "@material-ui/core";
+import { makeStyles, Link, Typography } from "@material-ui/core";
 import FavoriteIcon from "@material-ui/icons/Favorite";
 import * as PropTypes from "prop-types";
 
 import { getWishList } from "../../../redux/selectors";
 import { addToWishList } from "../../../redux/authReducer";
-import Typography from "@material-ui/core/Typography";
 
 const useStyles = makeStyles((theme) => ({
   notAdded: {
@@ -47,7 +46,7 @@ const useStyles = makeStyles((theme) => ({
   },
 }));
 
-const AddToWishListButton = ({ id, wishList, addToWishList }) => {
+const AddToWishListButton = ({ text, id, wishList, addToWishList }) => {
   const classes = useStyles();
 
   let isAdded = false;
@@ -97,7 +96,7 @@ const AddToWishListButton = ({ id, wishList, addToWishList }) => {
             className={classes.notAddedIcon}
             style={{ fontSize: 25 }}
           />
-          <Typography component="span" className={classes.span}>В список желаний</Typography>
+          <Typography component="span" className={classes.span}>{text || "В список желаний"}</Typography>
         </div>
       )}
     </div>

@@ -9,7 +9,7 @@ import * as PropTypes from "prop-types";
 import Login from "../Login/Login";
 import Search from "./Search/Search";
 import Cart from "./Cart/Cart";
-import DarkTooltip from "../UI/Tooltip/DakTooltip";
+import DarkTooltip from "../UI/Tooltip/DarkTooltip";
 import { getCountInCart, getTotalCost } from "../../redux/selectors";
 
 const useStyles = makeStyles((theme) => ({

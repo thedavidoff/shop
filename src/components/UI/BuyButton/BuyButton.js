@@ -10,6 +10,7 @@ import { addToCart } from "../../../redux/cartReducer";
 const useStyles = makeStyles((theme) => ({
   root: {
     position: "relative",
+    width: 100,
   },
   button: {
     backgroundColor: theme.palette.primary.main,
@@ -24,7 +25,7 @@ const useStyles = makeStyles((theme) => ({
     paddingBottom: 2,
     position: "absolute",
     textAlign: "center",
-    lineHeight: 1,
+    lineHeight: 1.2,
     background: "#fff9bb",
     border: "1px solid #f5d993",
     borderRadius: 4,

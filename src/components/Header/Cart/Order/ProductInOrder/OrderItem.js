@@ -1,9 +1,60 @@
 import React from "react";
-
-import styles from "../Order.module.css";
 import { NavLink } from "react-router-dom";
-import AddToWishListButton from "../../../../UI/AddToWishListButton/AddToWishListButton";
+import {
+  makeStyles,
+  TableRow,
+  TableCell,
+  Button,
+  Link,
+  Box,
+  TextField,
+  IconButton,
+} from "@material-ui/core";
+import DeleteIcon from "@material-ui/icons/Delete";
 import * as PropTypes from "prop-types";
+
+import AddToWishListButton from "../../../../UI/AddToWishListButton/AddToWishListButton";
+import DarkTooltip from "../../../../UI/Tooltip/DarkTooltip";
+
+const useStyles = makeStyles((theme) => ({
+  row: {
+    "& td": {
+      borderBottom: "1px solid #bfbfbf",
+    },
+    "&:last-child td": {
+      borderBottom: "none",
+    },
+  },
+  photoLinkCell: {
+    marginRight: 20,
+    padding: "0 15px",
+    "& img": {
+      width: 100,
+    },
+  },
+  nameLink: {
+    position: "relative",
+    "& a": {
+      fontSize: 14,
+      color: "#000",
+      "&:hover": {
+        color: theme.palette.secondary.main,
+      },
+    },
+  },
+  quantity: {
+    width: 100
+  },
+  price: {
+    textAlign: "center",
+    color: theme.palette.secondary.dark,
+  },
+  delete: {
+    width: 80,
+    textAlign: "center",
+    "& button:hover": { backgroundColor: "rgba(0, 0, 0, .2)" },
+  },
+}));
 
 const OrderItem = ({
   id,
@@ -12,45 +63,55 @@ const OrderItem = ({
   deleteCartItem,
   product: { photoInOrder, name, price },
 }) => {
+  const classes = useStyles();
+
   const handleChange = (e) => changeQuantity(e.target.value, id);
 
   return (
-    <tr id={id} className={styles.orderProduct}>
-      <td className={styles.orderProductPhoto}>
-        <NavLink to={`/shop/video_cards/${id}`}>
+    <TableRow id={id} className={classes.row}>
+      <TableCell style={{ width: 150 }}>
+        <Button
+          component={NavLink}
+          to={`/shop/video_cards/${id}`}
+          className={classes.photoLink}
+        >
           <img src={photoInOrder} alt={name} />
-        </NavLink>
-      </td>
-      <td className={styles.orderProductName}>
-        <NavLink to={`/shop/video_cards/${id}`}>
+        </Button>
+      </TableCell>
+      <TableCell className={classes.nameLink}>
+        <Link component={NavLink} to={`/shop/video_cards/${id}`}>
           <b>{name}</b>
-        </NavLink>
-        <div className={styles.addToWishListButtonWrapper}>
+        </Link>
+        <Box position="absolute" bottom={5}>
           <AddToWishListButton id={id} />
-        </div>
-      </td>
-      <td className={styles.orderProductQuantity}>
-        <input
+        </Box>
+      </TableCell>
+      <TableCell className={classes.quantity}>
+        <TextField
           type="number"
-          min="1"
+          inputProps={{ min: "1" }}
           defaultValue={quantity}
           onChange={handleChange}
         />
-      </td>
-      <td className={styles.orderProductPrice}>
+      </TableCell>
+      <TableCell className={classes.price}>
         <b>{`${price} грн`}</b>
-      </td>
-      <td className={styles.orderProductTotalCost}>
+      </TableCell>
+      <TableCell className={classes.price}>
         <b>{`${quantity * price} грн`}</b>
-      </td>
-      <td className={styles.orderDeleteProduct}>
-        <button
-          onClick={() => deleteCartItem(id)}
-        >
-          Удалить
-        </button>
-      </td>
-    </tr>
+      </TableCell>
+      <TableCell className={classes.delete}>
+        <DarkTooltip title="Удаление данного товара из корзины" placement="top">
+          <IconButton
+            aria-label="delete"
+            onClick={() => deleteCartItem(id)}
+            color="primary"
+          >
+            <DeleteIcon />
+          </IconButton>
+        </DarkTooltip>
+      </TableCell>
+    </TableRow>
   );
 };
 
@@ -61,7 +122,7 @@ OrderItem.propTypes = {
   deleteCartItem: PropTypes.func,
   photoInOrder: PropTypes.string,
   name: PropTypes.string,
-  price: PropTypes.number
+  price: PropTypes.number,
 };
 
 export default OrderItem;

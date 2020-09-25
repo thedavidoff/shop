@@ -17,7 +17,7 @@ import LoginForm from "../Forms/LoginForm/LoginForm";
 import RegForm from "../Forms/RegForm/RegForm";
 import { login, logout, registration } from "../../redux/authReducer";
 import { getIsAnonymous, getIsAuth, getUserName } from "../../redux/selectors";
-import DarkTooltip from "../UI/Tooltip/DakTooltip";
+import DarkTooltip from "../UI/Tooltip/DarkTooltip";
 
 const useStyles = makeStyles((theme) => ({
   root: {

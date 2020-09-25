@@ -44,7 +44,6 @@ const useStyles = makeStyles((theme) => ({
     lineHeight: 1,
   },
   span: {
-    paddingBottom: 1,
     fontSize: 14,
     lineHeight: 1,
     borderBottom: "1px dashed",

@@ -1,11 +1,15 @@
 import React from "react";
-import { withStyles, Checkbox as MUICheckbox } from "@material-ui/core";
+import { withStyles, Checkbox } from "@material-ui/core";
 
-const Checkbox = withStyles({
+export const RememberMeCheckbox = withStyles({
   root: {
     paddingLeft: 0,
     color: "#b3b9c3",
   },
-})((props) => <MUICheckbox color="default" {...props} />);
+})((props) => <Checkbox color="default" {...props} />);
 
-export default Checkbox;
+export const PrimaryColorCheckbox = withStyles((theme) => ({
+  root: {
+    color: theme.palette.primary.main,
+  },
+}))((props) => <Checkbox color="default" {...props} />);
