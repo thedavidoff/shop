@@ -27,12 +27,12 @@ import { getProducts } from "../../../redux/selectors";
 const styles = (theme) => ({
   root: {
     margin: 0,
-    padding: theme.spacing(2),
+    padding: "16px 24px",
   },
   closeButton: {
     position: "absolute",
-    right: theme.spacing(1),
-    top: theme.spacing(1),
+    top: 5,
+    right: 5,
     color: theme.palette.grey[500],
   },
 });

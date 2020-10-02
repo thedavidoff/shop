@@ -16,9 +16,8 @@ import stylesTooltip from "../../UI/Tooltip/Tooltip.module.css";
 import { email, required, gender } from "../validate";
 import { checkboxProfile, inputProfile } from "../renderFields";
 import Preloader from "../../UI/Preloader/Preloader";
-import Popup from "../../UI/Popup/Popup";
-import SearchCity from "../../Profile/SearchCity/SearchCity";
 import Select from "../../UI/Select/Select";
+import City from "../../Profile/SearchCity/City";
 
 const useStyles = makeStyles((theme) => ({
   root: {},
@@ -32,8 +31,9 @@ const useStyles = makeStyles((theme) => ({
       verticalAlign: "baseline",
     },
     "& td": {
-      padding: 6,
+      padding: "2px 6px",
       width: "50%",
+      borderBottom: "none"
     },
   },
   required: {
@@ -71,9 +71,9 @@ let ProfileForm = ({ pristine, submitting, handleSubmit, initialValues }) => {
     setIsClose(false);
   }, [isClose]);
 
-  const handleClick = () => {
-    ReactTooltip.hide();
-  };
+  // const handleClick = () => {
+  //   ReactTooltip.hide();
+  // };
 
   return (
     <form onSubmit={handleSubmit} className={classes.root}>
@@ -281,22 +281,11 @@ let ProfileForm = ({ pristine, submitting, handleSubmit, initialValues }) => {
               :
             </TableCell>
             <TableCell>
-              <div onClick={handleClick}>
-                <Popup
-                  text={
-                    newCity ||
-                    (initialValues && initialValues.city) ||
-                    (initialValues && !initialValues.city && "Выберите город")
-                  }
-                  isClose={isClose}
-                >
-                  <SearchCity
-                    city={initialValues && initialValues.city}
-                    newCity={newCity}
-                    handleSelectCity={handleSelectCity}
-                  />
-                </Popup>
-              </div>
+              <City
+                city={initialValues && initialValues.city}
+                newCity={newCity}
+                handleSelectCity={handleSelectCity}
+              />
               <Field
                 name="city"
                 type="hidden"
