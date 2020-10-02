@@ -3,18 +3,16 @@ import { connect } from "react-redux";
 import ReactTooltip from "react-tooltip";
 import {
   makeStyles,
-  Paper,
-  TableContainer,
   Table,
   TableBody,
   TableRow,
   TableCell,
   Typography,
+  Box,
 } from "@material-ui/core";
 import Helmet from "react-helmet";
 import * as PropTypes from "prop-types";
 
-import styles from "./WishList.module.css";
 import stylesTooltip from "../../UI/Tooltip/Tooltip.module.css";
 import {
   getProducts,
@@ -23,20 +21,19 @@ import {
 } from "../../../redux/selectors";
 import { addToCart } from "../../../redux/cartReducer";
 import { removeFromWishList } from "../../../redux/authReducer";
-import Item from "./WishListItem/WishListItem";
+import WishListItem from "./WishListItem/WishListItem";
 
 const useStyles = makeStyles((theme) => ({
-  root: {
-    padding: 30,
-  },
   title: {
+    marginBottom: 16,
     fontSize: 18,
     textAlign: "center",
   },
   selectActions: {
     padding: "5px 15px",
     width: "100%",
-    backgroundColor: "#fff4ce",
+    backgroundColor: "#fff9bb",
+    borderBottom: "1px solid #bfbfbf",
     "& p": {
       fontSize: 14,
     },
@@ -56,6 +53,15 @@ const useStyles = makeStyles((theme) => ({
   },
   totalCost: {
     textAlign: "right",
+  },
+  empty: {
+    "& p:first-child": {
+      marginTop: 20,
+    },
+    "& p": {
+      fontSize: 14,
+      textAlign: "center",
+    },
   },
 }));
 
@@ -124,76 +130,67 @@ const WishList = ({
           href="http://localhost:3000/profile?tab=wishlist"
         />
       </Helmet>
-      <div className={classes.root}>
-        <Typography component="h2" className={classes.title}>
-          Мой список желаний:
-        </Typography>
-        <ReactTooltip className={stylesTooltip.tooltip} />
-        {wishList && wishList.length > 0 ? (
-          <TableContainer
-            component={Paper}
-            elevation={15}
-            className={classes.tableContainer}
-          >
-            <Table className={classes.table} aria-label="Wishlist table">
-              <TableBody>
-                <TableRow>
-                  <TableCell colSpan={4} className={classes.selectActions}>
-                    <Typography>
-                      Выберите действия с отмеченными товарами:
-                    </Typography>
-                    <Typography component="span" onClick={toggleSelectedAll}>
-                      Выбрать все
-                    </Typography>
-                    <Typography
-                      component="span"
-                      onClick={() => addToCart(selectedItems)}
-                    >
-                      Добавить в корзину
-                    </Typography>
-                    <Typography component="span" onClick={removeSelectedItems}>
-                      Удалить из списка
-                    </Typography>
-                  </TableCell>
-                </TableRow>
-                {wishList.map((id) => (
-                  <Item
-                    key={id}
-                    products={productsInCart}
-                    product={products.find((product) => product.id === id)}
-                    handleCheckedItems={handleSelectedItems}
-                    isSelected={isSelected && isSelected[id]}
-                  />
-                ))}
-                <TableRow>
-                  <TableCell colSpan="4" className={classes.totalCost}>
-                    <Typography>
-                      Общая сумма:{" "}
-                      <Typography component="span">
-                        <b>{`${wishList
-                          .map(
-                            (id) =>
-                              products.find((product) => product.id === id)
-                                .price
-                          )
-                          .reduce((sum, price) => sum + price, 0)} грн`}</b>
-                      </Typography>
-                    </Typography>
-                  </TableCell>
-                </TableRow>
-              </TableBody>
-            </Table>
-          </TableContainer>
-        ) : (
-          <div className={styles.emptyWishList}>
-            <p>Этот список пуст</p>
-            <p>
-              Чтобы добавить сюда товары, нажимайте ссылки "В список желаний" на
-              страницах сайта.
-            </p>
-          </div>
-        )}
-      </div>
+      <Typography component="h2" className={classes.title}>
+        Мой список желаний:
+      </Typography>
+      <ReactTooltip className={stylesTooltip.tooltip} />
+      {wishList && wishList.length > 0 ? (
+        <Table className={classes.table} aria-label="Wishlist table">
+          <TableBody>
+            <TableRow>
+              <TableCell colSpan={4} className={classes.selectActions}>
+                <Typography>
+                  Выберите действия с отмеченными товарами:
+                </Typography>
+                <Typography component="span" onClick={toggleSelectedAll}>
+                  Выбрать все
+                </Typography>
+                <Typography
+                  component="span"
+                  onClick={() => addToCart(selectedItems)}
+                >
+                  Добавить в корзину
+                </Typography>
+                <Typography component="span" onClick={removeSelectedItems}>
+                  Удалить из списка
+                </Typography>
+              </TableCell>
+            </TableRow>
+            {wishList.map((id) => (
+              <WishListItem
+                key={id}
+                products={productsInCart}
+                product={products.find((product) => product.id === id)}
+                handleCheckedItems={handleSelectedItems}
+                isSelected={isSelected && isSelected[id]}
+              />
+            ))}
+            <TableRow>
+              <TableCell colSpan="4" className={classes.totalCost}>
+                <Typography>
+                  Общая сумма:{" "}
+                  <Typography component="span">
+                    <b>{`${wishList
+                      .map(
+                        (id) =>
+                          products.find((product) => product.id === id).price
+                      )
+                      .reduce((sum, price) => sum + price, 0)} грн`}</b>
+                  </Typography>
+                </Typography>
+              </TableCell>
+            </TableRow>
+          </TableBody>
+        </Table>
+      ) : (
+        <Box className={classes.empty}>
+          <Typography>Этот список пуст</Typography>
+          <Typography>
+            Чтобы добавить сюда товары, нажимайте ссылки "В список желаний" на
+            страницах сайта.
+          </Typography>
+        </Box>
+      )}
     </>
   );
 };

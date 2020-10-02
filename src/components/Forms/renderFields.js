@@ -1,9 +1,21 @@
 import React from "react";
-import { TextField, FormControlLabel } from "@material-ui/core";
+import { TextField, FormControlLabel, withStyles } from "@material-ui/core";
 
 import styles from "./errors.module.css";
 import Preloader from "../UI/Preloader/Preloader";
-import { RememberMeCheckbox } from "../UI/Checkbox/Checkbox";
+import {
+  PrimaryColorCheckbox,
+  RememberMeCheckbox,
+} from "../UI/Checkbox/Checkbox";
+
+const ProfileTextField = withStyles({
+  root: {
+    "& input": {
+      padding: "2px 5px",
+      fontSize: 14,
+    },
+  },
+})(TextField);
 
 export const textarea = ({
   input,
@@ -45,20 +57,18 @@ export const input = ({
   input,
 }) => {
   return (
-    <>
-      <TextField
-        id={id}
-        name={name}
-        type={type}
-        label={label}
-        error={touched && invalid}
-        helperText={touched && error}
-        size="small"
-        variant="outlined"
-        style={{ marginTop: 24 }}
-        {...input}
-      />
-    </>
+    <TextField
+      id={id}
+      name={name}
+      type={type}
+      label={label}
+      error={touched && invalid}
+      helperText={touched && error}
+      size="small"
+      variant="outlined"
+      style={{ marginTop: 24 }}
+      {...input}
+    />
   );
 };
 
@@ -85,74 +95,43 @@ export const inputProfile = ({
   input,
   type,
   disabled,
-  placeholder,
   id,
-  meta: { touched, error, warning },
+  meta: { touched, invalid, error },
   loadedSuccess,
 }) => {
-  const hasError = touched && error;
-  const hasWarning = touched && warning;
-
   return (
     <>
-      <input
-        className={
-          hasError || hasWarning ? `${styles.input} ${styles.inputProfile}` : ""
-        }
-        {...input}
-        type={type}
-        placeholder={placeholder}
+      <ProfileTextField
         id={id}
+        type={type}
+        error={touched && invalid}
+        helperText={touched && error}
+        size="small"
+        variant="outlined"
         disabled={disabled}
-        style={{ position: "relative" }}
+        {...input}
       />
-
       {!loadedSuccess && <Preloader type="inputProfile" />}
-
-      {touched &&
-        ((hasError && (
-          <p className={styles.inputMessage}>
-            <i>{error}</i>
-          </p>
-        )) ||
-          (hasWarning && (
-            <p className={styles.inputMessage}>
-              <i>{warning}</i>
-            </p>
-          )))}
     </>
   );
 };
 
-export const selectProfile = ({ input, meta: { touched, error, warning } }) => {
-  const hasError = touched && error;
-  const hasWarning = touched && warning;
-
+export const checkboxProfile = ({ name, label, input, loadedSuccess }) => {
   return (
     <>
-      <select
-        className={
-          hasError || hasWarning ? `${styles.input} ${styles.inputProfile}` : ""
+      <FormControlLabel
+        control={
+          <PrimaryColorCheckbox
+            name={name}
+            size="small"
+            color="primary"
+            checked={!!input.value}
+            onChange={input.onChange}
+          />
         }
-        {...input}
-        style={{ position: "relative" }}
-      >
-        <option value={0}>Выбрать пол</option>
-        <option value="male">Мужской</option>
-        <option value="female">Женский</option>
-      </select>
-
-      {touched &&
-        ((hasError && (
-          <p className={styles.inputMessage}>
-            <i>{error}</i>
-          </p>
-        )) ||
-          (hasWarning && (
-            <p className={styles.inputMessage}>
-              <i>{warning}</i>
-            </p>
-          )))}
+        label={label}
+      />
+      {!loadedSuccess && <Preloader type="inputProfile" />}
     </>
   );
 };

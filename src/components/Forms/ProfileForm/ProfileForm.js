@@ -1,17 +1,61 @@
 import React, { useEffect, useState } from "react";
+import { useDispatch } from "react-redux";
 import { Field, reduxForm, autofill } from "redux-form";
 import ReactTooltip from "react-tooltip";
-import { useDispatch } from "react-redux";
+import {
+  Button,
+  makeStyles,
+  Table,
+  TableBody,
+  TableCell,
+  TableRow,
+  Typography,
+} from "@material-ui/core";
 
-import styles from "../LoginForm/LoginForm.module.css";
 import stylesTooltip from "../../UI/Tooltip/Tooltip.module.css";
 import { email, required, gender } from "../validate";
-import { inputProfile, selectProfile } from "../renderFields";
+import { checkboxProfile, inputProfile } from "../renderFields";
 import Preloader from "../../UI/Preloader/Preloader";
 import Popup from "../../UI/Popup/Popup";
 import SearchCity from "../../Profile/SearchCity/SearchCity";
+import Select from "../../UI/Select/Select";
+
+const useStyles = makeStyles((theme) => ({
+  root: {},
+  title: {
+    marginBottom: 16,
+    fontSize: 18,
+    textAlign: "center",
+  },
+  table: {
+    "& tr": {
+      verticalAlign: "baseline",
+    },
+    "& td": {
+      padding: 6,
+      width: "50%",
+    },
+  },
+  required: {
+    color: theme.palette.error.main,
+  },
+  priceLevelInfo: {
+    color: "#597391",
+    fontSize: 12,
+    lineHeight: 1,
+  },
+  button: {
+    backgroundColor: theme.palette.primary.main,
+    color: "#fff",
+    textTransform: "none",
+    padding: "3px 15px",
+    fontSize: 14,
+    "&:hover": { backgroundColor: theme.palette.primary.dark },
+  },
+}));
 
 let ProfileForm = ({ pristine, submitting, handleSubmit, initialValues }) => {
+  const classes = useStyles();
   let [newCity, setNewCity] = useState("");
   let [isClose, setIsClose] = useState(false);
 
@@ -32,21 +76,24 @@ let ProfileForm = ({ pristine, submitting, handleSubmit, initialValues }) => {
   };
 
   return (
-    <form
-      onSubmit={handleSubmit}
-      className={`${styles.loginForm} ${styles.profileForm}`}
-    >
-      <h5>Данные о покупателе:</h5>
+    <form onSubmit={handleSubmit} className={classes.root}>
+      <Typography component="h2" className={classes.title}>
+        Данные о покупателе:
+      </Typography>
 
       <ReactTooltip className={stylesTooltip.tooltip} />
 
-      <table>
-        <tbody>
-          <tr data-tip="Отображается в отзывах. Изменить можно только один раз, после регистрации.">
-            <td>
-              Логин<span>*</span>:
-            </td>
-            <td>
+      <Table size="small" className={classes.table} aria-label="Wishlist table">
+        <TableBody>
+          <TableRow data-tip="Отображается в отзывах. Изменить можно только один раз, после регистрации.">
+            <TableCell align="right">
+              Логин
+              <Typography component="span" className={classes.required}>
+                *
+              </Typography>
+              :
+            </TableCell>
+            <TableCell>
               <Field
                 name="login"
                 type="text"
@@ -55,13 +102,17 @@ let ProfileForm = ({ pristine, submitting, handleSubmit, initialValues }) => {
                 validate={[required]}
                 loadedSuccess={initialValues}
               />
-            </td>
-          </tr>
-          <tr data-tip="Нужна для оформления и доставки заказов. Будет скрыта от других пользователей.">
-            <td>
-              Фамилия<span>*</span>:
-            </td>
-            <td>
+            </TableCell>
+          </TableRow>
+          <TableRow data-tip="Нужна для оформления и доставки заказов. Будет скрыта от других пользователей.">
+            <TableCell align="right">
+              Фамилия
+              <Typography component="span" className={classes.required}>
+                *
+              </Typography>
+              :
+            </TableCell>
+            <TableCell>
               <Field
                 name="lastName"
                 type="text"
@@ -69,13 +120,17 @@ let ProfileForm = ({ pristine, submitting, handleSubmit, initialValues }) => {
                 validate={[required]}
                 loadedSuccess={initialValues}
               />
-            </td>
-          </tr>
-          <tr>
-            <td>
-              Имя<span>*</span>:
-            </td>
-            <td>
+            </TableCell>
+          </TableRow>
+          <TableRow>
+            <TableCell align="right">
+              Имя
+              <Typography component="span" className={classes.required}>
+                *
+              </Typography>
+              :
+            </TableCell>
+            <TableCell>
               <Field
                 id="firstName"
                 name="firstName"
@@ -84,35 +139,45 @@ let ProfileForm = ({ pristine, submitting, handleSubmit, initialValues }) => {
                 validate={[required]}
                 loadedSuccess={initialValues}
               />
-            </td>
-          </tr>
-          <tr data-tip="Нужно для отправки заказов Новой Почтой. Будет скрыто от других пользователей.">
-            <td>Отчество:</td>
-            <td>
+            </TableCell>
+          </TableRow>
+          <TableRow data-tip="Нужно для отправки заказов Новой Почтой. Будет скрыто от других пользователей.">
+            <TableCell align="right">Отчество:</TableCell>
+            <TableCell>
               <Field
                 name="patronymic"
                 type="text"
                 component={inputProfile}
                 loadedSuccess={initialValues}
               />
-            </td>
-          </tr>
-          <tr data-tip="Для учета Ваших предпочтений в акциях и розыгрышах.">
-            <td>
-              Пол<span>*</span>:
-            </td>
-            <td>
+            </TableCell>
+          </TableRow>
+          <TableRow data-tip="Для учета Ваших предпочтений в акциях и розыгрышах.">
+            <TableCell align="right">
+              Пол
+              <Typography component="span" className={classes.required}>
+                *
+              </Typography>
+              :
+            </TableCell>
+            <TableCell>
               <Field
                 name="gender"
-                component={selectProfile}
+                label={null}
+                component={Select}
                 validate={[gender]}
-              />
+                style={{ position: "relative" }}
+              >
+                <option value={0}>Выбрать пол</option>
+                <option value="male">Мужской</option>
+                <option value="female">Женский</option>
+              </Field>
               {!initialValues && <Preloader type="inputProfile" />}
-            </td>
-          </tr>
-          <tr>
-            <td>Уровень цен:</td>
-            <td>
+            </TableCell>
+          </TableRow>
+          <TableRow>
+            <TableCell align="right">Уровень цен:</TableCell>
+            <TableCell>
               <Field
                 id="priceLevel"
                 name="priceLevel"
@@ -121,14 +186,14 @@ let ProfileForm = ({ pristine, submitting, handleSubmit, initialValues }) => {
                 component={inputProfile}
                 loadedSuccess={initialValues}
               />
-              <div className={styles.priceLevelInfo}>
+              <div className={classes.priceLevelInfo}>
                 Данная сумма является весьма примерной и не является фискальной.
               </div>
-            </td>
-          </tr>
-          <tr data-tip="Данная сумма является весьма примерной и не является фискальной. В ней учитываються лишь успешные заказы через сайт c этого аккаунта.">
-            <td>Сумма покупок:</td>
-            <td>
+            </TableCell>
+          </TableRow>
+          <TableRow data-tip="Данная сумма является весьма примерной и не является фискальной. В ней учитываються лишь успешные заказы через сайт c этого аккаунта.">
+            <TableCell align="right">Сумма покупок:</TableCell>
+            <TableCell>
               <Field
                 name="amountOfPurchases"
                 type="text"
@@ -136,13 +201,17 @@ let ProfileForm = ({ pristine, submitting, handleSubmit, initialValues }) => {
                 component={inputProfile}
                 loadedSuccess={initialValues}
               />
-            </td>
-          </tr>
-          <tr data-tip="Нужен для отправки пароля, информации о заказах, ссылок на оплату и прочего. Будет скрыт от других пользователей.">
-            <td>
-              E-mail<span>*</span>:
-            </td>
-            <td>
+            </TableCell>
+          </TableRow>
+          <TableRow data-tip="Нужен для отправки пароля, информации о заказах, ссылок на оплату и прочего. Будет скрыт от других пользователей.">
+            <TableCell align="right">
+              E-mail
+              <Typography component="span" className={classes.required}>
+                *
+              </Typography>
+              :
+            </TableCell>
+            <TableCell>
               <Field
                 name="email"
                 type="text"
@@ -150,66 +219,68 @@ let ProfileForm = ({ pristine, submitting, handleSubmit, initialValues }) => {
                 validate={[email]}
                 loadedSuccess={initialValues}
               />
-            </td>
-          </tr>
-          <tr data-tip="Отправка на указанный e-mail информации о сделанных заказах.">
-            <td>Получать e-mail о заказах:</td>
-            <td>
+            </TableCell>
+          </TableRow>
+          <TableRow data-tip="Отправка на указанный e-mail информации о сделанных заказах.">
+            <TableCell align="right">Получать e-mail о заказах:</TableCell>
+            <TableCell>
               <Field
                 name="receiveEmailAboutOrders"
-                component={inputProfile}
-                type="checkbox"
+                component={checkboxProfile}
                 loadedSuccess={initialValues}
+                label={null}
               />
-            </td>
-          </tr>
-          <tr data-tip="Нужен для связи с Вами по поводу заказов. Будет скрыт от других пользователей.">
-            <td>
-              Телефон<span>*</span>:
-            </td>
-            <td>
+            </TableCell>
+          </TableRow>
+          <TableRow data-tip="Нужен для связи с Вами по поводу заказов. Будет скрыт от других пользователей.">
+            <TableCell align="right">
+              Телефон
+              <Typography component="span" className={classes.required}>
+                *
+              </Typography>
+              :
+            </TableCell>
+            <TableCell>
               <Field
                 name="phone"
-                type="text"
+                type="number"
                 component={inputProfile}
                 validate={[required]}
                 loadedSuccess={initialValues}
               />
-            </td>
-          </tr>
-          <tr data-tip="Перезвонить после общения с оператором для возможности оценки разговора. Отключение распространяется только на номер, указанный в профиле, и требует подтверждения телефона.">
-            <td>Перезванивать с оценкой оператора:</td>
-            <td>
+            </TableCell>
+          </TableRow>
+          <TableRow data-tip="Перезвонить после общения с оператором для возможности оценки разговора. Отключение распространяется только на номер, указанный в профиле, и требует подтверждения телефона.">
+            <TableCell align="right">
+              Перезванивать с оценкой оператора:
+            </TableCell>
+            <TableCell>
               <Field
                 name="callBackWithAnOperatorRating"
-                component={inputProfile}
-                type="checkbox"
+                component={checkboxProfile}
                 loadedSuccess={initialValues}
               />
-            </td>
-          </tr>
-          <tr data-tip="Отправка на указанный e-mail копий SMS/Viber сообщений для указанного номера.">
-            <td>Дублировать SMS/Viber на email:</td>
-            <td>
+            </TableCell>
+          </TableRow>
+          <TableRow data-tip="Отправка на указанный e-mail копий SMS/Viber сообщений для указанного номера.">
+            <TableCell align="right">Дублировать SMS/Viber на email:</TableCell>
+            <TableCell>
               <Field
                 name="duplicateSmsViberToEmail"
-                component={inputProfile}
-                type="checkbox"
+                component={checkboxProfile}
                 loadedSuccess={initialValues}
               />
-            </td>
-          </tr>
-          <tr data-tip="Нужен для отправки заказов службами доставки, отображении возможных видов оплаты и прочего.">
-            <td>
-              Город<span>*</span>:
-            </td>
-            <td>
-              <Field
-                name="city"
-                type="hidden"
-                component={inputProfile}
-                loadedSuccess={initialValues}
-              />
+            </TableCell>
+          </TableRow>
+          <TableRow data-tip="Нужен для отправки заказов службами доставки, отображении возможных видов оплаты и прочего.">
+            <TableCell align="right">
+              Город
+              <Typography component="span" className={classes.required}>
+                *
+              </Typography>
+              :
+            </TableCell>
+            <TableCell>
               <div onClick={handleClick}>
                 <Popup
                   text={
@@ -226,22 +297,39 @@ let ProfileForm = ({ pristine, submitting, handleSubmit, initialValues }) => {
                   />
                 </Popup>
               </div>
-            </td>
-          </tr>
-          <tr>
-            <td />
-            <td>
-              <span>*</span> - обязательно
-            </td>
-          </tr>
-          <tr>
-            <td />
-            <td>
-              <button disabled={pristine || submitting}>Сохранить</button>
-            </td>
-          </tr>
-        </tbody>
-      </table>
+              <Field
+                name="city"
+                type="hidden"
+                component={inputProfile}
+                loadedSuccess={initialValues}
+              />
+            </TableCell>
+          </TableRow>
+          <TableRow>
+            <TableCell />
+            <TableCell>
+              <Typography component="span" className={classes.required}>
+                *
+              </Typography>{" "}
+              - обязательно
+            </TableCell>
+          </TableRow>
+          <TableRow>
+            <TableCell />
+            <TableCell>
+              <Button
+                variant="contained"
+                size="small"
+                type="submit"
+                className={classes.button}
+                disabled={pristine || submitting}
+              >
+                Сохранить
+              </Button>
+            </TableCell>
+          </TableRow>
+        </TableBody>
+      </Table>
     </form>
   );
 };

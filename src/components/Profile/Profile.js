@@ -1,12 +1,11 @@
 import React, { useEffect } from "react";
 import { connect, useDispatch } from "react-redux";
 import { isEmpty, isLoaded } from "react-redux-firebase";
-import { Tab, TabList, TabPanel, Tabs } from "react-tabs";
 import { NavLink } from "react-router-dom";
+import { makeStyles, AppBar, Box, Tabs, Tab } from "@material-ui/core";
 import Helmet from "react-helmet";
 import * as PropTypes from "prop-types";
 
-import styles from "./Profile.module.css";
 import ProfileForm from "../Forms/ProfileForm/ProfileForm";
 import {
   setInitialValuesForProfileForm,
@@ -21,6 +20,41 @@ import {
   getNoticeType,
   getProfile,
 } from "../../redux/selectors";
+import Paper from "@material-ui/core/Paper";
+
+const useStyles = makeStyles(() => ({
+  root: {
+    padding: 30,
+  },
+  header: {
+    borderRadius: "4px 4px 0 0",
+  },
+}));
+
+const TabPanel = ({ children, value, index, ...other }) => {
+  return (
+    <div
+      role="tabpanel"
+      hidden={value !== index}
+      id={`nav-tabpanel-${index}`}
+      aria-labelledby={`nav-tab-${index}`}
+      {...other}
+    >
+      {value === index && <Box style={{ padding: "24px 0" }}>{children}</Box>}
+    </div>
+  );
+};
+
+const linkProps = (index) => {
+  return {
+    id: `nav-tab-${index}`,
+    "aria-controls": `nav-tabpanel-${index}`,
+  };
+};
+
+const LinkTab = (props) => {
+  return <Tab component={NavLink} {...props} />;
+};
 
 const Profile = ({
   isAuth,
@@ -30,11 +64,21 @@ const Profile = ({
   index,
   updateProfile,
 }) => {
+  const classes = useStyles();
   const dispatch = useDispatch();
+  const [value, setValue] = React.useState(0);
 
   useEffect(() => {
     dispatch(setInitialValuesForProfileForm());
   }, [isAuth, dispatch]);
+
+  useEffect(() => {
+    setValue(index);
+  }, [index]);
+
+  const handleChange = (event, newValue) => {
+    setValue(newValue);
+  };
 
   return (
     <>
@@ -50,40 +94,44 @@ const Profile = ({
       {isLoaded(isAuth) && isEmpty(isAuth) ? (
         <Notices type="accessDenied" />
       ) : (
-        <div className={styles.profile}>
-          <Tabs selectedIndex={index} onSelect={() => null}>
-            <TabList className={styles.profileTabs}>
-              <Tab>
-                <NavLink className={styles.tabLink} to="/profile?tab=regdata">
-                  Общие
-                </NavLink>
-              </Tab>
-              <Tab>
-                <NavLink className={styles.tabLink} to="/profile?tab=wishlist">
-                  Список желаний
-                </NavLink>
-              </Tab>
-            </TabList>
-            <div className={styles.profileBody}>
-              <TabPanel>
-                {isLoaded(isAuth) && !isEmpty(isAuth) ? (
-                  <ProfileForm
-                    onSubmit={updateProfile}
-                    initialValues={initialValues}
-                  />
-                ) : (
-                  <Preloader type="bigProfile" />
-                )}
-              </TabPanel>
-              <TabPanel>
-                {isLoaded(profile) && !isEmpty(profile) ? (
-                  <WishList />
-                ) : (
-                  <Preloader type="bigProfile" />
-                )}
-              </TabPanel>
-            </div>
-          </Tabs>
+        <div className={classes.root}>
+          <Paper elevation={15}>
+            <AppBar position="static" className={classes.header}>
+              <Tabs
+                value={index || value}
+                onChange={handleChange}
+                aria-label="Nav tabs"
+              >
+                <LinkTab
+                  label="Общие"
+                  to="/profile?tab=regdata"
+                  {...linkProps(0)}
+                />
+                <LinkTab
+                  label="Список желаний"
+                  to="/profile?tab=wishlist"
+                  {...linkProps(1)}
+                />
+              </Tabs>
+            </AppBar>
+            <TabPanel value={value} index={0}>
+              {isLoaded(isAuth) && !isEmpty(isAuth) ? (
+                <ProfileForm
+                  onSubmit={updateProfile}
+                  initialValues={initialValues}
+                />
+              ) : (
+                <Preloader type="bigProfile" />
+              )}
+            </TabPanel>
+            <TabPanel value={value} index={1}>
+              {isLoaded(profile) && !isEmpty(profile) ? (
+                <WishList />
+              ) : (
+                <Preloader type="bigProfile" />
+              )}
+            </TabPanel>
+          </Paper>
         </div>
       )}
     </>

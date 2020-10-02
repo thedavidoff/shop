@@ -37,7 +37,7 @@ const useStyles = makeStyles((theme) => ({
     },
   },
   totalRow: {
-    backgroundColor: "#fff1a6",
+    backgroundColor: "#fff9bb",
     "& td": {
       padding: "8px 16px",
       borderBottom: "1px solid #bfbfbf"

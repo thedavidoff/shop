@@ -22,6 +22,11 @@ import HitSVG from "../../../UI/SVG/HitSVG";
 import NewSVG from "../../../UI/SVG/NewSVG";
 
 const useStyles = makeStyles((theme) => ({
+  root: {
+    "& td": {
+      borderBottom: "1px solid #bfbfbf",
+    },
+  },
   checkbox: {
     "&>span": {
       paddingLeft: 9,
@@ -170,7 +175,7 @@ const WishListItem = ({
   ));
 
   return (
-    <TableRow key={id}>
+    <TableRow key={id} className={classes.root}>
       <TableCell align="center" className={classes.checkbox}>
         <PrimaryColorCheckbox
           size="small"
