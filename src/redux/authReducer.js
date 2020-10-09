@@ -247,6 +247,7 @@ export const registration = ({ email, password }) => {
             .database()
             .ref("users/" + user.uid + "/wishList");
 
+          dispatch({ type: SET_NOTICE_TYPE, payload: null });
           dispatch({ type: SET_NOTICE_TYPE, payload: "regSuccess" });
           firebase
             .updateAuth({
@@ -426,6 +427,10 @@ export const updateProfile = (data) => {
               .then(() => {
                 dispatch({
                   type: SET_NOTICE_TYPE,
+                  payload: null,
+                });
+                dispatch({
+                  type: SET_NOTICE_TYPE,
                   payload: "profileUpdateSuccess",
                 });
               });
@@ -433,6 +438,10 @@ export const updateProfile = (data) => {
       })
       .catch((error) => {
         console.log(error);
+        dispatch({
+          type: SET_NOTICE_TYPE,
+          payload: null,
+        });
         dispatch({
           type: SET_NOTICE_TYPE,
           payload: "profileUpdateFailed",

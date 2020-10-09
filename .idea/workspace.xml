@@ -2,11 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="d838e675-2b75-4462-b131-7ac443757c74" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/components/Profile/SearchCity/City.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/Forms/ProfileForm/ProfileForm.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Forms/ProfileForm/ProfileForm.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Profile/SearchCity/SearchCity.module.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Profile/SearchCity/SearchCity.module.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/UI/ViewRest/ViewRest.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/UI/ViewRest/ViewRest.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Profile/Profile.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Profile/Profile.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Profile/SearchCity/City.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Profile/SearchCity/City.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/redux/authReducer.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/redux/authReducer.js" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -212,7 +212,9 @@
       <workItem from="1600934721879" duration="32377000" />
       <workItem from="1601035326668" duration="20302000" />
       <workItem from="1601548707103" duration="21052000" />
-      <workItem from="1601628217419" duration="21345000" />
+      <workItem from="1601628217419" duration="23985000" />
+      <workItem from="1601728161340" duration="2389000" />
+      <workItem from="1602267870570" duration="2466000" />
     </task>
     <servers />
   </component>

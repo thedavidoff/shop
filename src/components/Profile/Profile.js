@@ -21,14 +21,25 @@ import {
   getProfile,
 } from "../../redux/selectors";
 import Paper from "@material-ui/core/Paper";
+import Alert from "@material-ui/lab/Alert/Alert";
+import Snackbar from "@material-ui/core/Snackbar/Snackbar";
 
-const useStyles = makeStyles(() => ({
+const useStyles = makeStyles((theme) => ({
   root: {
     padding: 30,
   },
   header: {
     borderRadius: "4px 4px 0 0",
   },
+  snackbar: {
+    "& > div": {
+      backgroundColor: theme.palette.success.main,
+      color: "#fff",
+      "& > div": {
+        color: "#fff !important"
+      }
+    }
+  }
 }));
 
 const TabPanel = ({ children, value, index, ...other }) => {
@@ -80,6 +91,19 @@ const Profile = ({
     setValue(newValue);
   };
 
+  const [open, setOpen] = React.useState(false);
+
+  useEffect(() => {
+    setOpen(true);
+  }, [noticeType]);
+
+  const handleClose = (event, reason) => {
+    if (reason === "clickaway") {
+      return;
+    }
+    setOpen(false);
+  };
+
   return (
     <>
       <Helmet>
@@ -91,6 +115,19 @@ const Profile = ({
         />
       </Helmet>
       {noticeType && <Notices type={noticeType} />}
+      {noticeType && (
+        <Snackbar
+          open={open}
+          autoHideDuration={600000}
+          onClose={handleClose}
+          anchorOrigin={{ vertical: "bottom", horizontal: "right" }}
+          className={classes.snackbar}
+        >
+          <Alert onClose={handleClose} severity="success">
+            {noticeType}
+          </Alert>
+        </Snackbar>
+      )}
       {isLoaded(isAuth) && isEmpty(isAuth) ? (
         <Notices type="accessDenied" />
       ) : (

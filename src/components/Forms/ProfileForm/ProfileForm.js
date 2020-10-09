@@ -71,10 +71,6 @@ let ProfileForm = ({ pristine, submitting, handleSubmit, initialValues }) => {
     setIsClose(false);
   }, [isClose]);
 
-  // const handleClick = () => {
-  //   ReactTooltip.hide();
-  // };
-
   return (
     <form onSubmit={handleSubmit} className={classes.root}>
       <Typography component="h2" className={classes.title}>
