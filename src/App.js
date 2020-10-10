@@ -2,12 +2,11 @@ import React, { useEffect } from "react";
 import { makeStyles, Grid, Container } from "@material-ui/core";
 import { connect } from "react-redux";
 
-import "./App.css";
 import { productsRequest } from "./redux/homeReducer";
 import HeaderContainer from "./components/Header/HeaderContainer";
 import Sidebar from "./components/Sidebar/Sidebar";
-import Notices from "./components/UI/Notices/Notices";
 import Routes from "./Routes";
+import Notice from "./components/UI/Notice/Notice";
 
 const useStyles = makeStyles(() => ({
   sidebar: {
@@ -31,7 +30,7 @@ const App = ({ rangePrices, productsRequest }) => {
           <Sidebar rangePrices={rangePrices} />
         </Grid>
         <Grid item xs>
-          <Notices type="warning" />
+          <Notice type="warning" />
           <Routes />
         </Grid>
       </Grid>

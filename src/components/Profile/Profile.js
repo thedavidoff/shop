@@ -2,7 +2,14 @@ import React, { useEffect } from "react";
 import { connect, useDispatch } from "react-redux";
 import { isEmpty, isLoaded } from "react-redux-firebase";
 import { NavLink } from "react-router-dom";
-import { makeStyles, AppBar, Box, Tabs, Tab } from "@material-ui/core";
+import {
+  makeStyles,
+  AppBar,
+  Box,
+  Tabs,
+  Tab,
+  Paper,
+} from "@material-ui/core";
 import Helmet from "react-helmet";
 import * as PropTypes from "prop-types";
 
@@ -12,34 +19,24 @@ import {
   updateProfile,
 } from "../../redux/authReducer";
 import Preloader from "../UI/Preloader/Preloader";
-import Notices from "../UI/Notices/Notices";
 import WishList from "./WishList/WishList";
 import {
   getInitialValues,
+  getIsAnonymous,
   getIsAuth,
   getNoticeType,
   getProfile,
 } from "../../redux/selectors";
-import Paper from "@material-ui/core/Paper";
-import Alert from "@material-ui/lab/Alert/Alert";
-import Snackbar from "@material-ui/core/Snackbar/Snackbar";
+import Notice from "../UI/Notice/Notice";
+import Snackbar from "../UI/Snackbar/Snackbar";
 
-const useStyles = makeStyles((theme) => ({
+const useStyles = makeStyles(() => ({
   root: {
     padding: 30,
   },
   header: {
     borderRadius: "4px 4px 0 0",
   },
-  snackbar: {
-    "& > div": {
-      backgroundColor: theme.palette.success.main,
-      color: "#fff",
-      "& > div": {
-        color: "#fff !important"
-      }
-    }
-  }
 }));
 
 const TabPanel = ({ children, value, index, ...other }) => {
@@ -69,6 +66,7 @@ const LinkTab = (props) => {
 
 const Profile = ({
   isAuth,
+  isAnonymous,
   profile,
   initialValues,
   noticeType,
@@ -91,19 +89,6 @@ const Profile = ({
     setValue(newValue);
   };
 
-  const [open, setOpen] = React.useState(false);
-
-  useEffect(() => {
-    setOpen(true);
-  }, [noticeType]);
-
-  const handleClose = (event, reason) => {
-    if (reason === "clickaway") {
-      return;
-    }
-    setOpen(false);
-  };
-
   return (
     <>
       <Helmet>
@@ -114,22 +99,9 @@ const Profile = ({
           href="http://localhost:3000/profile?tab=regdata"
         />
       </Helmet>
-      {noticeType && <Notices type={noticeType} />}
-      {noticeType && (
-        <Snackbar
-          open={open}
-          autoHideDuration={600000}
-          onClose={handleClose}
-          anchorOrigin={{ vertical: "bottom", horizontal: "right" }}
-          className={classes.snackbar}
-        >
-          <Alert onClose={handleClose} severity="success">
-            {noticeType}
-          </Alert>
-        </Snackbar>
-      )}
-      {isLoaded(isAuth) && isEmpty(isAuth) ? (
-        <Notices type="accessDenied" />
+      {noticeType && <Snackbar type={noticeType} />}
+      {index === 0 && (isEmpty(isAuth) || isAnonymous) ? (
+        <Notice type="accessDenied" />
       ) : (
         <div className={classes.root}>
           <Paper elevation={15}>
@@ -177,6 +149,7 @@ const Profile = ({
 
 Profile.propTypes = {
   isAuth: PropTypes.object,
+  isAnonymous: PropTypes.bool,
   profile: PropTypes.object,
   initialValues: PropTypes.object,
   noticeType: PropTypes.string,
@@ -187,6 +160,7 @@ Profile.propTypes = {
 const mapStateToProps = (state) => {
   return {
     isAuth: getIsAuth(state),
+    isAnonymous: getIsAnonymous(state),
     profile: getProfile(state),
     initialValues: getInitialValues(state),
     noticeType: getNoticeType(state),
