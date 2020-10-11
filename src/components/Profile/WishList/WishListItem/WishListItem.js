@@ -1,6 +1,5 @@
 import React, { useState } from "react";
 import { NavLink } from "react-router-dom";
-import { HashLink } from "react-router-hash-link";
 import ReactTooltip from "react-tooltip";
 import {
   makeStyles,
@@ -20,6 +19,7 @@ import BuyButton from "../../../UI/BuyButton/BuyButton";
 import DarkTooltip from "../../../UI/Tooltip/DarkTooltip";
 import HitSVG from "../../../UI/SVG/HitSVG";
 import NewSVG from "../../../UI/SVG/NewSVG";
+import ForwardLink from "../../../UI/ForwardLink/ForwardLink";
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -169,10 +169,6 @@ const WishListItem = ({
   const handleClick = () => {
     ReactTooltip.hide();
   };
-
-  const ForwardLink = React.forwardRef((props, ref) => (
-    <HashLink {...props} innerRef={ref} />
-  ));
 
   return (
     <TableRow key={id} className={classes.root}>

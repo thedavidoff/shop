@@ -1,15 +1,52 @@
 import React from "react";
+import {
+  makeStyles,
+  Typography,
+  Table,
+  TableBody,
+  TableRow,
+  TableCell,
+  Paper,
+} from "@material-ui/core";
 import * as PropTypes from "prop-types";
 
-import styles from "./SpecificationsBlock.module.css";
+const useStyles = makeStyles((theme) => ({
+  root: {
+    marginTop: 32,
+  },
+  title: {
+    fontSize: 15,
+    marginBottom: 15,
+  },
+  tableRow: {
+    "& td": {
+      fontSize: 13,
+      lineHeight: 1,
+    },
+  },
+  info: {
+    margin: "30px 15px",
+    padding: 16,
+    background: "#fff6c6",
+    border: "1px solid #d2ddec",
+    "& p": {
+      marginBottom: 8,
+      fontSize: 12,
+      color: theme.palette.primary.main,
+    },
+  },
+}));
 
 const SpecificationsBlock = ({ product }) => {
+  const classes = useStyles();
 
   return (
-    <div className={styles.specificationsBlock}>
-      <h2 id="specs">{`Технические характеристики* ${product.name}:`}</h2>
-      <table className={styles.specifications}>
-        <tbody>
+    <div className={classes.root}>
+      <Typography component="h2" id="specs" className={classes.title}>
+        <b>{`Технические характеристики* ${product.name}:`}</b>
+      </Typography>
+      <Table size="small">
+        <TableBody>
           {product.specifications.map((key, index) => {
             const { property, value, hide } = Object.values(key)[0];
             let link;
@@ -17,26 +54,32 @@ const SpecificationsBlock = ({ product }) => {
               link = value;
             }
             return (
-              !hide && (<tr key={index}>
-              <td>{property}</td>
-              <td>{link ? <a href={link}>{link}</a> : value}</td>
-            </tr>)
+              !hide && (
+                <TableRow key={index} className={classes.tableRow}>
+                  <TableCell>{property}</TableCell>
+                  <TableCell>
+                    {link ? <a href={link}>{link}</a> : value}
+                  </TableCell>
+                </TableRow>
+              )
             );
           })}
-        </tbody>
-      </table>
-      <div className={styles.messageInfo}>
-        <p>
+        </TableBody>
+      </Table>
+      <Paper elevation={15} className={classes.info}>
+        <Typography>
           * Характеристики и комплектация товара могут изменяться производителем
           без уведомления
-        </p>
-        <p>
+        </Typography>
+        <Typography>
           Если Вы заметили какую-либо ошибку на сайте, то выделите ее и нажмите
           комбинацию клавиш Ctrl+Enter или кнопку слева с текстом "Нашли ошибку?
           Ctrl+Enter".
-        </p>
-        <p>Все собранные ошибки мы будем стараться исправлять.</p>
-      </div>
+        </Typography>
+        <Typography>
+          Все собранные ошибки мы будем стараться исправлять.
+        </Typography>
+      </Paper>
     </div>
   );
 };

@@ -2,14 +2,7 @@ import React, { useEffect } from "react";
 import { connect, useDispatch } from "react-redux";
 import { isEmpty, isLoaded } from "react-redux-firebase";
 import { NavLink } from "react-router-dom";
-import {
-  makeStyles,
-  AppBar,
-  Box,
-  Tabs,
-  Tab,
-  Paper,
-} from "@material-ui/core";
+import { makeStyles, AppBar, Tabs, Tab, Paper } from "@material-ui/core";
 import Helmet from "react-helmet";
 import * as PropTypes from "prop-types";
 
@@ -29,6 +22,7 @@ import {
 } from "../../redux/selectors";
 import Notice from "../UI/Notice/Notice";
 import Snackbar from "../UI/Snackbar/Snackbar";
+import TabPanel from "../UI/TabPanel/TabPanel";
 
 const useStyles = makeStyles(() => ({
   root: {
@@ -38,20 +32,6 @@ const useStyles = makeStyles(() => ({
     borderRadius: "4px 4px 0 0",
   },
 }));
-
-const TabPanel = ({ children, value, index, ...other }) => {
-  return (
-    <div
-      role="tabpanel"
-      hidden={value !== index}
-      id={`nav-tabpanel-${index}`}
-      aria-labelledby={`nav-tab-${index}`}
-      {...other}
-    >
-      {value === index && <Box style={{ padding: "24px 0" }}>{children}</Box>}
-    </div>
-  );
-};
 
 const linkProps = (index) => {
   return {
@@ -134,7 +114,7 @@ const Profile = ({
               )}
             </TabPanel>
             <TabPanel value={value} index={1}>
-              {isLoaded(profile) && !isEmpty(profile) ? (
+              {isLoaded(profile) && !isEmpty(isAuth) ? (
                 <WishList />
               ) : (
                 <Preloader type="bigProfile" />

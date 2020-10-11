@@ -62,9 +62,9 @@ const useStyles = makeStyles((theme) => ({
     fontSize: 14,
     lineHeight: 1,
     borderBottom: "1px dashed",
-    cursor: "pointer",
     "&:hover": {
       color: theme.palette.secondary.main,
+      cursor: "pointer",
     },
   },
   tableContainer: {

@@ -43,6 +43,7 @@ const useStyles = makeStyles((theme) => ({
       lineHeight: 1,
       borderBottom: "1px dashed",
       cursor: "pointer",
+      userSelect: "none",
       "&:hover": {
         color: theme.palette.secondary.main,
       },

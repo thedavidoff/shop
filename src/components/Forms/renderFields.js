@@ -109,6 +109,7 @@ export const inputProfile = ({
         size="small"
         variant="outlined"
         disabled={disabled}
+        style={type === "hidden" ? { opacity: 0 } : {}}
         {...input}
       />
       {!loadedSuccess && <Preloader type="inputProfile" />}

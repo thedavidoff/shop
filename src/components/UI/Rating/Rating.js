@@ -1,10 +1,8 @@
 import React  from "react";
 import StarRatingComponent from "react-star-rating-component";
-import ReactTooltip from "react-tooltip";
 import * as PropTypes from "prop-types";
 
 import styles from "./Rating.module.css";
-import stylesTooltip from "../Tooltip/Tooltip.module.css";
 
 const emptyStar = "#c6c6c6";
 const fullStar = "#f70000";
@@ -37,7 +35,6 @@ const Rating = ({ totalRating, ratingsCount }) => {
 
   return (
     <div className={styles.totalRating} data-tip={tooltipText}>
-      <ReactTooltip className={stylesTooltip.tooltip} />
       <StarRatingComponent
         name="totalRating"
         value={totalRating}

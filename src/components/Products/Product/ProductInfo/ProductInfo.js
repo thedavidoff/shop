@@ -1,6 +1,5 @@
 import React from "react";
 import ReactTooltip from "react-tooltip";
-import { HashLink } from "react-router-hash-link";
 import {
   makeStyles,
   Grid,
@@ -16,6 +15,7 @@ import Rating from "../../../UI/Rating/Rating";
 import BuyButton from "../../../UI/BuyButton/BuyButton";
 import AddToWishListButton from "../../../UI/AddToWishListButton/AddToWishListButton";
 import ViewRest from "../../../UI/ViewRest/ViewRest";
+import ForwardLink from "../../../UI/ForwardLink/ForwardLink";
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -32,16 +32,16 @@ const useStyles = makeStyles((theme) => ({
   list: {
     padding: 0,
   },
-  warranty: {
-    fontSize: 14,
-    lineHeight: 1,
-    cursor: "default",
-  },
   listItem: {
     marginBottom: 8,
     padding: 0,
     fontSize: 14,
     lineHeight: 1,
+  },
+  warranty: {
+    fontSize: 14,
+    lineHeight: 1,
+    cursor: "default",
   },
   span: {
     fontSize: 14,
@@ -104,10 +104,6 @@ const ProductInfo = ({
   const handleClick = () => {
     ReactTooltip.hide();
   };
-
-  const ForwardLink = React.forwardRef((props, ref) => (
-    <HashLink {...props} innerRef={ref} />
-  ));
 
   return (
     <Grid container className={classes.root}>

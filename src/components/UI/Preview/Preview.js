@@ -47,9 +47,10 @@ export const previewMethods = {
   showProduct(e) {
     const height = window.document.documentElement.clientHeight;
     const top = e.target.getBoundingClientRect().top;
+    const x = e.target.getBoundingClientRect().x;
 
-    if (e.currentTarget) {
-      if (e.currentTarget.x < 532) {
+    if (e.target) {
+      if (x < 532) {
         if (top + 432 > height) {
           return { top: -(top + 432 - height + 15) + "px", left: 320 }; // 432 - height of preview block
         } else {
@@ -68,7 +69,7 @@ export const previewMethods = {
     const height = window.document.documentElement.clientHeight;
     const top = e.target.getBoundingClientRect().top;
 
-    if (e.currentTarget) {
+    if (e.target) {
       if (top + 432 > height) {
         return { top: -(top + 432 - height + 30) + "px", left: 130 };
       } else {

@@ -1,10 +1,6 @@
 .tooltip {
-  /*position: absolute;*/
   max-width: 250px;
-  /*background: #fff !important;*/
-  /*padding: 15px;*/
-  /*border: 2px solid #0075ff !important;*/
   border-radius: 4px;
   text-align: left;
-  /*z-index: 1000;*/
+  opacity: 1 !important;
 }

@@ -12,7 +12,11 @@ const useStyles = makeStyles((theme) => ({
   notAdded: {
     fontSize: 13,
     opacity: 0.7,
-    "&:hover": { cursor: "pointer", opacity: 1 },
+    "&:hover": {
+      cursor: "pointer",
+      opacity: 1,
+      "& span": { color: theme.palette.secondary.main, cursor: "pointer" },
+    },
   },
   isAdded: {
     fontSize: 13,
@@ -39,10 +43,6 @@ const useStyles = makeStyles((theme) => ({
     fontSize: 14,
     lineHeight: 1,
     borderBottom: "1px dashed",
-    cursor: "pointer",
-    "&:hover": {
-      color: theme.palette.secondary.main,
-    },
   },
 }));
 
@@ -96,7 +96,9 @@ const AddToWishListButton = ({ text, id, wishList, addToWishList }) => {
             className={classes.notAddedIcon}
             style={{ fontSize: 25 }}
           />
-          <Typography component="span" className={classes.span}>{text || "В список желаний"}</Typography>
+          <Typography component="span" className={classes.span}>
+            {text || "В список желаний"}
+          </Typography>
         </div>
       )}
     </div>

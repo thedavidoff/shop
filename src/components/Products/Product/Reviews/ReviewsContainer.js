@@ -1,10 +1,10 @@
-import React, { Component } from "react";
+import React, { useEffect } from "react";
 import { compose } from "redux";
 import { connect } from "react-redux";
 import { withRouter } from "react-router-dom";
+import { makeStyles, Typography } from "@material-ui/core";
 import * as PropTypes from "prop-types";
 
-import styles from "../ProductPage/ProductPage.module.css";
 import {
   getAnswerModeId,
   getAnswers,
@@ -24,38 +24,53 @@ import {
 import Reviews from "./Reviews";
 import Preloader from "../../../UI/Preloader/Preloader";
 
-class ReviewsContainer extends Component {
-  componentDidMount() {
-    this.props.reviewsRequest(+this.props.match.params.id);
-    this.props.answersRequest(+this.props.match.params.id);
-  }
+const useStyles = makeStyles(() => ({
+  root: {
+    marginTop: 15,
+    padding: "0 15px",
+  },
+  title: {
+    fontSize: 15
+  },
+}));
 
-  render() {
-    return (
-      <div className={styles.reviewsBlock}>
-        <div className={styles.reviews}>
-          {this.props.isFetchingReviews ? (
-            <Preloader type="reviews" />
-          ) : (
-            <>
-              <h2 id="reviews">Отзывы покупателей</h2>
-              <Reviews
-                reviews={this.props.reviews}
-                toggleIsOpenReviewForm={this.props.toggleIsOpenReviewForm}
-                sendReview={this.props.sendReview}
-                setAnswerMode={this.props.setAnswerMode}
-                sendAnswer={this.props.sendAnswer}
-                answers={this.props.answers}
-                answerModeId={this.props.answerModeId}
-                isOpenReviewFormId={this.props.isOpenReviewFormId}
-              />
-            </>
-          )}
-        </div>
-      </div>
-    );
-  }
-}
+const ReviewsContainer = ({
+  reviewsRequest,
+  answersRequest,
+  match,
+  ...props
+}) => {
+  const classes = useStyles();
+
+  useEffect(() => {
+    reviewsRequest(+match.params.id);
+    answersRequest(+match.params.id);
+  }, [match.params.id, reviewsRequest, answersRequest]);
+
+  return (
+    <div className={classes.root}>
+      {props.isFetchingReviews ? (
+        <Preloader type="reviews" />
+      ) : (
+        <>
+          <Typography component="h2" id="reviews" className={classes.title}>
+            <b>Отзывы покупателей</b>
+          </Typography>
+          <Reviews
+            reviews={props.reviews}
+            toggleIsOpenReviewForm={props.toggleIsOpenReviewForm}
+            sendReview={props.sendReview}
+            setAnswerMode={props.setAnswerMode}
+            sendAnswer={props.sendAnswer}
+            answers={props.answers}
+            answerModeId={props.answerModeId}
+            isOpenReviewFormId={props.isOpenReviewFormId}
+          />
+        </>
+      )}
+    </div>
+  );
+};
 
 ReviewsContainer.propTypes = {
   reviewsRequest: PropTypes.func,

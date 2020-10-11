@@ -1,32 +1,62 @@
 import React from "react";
+import {
+  makeStyles,
+  Paper,
+  Grid,
+  Typography,
+  List,
+  ListItem,
+} from "@material-ui/core";
 
-import styles from "./DeliveryPayBlock.module.css";
+const useStyles = makeStyles(() => ({
+  list: {
+    "& li": {
+      paddingTop: 2,
+      paddingBottom: 2,
+      fontSize: 14,
+    },
+  },
+  gridItem: {
+    padding: "16px 32px",
+  },
+  title: {
+    fontSize: 15,
+  },
+}));
 
 const DeliveryPayBlock = () => {
+  const classes = useStyles();
+
   return (
-    <div className={styles.deliveryPayBlock}>
-      <div className={styles.deliveryColumn}>
-        <h3>Доставка:</h3>
-        <ul>
-          <li>самовывоз: бесплатно</li>
-          <li>по Харькову: 70 грн</li>
-          <li>по Украине</li>
-          <li>адресная доставка в регионы</li>
-          <li>оплата при получении товара</li>
-        </ul>
-      </div>
-      <div className={styles.payColumn}>
-        <h3>Оплата:</h3>
-        <ul>
-          <li>наличная</li>
-          <li>безналичная</li>
-          <li>эл. платежи</li>
-          <li>рассрочка</li>
-          <li>Apple Pay</li>
-          <li>Google Pay</li>
-        </ul>
-      </div>
-    </div>
+    <Paper elevation={15}>
+      <Grid container>
+        <Grid item xs={6} className={classes.gridItem}>
+          <Typography component="h3" className={classes.title}>
+            <b>Доставка:</b>
+          </Typography>
+          <List className={classes.list}>
+            <ListItem>самовывоз: бесплатно</ListItem>
+            <ListItem>по Харькову: 70 грн</ListItem>
+            <ListItem>по Украине</ListItem>
+            <ListItem>адресная доставка в регионы</ListItem>
+            <ListItem>оплата при получении товара</ListItem>
+          </List>
+        </Grid>
+        <Grid item xs={6} className={classes.gridItem}>
+          <Typography component="h3" className={classes.title}>
+            <b>Оплата:</b>
+          </Typography>
+          <List className={classes.list}>
+            <ListItem>наличная</ListItem>
+            <ListItem>безналичная</ListItem>
+            <ListItem>эл. платежи</ListItem>
+            <ListItem>рассрочка</ListItem>
+            <ListItem>Apple Pay</ListItem>
+            <ListItem>Google Pay</ListItem>
+          </List>
+        </Grid>
+      </Grid>
+    </Paper>
   );
 };
 
