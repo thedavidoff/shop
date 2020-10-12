@@ -1,5 +1,13 @@
 import React from "react";
-import { TextField, FormControlLabel, withStyles } from "@material-ui/core";
+import {
+  withStyles,
+  TextareaAutosize,
+  Typography,
+  TextField,
+  FormControl,
+  RadioGroup,
+  FormControlLabel,
+} from "@material-ui/core";
 
 import styles from "./errors.module.css";
 import Preloader from "../UI/Preloader/Preloader";
@@ -7,6 +15,7 @@ import {
   PrimaryColorCheckbox,
   RememberMeCheckbox,
 } from "../UI/Checkbox/Checkbox";
+import RadioButton from "../UI/RadioButton/RadioButton";
 
 const ProfileTextField = withStyles({
   root: {
@@ -25,26 +34,63 @@ export const textarea = ({
 }) => {
   const hasError = touched && error;
   const hasWarning = touched && warning;
+
   return (
     <>
-      <textarea
+      <TextareaAutosize
         className={hasError || hasWarning ? `${styles.textarea}` : ""}
         {...input}
         placeholder={placeholder}
         id={id}
+        aria-label="Textarea"
+        rowsMin={3}
+        style={{
+          width: "100%",
+          padding: "5px 10px",
+          fontSize: 16,
+          borderRadius: 4,
+          resize: "vertical",
+        }}
       />
       {touched &&
         ((hasError && (
-          <p className={styles.textareaMessage}>
+          <Typography component="span" className={styles.textareaMessage}>
             <i>{error}</i>
-          </p>
+          </Typography>
         )) ||
           (hasWarning && (
-            <p className={styles.textareaMessage}>
+            <Typography component="span" className={styles.textareaMessage}>
               <i>{warning}</i>
-            </p>
+            </Typography>
           )))}
     </>
+  );
+};
+
+export const radio = ({ input, ...rest }) => {
+  return (
+    <FormControl>
+      <RadioGroup {...input} {...rest}>
+        <FormControlLabel
+          value="1"
+          control={<RadioButton />}
+          label="- у Вас в магазине"
+          style={{ marginLeft: 0 }}
+        />
+        <FormControlLabel
+          value="2"
+          control={<RadioButton />}
+          label="- в другом магазине"
+          style={{ marginLeft: 0 }}
+        />
+        <FormControlLabel
+          value="3"
+          control={<RadioButton />}
+          label="- не покупал(а), но хочу поделиться мнением"
+          style={{ marginLeft: 0 }}
+        />
+      </RadioGroup>
+    </FormControl>
   );
 };
 

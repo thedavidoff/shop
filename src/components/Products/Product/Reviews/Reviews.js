@@ -1,13 +1,11 @@
-import React from "react";
+import React, { useState } from "react";
+import { makeStyles, Typography, Button } from "@material-ui/core";
 import * as PropTypes from "prop-types";
 
-import styles from "../ProductPage/ProductPage.module.css";
-import ReviewForm from "../../../Forms/ReviewForm/ReviewForm";
 import Review from "./Review/Review";
-import { makeStyles } from "@material-ui/core/styles";
-import Typography from "@material-ui/core/Typography";
+import ReviewForm from "../../../Forms/ReviewForm/ReviewForm";
 
-const useStyles = makeStyles(() => ({
+const useStyles = makeStyles((theme) => ({
   root: {
     marginTop: 15,
   },
@@ -15,21 +13,31 @@ const useStyles = makeStyles(() => ({
     fontSize: 13,
     padding: "0 15px 8px",
   },
+  button: {
+    marginBottom: 15,
+    backgroundColor: theme.palette.primary.main,
+    color: "#fff",
+    textTransform: "none",
+    fontSize: 14,
+    "&:hover": { backgroundColor: theme.palette.primary.dark },
+  },
 }));
 
 const Reviews = ({
   reviews,
-  toggleIsOpenReviewForm,
   sendReview,
   answers,
   answerModeId,
-  isOpenReviewFormId,
   setAnswerMode,
   sendAnswer,
 }) => {
   const classes = useStyles();
   const onSubmitReview = (data) => sendReview(data);
-  const toggle = (id) => toggleIsOpenReviewForm(id);
+
+  let [openReviewFormId, setOpenReviewFormId] = useState(0);
+  const handleToggle = (id) => {
+    id === openReviewFormId ? setOpenReviewFormId(0) : setOpenReviewFormId(id);
+  };
 
   return (
     <div className={classes.root}>
@@ -38,10 +46,15 @@ const Reviews = ({
           На данный товар отзывов нет, Ваш отзыв будет первым.
         </Typography>
       )}
-      <button onClick={() => toggle(1)} className={styles.writeReview}>
-        {isOpenReviewFormId === 1 ? "Скрыть" : "Написать отзыв"}
-      </button>
-      {isOpenReviewFormId === 1 && <ReviewForm onSubmit={onSubmitReview} />}
+      <Button
+        size="small"
+        variant="contained"
+        className={classes.button}
+        onClick={() => handleToggle(1)}
+      >
+        {openReviewFormId === 1 ? "Скрыть" : "Написать отзыв"}
+      </Button>
+      {openReviewFormId === 1 && <ReviewForm onSubmit={onSubmitReview} />}
 
       {reviews.map((review) => (
         <Review
@@ -54,22 +67,25 @@ const Reviews = ({
         />
       ))}
       {reviews.length && (
-        <button onClick={() => toggle(2)} className={styles.writeReview}>
-          {isOpenReviewFormId === 2 ? "Скрыть" : "Написать отзыв"}
-        </button>
+        <Button
+          size="small"
+          variant="contained"
+          className={classes.button}
+          onClick={() => handleToggle(2)}
+        >
+          {openReviewFormId === 2 ? "Скрыть" : "Написать отзыв"}
+        </Button>
       )}
-      {isOpenReviewFormId === 2 && <ReviewForm onSubmit={onSubmitReview} />}
+      {openReviewFormId === 2 && <ReviewForm onSubmit={onSubmitReview} />}
     </div>
   );
 };
 
 Reviews.propTypes = {
   reviews: PropTypes.array,
-  toggleIsOpenReviewForm: PropTypes.func,
   sendReview: PropTypes.func,
   answers: PropTypes.array,
   answerModeId: PropTypes.number,
-  isOpenReviewFormId: PropTypes.number,
   setAnswerMode: PropTypes.func,
   sendAnswer: PropTypes.func,
 };

@@ -1,8 +1,7 @@
 .reviewForm {
-  padding: 15px;
-  margin: 15px 0 15px 30px;
-  font-size: 14px;
-  border: 1px solid #ff8383;
+  padding: 15px 30px;
+  /*margin: 15px 0 15px 30px;*/
+  /*font-size: 14px;*/
 }
 .reviewForm th {
   padding-top: 6px;
@@ -24,9 +23,6 @@
   display: flex;
   align-items: center;
   margin-bottom: 5px;
-  font-size: 14px;
-}
-.reviewForm tr:last-child td p {
   font-size: 14px;
 }
 .stars {
@@ -95,10 +91,10 @@
 .reviewAnswer {
   width: 80px;
 }
-.reviewForm button:hover,
-.reviewAnswer:hover {
-  color: #fff;
-  background: #000;
-  border: 2px solid #000;
-  border-radius: 3px;
-}
+/*.reviewForm button:hover,*/
+/*.reviewAnswer:hover {*/
+/*  color: #fff;*/
+/*  background: #000;*/
+/*  border: 2px solid #000;*/
+/*  border-radius: 3px;*/
+/*}*/

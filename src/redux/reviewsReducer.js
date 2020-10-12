@@ -4,8 +4,6 @@ import { reset } from "redux-form";
 const SET_REVIEWS = "productReducer/SET_REVIEWS";
 const TOGGLE_IS_FETCHING_REVIEWS = "productReducer/TOGGLE_IS_FETCHING_REVIEWS";
 
-const TOGGLE_IS_OPEN_REVIEW_FORM = "productReducer/TOGGLE_IS_OPEN_REVIEW_FORM";
-
 const SEND_REVIEW = "productReducer/SEND_REVIEW";
 const TOGGLE_IS_SENDING_REVIEW = "productReducer/TOGGLE_IS_SENDING_REVIEW";
 
@@ -41,11 +39,6 @@ const reviewsReducer = (state = initialState, { type, payload }) => {
       return {
         ...state,
         isFetchingReviews: payload,
-      };
-    case TOGGLE_IS_OPEN_REVIEW_FORM:
-      return {
-        ...state,
-        isOpenReviewFormId: payload,
       };
     case SET_RATING:
       return {
@@ -87,16 +80,6 @@ const reviewsReducer = (state = initialState, { type, payload }) => {
   }
 };
 
-export const toggleIsOpenReviewForm = (id) => {
-  return (dispatch, getState) => {
-    dispatch({
-      type: TOGGLE_IS_OPEN_REVIEW_FORM,
-      payload: id === getState().reviews.isOpenReviewFormId ? 0 : id,
-    });
-    dispatch(reset("ReviewForm"));
-    dispatch({ type: SET_RATING, payload: 0 });
-  };
-};
 export const setRating = (rating) => {
   return (dispatch) => {
     dispatch({ type: SET_RATING, payload: rating });
@@ -120,7 +103,6 @@ export const sendReview = (review) => {
     });
     dispatch(reset("ReviewForm"));
     dispatch({ type: SET_RATING, payload: 0 });
-    dispatch({ type: TOGGLE_IS_OPEN_REVIEW_FORM, payload: 0 });
   };
 };
 export const sendAnswer = (answer, id) => {

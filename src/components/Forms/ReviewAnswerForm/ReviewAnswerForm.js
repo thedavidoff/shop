@@ -1,69 +1,98 @@
 import React from "react";
-import { Field, reduxForm } from "redux-form";
 import { connect } from "react-redux";
+import { Field, reduxForm } from "redux-form";
+import {
+  makeStyles,
+  Paper,
+  Table,
+  TableBody,
+  TableRow,
+  TableCell,
+  Typography,
+  Button,
+} from "@material-ui/core";
 
-import styles from "../ReviewForm/ReviewForm.module.css";
 import { getReviews } from "../../../redux/selectors";
 import { required } from "../validate";
-import { textarea } from "../renderFields";
+import { radio, textarea } from "../renderFields";
+import RadioButton from "../../UI/RadioButton/RadioButton";
+
+const useStyles = makeStyles((theme) => ({
+  root: {
+    marginBottom: 15,
+    marginLeft: 30,
+    "& p": {
+      margin: "15px 0",
+      fontSize: 12,
+    },
+  },
+  form: {
+    padding: "15px 30px",
+  },
+  tr: {
+    "& td": {
+      padding: "8px 16px"
+    }
+  },
+  button: {
+    backgroundColor: theme.palette.primary.main,
+    color: "#fff",
+    textTransform: "none",
+    fontSize: 14,
+    "&:hover": { backgroundColor: theme.palette.primary.dark },
+  },
+}));
 
 let ReviewAnswerForm = ({ pristine, submitting, handleSubmit }) => {
+  const classes = useStyles();
+
   return (
-    <form onSubmit={handleSubmit} className={styles.reviewForm}>
-      <table>
-        <tbody>
-          <tr>
-            <th>Комментарий:</th>
-            <td>
-              <Field
-                id="comment"
-                name="comment"
-                placeholder="Укажите Ваш ответ"
-                component={textarea}
-                validate={[required]}
-              />
-            </td>
-          </tr>
-          <tr>
-            <th>Место покупки:</th>
-            <td>
-              <label>
+    <Paper elevation={15} className={classes.root}>
+      <form onSubmit={handleSubmit} className={classes.form}>
+        <Table>
+          <TableBody>
+            <TableRow className={classes.tr}>
+              <TableCell component="th">
+                <b>Комментарий:</b>
+              </TableCell>
+              <TableCell style={{ position: "relative" }}>
                 <Field
-                  name="buyType"
-                  value="1"
-                  component="input"
-                  type="radio"
+                  id="comment"
+                  name="comment"
+                  placeholder="Укажите Ваш ответ"
+                  component={textarea}
+                  validate={[required]}
                 />
-                {` - у Вас в магазине`}
-              </label>
-              <label>
-                <Field
-                  name="buyType"
-                  value="2"
-                  component="input"
-                  type="radio"
-                />
-                {` - в другом магазине`}
-              </label>
-              <label>
-                <Field
-                  name="buyType"
-                  value="3"
-                  component="input"
-                  type="radio"
-                />
-                {` - не покупал(а), но хочу поделиться мнением`}
-              </label>
-              <p>
-                Перед публикацией комментария рекомендуем ознакомиться с
-                правилами размещения отзывов и комментариев.
-              </p>
-              <button disabled={pristine || submitting}>Отправить</button>
-            </td>
-          </tr>
-        </tbody>
-      </table>
-    </form>
+              </TableCell>
+            </TableRow>
+            <TableRow className={classes.tr}>
+              <TableCell component="th">
+                <b>Место покупки:</b>
+              </TableCell>
+              <TableCell>
+                <Field name="buyType" component={radio}>
+                  <RadioButton value="1" label="- у Вас в магазине" />
+                  <RadioButton value="2" label="- в другом магазине" />
+                </Field>
+                <Typography>
+                  Перед публикацией комментария рекомендуем ознакомиться с
+                  правилами размещения отзывов и комментариев.
+                </Typography>
+                <Button
+                  variant="contained"
+                  size="small"
+                  type="submit"
+                  className={classes.button}
+                  disabled={pristine || submitting}
+                >
+                  Отправить
+                </Button>
+              </TableCell>
+            </TableRow>
+          </TableBody>
+        </Table>
+      </form>
+    </Paper>
   );
 };
 

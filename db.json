@@ -120,7 +120,11 @@
       "id": 1,
       "sku": 332495,
       "category": "video_cards",
-      "inventory": [0, 2, 5],
+      "inventory": [
+        0,
+        2,
+        5
+      ],
       "link": "graphics_card_pci-e_geforce_gt710_1gb_ddr3_msi_gt_710_1gd3h_lp",
       "status": "есть в наличии",
       "name": "Видеокарта PCI-E GeForce GT710 1GB DDR3 MSI (GT 710 1GD3H LP)",
@@ -137,10 +141,18 @@
       "isNew": false,
       "specifications": [
         {
-          "brand": { "id": 1, "property": "Производитель", "value": "MSI" }
+          "brand": {
+            "id": 1,
+            "property": "Производитель",
+            "value": "MSI"
+          }
         },
         {
-          "series": { "id": 2, "property": "Серия", "value": "GeForce 700" }
+          "series": {
+            "id": 2,
+            "property": "Серия",
+            "value": "GeForce 700"
+          }
         },
         {
           "chip_maker": {
@@ -150,7 +162,11 @@
           }
         },
         {
-          "lineup": { "id": 4, "property": "Модельный ряд", "value": "GT710" }
+          "lineup": {
+            "id": 4,
+            "property": "Модельный ряд",
+            "value": "GT710"
+          }
         },
         {
           "professional": {
@@ -160,7 +176,11 @@
           }
         },
         {
-          "condition": { "id": 6, "property": "Состояние", "value": "новая" }
+          "condition": {
+            "id": 6,
+            "property": "Состояние",
+            "value": "новая"
+          }
         },
         {
           "memory_size": {
@@ -184,7 +204,11 @@
           }
         },
         {
-          "directX": { "id": 10, "property": "DirectX", "value": "DX-12" }
+          "directX": {
+            "id": 10,
+            "property": "DirectX",
+            "value": "DX-12"
+          }
         },
         {
           "engine_clock": {
@@ -223,7 +247,12 @@
           }
         },
         {
-          "dvi": { "id": 16, "property": "DVI", "value": "1 шт.", "hide": true }
+          "dvi": {
+            "id": 16,
+            "property": "DVI",
+            "value": "1 шт.",
+            "hide": true
+          }
         },
         {
           "hdmi": {
@@ -366,7 +395,11 @@
       "id": 2,
       "sku": 956277,
       "category": "video_cards",
-      "inventory": [0, 0, 0],
+      "inventory": [
+        0,
+        0,
+        0
+      ],
       "link": "graphics_card_pci-e_radeon_rx_5700_8gb_ddr6_sapphire_11294-01-20g",
       "status": "доступно под заказ (1-5 дней)",
       "name": "Видеокарта PCI-E Radeon RX 5700 8GB DDR6 Sapphire (11294-01-20G)",
@@ -383,10 +416,18 @@
       "isNew": false,
       "specifications": [
         {
-          "brand": { "id": 1, "property": "Производитель", "value": "Sapphire" }
+          "brand": {
+            "id": 1,
+            "property": "Производитель",
+            "value": "Sapphire"
+          }
         },
         {
-          "series": { "id": 2, "property": "Серия", "value": "Radeon RX" }
+          "series": {
+            "id": 2,
+            "property": "Серия",
+            "value": "Radeon RX"
+          }
         },
         {
           "chip_maker": {
@@ -396,7 +437,11 @@
           }
         },
         {
-          "lineup": { "id": 4, "property": "Модельный ряд", "value": "RX 5700" }
+          "lineup": {
+            "id": 4,
+            "property": "Модельный ряд",
+            "value": "RX 5700"
+          }
         },
         {
           "professional": {
@@ -406,7 +451,11 @@
           }
         },
         {
-          "condition": { "id": 6, "property": "Состояние", "value": "новая" }
+          "condition": {
+            "id": 6,
+            "property": "Состояние",
+            "value": "новая"
+          }
         },
         {
           "memory_size": {
@@ -430,7 +479,11 @@
           }
         },
         {
-          "directX": { "id": 10, "property": "DirectX", "value": "DX-12" }
+          "directX": {
+            "id": 10,
+            "property": "DirectX",
+            "value": "DX-12"
+          }
         },
         {
           "engine_clock": {
@@ -469,7 +522,12 @@
           }
         },
         {
-          "dvi": { "id": 16, "property": "DVI", "value": "нет", "hide": true }
+          "dvi": {
+            "id": 16,
+            "property": "DVI",
+            "value": "нет",
+            "hide": true
+          }
         },
         {
           "hdmi": {
@@ -622,7 +680,11 @@
       "id": 3,
       "sku": 963409,
       "category": "video_cards",
-      "inventory": [10, 0, 6],
+      "inventory": [
+        10,
+        0,
+        6
+      ],
       "link": "graphics_card_pci-e_radeon_rx_5700_xt_8gb_ddr6_powercolor_red_dragon_axrx_5700xt_8gbd6-3dhr_oc",
       "status": "есть в наличии",
       "name": "Видеокарта PCI-E Radeon RX 5700 XT 8GB DDR6 PowerColor Red Dragon (AXRX 5700XT 8GBD6-3DHR/OC)",
@@ -646,7 +708,11 @@
           }
         },
         {
-          "series": { "id": 2, "property": "Серия", "value": "Radeon RX" }
+          "series": {
+            "id": 2,
+            "property": "Серия",
+            "value": "Radeon RX"
+          }
         },
         {
           "chip_maker": {
@@ -670,7 +736,11 @@
           }
         },
         {
-          "condition": { "id": 6, "property": "Состояние", "value": "новая" }
+          "condition": {
+            "id": 6,
+            "property": "Состояние",
+            "value": "новая"
+          }
         },
         {
           "memory_size": {
@@ -694,7 +764,11 @@
           }
         },
         {
-          "directX": { "id": 10, "property": "DirectX", "value": "DX-12" }
+          "directX": {
+            "id": 10,
+            "property": "DirectX",
+            "value": "DX-12"
+          }
         },
         {
           "engine_clock": {
@@ -733,7 +807,12 @@
           }
         },
         {
-          "dvi": { "id": 16, "property": "DVI", "value": "нет", "hide": true }
+          "dvi": {
+            "id": 16,
+            "property": "DVI",
+            "value": "нет",
+            "hide": true
+          }
         },
         {
           "hdmi": {
@@ -903,7 +982,11 @@
       "id": 4,
       "sku": 884586,
       "category": "video_cards",
-      "inventory": [6, 5, 0],
+      "inventory": [
+        6,
+        5,
+        0
+      ],
       "link": "graphics_card_pci-e_geforce_gtx1660_6gb_ddr5_asus_ph-gtx1660-o6g",
       "status": "есть в наличии",
       "name": "Видеокарта PCI-E GeForce GTX1660 6GB DDR5 Asus (PH-GTX1660-O6G)",
@@ -920,10 +1003,18 @@
       "isNew": true,
       "specifications": [
         {
-          "brand": { "id": 1, "property": "Производитель", "value": "Asus" }
+          "brand": {
+            "id": 1,
+            "property": "Производитель",
+            "value": "Asus"
+          }
         },
         {
-          "series": { "id": 2, "property": "Серия", "value": "GeForce 1000" }
+          "series": {
+            "id": 2,
+            "property": "Серия",
+            "value": "GeForce 1000"
+          }
         },
         {
           "chip_maker": {
@@ -947,7 +1038,11 @@
           }
         },
         {
-          "condition": { "id": 6, "property": "Состояние", "value": "новая" }
+          "condition": {
+            "id": 6,
+            "property": "Состояние",
+            "value": "новая"
+          }
         },
         {
           "memory_size": {
@@ -971,7 +1066,11 @@
           }
         },
         {
-          "directX": { "id": 10, "property": "DirectX", "value": "DX-12" }
+          "directX": {
+            "id": 10,
+            "property": "DirectX",
+            "value": "DX-12"
+          }
         },
         {
           "engine_clock": {
@@ -1010,7 +1109,12 @@
           }
         },
         {
-          "dvi": { "id": 16, "property": "DVI", "value": "1 шт", "hide": true }
+          "dvi": {
+            "id": 16,
+            "property": "DVI",
+            "value": "1 шт",
+            "hide": true
+          }
         },
         {
           "hdmi": {
@@ -1270,6 +1374,87 @@
       "advantages": "+компактность\n+качество материалов и сборка\n+тишина в простое",
       "disadvantages": "пока нет замечаний",
       "comment": "Короче карта для своего ценового сегмента бюджетных 5700 XT крутая, реально русскоязычных обзоров не нашел, но она как по мне недооценена. Но с другой стороны, перед НГ они практически исчезли с магазинов, можно сказать еле успел купить, а это уже о чем-то говорит). Удачная покупка для оптимальной AMD-сборки."
+    },
+    {
+      "id": 1602531527670,
+      "reviewTo": 1,
+      "author": "Admin",
+      "date": "12.10.2020",
+      "time": "22:38",
+      "rating": 0,
+      "buyType": "2"
+    },
+    {
+      "id": 1602531655909,
+      "reviewTo": 1,
+      "author": "Admin",
+      "date": "12.10.2020",
+      "time": "22:40",
+      "rating": 0,
+      "buyType": "2"
+    },
+    {
+      "id": 1602532743470,
+      "reviewTo": 1,
+      "author": "Admin",
+      "date": "12.10.2020",
+      "time": "22:59",
+      "rating": 0,
+      "buyType": "2"
+    },
+    {
+      "id": 1602532751580,
+      "reviewTo": 1,
+      "author": "Admin",
+      "date": "12.10.2020",
+      "time": "22:59",
+      "rating": 0,
+      "buyType": "2"
+    },
+    {
+      "id": 1602532754091,
+      "reviewTo": 1,
+      "author": "Admin",
+      "date": "12.10.2020",
+      "time": "22:59",
+      "rating": 0,
+      "buyType": "1"
+    },
+    {
+      "id": 1602533768588,
+      "reviewTo": 1,
+      "author": "Admin",
+      "date": "12.10.2020",
+      "time": "23:16",
+      "rating": 1,
+      "buyType": "2"
+    },
+    {
+      "id": 1602534431698,
+      "reviewTo": 1,
+      "author": "Admin",
+      "date": "12.10.2020",
+      "time": "23:27",
+      "rating": 5,
+      "buyType": "2"
+    },
+    {
+      "id": 1602534463177,
+      "reviewTo": 1,
+      "author": "Admin",
+      "date": "12.10.2020",
+      "time": "23:27",
+      "rating": 5,
+      "buyType": "2"
+    },
+    {
+      "id": 1602534484160,
+      "reviewTo": 1,
+      "author": "Admin",
+      "date": "12.10.2020",
+      "time": "23:28",
+      "rating": 3,
+      "buyType": "1"
     }
   ],
   "answers": [
@@ -1342,6 +1527,76 @@
       "time": "09:34",
       "buyType": "3",
       "comment": "как карточка себя ведет? Проблем никаких нет???"
+    },
+    {
+      "id": 1602499306096,
+      "answerTo": 1,
+      "answerToReview": 1478271540000,
+      "author": "Admin",
+      "date": "12.10.2020",
+      "time": "13:41",
+      "comment": "sdfsdf",
+      "buyType": "1"
+    },
+    {
+      "id": 1602516040821,
+      "answerTo": 1,
+      "answerToReview": 1522571460000,
+      "author": "Admin",
+      "date": "12.10.2020",
+      "time": "18:20",
+      "buyType": "3",
+      "comment": ","
+    },
+    {
+      "id": 1602516064586,
+      "answerTo": 1,
+      "answerToReview": 1522571460000,
+      "author": "Admin",
+      "date": "12.10.2020",
+      "time": "18:21",
+      "buyType": "2",
+      "comment": "mn"
+    },
+    {
+      "id": 1602519885078,
+      "answerTo": 1,
+      "answerToReview": 1525106340000,
+      "author": "Admin",
+      "date": "12.10.2020",
+      "time": "19:24",
+      "buyType": "3",
+      "comment": "dassad"
+    },
+    {
+      "id": 1602521566749,
+      "answerTo": 1,
+      "answerToReview": 1525106340000,
+      "author": "Admin",
+      "date": "12.10.2020",
+      "time": "19:52",
+      "buyType": "1",
+      "comment": "a"
+    },
+    {
+      "id": 1602530112001,
+      "answerTo": 1,
+      "answerToReview": 1525106340000,
+      "author": "Admin",
+      "date": "12.10.2020",
+      "time": "22:15",
+      "buyType": "2",
+      "comment": "1"
+    },
+    {
+      "id": 1602533019164,
+      "answerTo": 1,
+      "answerToReview": 1602532751580,
+      "author": "Admin",
+      "date": "12.10.2020",
+      "time": "23:03",
+      "buyType": "3",
+      "comment": "1"
     }
   ],
   "cities": [

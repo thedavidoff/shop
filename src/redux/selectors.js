@@ -45,9 +45,6 @@ export const getRating = (state) => {
 export const getAnswerModeId = (state) => {
   return state.reviews.answerModeId;
 };
-export const getIsOpenReviewFormId = (state) => {
-  return state.reviews.isOpenReviewFormId;
-};
 
 export const getProductsInCart = (state) => {
   return !state.firebase.profile.isEmpty ? state.firebase.profile.cart : null;

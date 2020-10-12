@@ -10,13 +10,11 @@ import {
   getAnswers,
   getIsFetchingAnswers,
   getIsFetchingReviews,
-  getIsOpenReviewFormId,
   getReviews,
 } from "../../../../redux/selectors";
 import {
   reviewsRequest,
   answersRequest,
-  toggleIsOpenReviewForm,
   sendReview,
   setAnswerMode,
   sendAnswer,
@@ -30,7 +28,7 @@ const useStyles = makeStyles(() => ({
     padding: "0 15px",
   },
   title: {
-    fontSize: 15
+    fontSize: 15,
   },
 }));
 
@@ -58,7 +56,6 @@ const ReviewsContainer = ({
           </Typography>
           <Reviews
             reviews={props.reviews}
-            toggleIsOpenReviewForm={props.toggleIsOpenReviewForm}
             sendReview={props.sendReview}
             setAnswerMode={props.setAnswerMode}
             sendAnswer={props.sendAnswer}
@@ -77,13 +74,11 @@ ReviewsContainer.propTypes = {
   answersRequest: PropTypes.func,
   isFetchingReviews: PropTypes.bool,
   reviews: PropTypes.array,
-  toggleIsOpenReviewForm: PropTypes.func,
   sendReview: PropTypes.func,
   setAnswerMode: PropTypes.func,
   sendAnswer: PropTypes.func,
   answers: PropTypes.array,
   answerModeId: PropTypes.number,
-  isOpenReviewFormId: PropTypes.number,
 };
 
 const mapStateToProps = (state) => {
@@ -93,7 +88,6 @@ const mapStateToProps = (state) => {
     answers: getAnswers(state),
     isFetchingAnswers: getIsFetchingAnswers(state),
     answerModeId: getAnswerModeId(state),
-    isOpenReviewFormId: getIsOpenReviewFormId(state),
   };
 };
 
@@ -102,7 +96,6 @@ export default compose(
   connect(mapStateToProps, {
     reviewsRequest,
     answersRequest,
-    toggleIsOpenReviewForm,
     sendReview,
     setAnswerMode,
     sendAnswer,

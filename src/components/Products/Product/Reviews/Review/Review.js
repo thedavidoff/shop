@@ -1,10 +1,57 @@
 import React from "react";
 import StarRatingComponent from "react-star-rating-component";
+import { makeStyles, Paper, Typography, Button } from "@material-ui/core";
 import * as PropTypes from "prop-types";
 
 import styles from "../../ProductPage/ProductPage.module.css";
 import ReviewAnswerForm from "../../../../Forms/ReviewAnswerForm/ReviewAnswerForm";
 import Answers from "./Answers/Answers";
+
+const useStyles = makeStyles((theme) => ({
+  root: {
+    marginBottom: 15,
+  },
+  header: {
+    display: "flex",
+    justifyContent: "space-between",
+    padding: "5px 15px",
+    borderBottom: "1px solid #ff8383",
+    "& p": {
+      fontSize: 13,
+      color: theme.palette.primary.main,
+    },
+    "& time": {
+      fontSize: 13,
+    },
+  },
+  info: {
+    display: "flex",
+    justifyContent: "space-between",
+    alignItems: "center",
+    padding: "5px 15px",
+    backgroundColor: "#fff9bb",
+  },
+  purchase: {
+    fontSize: 13,
+    color: "#f59b21",
+  },
+  comment: {
+    padding: "15px 30px",
+    "& pre": {
+      marginTop: 0,
+      fontSize: 14,
+      whiteSpace: "pre-wrap",
+    },
+  },
+  button: {
+    padding: "0 10px",
+    backgroundColor: theme.palette.primary.main,
+    color: "#fff",
+    textTransform: "none",
+    fontSize: 12,
+    "&:hover": { backgroundColor: theme.palette.primary.dark },
+  },
+}));
 
 const Review = ({
   answerModeId,
@@ -23,21 +70,24 @@ const Review = ({
     comment,
   },
 }) => {
+  const classes = useStyles();
   const onSubmitAnswer = (data) => sendAnswer(data, id);
 
   return (
     <>
-      <article id={id} className={styles.review}>
-        <header>
-          <div className={styles.reviewName}>{author}</div>
+      <Paper elevation={15} id={id} className={classes.root}>
+        <header className={classes.header}>
+          <Typography>
+            <b>{author}</b>
+          </Typography>
           <time>{`${date} | ${time}`}</time>
         </header>
-        <div className={styles.reviewInfo}>
-          <div className={styles.reviewPurchase}>
+        <div className={classes.info}>
+          <Typography className={classes.purchase}>
             {buyType === "1" && "Купил(а) этот товар у Вас в магазине"}
             {buyType === "2" && "Купил(а) этот товар в другом магазине"}
             {buyType === "3" && "Не покупал(а), но хочу поделиться мнением"}
-          </div>
+          </Typography>
           <div className={styles.reviewRating}>
             {rating > 0 ? (
               <StarRatingComponent
@@ -51,21 +101,21 @@ const Review = ({
             ) : null}
           </div>
         </div>
-        <div className={styles.reviewText}>
+        <div className={classes.comment}>
           {advantages ? (
-            <pre className={styles.reviewAdvantages}>
+            <pre>
               <b>Достоинства: </b>
               {advantages}
             </pre>
           ) : null}
           {disadvantages ? (
-            <pre className={styles.reviewDisadvantages}>
+            <pre>
               <b>Недостатки: </b>
               {disadvantages}
             </pre>
           ) : null}
           {comment ? (
-            <pre className={styles.reviewComment}>
+            <pre>
               {comment && (advantages || disadvantages) ? (
                 <>
                   <b>Комментарий: </b>
@@ -84,14 +134,11 @@ const Review = ({
               {rating === 1 && "Моя оценка - ужасно (1 из 5)."}
             </pre>
           )}
-          <button
-            onClick={() => setAnswerMode(id)}
-            className={styles.reviewAnswer}
-          >
+          <Button className={classes.button} onClick={() => setAnswerMode(id)}>
             Ответить
-          </button>
+          </Button>
         </div>
-      </article>
+      </Paper>
       {answerModeId === id && <ReviewAnswerForm onSubmit={onSubmitAnswer} />}
       <Answers answers={answers} id={id} />
     </>
