@@ -33,7 +33,7 @@ const useStyles = makeStyles((theme) => ({
     "& td": {
       padding: "2px 6px",
       width: "50%",
-      borderBottom: "none"
+      borderBottom: "none",
     },
   },
   required: {
@@ -95,7 +95,7 @@ let ProfileForm = ({ pristine, submitting, handleSubmit, initialValues }) => {
                 type="text"
                 disabled={initialValues ? !initialValues.canChangeLogin : false}
                 component={inputProfile}
-                validate={[required]}
+                validate={required}
                 loadedSuccess={initialValues}
               />
             </TableCell>
@@ -113,7 +113,7 @@ let ProfileForm = ({ pristine, submitting, handleSubmit, initialValues }) => {
                 name="lastName"
                 type="text"
                 component={inputProfile}
-                validate={[required]}
+                validate={required}
                 loadedSuccess={initialValues}
               />
             </TableCell>
@@ -132,7 +132,7 @@ let ProfileForm = ({ pristine, submitting, handleSubmit, initialValues }) => {
                 name="firstName"
                 type="text"
                 component={inputProfile}
-                validate={[required]}
+                validate={required}
                 loadedSuccess={initialValues}
               />
             </TableCell>
@@ -161,7 +161,7 @@ let ProfileForm = ({ pristine, submitting, handleSubmit, initialValues }) => {
                 name="gender"
                 label={null}
                 component={Select}
-                validate={[gender]}
+                validate={gender}
                 style={{ position: "relative" }}
               >
                 <option value={0}>Выбрать пол</option>
@@ -212,7 +212,7 @@ let ProfileForm = ({ pristine, submitting, handleSubmit, initialValues }) => {
                 name="email"
                 type="text"
                 component={inputProfile}
-                validate={[email]}
+                validate={email}
                 loadedSuccess={initialValues}
               />
             </TableCell>
@@ -241,7 +241,7 @@ let ProfileForm = ({ pristine, submitting, handleSubmit, initialValues }) => {
                 name="phone"
                 type="number"
                 component={inputProfile}
-                validate={[required]}
+                validate={required}
                 loadedSuccess={initialValues}
               />
             </TableCell>

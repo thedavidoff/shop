@@ -86,6 +86,7 @@ export const setRating = (rating) => {
   };
 };
 export const sendReview = (review) => {
+  console.log(review);
   return async (dispatch, getState) => {
     const data = {
       id: Date.now(),
@@ -94,15 +95,16 @@ export const sendReview = (review) => {
       date: new Date().toLocaleDateString(),
       time: new Date().toLocaleTimeString().slice(0, -3),
       ...review,
+      rating: getState().reviews.rating,
     };
     dispatch({ type: TOGGLE_IS_SENDING_REVIEW, payload: true });
     const response = await productAPI.sendReviewAPI(data);
-    dispatch({
-      type: SEND_REVIEW,
-      payload: response,
-    });
-    dispatch(reset("ReviewForm"));
+      dispatch({
+        type: SEND_REVIEW,
+        payload: response,
+      });
     dispatch({ type: SET_RATING, payload: 0 });
+    dispatch(reset("ReviewForm"));
   };
 };
 export const sendAnswer = (answer, id) => {

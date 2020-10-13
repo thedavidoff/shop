@@ -1,6 +1,5 @@
-import React, { useState } from "react";
+import React from "react";
 import { Field, reduxForm } from "redux-form";
-import StarRatingComponent from "react-star-rating-component";
 import {
   makeStyles,
   Paper,
@@ -13,12 +12,21 @@ import {
 } from "@material-ui/core";
 import { connect } from "react-redux";
 
-import styles from "./ReviewForm.module.css";
 import { getRating } from "../../../redux/selectors";
 import { setRating } from "../../../redux/reviewsReducer";
 import { input, radio, textarea } from "../renderFields";
 import RadioButton from "../../UI/RadioButton/RadioButton";
-import { validateRating } from "../validate";
+import FormControlLabel from "@material-ui/core/FormControlLabel";
+import Rating from "@material-ui/lab/Rating";
+import Box from "@material-ui/core/Box";
+
+const labels = {
+  1: "Ужасно",
+  2: "Плохо",
+  3: "Нейтрально",
+  4: "Хорошо",
+  5: "Отлично",
+};
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -56,15 +64,17 @@ let ReviewForm = ({
   handleSubmit,
 }) => {
   const classes = useStyles();
-  let [fakeRating, setFakeRating] = useState(rating);
-  const onStarClick = (nextValue) => setRating(nextValue);
-  const onStarHover = (nextValue) => {
-    return setFakeRating(nextValue);
-  };
-  const onStarHoverOut = () => {
-    return setFakeRating(rating);
-  };
+  const [hover, setHover] = React.useState(-1);
 
+  // let [fakeRating, setFakeRating] = useState(rating);
+  // const onStarClick = (nextValue) => setRating(nextValue);
+  // const onStarHover = (nextValue) => {
+  //   return setFakeRating(nextValue);
+  // };
+  // const onStarHoverOut = () => {
+  //   return setFakeRating(rating);
+  // };
+  // console.log(fakeRating, rating);
   return (
     <Paper elevation={15} className={classes.root}>
       <form onSubmit={handleSubmit} className={classes.form}>
@@ -73,22 +83,31 @@ let ReviewForm = ({
             <TableRow className={classes.tr}>
               <TableCell component="th">Выберите оценку:</TableCell>
               <TableCell>
-                <StarRatingComponent
-                  name="rate"
-                  value={fakeRating || rating}
-                  starColor="red"
-                  emptyStarColor="#adadad"
-                  onStarClick={onStarClick}
-                  onStarHover={onStarHover}
-                  onStarHoverOut={onStarHoverOut}
-                  className={styles.stars}
-                />
-                <Field
-                  id="rating"
-                  type="hidden"
-                  name="rating"
-                  component={input}
-                  validate={[validateRating]}
+                <FormControlLabel
+                  style={{marginLeft: 0}}
+                  control={
+                    <>
+                      <input
+                        name="rating"
+                        type="number"
+                        value={rating}
+                        hidden
+                        readOnly
+                      />
+                      <Rating
+                        name="rating"
+                        value={rating}
+                        onChange={(_, value) => {
+                          setRating(value || 0);
+                        }}
+                        onChangeActive={(event, newHover) => {
+                          setHover(newHover);
+                        }}
+                      />
+                      <Box ml={2}>{labels[hover !== -1 ? hover : rating]}</Box>
+                    </>
+                  }
+                  label={null}
                 />
               </TableCell>
             </TableRow>
@@ -140,7 +159,6 @@ let ReviewForm = ({
                   variant="contained"
                   size="small"
                   type="submit"
-                  onClick={() => setFakeRating(0)}
                   className={classes.button}
                   disabled={pristine || submitting}
                 >
