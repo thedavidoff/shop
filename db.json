@@ -2379,6 +2379,27 @@
       "time": "23:11",
       "rating": 5,
       "buyType": "1"
+    },
+    {
+      "id": 1602869359782,
+      "reviewTo": 1,
+      "author": "Admin",
+      "date": "16.10.2020",
+      "time": "20:29",
+      "rating": 5,
+      "buyType": "3"
+    },
+    {
+      "id": 1602873762360,
+      "reviewTo": 2,
+      "author": "Admin",
+      "date": "16.10.2020",
+      "time": "21:42",
+      "rating": 5,
+      "buyType": "3",
+      "advantages": "5",
+      "disadvantages": "5",
+      "comment": "5"
     }
   ],
   "answers": [
@@ -2521,6 +2542,25 @@
       "time": "23:03",
       "buyType": "3",
       "comment": "1"
+    },
+    {
+      "id": 1602870995541,
+      "answerTo": 1,
+      "answerToReview": 1602619890245,
+      "author": "Admin",
+      "date": "16.10.2020",
+      "time": "20:56",
+      "comment": "11111111111"
+    },
+    {
+      "id": 1602871153884,
+      "answerTo": 1,
+      "answerToReview": 1602869359782,
+      "author": "Admin",
+      "date": "16.10.2020",
+      "time": "20:59",
+      "buyType": "3",
+      "comment": "a"
     }
   ],
   "cities": [

@@ -1,5 +1,5 @@
-import { productAPI } from "../api/api";
 import { reset } from "redux-form";
+import { productAPI } from "../api/api";
 
 const SET_REVIEWS = "productReducer/SET_REVIEWS";
 const TOGGLE_IS_FETCHING_REVIEWS = "productReducer/TOGGLE_IS_FETCHING_REVIEWS";
@@ -20,7 +20,6 @@ const TOGGLE_IS_SENDING_ANSWER = "productReducer/TOGGLE_IS_SENDING_ANSWER";
 const initialState = {
   reviews: [],
   isFetchingReviews: false,
-  isOpenReviewFormId: 0,
   rating: 0,
   isSendingReview: false,
   answerModeId: null,
@@ -86,7 +85,6 @@ export const setRating = (rating) => {
   };
 };
 export const sendReview = (review) => {
-  console.log(review);
   return async (dispatch, getState) => {
     const data = {
       id: Date.now(),
@@ -99,10 +97,10 @@ export const sendReview = (review) => {
     };
     dispatch({ type: TOGGLE_IS_SENDING_REVIEW, payload: true });
     const response = await productAPI.sendReviewAPI(data);
-      dispatch({
-        type: SEND_REVIEW,
-        payload: response,
-      });
+    dispatch({
+      type: SEND_REVIEW,
+      payload: response,
+    });
     dispatch({ type: SET_RATING, payload: 0 });
     dispatch(reset("ReviewForm"));
   };
@@ -124,8 +122,8 @@ export const sendAnswer = (answer, id) => {
       type: SEND_ANSWER,
       payload: response,
     });
-    dispatch(reset("ReviewAnswerForm"));
     dispatch({ type: SET_ANSWER_MODE, payload: null });
+    dispatch(reset("ReviewAnswerForm"));
   };
 };
 

@@ -4,9 +4,13 @@
     <list default="true" id="d838e675-2b75-4462-b131-7ac443757c74" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/db.json" beforeDir="false" afterPath="$PROJECT_DIR$/db.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Forms/ProfileForm/ProfileForm.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Forms/ProfileForm/ProfileForm.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Forms/ReviewAnswerForm/ReviewAnswerForm.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Forms/ReviewAnswerForm/ReviewAnswerForm.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/Forms/ReviewForm/ReviewForm.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Forms/ReviewForm/ReviewForm.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Forms/validate.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Forms/validate.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Products/Product/Reviews/Review/Review.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Products/Product/Reviews/Review/Review.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Products/Product/Reviews/Reviews.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Products/Product/Reviews/Reviews.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Products/Product/Reviews/ReviewsContainer.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Products/Product/Reviews/ReviewsContainer.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/redux/reviewsReducer.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/redux/reviewsReducer.js" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -219,7 +223,8 @@
       <workItem from="1602320183364" duration="19864000" />
       <workItem from="1602402058934" duration="12405000" />
       <workItem from="1602493328102" duration="29546000" />
-      <workItem from="1602600800524" duration="16343000" />
+      <workItem from="1602600800524" duration="17063000" />
+      <workItem from="1602868933361" duration="10753000" />
     </task>
     <servers />
   </component>

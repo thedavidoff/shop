@@ -139,7 +139,7 @@ const Review = ({
           </Button>
         </div>
       </Paper>
-      {answerModeId === id && <ReviewAnswerForm onSubmit={onSubmitAnswer} />}
+      {answerModeId === id ? <ReviewAnswerForm onSubmit={onSubmitAnswer} /> : null}
       <Answers answers={answers} id={id} />
     </>
   );

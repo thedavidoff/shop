@@ -1,4 +1,5 @@
 import React from "react";
+import { connect } from "react-redux";
 import { Field, reduxForm } from "redux-form";
 import {
   makeStyles,
@@ -7,18 +8,16 @@ import {
   TableBody,
   TableRow,
   TableCell,
+  Box,
   Typography,
   Button,
 } from "@material-ui/core";
-import { connect } from "react-redux";
 
 import { getRating } from "../../../redux/selectors";
 import { setRating } from "../../../redux/reviewsReducer";
 import { input, radio, textarea } from "../renderFields";
-import RadioButton from "../../UI/RadioButton/RadioButton";
 import FormControlLabel from "@material-ui/core/FormControlLabel";
 import Rating from "@material-ui/lab/Rating";
-import Box from "@material-ui/core/Box";
 
 const labels = {
   1: "Ужасно",
@@ -66,15 +65,6 @@ let ReviewForm = ({
   const classes = useStyles();
   const [hover, setHover] = React.useState(-1);
 
-  // let [fakeRating, setFakeRating] = useState(rating);
-  // const onStarClick = (nextValue) => setRating(nextValue);
-  // const onStarHover = (nextValue) => {
-  //   return setFakeRating(nextValue);
-  // };
-  // const onStarHoverOut = () => {
-  //   return setFakeRating(rating);
-  // };
-  // console.log(fakeRating, rating);
   return (
     <Paper elevation={15} className={classes.root}>
       <form onSubmit={handleSubmit} className={classes.form}>
@@ -147,10 +137,7 @@ let ReviewForm = ({
             <TableRow className={classes.tr}>
               <TableCell component="th">Место покупки:</TableCell>
               <TableCell>
-                <Field name="buyType" component={radio}>
-                  <RadioButton value="1" label="- у Вас в магазине" />
-                  <RadioButton value="2" label="- в другом магазине" />
-                </Field>
+                <Field name="buyType" component={radio} />
                 <Typography>
                   Перед публикацией отзыва рекомендуем ознакомиться с правилами
                   размещения отзывов и комментариев.
@@ -177,6 +164,7 @@ ReviewForm = reduxForm({
   form: "ReviewForm",
   enableReinitialize: true,
   keepDirtyOnReinitialize: true,
+  destroyOnUnmount: true,
 })(ReviewForm);
 
 const mapStateToProps = (state) => {

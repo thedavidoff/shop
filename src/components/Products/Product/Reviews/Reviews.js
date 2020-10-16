@@ -34,9 +34,9 @@ const Reviews = ({
   const classes = useStyles();
   const onSubmitReview = (data) => sendReview(data);
 
-  let [openReviewFormId, setOpenReviewFormId] = useState(0);
-  const handleToggle = (id) => {
-    id === openReviewFormId ? setOpenReviewFormId(0) : setOpenReviewFormId(id);
+  let [isOpenReviewForm, setIsOpenReviewForm] = useState(false);
+  const handleToggle = () => {
+    isOpenReviewForm ? setIsOpenReviewForm(false) : setIsOpenReviewForm(true);
   };
 
   return (
@@ -50,11 +50,11 @@ const Reviews = ({
         size="small"
         variant="contained"
         className={classes.button}
-        onClick={() => handleToggle(1)}
+        onClick={handleToggle}
       >
-        {openReviewFormId === 1 ? "Скрыть" : "Написать отзыв"}
+        {isOpenReviewForm ? "Скрыть" : "Написать отзыв"}
       </Button>
-      {openReviewFormId === 1 && <ReviewForm onSubmit={onSubmitReview} />}
+      {isOpenReviewForm && <ReviewForm onSubmit={onSubmitReview} />}
 
       {reviews.map((review) => (
         <Review
@@ -66,17 +66,6 @@ const Reviews = ({
           setAnswerMode={setAnswerMode}
         />
       ))}
-      {reviews.length && (
-        <Button
-          size="small"
-          variant="contained"
-          className={classes.button}
-          onClick={() => handleToggle(2)}
-        >
-          {openReviewFormId === 2 ? "Скрыть" : "Написать отзыв"}
-        </Button>
-      )}
-      {openReviewFormId === 2 && <ReviewForm onSubmit={onSubmitReview} />}
     </div>
   );
 };
