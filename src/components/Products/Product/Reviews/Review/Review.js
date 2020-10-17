@@ -72,6 +72,10 @@ const Review = ({
 }) => {
   const classes = useStyles();
   const onSubmitAnswer = (data) => sendAnswer(data, id);
+  const handleClick = async () => {
+    await Promise.all([setAnswerMode(null)]);
+    answerModeId === id ? setAnswerMode(null) : setAnswerMode(id);
+  };
 
   return (
     <>
@@ -134,12 +138,12 @@ const Review = ({
               {rating === 1 && "Моя оценка - ужасно (1 из 5)."}
             </pre>
           )}
-          <Button className={classes.button} onClick={() => setAnswerMode(id)}>
-            Ответить
+          <Button className={classes.button} onClick={handleClick}>
+            {answerModeId === id ? "Скрыть" : "Ответить"}
           </Button>
         </div>
       </Paper>
-      {answerModeId === id ? <ReviewAnswerForm onSubmit={onSubmitAnswer} /> : null}
+      {answerModeId === id && <ReviewAnswerForm onSubmit={onSubmitAnswer} />}
       <Answers answers={answers} id={id} />
     </>
   );

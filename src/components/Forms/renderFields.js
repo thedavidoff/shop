@@ -29,7 +29,6 @@ const ProfileTextField = withStyles({
 export const textarea = ({
   input,
   placeholder,
-  id,
   meta: { touched, error, warning },
 }) => {
   const hasError = touched && error;
@@ -41,7 +40,6 @@ export const textarea = ({
         className={hasError || hasWarning ? `${styles.textarea}` : ""}
         {...input}
         placeholder={placeholder}
-        id={id}
         aria-label="Textarea"
         rowsMin={3}
         style={{
@@ -67,10 +65,13 @@ export const textarea = ({
   );
 };
 
-export const radio = ({ input, ...rest }) => {
+export const radio = ({ input, ...props }) => {
   return (
     <FormControl>
-      <RadioGroup {...input} {...rest}>
+      <RadioGroup
+        {...input}
+        {...props}
+      >
         <FormControlLabel
           value="1"
           control={<RadioButton />}

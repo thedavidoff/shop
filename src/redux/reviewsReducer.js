@@ -5,7 +5,7 @@ const SET_REVIEWS = "productReducer/SET_REVIEWS";
 const TOGGLE_IS_FETCHING_REVIEWS = "productReducer/TOGGLE_IS_FETCHING_REVIEWS";
 
 const SEND_REVIEW = "productReducer/SEND_REVIEW";
-const TOGGLE_IS_SENDING_REVIEW = "productReducer/TOGGLE_IS_SENDING_REVIEW";
+const TOGGLE_REVIEW_SENT = "productReducer/TOGGLE_REVIEW_SENT";
 
 const SET_RATING = "productReducer/SET_RATING";
 
@@ -21,7 +21,7 @@ const initialState = {
   reviews: [],
   isFetchingReviews: false,
   rating: 0,
-  isSendingReview: false,
+  reviewSent: false,
   answerModeId: null,
   answers: [],
   isFetchingAnswers: false,
@@ -49,10 +49,10 @@ const reviewsReducer = (state = initialState, { type, payload }) => {
         ...state,
         reviews: [{ ...payload }, ...state.reviews],
       };
-    case TOGGLE_IS_SENDING_REVIEW:
+    case TOGGLE_REVIEW_SENT:
       return {
         ...state,
-        isSendingReview: payload,
+        reviewSent: payload,
       };
     case SET_ANSWER_MODE:
       return {
@@ -85,17 +85,19 @@ export const setRating = (rating) => {
   };
 };
 export const sendReview = (review) => {
-  return async (dispatch, getState) => {
+  return async (dispatch, getState, getFirebase) => {
+    const userName = getFirebase().auth().currentUser.displayName;
+
     const data = {
       id: Date.now(),
       reviewTo: getState().productPage.product[0].id,
-      author: "Admin",
+      author: userName,
       date: new Date().toLocaleDateString(),
       time: new Date().toLocaleTimeString().slice(0, -3),
       ...review,
       rating: getState().reviews.rating,
     };
-    dispatch({ type: TOGGLE_IS_SENDING_REVIEW, payload: true });
+    dispatch({ type: TOGGLE_REVIEW_SENT, payload: true });
     const response = await productAPI.sendReviewAPI(data);
     dispatch({
       type: SEND_REVIEW,
@@ -106,12 +108,14 @@ export const sendReview = (review) => {
   };
 };
 export const sendAnswer = (answer, id) => {
-  return async (dispatch, getState) => {
+  return async (dispatch, getState, getFirebase) => {
+    const userName = getFirebase().auth().currentUser.displayName;
+
     const data = {
       id: Date.now(),
       answerTo: getState().productPage.product[0].id,
       answerToReview: id,
-      author: "Admin",
+      author: userName,
       date: new Date().toLocaleDateString(),
       time: new Date().toLocaleTimeString().slice(0, -3),
       ...answer,

@@ -8,16 +8,16 @@ import {
   TableBody,
   TableRow,
   TableCell,
+  FormControlLabel,
   Box,
   Typography,
   Button,
 } from "@material-ui/core";
+import Rating from "@material-ui/lab/Rating";
 
 import { getRating } from "../../../redux/selectors";
 import { setRating } from "../../../redux/reviewsReducer";
 import { input, radio, textarea } from "../renderFields";
-import FormControlLabel from "@material-ui/core/FormControlLabel";
-import Rating from "@material-ui/lab/Rating";
 
 const labels = {
   1: "Ужасно",
@@ -74,7 +74,7 @@ let ReviewForm = ({
               <TableCell component="th">Выберите оценку:</TableCell>
               <TableCell>
                 <FormControlLabel
-                  style={{marginLeft: 0}}
+                  style={{ marginLeft: 0 }}
                   control={
                     <>
                       <input
@@ -138,6 +138,11 @@ let ReviewForm = ({
               <TableCell component="th">Место покупки:</TableCell>
               <TableCell>
                 <Field name="buyType" component={radio} />
+              </TableCell>
+            </TableRow>
+            <TableRow className={classes.tr}>
+              <TableCell component="th" />
+              <TableCell>
                 <Typography>
                   Перед публикацией отзыва рекомендуем ознакомиться с правилами
                   размещения отзывов и комментариев.

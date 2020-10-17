@@ -15,7 +15,6 @@ import {
 import { getReviews } from "../../../redux/selectors";
 import { required } from "../validate";
 import { radio, textarea } from "../renderFields";
-import RadioButton from "../../UI/RadioButton/RadioButton";
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -31,8 +30,8 @@ const useStyles = makeStyles((theme) => ({
   },
   tr: {
     "& td": {
-      padding: "8px 16px"
-    }
+      padding: "8px 16px",
+    },
   },
   button: {
     backgroundColor: theme.palette.primary.main,
@@ -43,21 +42,19 @@ const useStyles = makeStyles((theme) => ({
   },
 }));
 
-let ReviewAnswerForm = ({ pristine, submitting, handleSubmit }) => {
+let ReviewAnswerForm = ({ pristine, submitting, handleSubmit, ...props }) => {
   const classes = useStyles();
-
   return (
     <Paper elevation={15} className={classes.root}>
       <form onSubmit={handleSubmit} className={classes.form}>
         <Table>
           <TableBody>
             <TableRow className={classes.tr}>
-              <TableCell component="th">
+              <TableCell>
                 <b>Комментарий:</b>
               </TableCell>
               <TableCell style={{ position: "relative" }}>
                 <Field
-                  id="comment"
                   name="comment"
                   placeholder="Укажите Ваш ответ"
                   component={textarea}
@@ -66,14 +63,16 @@ let ReviewAnswerForm = ({ pristine, submitting, handleSubmit }) => {
               </TableCell>
             </TableRow>
             <TableRow className={classes.tr}>
-              <TableCell component="th">
+              <TableCell>
                 <b>Место покупки:</b>
               </TableCell>
               <TableCell>
-                <Field name="buyType" component={radio}>
-                  <RadioButton value="1" label="- у Вас в магазине" />
-                  <RadioButton value="2" label="- в другом магазине" />
-                </Field>
+                <Field name="buyType" component={radio} />
+              </TableCell>
+            </TableRow>
+            <TableRow>
+              <TableCell />
+              <TableCell>
                 <Typography>
                   Перед публикацией комментария рекомендуем ознакомиться с
                   правилами размещения отзывов и комментариев.

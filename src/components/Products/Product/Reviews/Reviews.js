@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { makeStyles, Typography, Button } from "@material-ui/core";
 import * as PropTypes from "prop-types";
 
@@ -27,6 +27,7 @@ const Reviews = ({
   reviews,
   sendReview,
   answers,
+  reviewSent,
   answerModeId,
   setAnswerMode,
   sendAnswer,
@@ -38,6 +39,9 @@ const Reviews = ({
   const handleToggle = () => {
     isOpenReviewForm ? setIsOpenReviewForm(false) : setIsOpenReviewForm(true);
   };
+  useEffect(() => {
+    reviewSent && setIsOpenReviewForm(false);
+  }, [reviewSent]);
 
   return (
     <div className={classes.root}>

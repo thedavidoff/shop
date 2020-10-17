@@ -10,7 +10,7 @@ import {
   getAnswers,
   getIsFetchingAnswers,
   getIsFetchingReviews,
-  getReviews,
+  getReviews, getReviewSent,
 } from "../../../../redux/selectors";
 import {
   reviewsRequest,
@@ -60,6 +60,7 @@ const ReviewsContainer = ({
             setAnswerMode={props.setAnswerMode}
             sendAnswer={props.sendAnswer}
             answers={props.answers}
+            reviewSent={props.reviewSent}
             answerModeId={props.answerModeId}
           />
         </>
@@ -77,6 +78,7 @@ ReviewsContainer.propTypes = {
   setAnswerMode: PropTypes.func,
   sendAnswer: PropTypes.func,
   answers: PropTypes.array,
+  reviewSent: PropTypes.bool,
   answerModeId: PropTypes.number,
 };
 
@@ -86,6 +88,7 @@ const mapStateToProps = (state) => {
     isFetchingReviews: getIsFetchingReviews(state),
     answers: getAnswers(state),
     isFetchingAnswers: getIsFetchingAnswers(state),
+    reviewSent: getReviewSent(state),
     answerModeId: getAnswerModeId(state),
   };
 };

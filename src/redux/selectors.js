@@ -42,6 +42,9 @@ export const getAnswers = (state) => {
 export const getRating = (state) => {
   return state.reviews.rating;
 };
+export const getReviewSent = (state) => {
+  return state.reviews.reviewSent
+};
 export const getAnswerModeId = (state) => {
   return state.reviews.answerModeId;
 };
