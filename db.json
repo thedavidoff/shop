@@ -2540,6 +2540,161 @@
       "time": "15:25",
       "rating": 5,
       "buyType": "3"
+    },
+    {
+      "id": 1602944781620,
+      "reviewTo": 2,
+      "author": null,
+      "date": "17.10.2020",
+      "time": "17:26",
+      "rating": 5,
+      "buyType": "3",
+      "advantages": "---",
+      "disadvantages": "---",
+      "comment": "---"
+    },
+    {
+      "id": 1602948434264,
+      "reviewTo": 2,
+      "author": "Жура",
+      "date": "17.10.2020",
+      "time": "18:27",
+      "rating": 5,
+      "buyType": "3",
+      "name": "Жура",
+      "advantages": "aa",
+      "disadvantages": "aa",
+      "comment": "aa"
+    },
+    {
+      "id": 1602948637551,
+      "reviewTo": 2,
+      "author": "aaa",
+      "date": "17.10.2020",
+      "time": "18:30",
+      "rating": 0,
+      "buyType": "3",
+      "name": "aaa"
+    },
+    {
+      "id": 1602949134941,
+      "reviewTo": 2,
+      "author": "12",
+      "date": "17.10.2020",
+      "time": "18:38",
+      "rating": 0,
+      "buyType": "3",
+      "name": "12"
+    },
+    {
+      "id": 1602951864848,
+      "reviewTo": 2,
+      "author": "ad",
+      "date": "17.10.2020",
+      "time": "19:24",
+      "rating": 0,
+      "buyType": "3",
+      "name": "ad",
+      "advantages": "a"
+    },
+    {
+      "id": 1602951966154,
+      "reviewTo": 2,
+      "author": "a",
+      "date": "17.10.2020",
+      "time": "19:26",
+      "rating": 0,
+      "buyType": "3",
+      "name": "a",
+      "advantages": "ass",
+      "disadvantages": "ass",
+      "comment": "ass"
+    },
+    {
+      "id": 1602954514685,
+      "reviewTo": 2,
+      "author": "1",
+      "date": "17.10.2020",
+      "time": "20:08",
+      "rating": 0,
+      "buyType": "1",
+      "name": "1",
+      "advantages": "1"
+    },
+    {
+      "id": 1602955541214,
+      "reviewTo": 2,
+      "author": "1212",
+      "date": "17.10.2020",
+      "time": "20:25",
+      "rating": 5,
+      "buyType": "1",
+      "name": "1212",
+      "advantages": "1"
+    },
+    {
+      "id": 1602959230845,
+      "reviewTo": 2,
+      "author": "2",
+      "date": "17.10.2020",
+      "time": "21:27",
+      "rating": 5,
+      "buyType": "2",
+      "name": "2",
+      "advantages": "1",
+      "disadvantages": "2",
+      "comment": "3"
+    },
+    {
+      "id": 1602959245573,
+      "reviewTo": 2,
+      "author": "a1",
+      "date": "17.10.2020",
+      "time": "21:27",
+      "rating": 5,
+      "buyType": "3",
+      "name": "a1"
+    },
+    {
+      "id": 1602962333712,
+      "reviewTo": 2,
+      "author": "asd",
+      "date": "17.10.2020",
+      "time": "22:18",
+      "rating": 0,
+      "buyType": "3",
+      "name": "asd"
+    },
+    {
+      "id": 1602962402034,
+      "reviewTo": 2,
+      "author": "ad",
+      "date": "17.10.2020",
+      "time": "22:20",
+      "rating": 0,
+      "buyType": "3",
+      "name": "ad"
+    },
+    {
+      "id": 1602964335173,
+      "reviewTo": 2,
+      "author": "1",
+      "date": "17.10.2020",
+      "time": "22:52",
+      "rating": 0,
+      "buyType": "3",
+      "disadvantages": "1",
+      "name": "1"
+    },
+    {
+      "id": 1602964619484,
+      "reviewTo": 2,
+      "author": "asd 2 ",
+      "date": "17.10.2020",
+      "time": "22:56",
+      "rating": 5,
+      "buyType": "3",
+      "advantages": "1"
     }
   ],
   "answers": [
@@ -2791,6 +2946,27 @@
       "time": "17:06",
       "buyType": "3",
       "comment": "jhhjh"
+    },
+    {
+      "id": 1602948592151,
+      "answerTo": 2,
+      "answerToReview": 1602944781620,
+      "author": "xxx",
+      "date": "17.10.2020",
+      "time": "18:29",
+      "buyType": "3",
+      "name": "xxx",
+      "comment": "xxx"
+    },
+    {
+      "id": 1602964632060,
+      "answerTo": 2,
+      "answerToReview": 1602964619484,
+      "author": "asd 2 ",
+      "date": "17.10.2020",
+      "time": "22:57",
+      "buyType": "1",
+      "comment": "12"
     }
   ],
   "cities": [

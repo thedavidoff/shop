@@ -45,7 +45,7 @@ let LoginForm = ({ error, pristine, submitting, handleSubmit }) => {
         type="text"
         label="Ваш e-mail:"
         component={input}
-        validate={[email]}
+        validate={email}
       />
       <Field
         id="password"
@@ -53,7 +53,7 @@ let LoginForm = ({ error, pristine, submitting, handleSubmit }) => {
         type="password"
         label="Пароль:"
         component={input}
-        validate={[minLength6]}
+        validate={minLength6}
       />
       <Field
         id="rememberMe"

@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import { connect } from "react-redux";
 import { Field, reduxForm } from "redux-form";
 import {
@@ -15,9 +15,11 @@ import {
 } from "@material-ui/core";
 import Rating from "@material-ui/lab/Rating";
 
-import { getRating } from "../../../redux/selectors";
+import { getIsAnonymous, getRating } from "../../../redux/selectors";
 import { setRating } from "../../../redux/reviewsReducer";
 import { input, radio, textarea } from "../renderFields";
+import { required } from "../validate";
+import Snackbar from "../../UI/Snackbar/Snackbar";
 
 const labels = {
   1: "Ужасно",
@@ -33,15 +35,12 @@ const useStyles = makeStyles((theme) => ({
     "& p": {
       margin: "15px 0",
       fontSize: 12,
-    },
+    }
   },
   form: {
     padding: "15px 30px",
   },
   tr: {
-    "& th": {
-      padding: "8px 16px",
-    },
     "& td": {
       padding: "8px 16px",
     },
@@ -56,22 +55,45 @@ const useStyles = makeStyles((theme) => ({
 }));
 
 let ReviewForm = ({
+  isAnonymous,
   rating,
   setRating,
   pristine,
   submitting,
   handleSubmit,
+  sendReviewFailed,
 }) => {
   const classes = useStyles();
-  const [hover, setHover] = React.useState(-1);
+  const [hover, setHover] = useState(-1);
 
   return (
     <Paper elevation={15} className={classes.root}>
+      {sendReviewFailed && <Snackbar type="sendReviewFailed" />}
       <form onSubmit={handleSubmit} className={classes.form}>
         <Table>
           <TableBody>
+            {isAnonymous && (
+              <TableRow>
+                <TableCell>
+                  <b>Ваше Имя:</b>
+                </TableCell>
+                <TableCell>
+                  <Field
+                    id="name"
+                    name="name"
+                    type="text"
+                    label={null}
+                    component={input}
+                    validate={required}
+                    style={{ marginTop: 0 }}
+                  />
+                </TableCell>
+              </TableRow>
+            )}
             <TableRow className={classes.tr}>
-              <TableCell component="th">Выберите оценку:</TableCell>
+              <TableCell>
+                <b>Выберите оценку:</b>
+              </TableCell>
               <TableCell>
                 <FormControlLabel
                   style={{ marginLeft: 0 }}
@@ -102,8 +124,10 @@ let ReviewForm = ({
               </TableCell>
             </TableRow>
             <TableRow className={classes.tr}>
-              <TableCell component="th">Достоинства:</TableCell>
               <TableCell>
+                <b>Достоинства:</b>
+              </TableCell>
+              <TableCell style={{ position: "relative" }}>
                 <Field
                   id="advantages"
                   name="advantages"
@@ -113,8 +137,10 @@ let ReviewForm = ({
               </TableCell>
             </TableRow>
             <TableRow className={classes.tr}>
-              <TableCell component="th">Недостатки:</TableCell>
               <TableCell>
+                <b>Недостатки:</b>
+              </TableCell>
+              <TableCell style={{ position: "relative" }}>
                 <Field
                   id="disadvantages"
                   name="disadvantages"
@@ -124,8 +150,10 @@ let ReviewForm = ({
               </TableCell>
             </TableRow>
             <TableRow className={classes.tr}>
-              <TableCell component="th">Комментарий:</TableCell>
               <TableCell>
+                <b>Комментарий:</b>
+              </TableCell>
+              <TableCell style={{ position: "relative" }}>
                 <Field
                   id="comment"
                   name="comment"
@@ -135,13 +163,15 @@ let ReviewForm = ({
               </TableCell>
             </TableRow>
             <TableRow className={classes.tr}>
-              <TableCell component="th">Место покупки:</TableCell>
+              <TableCell>
+                <b>Место покупки:</b>
+              </TableCell>
               <TableCell>
                 <Field name="buyType" component={radio} />
               </TableCell>
             </TableRow>
             <TableRow className={classes.tr}>
-              <TableCell component="th" />
+              <TableCell />
               <TableCell>
                 <Typography>
                   Перед публикацией отзыва рекомендуем ознакомиться с правилами
@@ -174,7 +204,9 @@ ReviewForm = reduxForm({
 
 const mapStateToProps = (state) => {
   return {
+    isAnonymous: getIsAnonymous(state),
     rating: getRating(state),
+    sendReviewFailed: state.reviews.sendReviewFailed,
     initialValues: {
       rating: getRating(state),
       buyType: "3",

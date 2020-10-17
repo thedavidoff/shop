@@ -12,18 +12,14 @@ import {
   Button,
 } from "@material-ui/core";
 
-import { getReviews } from "../../../redux/selectors";
+import { getIsAnonymous, getReviews } from "../../../redux/selectors";
 import { required } from "../validate";
-import { radio, textarea } from "../renderFields";
+import { input, radio, textarea } from "../renderFields";
 
 const useStyles = makeStyles((theme) => ({
   root: {
     marginBottom: 15,
     marginLeft: 30,
-    "& p": {
-      margin: "15px 0",
-      fontSize: 12,
-    },
   },
   form: {
     padding: "15px 30px",
@@ -32,6 +28,10 @@ const useStyles = makeStyles((theme) => ({
     "& td": {
       padding: "8px 16px",
     },
+  },
+  p: {
+    margin: "15px 0",
+    fontSize: 12,
   },
   button: {
     backgroundColor: theme.palette.primary.main,
@@ -42,13 +42,36 @@ const useStyles = makeStyles((theme) => ({
   },
 }));
 
-let ReviewAnswerForm = ({ pristine, submitting, handleSubmit, ...props }) => {
+let ReviewAnswerForm = ({
+  isAnonymous,
+  pristine,
+  submitting,
+  handleSubmit,
+}) => {
   const classes = useStyles();
   return (
     <Paper elevation={15} className={classes.root}>
       <form onSubmit={handleSubmit} className={classes.form}>
         <Table>
           <TableBody>
+            {isAnonymous && (
+              <TableRow>
+                <TableCell>
+                  <b>Ваше Имя:</b>
+                </TableCell>
+                <TableCell>
+                  <Field
+                    id="name"
+                    name="name"
+                    type="text"
+                    label={null}
+                    component={input}
+                    validate={required}
+                    style={{ marginTop: 0 }}
+                  />
+                </TableCell>
+              </TableRow>
+            )}
             <TableRow className={classes.tr}>
               <TableCell>
                 <b>Комментарий:</b>
@@ -73,7 +96,7 @@ let ReviewAnswerForm = ({ pristine, submitting, handleSubmit, ...props }) => {
             <TableRow>
               <TableCell />
               <TableCell>
-                <Typography>
+                <Typography className={classes.p}>
                   Перед публикацией комментария рекомендуем ознакомиться с
                   правилами размещения отзывов и комментариев.
                 </Typography>
@@ -104,6 +127,7 @@ ReviewAnswerForm = reduxForm({
 
 const mapStateToProps = (state) => {
   return {
+    isAnonymous: getIsAnonymous(state),
     reviews: getReviews(state),
     initialValues: {
       buyType: "3",

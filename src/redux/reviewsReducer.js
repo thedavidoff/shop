@@ -1,4 +1,4 @@
-import { reset } from "redux-form";
+import { reset, stopSubmit } from "redux-form";
 import { productAPI } from "../api/api";
 
 const SET_REVIEWS = "productReducer/SET_REVIEWS";
@@ -6,6 +6,7 @@ const TOGGLE_IS_FETCHING_REVIEWS = "productReducer/TOGGLE_IS_FETCHING_REVIEWS";
 
 const SEND_REVIEW = "productReducer/SEND_REVIEW";
 const TOGGLE_REVIEW_SENT = "productReducer/TOGGLE_REVIEW_SENT";
+const SEND_REVIEW_FAILED = "productReducer/SEND_REVIEW_FAILED";
 
 const SET_RATING = "productReducer/SET_RATING";
 
@@ -22,6 +23,7 @@ const initialState = {
   isFetchingReviews: false,
   rating: 0,
   reviewSent: false,
+  sendReviewFailed: false,
   answerModeId: null,
   answers: [],
   isFetchingAnswers: false,
@@ -53,6 +55,11 @@ const reviewsReducer = (state = initialState, { type, payload }) => {
       return {
         ...state,
         reviewSent: payload,
+      };
+    case SEND_REVIEW_FAILED:
+      return {
+        ...state,
+        sendReviewFailed: payload,
       };
     case SET_ANSWER_MODE:
       return {
@@ -91,20 +98,31 @@ export const sendReview = (review) => {
     const data = {
       id: Date.now(),
       reviewTo: getState().productPage.product[0].id,
-      author: userName,
+      author: review.name || userName,
       date: new Date().toLocaleDateString(),
       time: new Date().toLocaleTimeString().slice(0, -3),
       ...review,
       rating: getState().reviews.rating,
     };
-    dispatch({ type: TOGGLE_REVIEW_SENT, payload: true });
-    const response = await productAPI.sendReviewAPI(data);
-    dispatch({
-      type: SEND_REVIEW,
-      payload: response,
-    });
-    dispatch({ type: SET_RATING, payload: 0 });
-    dispatch(reset("ReviewForm"));
+
+    if (!review.advantages && !review.disadvantages && !review.comment) {
+      await dispatch({ type: SEND_REVIEW_FAILED, payload: false });
+      dispatch({ type: SEND_REVIEW_FAILED, payload: true });
+      dispatch(
+        stopSubmit("ReviewForm", {
+          _error: true,
+        })
+      );
+    } else {
+      dispatch({ type: TOGGLE_REVIEW_SENT, payload: true });
+      const response = await productAPI.sendReviewAPI(data);
+      dispatch({
+        type: SEND_REVIEW,
+        payload: response,
+      });
+      dispatch({ type: SET_RATING, payload: 0 });
+      dispatch(reset("ReviewForm"));
+    }
   };
 };
 export const sendAnswer = (answer, id) => {
@@ -115,7 +133,7 @@ export const sendAnswer = (answer, id) => {
       id: Date.now(),
       answerTo: getState().productPage.product[0].id,
       answerToReview: id,
-      author: userName,
+      author: answer.name || userName,
       date: new Date().toLocaleDateString(),
       time: new Date().toLocaleTimeString().slice(0, -3),
       ...answer,

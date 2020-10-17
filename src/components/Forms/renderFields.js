@@ -48,17 +48,18 @@ export const textarea = ({
           fontSize: 16,
           borderRadius: 4,
           resize: "vertical",
+          borderColor: "#c4c4c4"
         }}
       />
       {touched &&
-        ((hasError && (
-          <Typography component="span" className={styles.textareaMessage}>
-            <i>{error}</i>
+        ((error && (
+          <Typography className={styles.textareaMessage}>
+            <span>{error}</span>
           </Typography>
         )) ||
-          (hasWarning && (
-            <Typography component="span" className={styles.textareaMessage}>
-              <i>{warning}</i>
+          (warning && (
+            <Typography className={styles.textareaMessage}>
+              <span>{warning}</span>
             </Typography>
           )))}
     </>
@@ -102,6 +103,7 @@ export const input = ({
   label,
   meta: { touched, invalid, error },
   input,
+  style,
 }) => {
   return (
     <TextField
@@ -113,7 +115,7 @@ export const input = ({
       helperText={touched && error}
       size="small"
       variant="outlined"
-      style={{ marginTop: 24 }}
+      style={style || { marginTop: 24 }}
       {...input}
     />
   );

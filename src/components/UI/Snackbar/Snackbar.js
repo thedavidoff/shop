@@ -35,6 +35,10 @@ const Snackbar = ({ type }) => {
         "При обновлении e-mail возникли проблемы... Выйдите из своей учетной записи и войдите заново.";
       severity = error;
       break;
+    case "sendReviewFailed":
+      notice = "Сообщение не должно быть пустым"; //Заполните хотя бы одно поле (Достоинства, Недостатки, Комментарий)
+      severity = error;
+      break;
     default:
       notice = type;
   }
