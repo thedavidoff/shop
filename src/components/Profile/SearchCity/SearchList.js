@@ -1,7 +1,6 @@
 import React, { useState, useEffect } from "react";
 import Fuse from "fuse.js";
-
-import styles from "./SearchCity.module.css";
+import { makeStyles, List, ListItem } from "@material-ui/core";
 
 const searchOptions = (keys) => ({
   shouldSort: true,
@@ -24,7 +23,30 @@ const fetchList = async (url) => {
   return await res.json();
 };
 
+const useStyles = makeStyles((theme) => ({
+  list: {
+    position: "absolute",
+    display: "inline-block",
+    marginTop: 68,
+    padding: 0,
+    listStyle: "none",
+    background: "#fff",
+    fontSize: 16,
+    border: "1px solid cadetblue",
+    zIndex: 1,
+  },
+  listItem: {
+    padding: "3px 5px",
+    "&:hover": {
+      cursor: "pointer",
+      color: "#fff",
+      background: theme.palette.primary.main,
+    },
+  },
+}));
+
 const SearchList = ({ handleSelectCity, filter }) => {
+  const classes = useStyles();
   const [list, setList] = useState([]);
   const [filteredList, setFilteredList] = useState([]);
   const url = "http://localhost:3001/cities";
@@ -51,18 +73,20 @@ const SearchList = ({ handleSelectCity, filter }) => {
   }, [filter, list]);
 
   return filter ? (
-    <ul className={styles.searchList}>
+    <List className={classes.list}>
       {filteredList.slice(0, 10).map((it) => {
         return (
-          <li
+          <ListItem
+            className={classes.listItem}
             onClick={handleSelectCity}
             key={it.id ? it.id : it.item && it.item.id}
+            disableGutters
           >
             {it.item && it.item.name}
-          </li>
+          </ListItem>
         );
       })}
-    </ul>
+    </List>
   ) : null;
 };
 

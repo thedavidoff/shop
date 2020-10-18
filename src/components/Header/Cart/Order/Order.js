@@ -1,5 +1,6 @@
 import React from "react";
 import { connect } from "react-redux";
+import Helmet from "react-helmet";
 import {
   makeStyles,
   Paper,
@@ -12,10 +13,8 @@ import {
   Typography,
   Box,
 } from "@material-ui/core";
-import Helmet from "react-helmet";
 import * as PropTypes from "prop-types";
 
-import styles from "./Order.module.css";
 import OrderItem from "./ProductInOrder/OrderItem";
 import { changeQuantity, deleteCartItem } from "../../../../redux/cartReducer";
 import {
@@ -26,6 +25,10 @@ import {
 import AddToWishListButton from "../../../UI/AddToWishListButton/AddToWishListButton";
 
 const useStyles = makeStyles((theme) => ({
+  root: {
+    width: "100%",
+    padding: "0 30px",
+  },
   title: {
     marginTop: 16,
     fontSize: 18,
@@ -40,8 +43,8 @@ const useStyles = makeStyles((theme) => ({
     backgroundColor: "#fff9bb",
     "& td": {
       padding: "8px 16px",
-      borderBottom: "1px solid #bfbfbf"
-    }
+      borderBottom: "1px solid #bfbfbf",
+    },
   },
   price: {
     color: theme.palette.secondary.dark,
@@ -62,9 +65,9 @@ const Order = (props) => {
         <title>Корзина / Оформление заказа</title>
         <link rel="canonical" href="http://localhost:3000/order" />
       </Helmet>
-      <div className={styles.order}>
+      <div className={classes.root}>
         <Typography component="h2" className={classes.title}>
-          Ваша корзина
+          Ваша корзина:
         </Typography>
         <>
           <TableContainer

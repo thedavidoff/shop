@@ -1,7 +1,5 @@
 import React, { useEffect, useState } from "react";
 import { useDebouncedCallback } from "use-debounce";
-
-import SearchList from "./SearchList";
 import {
   makeStyles,
   withStyles,
@@ -15,6 +13,8 @@ import {
   ListItem
 } from "@material-ui/core";
 import CloseIcon from "@material-ui/icons/Close";
+
+import SearchList from "./SearchList";
 
 const delay = 400;
 

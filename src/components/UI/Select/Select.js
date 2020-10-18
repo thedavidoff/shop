@@ -3,8 +3,8 @@ import {
   makeStyles,
   FormControl,
   Select as MUISelect,
+  FormHelperText
 } from "@material-ui/core";
-import FormHelperText from "@material-ui/core/FormHelperText";
 
 const useStyles = makeStyles(() => ({
   root: {
@@ -21,7 +21,7 @@ const renderFromHelper = ({ touched, error }) => {
   } else {
     return <FormHelperText>{touched && error}</FormHelperText>
   }
-}
+};
 
 const Select = ({
   input,

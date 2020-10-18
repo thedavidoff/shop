@@ -1,9 +1,9 @@
 import React from "react";
 import { Field, reduxForm } from "redux-form";
+import { makeStyles, Typography, Button } from "@material-ui/core";
 
 import { email, minLength6 } from "../validate";
 import { checkbox, input } from "../renderFields";
-import { makeStyles, Typography, Button } from "@material-ui/core";
 
 const useStyles = makeStyles((theme) => ({
   root: {

@@ -1,6 +1,6 @@
 import React from "react";
-import { connect } from "react-redux";
 import { NavLink } from "react-router-dom";
+import { connect } from "react-redux";
 import { makeStyles, Link, Typography } from "@material-ui/core";
 import FavoriteIcon from "@material-ui/icons/Favorite";
 import * as PropTypes from "prop-types";

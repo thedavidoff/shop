@@ -1,34 +1,46 @@
-import React, { Component } from "react";
-import { connect } from "react-redux";
-import { compose } from "redux";
+import React, { useEffect } from "react";
 import { withRouter } from "react-router-dom";
+import { compose } from "redux";
+import { connect } from "react-redux";
+import { makeStyles } from "@material-ui/core/styles";
 import * as PropTypes from "prop-types";
 
-import styles from "../../ProductContainer.module.css";
 import { getIsFetchingProduct, getProduct } from "../../../../redux/selectors";
 import { productRequest } from "../../../../redux/productReducer";
 import ProductPage from "./ProductPage";
 import Preloader from "../../../UI/Preloader/Preloader";
 
-class ProductPageContainer extends Component {
-  componentDidMount() {
-    this.props.productRequest(+this.props.match.params.id);
-  }
+const useStyles = makeStyles((theme) => ({
+  root: {
+    display: "flex",
+    flexWrap: "wrap",
+    padding: 30,
+  },
+}));
 
-  render() {
-    return (
-      <div className={styles.wrapper}>
-        <div>
-          {this.props.isFetchingProduct ? (
-            <Preloader type="productPage" />
-          ) : (
-            <ProductPage product={this.props.product[0]} />
-          )}
-        </div>
+const ProductPageContainer = ({
+  isFetchingProduct,
+  product,
+  productRequest,
+  match,
+}) => {
+  const classes = useStyles();
+  useEffect(() => {
+    productRequest(+match.params.id);
+  }, [productRequest, match]);
+
+  return (
+    <div className={classes.root}>
+      <div>
+        {isFetchingProduct ? (
+          <Preloader type="productPage" />
+        ) : (
+          <ProductPage product={product[0]} />
+        )}
       </div>
-    );
-  }
-}
+    </div>
+  );
+};
 
 ProductPageContainer.propTypes = {
   isFetchingProduct: PropTypes.bool,

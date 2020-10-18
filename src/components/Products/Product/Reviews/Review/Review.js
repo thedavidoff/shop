@@ -3,7 +3,6 @@ import StarRatingComponent from "react-star-rating-component";
 import { makeStyles, Paper, Typography, Button } from "@material-ui/core";
 import * as PropTypes from "prop-types";
 
-import styles from "../../ProductPage/ProductPage.module.css";
 import ReviewAnswerForm from "../../../../Forms/ReviewAnswerForm/ReviewAnswerForm";
 import Answers from "./Answers/Answers";
 
@@ -92,7 +91,7 @@ const Review = ({
             {buyType === "2" && "Купил(а) этот товар в другом магазине"}
             {buyType === "3" && "Не покупал(а), но хочу поделиться мнением"}
           </Typography>
-          <div className={styles.reviewRating}>
+          <div>
             {rating > 0 ? (
               <StarRatingComponent
                 name="rateReview"
@@ -100,7 +99,6 @@ const Review = ({
                 starColor="red"
                 emptyStarColor="#adadad"
                 editing={false}
-                className={styles.stars}
               />
             ) : null}
           </div>
@@ -130,7 +128,7 @@ const Review = ({
             </pre>
           ) : null}
           {!advantages && !disadvantages && !comment && (
-            <pre className={styles.reviewComment}>
+            <pre>
               {rating === 5 && "Моя оценка - отлично (5 из 5)."}
               {rating === 4 && "Моя оценка - хорошо (4 из 5)."}
               {rating === 3 && "Моя оценка - нейтрально (3 из 5)."}

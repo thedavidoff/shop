@@ -37,7 +37,7 @@ export const textarea = ({
   return (
     <>
       <TextareaAutosize
-        className={hasError || hasWarning ? `${styles.textarea}` : ""}
+        className={hasError || hasWarning ? styles.textarea : ""}
         {...input}
         placeholder={placeholder}
         aria-label="Textarea"

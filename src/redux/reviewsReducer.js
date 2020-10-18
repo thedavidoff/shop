@@ -92,13 +92,13 @@ export const setRating = (rating) => {
   };
 };
 export const sendReview = (review) => {
-  return async (dispatch, getState, getFirebase) => {
-    const userName = getFirebase().auth().currentUser.displayName;
+  return async (dispatch, getState) => {
+    const login = getState().firebase.profile.login;
 
     const data = {
       id: Date.now(),
       reviewTo: getState().productPage.product[0].id,
-      author: review.name || userName,
+      author: review.name || login,
       date: new Date().toLocaleDateString(),
       time: new Date().toLocaleTimeString().slice(0, -3),
       ...review,
@@ -114,6 +114,7 @@ export const sendReview = (review) => {
         })
       );
     } else {
+      dispatch({ type: SEND_REVIEW_FAILED, payload: false });
       dispatch({ type: TOGGLE_REVIEW_SENT, payload: true });
       const response = await productAPI.sendReviewAPI(data);
       dispatch({
@@ -126,14 +127,14 @@ export const sendReview = (review) => {
   };
 };
 export const sendAnswer = (answer, id) => {
-  return async (dispatch, getState, getFirebase) => {
-    const userName = getFirebase().auth().currentUser.displayName;
+  return async (dispatch, getState) => {
+    const login = getState().firebase.profile.login;
 
     const data = {
       id: Date.now(),
       answerTo: getState().productPage.product[0].id,
       answerToReview: id,
-      author: answer.name || userName,
+      author: answer.name || login,
       date: new Date().toLocaleDateString(),
       time: new Date().toLocaleTimeString().slice(0, -3),
       ...answer,

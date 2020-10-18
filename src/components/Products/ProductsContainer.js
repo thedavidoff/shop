@@ -1,7 +1,7 @@
 import React from "react";
 import { connect } from "react-redux";
-import { Grid, Typography } from "@material-ui/core";
 import Helmet from "react-helmet";
+import { makeStyles, Grid, Typography } from "@material-ui/core";
 import * as PropTypes from "prop-types";
 
 import Products from "./Products";
@@ -11,7 +11,6 @@ import {
   getFilteredProducts,
 } from "../../redux/selectors";
 import SkeletonCard from "../UI/SkeletonCard/SkeletonCard";
-import { makeStyles } from "@material-ui/core/styles";
 
 const useStyles = makeStyles(() => ({
   root: {

@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from "react";
+import { useDispatch } from "react-redux";
 import { makeStyles, Typography, Button } from "@material-ui/core";
 import * as PropTypes from "prop-types";
 
@@ -33,10 +34,13 @@ const Reviews = ({
   sendAnswer,
 }) => {
   const classes = useStyles();
+  const dispatch = useDispatch();
   const onSubmitReview = (data) => sendReview(data);
 
   let [isOpenReviewForm, setIsOpenReviewForm] = useState(false);
   const handleToggle = () => {
+    if (isOpenReviewForm)
+      dispatch({ type: "productReducer/SEND_REVIEW_FAILED", payload: false });
     isOpenReviewForm ? setIsOpenReviewForm(false) : setIsOpenReviewForm(true);
   };
   useEffect(() => {

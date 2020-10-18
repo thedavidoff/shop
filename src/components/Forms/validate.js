@@ -6,7 +6,6 @@ export const email = (value) =>
     : undefined;
 const minLength = (min) => (value) =>
   value && value.length < min ? `Минимум ${min} символов` : undefined;
-export const minLength3 = minLength(3);
 export const minLength6 = minLength(6);
 export const gender = (value) =>
   value === "0" ? "Выберите Ваш пол" : undefined;

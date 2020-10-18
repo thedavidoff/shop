@@ -1,9 +1,9 @@
 import React, { useEffect } from "react";
+import { NavLink } from "react-router-dom";
 import { connect, useDispatch } from "react-redux";
 import { isEmpty, isLoaded } from "react-redux-firebase";
-import { NavLink } from "react-router-dom";
-import { makeStyles, AppBar, Tabs, Tab, Paper } from "@material-ui/core";
 import Helmet from "react-helmet";
+import { makeStyles, AppBar, Tabs, Tab, Paper } from "@material-ui/core";
 import * as PropTypes from "prop-types";
 
 import ProfileForm from "../Forms/ProfileForm/ProfileForm";

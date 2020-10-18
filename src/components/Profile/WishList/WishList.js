@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { connect } from "react-redux";
+import Helmet from "react-helmet";
 import ReactTooltip from "react-tooltip";
 import {
   makeStyles,
@@ -10,7 +11,6 @@ import {
   Typography,
   Box,
 } from "@material-ui/core";
-import Helmet from "react-helmet";
 import * as PropTypes from "prop-types";
 
 import stylesTooltip from "../../UI/Tooltip/Tooltip.module.css";

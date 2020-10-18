@@ -1,8 +1,8 @@
 import React, { useEffect, useState } from "react";
 import { NavLink, useLocation, withRouter } from "react-router-dom";
-import { Range } from "rc-slider/es";
 import { compose } from "redux";
 import { connect } from "react-redux";
+import { Range } from "rc-slider/es";
 import * as PropTypes from "prop-types";
 
 import styles from "./Filters.module.css";

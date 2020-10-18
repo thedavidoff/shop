@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import Helmet from "react-helmet";
 import ReactTooltip from "react-tooltip";
 import {
   List,
@@ -11,7 +12,6 @@ import {
   Tab,
 } from "@material-ui/core";
 import * as PropTypes from "prop-types";
-import Helmet from "react-helmet";
 
 import BuyButton from "../../../UI/BuyButton/BuyButton";
 import Slider from "./Slider/Slider";

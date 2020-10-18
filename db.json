@@ -2695,6 +2695,94 @@
       "rating": 5,
       "buyType": "3",
       "advantages": "1"
+    },
+    {
+      "id": 1602965082026,
+      "reviewTo": 2,
+      "author": "asd 2 ",
+      "date": "17.10.2020",
+      "time": "23:04",
+      "rating": 5,
+      "buyType": "3",
+      "advantages": "5"
+    },
+    {
+      "id": 1602965601018,
+      "reviewTo": 2,
+      "author": "1",
+      "date": "17.10.2020",
+      "time": "23:13",
+      "rating": 0,
+      "buyType": "3",
+      "name": "1",
+      "advantages": "1"
+    },
+    {
+      "id": 1602965938962,
+      "reviewTo": 2,
+      "author": "1",
+      "date": "17.10.2020",
+      "time": "23:18",
+      "rating": 0,
+      "buyType": "3",
+      "name": "1",
+      "comment": "s"
+    },
+    {
+      "id": 1602966001674,
+      "reviewTo": 2,
+      "author": "1",
+      "date": "17.10.2020",
+      "time": "23:20",
+      "rating": 0,
+      "buyType": "3",
+      "name": "1",
+      "comment": "a"
+    },
+    {
+      "id": 1603018446200,
+      "reviewTo": 1,
+      "author": "asd 2 ",
+      "date": "18.10.2020",
+      "time": "13:54",
+      "rating": 1,
+      "buyType": "1",
+      "advantages": "1",
+      "disadvantages": "1",
+      "comment": "1"
+    },
+    {
+      "id": 1603018513677,
+      "reviewTo": 1,
+      "author": "User_0",
+      "date": "18.10.2020",
+      "time": "13:55",
+      "rating": 5,
+      "buyType": "1",
+      "advantages": "5",
+      "disadvantages": "5",
+      "comment": "5"
+    },
+    {
+      "id": 1603018545108,
+      "reviewTo": 1,
+      "author": "5",
+      "date": "18.10.2020",
+      "time": "13:55",
+      "rating": 5,
+      "buyType": "3",
+      "name": "5",
+      "advantages": "5"
+    },
+    {
+      "id": 1603023726627,
+      "reviewTo": 1,
+      "author": "User_0",
+      "date": "18.10.2020",
+      "time": "15:22",
+      "rating": 5,
+      "buyType": "3",
+      "advantages": "2"
     }
   ],
   "answers": [
@@ -2967,6 +3055,16 @@
       "time": "22:57",
       "buyType": "1",
       "comment": "12"
+    },
+    {
+      "id": 1603018522301,
+      "answerTo": 1,
+      "answerToReview": 1603018513677,
+      "author": "User_0",
+      "date": "18.10.2020",
+      "time": "13:55",
+      "buyType": "1",
+      "comment": "5"
     }
   ],
   "cities": [
