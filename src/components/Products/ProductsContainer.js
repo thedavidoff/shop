@@ -11,6 +11,7 @@ import {
   getFilteredProducts,
 } from "../../redux/selectors";
 import SkeletonCard from "../UI/SkeletonCard/SkeletonCard";
+import {Hits} from "react-instantsearch-dom";
 
 const useStyles = makeStyles(() => ({
   root: {
@@ -28,6 +29,9 @@ const ProductsContainer = (props) => {
 
   return (
     <>
+
+      <Hits />
+
       <Typography className={classes.totalCount}>{`Всего товаров: ${
         props.min || props.max || props.filteredProducts.length
           ? props.filteredProducts.length
