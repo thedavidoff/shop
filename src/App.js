@@ -15,7 +15,7 @@ const useStyles = makeStyles(() => ({
   },
 }));
 
-const App = ({ rangePrices, productsRequest }) => {
+const App = ({ productsRequest }) => {
   useEffect(() => {
     productsRequest();
   }, [productsRequest]);
@@ -27,7 +27,7 @@ const App = ({ rangePrices, productsRequest }) => {
       <HeaderContainer />
       <Grid container>
         <Grid item className={classes.sidebar}>
-          <Sidebar rangePrices={rangePrices} />
+          <Sidebar />
         </Grid>
         <Grid item xs>
           <Notice type="warning" />
@@ -38,11 +38,4 @@ const App = ({ rangePrices, productsRequest }) => {
   );
 };
 
-const mapStateToProps = (state) => {
-  return {
-    isAuth: state.firebase.auth,
-    rangePrices: state.homePage.rangePrices,
-  };
-};
-
-export default connect(mapStateToProps, { productsRequest })(App);
+export default connect(null, { productsRequest })(App);

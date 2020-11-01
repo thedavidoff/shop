@@ -19,6 +19,9 @@ const useStyles = makeStyles((theme) => ({
     marginBottom: 15,
   },
   tableRow: {
+    "&:nth-child(odd)": {
+      background: "#d3e2f0"
+    },
     "& td": {
       fontSize: 13,
       lineHeight: 1,

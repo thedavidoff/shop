@@ -8,7 +8,7 @@ import {
 } from "@material-ui/core";
 import ExpandMoreIcon from "@material-ui/icons/ExpandMore";
 
-const useStyles = makeStyles(() => ({
+const useStyles = makeStyles((theme) => ({
   accordion: {
     margin: "8px 0 !important",
     minHeight: "auto",
@@ -17,7 +17,8 @@ const useStyles = makeStyles(() => ({
   summary: {
     minHeight: "auto",
     padding: "0px 8px",
-    backgroundColor: "#fff",
+    color: "#fff",
+    backgroundColor: theme.palette.primary.main,
     borderTopLeftRadius: 4,
     borderTopRightRadius: 4,
   },
@@ -30,10 +31,12 @@ const useStyles = makeStyles(() => ({
   },
   details: {
     padding: 0,
+    backgroundColor: "#fff",
   },
   icon: {
     marginRight: 0,
     padding: 0,
+    color: "#fff",
     "& svg": {
       fontSize: 16,
     },
@@ -45,34 +48,14 @@ const useStyles = makeStyles(() => ({
 
 const FilterAccordion = (props) => {
   const classes = useStyles();
-  const [expanded, setExpanded] = React.useState({
-    brand: true,
-    chip_maker: true,
-    series: false,
-    lineup: true,
-    professional: false,
-    memory_size: true,
-    memory_type: true,
-    memory_bus: true,
-    directX: false,
-    power_connectors: false,
-    "d-sub": false,
-    dvi: false,
-    hdmi: false,
-    displayPort: false,
-    process_technology: false,
-    recommended_psu: false,
-    cooling_type: false,
-    features: false,
-    slot_type: false
-  });
+  const [expanded, setExpanded] = React.useState(props.isOpen);
 
-  const handleChange = (e) => {
-    setExpanded({...expanded, [e.currentTarget.id]: !expanded[e.currentTarget.id]});
+  const handleChange = () => {
+    setExpanded(!expanded);
   };
 
   return (
-    <Accordion className={classes.accordion} expanded={expanded[props.id]} onChange={handleChange}>
+    <Accordion elevation={15} className={classes.accordion} expanded={expanded} onChange={handleChange}>
       <AccordionSummary
         expandIcon={<ExpandMoreIcon />}
         aria-controls="panel-content"

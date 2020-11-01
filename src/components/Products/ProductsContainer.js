@@ -1,27 +1,21 @@
 import React from "react";
 import { connect } from "react-redux";
 import Helmet from "react-helmet";
-import { makeStyles, Grid, Typography } from "@material-ui/core";
+import { makeStyles, Grid } from "@material-ui/core";
 import * as PropTypes from "prop-types";
 
-import Products from "./Products";
-import {
-  getIsLoaded,
-  getProducts,
-  getFilteredProducts,
-} from "../../redux/selectors";
+import { getIsLoaded, getProducts } from "../../redux/selectors";
 import SkeletonCard from "../UI/SkeletonCard/SkeletonCard";
-import {Hits} from "react-instantsearch-dom";
+import Hits from "../UI/Hit/Hits";
+import Pagination from "../UI/Pagination/Pagination";
+import Stats from "../UI/Stats/Stats";
 
 const useStyles = makeStyles(() => ({
   root: {
     display: "flex",
     flexWrap: "wrap",
     padding: 30,
-  },
-  totalCount: {
-    padding: "30px 45px 0",
-  },
+  }
 }));
 
 const ProductsContainer = (props) => {
@@ -29,31 +23,19 @@ const ProductsContainer = (props) => {
 
   return (
     <>
-
-      <Hits />
-
-      <Typography className={classes.totalCount}>{`Всего товаров: ${
-        props.min || props.max || props.filteredProducts.length
-          ? props.filteredProducts.length
-          : props.products.length
-      }`}</Typography>
       <div className={classes.root}>
         <Helmet>
           <meta charSet="utf-8" />
-          <title>{`Видеокарты ${props.min || props.max ? "|" : ""}${
-            props.min ? " от " + props.min + " грн" : ""
-          }${props.max ? " до " + props.max + " грн" : ""}`}</title>
+          <title>Видеокарты</title>
           <link rel="canonical" href="http://localhost:3000/shop" />
         </Helmet>
+        <Stats />
         <Grid container>
           {props.isLoaded ? (
-            <Products
-              products={
-                props.min || props.max || props.filteredProducts.length > 0
-                  ? props.filteredProducts
-                  : props.products
-              }
-            />
+            <>
+              <Hits />
+              <Pagination />
+            </>
           ) : (
             Array(36)
               .fill(undefined, undefined, undefined)
@@ -68,16 +50,12 @@ const ProductsContainer = (props) => {
 ProductsContainer.propTypes = {
   isLoaded: PropTypes.bool,
   products: PropTypes.array,
-  filteredProducts: PropTypes.array,
-  min: PropTypes.number,
-  max: PropTypes.number,
 };
 
 const mapStateToProps = (state) => {
   return {
     isLoaded: getIsLoaded(state),
     products: getProducts(state),
-    filteredProducts: getFilteredProducts(state),
   };
 };
 

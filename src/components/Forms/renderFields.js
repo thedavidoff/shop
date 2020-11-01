@@ -13,7 +13,7 @@ import styles from "./errors.module.css";
 import Preloader from "../UI/Preloader/Preloader";
 import {
   PrimaryColorCheckbox,
-  RememberMeCheckbox,
+  GrayColorCheckbox,
 } from "../UI/Checkbox/Checkbox";
 import RadioButton from "../UI/RadioButton/RadioButton";
 
@@ -125,7 +125,7 @@ export const checkbox = ({ id, name, label, input }) => {
   return (
     <FormControlLabel
       control={
-        <RememberMeCheckbox
+        <GrayColorCheckbox
           size="small"
           color="primary"
           defaultChecked

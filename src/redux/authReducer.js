@@ -211,7 +211,7 @@ export const logout = () => {
     firebase
       .auth()
       .signOut()
-      .then(async () => {
+      .then(() => {
         dispatch({ type: SET_INITIAL_VALUES_FOR_PROFILE_FORM, payload: null });
         dispatch({ type: SET_NOTICE_TYPE, payload: null });
         dispatch({ type: SET_CART, payload: cart ? Object.values(cart) : [] });

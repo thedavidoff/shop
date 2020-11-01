@@ -100,3 +100,7 @@ export const getNoticeType = (state) => {
 //   const max = state.homePage.maxPrice;
 //   getProducts(state).filter((product) => product.price >= state.homePage.minPrice && product.price <= state.homePage.maxPrice);
 // };
+
+// export const getCurrentRefinement = (state) => {
+//   return state.homePage.refinements;
+// };

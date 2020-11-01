@@ -31,9 +31,6 @@ const useStyles = makeStyles((theme) => ({
     "&>span": {
       paddingLeft: 9,
     },
-    "&>span:hover": {
-      backgroundColor: "rgba(0, 0, 0, .15)",
-    },
   },
   photoLink: {
     position: "relative",

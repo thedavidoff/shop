@@ -1,3 +1,5 @@
+import algoliasearch from "algoliasearch";
+
 export const productAPI = {
   getProductsAPI() {
     return fetch("http://localhost:9200/products")
@@ -47,6 +49,33 @@ export const productAPI = {
     return fetch("http://localhost:9200/filters")
       .then((response) => response.json())
       .catch((err) => console.error("getFilterFieldsAPI:", err));
+  },
+
+  getInitialFacetsAPI(attribute) {
+    return algoliasearch("I21C32G5C2", "85a7081843a79618290d2c0a18ddf6af")
+      .searchForFacetValues([
+        {
+          indexName: "dev_NAME",
+          params: {
+            facetName: attribute,
+            facetQuery: "",
+            maxFacetHits: 100,
+          },
+        },
+      ])
+      .then(([{ facetHits }]) => {
+        const fields = [];
+        fields.push(
+          ...facetHits.map((facet) => ({
+            ...facet,
+            label: facet.value,
+            value: facet.value,
+            isRefined: false,
+            count: 0,
+          }))
+        );
+        return fields;
+      });
   },
 
   // getProductsFilteredByPriceAPI(min, max) {
