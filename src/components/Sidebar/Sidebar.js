@@ -43,6 +43,7 @@ const Sidebar = ({
                 field={field}
                 currentRefinement={currentRefinement[field]}
                 setCurrentRefinement={setCurrentRefinement}
+                limit={100}
               />
             </FilterAccordion>
           );

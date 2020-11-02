@@ -49,7 +49,7 @@ const FilterCheckboxList = connectRefinementList(
       orderBy([...items, ...fields], ["label"], "asc"),
       "label"
     )
-      .slice(0, 100)
+      .slice(0, 1000)
       .map((item) => {
         const isRefined = currentRefinement.includes(item.label);
         const value =

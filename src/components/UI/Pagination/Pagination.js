@@ -11,11 +11,12 @@ const Pagination = withStyles({
 })((props) => {
   return (
     <MuiPagination
+      classes={props.classes}
       count={props.nbPages}
       onChange={(_, page) => props.refine(page)}
       variant="outlined"
       shape="rounded"
-      {...props}
+      color="primary"
     />
   );
 });
