@@ -7,14 +7,19 @@ import * as PropTypes from "prop-types";
 import { getIsLoaded, getProducts } from "../../redux/selectors";
 import SkeletonCard from "../UI/SkeletonCard/SkeletonCard";
 import Hits from "../UI/Hit/Hits";
-import Pagination from "../UI/Pagination/Pagination";
 import Stats from "../UI/Stats/Stats";
+import AlgoliaSVG from "../UI/SVG/AlgoliaSVG";
+import Pagination from "../UI/Pagination/Pagination";
 
 const useStyles = makeStyles(() => ({
-  root: {
+  productsContainer: {
     display: "flex",
     flexWrap: "wrap",
     padding: 30,
+  },
+  grid: {
+    alignItems: "center",
+    marginTop: 30
   }
 }));
 
@@ -23,7 +28,7 @@ const ProductsContainer = (props) => {
 
   return (
     <>
-      <div className={classes.root}>
+      <div className={classes.productsContainer}>
         <Helmet>
           <meta charSet="utf-8" />
           <title>Видеокарты</title>
@@ -34,7 +39,10 @@ const ProductsContainer = (props) => {
           {props.isLoaded ? (
             <>
               <Hits />
-              <Pagination />
+              <Grid container className={classes.grid}>
+                <Grid item xs><Pagination /></Grid>
+                <Grid item><AlgoliaSVG /></Grid>
+              </Grid>
             </>
           ) : (
             Array(36)

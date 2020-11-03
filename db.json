@@ -1112,7 +1112,7 @@
           "dvi": {
             "id": 16,
             "property": "DVI",
-            "value": "1 шт",
+            "value": "1 шт.",
             "hide": true
           }
         },
@@ -1428,28 +1428,28 @@
           "spu": {
             "id": 20,
             "property": "Число универсальных процессоров (SPU)",
-            "value": "-"
+            "value": "48"
           }
         },
         {
           "tmu": {
             "id": 21,
             "property": "Число текстурных блоков (TMU)",
-            "value": "-"
+            "value": "16"
           }
         },
         {
           "rop": {
             "id": 22,
             "property": "Число блоков растеризации (ROP)",
-            "value": "-"
+            "value": "8"
           }
         },
         {
           "process_technology": {
             "id": 23,
             "property": "Техпроцесс",
-            "value": "-"
+            "value": "40 нм"
           }
         },
         {
@@ -2982,7 +2982,7 @@
           "power_connectors": {
             "id": 13,
             "property": "Дополнительное питание",
-            "value": "8 pin"
+            "value": "8-pin"
           }
         },
         {
@@ -3304,7 +3304,7 @@
           "power_connectors": {
             "id": 13,
             "property": "Дополнительное питание",
-            "value": "6 pin"
+            "value": "6-pin"
           }
         },
         {
@@ -3589,7 +3589,7 @@
           "power_connectors": {
             "id": 13,
             "property": "Дополнительное питание",
-            "value": "8 pin"
+            "value": "8-pin"
           }
         },
         {
@@ -4942,7 +4942,7 @@
           "lineup": {
             "id": 4,
             "property": "Модельный ряд",
-            "value": "Radeon RX 550"
+            "value": "RX 550"
           }
         },
         {
@@ -5244,7 +5244,7 @@
           "lineup": {
             "id": 4,
             "property": "Модельный ряд",
-            "value": "Radeon RX 5700 XT"
+            "value": "RX 5700 XT"
           }
         },
         {
@@ -5536,7 +5536,7 @@
           "lineup": {
             "id": 4,
             "property": "Модельный ряд",
-            "value": "GeForce RTX2080 Super"
+            "value": "RTX 2080 Super"
           }
         },
         {
@@ -5848,7 +5848,7 @@
           "lineup": {
             "id": 4,
             "property": "Модельный ряд",
-            "value": "GeForce RTX3080"
+            "value": "RTX 3080"
           }
         },
         {
@@ -6220,7 +6220,7 @@
           "lineup": {
             "id": 4,
             "property": "Модельный ряд",
-            "value": "GeForce RTX 2080 Ti"
+            "value": "RTX 2080 Ti"
           }
         },
         {
@@ -6562,7 +6562,7 @@
           "lineup": {
             "id": 4,
             "property": "Модельный ряд",
-            "value": "GeForce RTX 2060 Super"
+            "value": "RTX 2060 Super"
           }
         },
         {
@@ -7099,6 +7099,3425 @@
           "thumbnail": "https://c.428.ua/img/1786794/50/40/i.jpg"
         }
       ]
+    },
+    {
+      "id": 25,
+      "sku": 539239,
+      "category": "video_cards",
+      "inventory": [
+        1,
+        0,
+        0
+      ],
+      "link": "graphics_card_msi_pci-e_radeon_rx_550_2gb_ddr5_rx_550_2gt_lp_oc",
+      "status": "доступно под заказ (1-5 дней)",
+      "name": "Видеокарта MSI PCI-E Radeon RX 550 2GB DDR5 (RX 550 2GT LP OC)",
+      "description": "RX 550 / 2 ГБ / GDDR-5 / 128 бит / DX-12 / Частота ядра - 1203 МГц / Частота памяти - 7000 МГц / HDMI - 1 шт. / DVI - 1 шт. / Блок питания - 400 Вт / 170x68x38 мм",
+      "poster": "https://d.428.ua/img/915428/320/240/.jpg",
+      "preview": "https://c.428.ua/img/915428/500/400/.jpg",
+      "photoInOrder": "https://elmir.ua/img/915428/100/100/.jpg",
+      "price": 2096,
+      "warranty": 36,
+      "reviewsCount": 1,
+      "ratingsCount": 1,
+      "totalRating": 5,
+      "isHit": true,
+      "isNew": false,
+      "specifications": [
+        {
+          "brand": {
+            "id": 1,
+            "property": "Производитель",
+            "value": "MSI"
+          }
+        },
+        {
+          "series": {
+            "id": 2,
+            "property": "Серия",
+            "value": "Radeon RX"
+          }
+        },
+        {
+          "chip_maker": {
+            "id": 3,
+            "property": "Производитель чипа",
+            "value": "AMD"
+          }
+        },
+        {
+          "lineup": {
+            "id": 4,
+            "property": "Модельный ряд",
+            "value": "RX 550"
+          }
+        },
+        {
+          "professional": {
+            "id": 5,
+            "property": "Профессиональная",
+            "value": "нет"
+          }
+        },
+        {
+          "condition": {
+            "id": 6,
+            "property": "Состояние",
+            "value": "новая"
+          }
+        },
+        {
+          "memory_size": {
+            "id": 7,
+            "property": "Объем памяти",
+            "value": "2 ГБ"
+          }
+        },
+        {
+          "memory_type": {
+            "id": 8,
+            "property": "Тип памяти",
+            "value": "GDDR-5"
+          }
+        },
+        {
+          "memory_bus": {
+            "id": 9,
+            "property": "Шина памяти",
+            "value": "128 бит"
+          }
+        },
+        {
+          "directX": {
+            "id": 10,
+            "property": "DirectX",
+            "value": "DX-12"
+          }
+        },
+        {
+          "engine_clock": {
+            "id": 11,
+            "property": "Частота ядра",
+            "value": "1203 МГц"
+          }
+        },
+        {
+          "memory_clock": {
+            "id": 12,
+            "property": "Частота памяти",
+            "value": "7000 МГц"
+          }
+        },
+        {
+          "power_connectors": {
+            "id": 13,
+            "property": "Дополнительное питание",
+            "value": "нет"
+          }
+        },
+        {
+          "interface": {
+            "id": 14,
+            "property": "Интерфейс подключения",
+            "value": "PCI-E х16 3.0"
+          }
+        },
+        {
+          "d-sub": {
+            "id": 15,
+            "property": "D-Sub (VGA)",
+            "value": "нет",
+            "hide": true
+          }
+        },
+        {
+          "dvi": {
+            "id": 16,
+            "property": "DVI",
+            "value": "1 шт.",
+            "hide": true
+          }
+        },
+        {
+          "hdmi": {
+            "id": 17,
+            "property": "HDMI",
+            "value": "1 шт.",
+            "hide": true
+          }
+        },
+        {
+          "displayPort": {
+            "id": 18,
+            "property": "DisplayPort",
+            "value": "нет",
+            "hide": true
+          }
+        },
+        {
+          "output": {
+            "id": 19,
+            "property": "Разъёмы подключения",
+            "value": "DL-DVI-D, HDMI"
+          }
+        },
+        {
+          "spu": {
+            "id": 20,
+            "property": "Число универсальных процессоров (SPU)",
+            "value": 512
+          }
+        },
+        {
+          "tmu": {
+            "id": 21,
+            "property": "Число текстурных блоков (TMU)",
+            "value": 32
+          }
+        },
+        {
+          "rop": {
+            "id": 22,
+            "property": "Число блоков растеризации (ROP)",
+            "value": 16
+          }
+        },
+        {
+          "process_technology": {
+            "id": 23,
+            "property": "Техпроцесс",
+            "value": "14 нм"
+          }
+        },
+        {
+          "power_consumption": {
+            "id": 24,
+            "property": "Энергопотребление",
+            "value": "65 Вт"
+          }
+        },
+        {
+          "recommended_psu": {
+            "id": 25,
+            "property": "Блок питания",
+            "value": "400 Вт"
+          }
+        },
+        {
+          "cooling_type": {
+            "id": 26,
+            "property": "Тип охлаждения",
+            "value": "активное"
+          }
+        },
+        {
+          "slot_type": {
+            "id": 27,
+            "property": "Исполнение",
+            "value": "однослотовое"
+          }
+        },
+        {
+          "dimensions": {
+            "id": 28,
+            "property": "Габариты",
+            "value": "170x68x38 мм"
+          }
+        },
+        {
+          "products_web_page": {
+            "id": 29,
+            "property": "Сайт производителя",
+            "value": "https://www.msi.com/Graphics-card/Radeon-RX-550-2GT-LP-OC.html#hero-overview"
+          }
+        }
+      ],
+      "photos": [
+        {
+          "id": 1,
+          "w240": "https://b.428.ua/img/915428/240/180/.jpg",
+          "w320": "https://b.428.ua/img/915428/320/240/.jpg",
+          "w425": "https://b.428.ua/img/915428/425/319/.jpg",
+          "w480": "https://b.428.ua/img/915428/480/360/.jpg",
+          "w640": "https://b.428.ua/img/915428/640/480/.jpg",
+          "original": "https://c.428.ua/img/915428/3000/2000/ua_videokarta_msi_pci-e_radeon_rx_550_2gb_ddr5_rx_550_2gt_lp_oc_videokarta_msi_pci-e_radeon_rx_550_2gb_ddr5_rx_550_2gt_lp_oc~879~749.jpg",
+          "thumbnail": "https://b.428.ua/img/915428/50/40/i.jpg"
+        },
+        {
+          "id": 2,
+          "w240": "https://c.428.ua/img/915429/240/180/.jpg",
+          "w320": "https://c.428.ua/img/915429/320/240/.jpg",
+          "w425": "https://c.428.ua/img/915429/425/319/.jpg",
+          "w480": "https://c.428.ua/img/915429/480/360/.jpg",
+          "w640": "https://c.428.ua/img/915429/640/480/.jpg",
+          "original": "https://d.428.ua/img/915429/3000/2000/ua_videokarta_msi_pci-e_radeon_rx_550_2gb_ddr5_rx_550_2gt_lp_oc_videokarta_msi_pci-e_radeon_rx_550_2gb_ddr5_rx_550_2gt_lp_oc~989~672.jpg",
+          "thumbnail": "https://c.428.ua/img/915429/50/40/i.jpg"
+        },
+        {
+          "id": 3,
+          "w240": "https://c.428.ua/img/915430/240/180/.jpg",
+          "w320": "https://c.428.ua/img/915430/320/240/.jpg",
+          "w425": "https://c.428.ua/img/915430/425/319/.jpg",
+          "w480": "https://c.428.ua/img/915430/480/360/.jpg",
+          "w640": "https://c.428.ua/img/915430/640/480/.jpg",
+          "original": "https://e.428.ua/img/915430/3000/2000/ua_videokarta_msi_pci-e_radeon_rx_550_2gb_ddr5_rx_550_2gt_lp_oc_videokarta_msi_pci-e_radeon_rx_550_2gb_ddr5_rx_550_2gt_lp_oc~957~797.jpg",
+          "thumbnail": "https://c.428.ua/img/915430/50/40/i.jpg"
+        },
+        {
+          "id": 4,
+          "w240": "https://c.428.ua/img/915431/240/180/.jpg",
+          "w320": "https://c.428.ua/img/915431/320/240/.jpg",
+          "w425": "https://c.428.ua/img/915431/425/319/.jpg",
+          "w480": "https://c.428.ua/img/915431/480/360/.jpg",
+          "w640": "https://c.428.ua/img/915431/640/480/.jpg",
+          "original": "https://f.428.ua/img/915431/3000/2000/ua_videokarta_msi_pci-e_radeon_rx_550_2gb_ddr5_rx_550_2gt_lp_oc_videokarta_msi_pci-e_radeon_rx_550_2gb_ddr5_rx_550_2gt_lp_oc~1011~724.jpg",
+          "thumbnail": "https://c.428.ua/img/915431/50/40/i.jpg"
+        },
+        {
+          "id": 5,
+          "w240": "https://c.428.ua/img/915432/240/180/.jpg",
+          "w320": "https://c.428.ua/img/915432/320/240/.jpg",
+          "w425": "https://c.428.ua/img/915432/425/319/.jpg",
+          "w480": "https://c.428.ua/img/915432/480/360/.jpg",
+          "w640": "https://c.428.ua/img/915432/640/480/.jpg",
+          "original": "https://a.428.ua/img/915432/3000/2000/ua_videokarta_msi_pci-e_radeon_rx_550_2gb_ddr5_rx_550_2gt_lp_oc_videokarta_msi_pci-e_radeon_rx_550_2gb_ddr5_rx_550_2gt_lp_oc~911~307.jpg",
+          "thumbnail": "https://c.428.ua/img/915432/50/40/i.jpg"
+        }
+      ]
+    },
+    {
+      "id": 26,
+      "sku": 539239,
+      "category": "video_cards",
+      "inventory": [
+        0,
+        0,
+        1
+      ],
+      "link": "graphics_card_palit_pci-e_geforce_rtx2080_ti_11gb_ddr6_gamingpro_oc_ne6208ts20lc-150a",
+      "status": "доступно под заказ (1-5 дней)",
+      "name": "Видеокарта Palit PCI-E GeForce RTX2080 Ti 11GB DDR6 GamingPro OC (NE6208TS20LC-150A)",
+      "description": "RTX 2080 Ti / 11 ГБ / GDDR-6 / 352 бит / DX-12 / Частота ядра - 1350 МГц / Частота памяти - 14000 МГц / поддержка NVIDIA SLI, поддержка VR, подключение более 3 мониторов, с бэкплейтом, с подсветкой / HDMI - 1 шт. / DisplayPort - 3 шт. / Блок питания - 650 Вт / 292x112x58 мм",
+      "poster": "https://d.428.ua/img/1544111/320/240/.jpg",
+      "preview": "https://c.428.ua/img/1544111/500/400/.jpg",
+      "photoInOrder": "https://elmir.ua/img/1544111/100/100/.jpg",
+      "price": 31793,
+      "warranty": 24,
+      "reviewsCount": 0,
+      "ratingsCount": 0,
+      "totalRating": 0,
+      "isHit": false,
+      "isNew": false,
+      "specifications": [
+        {
+          "brand": {
+            "id": 1,
+            "property": "Производитель",
+            "value": "Palit"
+          }
+        },
+        {
+          "series": {
+            "id": 2,
+            "property": "Серия",
+            "value": "GeForce RTX 2000"
+          }
+        },
+        {
+          "chip_maker": {
+            "id": 3,
+            "property": "Производитель чипа",
+            "value": "NVIDIA"
+          }
+        },
+        {
+          "lineup": {
+            "id": 4,
+            "property": "Модельный ряд",
+            "value": "RTX 2080 Ti"
+          }
+        },
+        {
+          "professional": {
+            "id": 5,
+            "property": "Профессиональная",
+            "value": "нет"
+          }
+        },
+        {
+          "condition": {
+            "id": 6,
+            "property": "Состояние",
+            "value": "новая"
+          }
+        },
+        {
+          "memory_size": {
+            "id": 7,
+            "property": "Объем памяти",
+            "value": "11 ГБ"
+          }
+        },
+        {
+          "memory_type": {
+            "id": 8,
+            "property": "Тип памяти",
+            "value": "GDDR-6"
+          }
+        },
+        {
+          "memory_bus": {
+            "id": 9,
+            "property": "Шина памяти",
+            "value": "352 бит"
+          }
+        },
+        {
+          "directX": {
+            "id": 10,
+            "property": "DirectX",
+            "value": "DX-12"
+          }
+        },
+        {
+          "engine_clock": {
+            "id": 11,
+            "property": "Частота ядра",
+            "value": "1350 МГц"
+          }
+        },
+        {
+          "memory_clock": {
+            "id": 12,
+            "property": "Частота памяти",
+            "value": "14000 МГц"
+          }
+        },
+        {
+          "power_connectors": {
+            "id": 13,
+            "property": "Дополнительное питание",
+            "value": "8+8 pin"
+          }
+        },
+        {
+          "interface": {
+            "id": 14,
+            "property": "Интерфейс подключения",
+            "value": "PCI-E х16 3.0"
+          }
+        },
+        {
+          "d-sub": {
+            "id": 15,
+            "property": "D-Sub (VGA)",
+            "value": "нет",
+            "hide": true
+          }
+        },
+        {
+          "dvi": {
+            "id": 16,
+            "property": "DVI",
+            "value": "нет",
+            "hide": true
+          }
+        },
+        {
+          "hdmi": {
+            "id": 17,
+            "property": "HDMI",
+            "value": "1 шт.",
+            "hide": true
+          }
+        },
+        {
+          "displayPort": {
+            "id": 18,
+            "property": "DisplayPort",
+            "value": "3 шт.",
+            "hide": true
+          }
+        },
+        {
+          "output": {
+            "id": 19,
+            "property": "Разъёмы подключения",
+            "value": "3xDisplayPort 1.4, HDMI 2.0b, USB Type-C"
+          }
+        },
+        {
+          "spu": {
+            "id": 20,
+            "property": "Число универсальных процессоров (SPU)",
+            "value": 4352
+          }
+        },
+        {
+          "tmu": {
+            "id": 21,
+            "property": "Число текстурных блоков (TMU)",
+            "value": 272
+          }
+        },
+        {
+          "rop": {
+            "id": 22,
+            "property": "Число блоков растеризации (ROP)",
+            "value": 88
+          }
+        },
+        {
+          "process_technology": {
+            "id": 23,
+            "property": "Техпроцесс",
+            "value": "12 нм"
+          }
+        },
+        {
+          "power_consumption": {
+            "id": 24,
+            "property": "Энергопотребление",
+            "value": "295 Вт"
+          }
+        },
+        {
+          "recommended_psu": {
+            "id": 25,
+            "property": "Блок питания",
+            "value": "650 Вт"
+          }
+        },
+        {
+          "cooling_type": {
+            "id": 26,
+            "property": "Тип охлаждения",
+            "value": "активное"
+          }
+        },
+        {
+          "features": {
+            "id": 27,
+            "property": "Особенности",
+            "value": "поддержка VR"
+          }
+        },
+        {
+          "slot_type": {
+            "id": 28,
+            "property": "Исполнение",
+            "value": "двухслотовое"
+          }
+        },
+        {
+          "dimensions": {
+            "id": 29,
+            "property": "Габариты",
+            "value": "292x112x58 мм"
+          }
+        },
+        {
+          "products_web_page": {
+            "id": 30,
+            "property": "Сайт производителя",
+            "value": "http://www.palit.com/palit/vgapro.php?id=3006"
+          }
+        }
+      ],
+      "photos": [
+        {
+          "id": 1,
+          "w240": "https://b.428.ua/img/1544111/240/180/.jpg",
+          "w320": "https://b.428.ua/img/1544111/320/240/.jpg",
+          "w425": "https://b.428.ua/img/1544111/425/319/.jpg",
+          "w480": "https://b.428.ua/img/1544111/480/360/.jpg",
+          "w640": "https://b.428.ua/img/1544111/640/480/.jpg",
+          "original": "https://f.428.ua/img/1544111/3000/2000/ua_videokarta_palit_pci-e_geforce_rtx2080_ti_11gb_ddr6_gamingpro_oc_ne6208ts20lc-150a_videokarta_palit_pci-e_geforce_rtx2080_ti_11gb_ddr6_gamingpro_oc_ne6208ts20lc-150a~993~419.jpg",
+          "thumbnail": "https://b.428.ua/img/1544111/50/40/i.jpg"
+        },
+        {
+          "id": 2,
+          "w240": "https://c.428.ua/img/1544112/240/180/.jpg",
+          "w320": "https://c.428.ua/img/1544112/320/240/.jpg",
+          "w425": "https://c.428.ua/img/1544112/425/319/.jpg",
+          "w480": "https://c.428.ua/img/1544112/480/360/.jpg",
+          "w640": "https://c.428.ua/img/1544112/640/480/.jpg",
+          "original": "https://a.428.ua/img/1544112/3000/2000/ua_videokarta_palit_pci-e_geforce_rtx2080_ti_11gb_ddr6_gamingpro_oc_ne6208ts20lc-150a_videokarta_palit_pci-e_geforce_rtx2080_ti_11gb_ddr6_gamingpro_oc_ne6208ts20lc-150a~991~358.jpg",
+          "thumbnail": "https://c.428.ua/img/1544112/50/40/i.jpg"
+        },
+        {
+          "id": 3,
+          "w240": "https://c.428.ua/img/1544113/240/180/.jpg",
+          "w320": "https://c.428.ua/img/1544113/320/240/.jpg",
+          "w425": "https://c.428.ua/img/1544113/425/319/.jpg",
+          "w480": "https://c.428.ua/img/1544113/480/360/.jpg",
+          "w640": "https://c.428.ua/img/1544113/640/480/.jpg",
+          "original": "https://b.428.ua/img/1544113/3000/2000/ua_videokarta_palit_pci-e_geforce_rtx2080_ti_11gb_ddr6_gamingpro_oc_ne6208ts20lc-150a_videokarta_palit_pci-e_geforce_rtx2080_ti_11gb_ddr6_gamingpro_oc_ne6208ts20lc-150a~801~734.jpg",
+          "thumbnail": "https://c.428.ua/img/1544113/50/40/i.jpg"
+        },
+        {
+          "id": 4,
+          "w240": "https://c.428.ua/img/1544114/240/180/.jpg",
+          "w320": "https://c.428.ua/img/1544114/320/240/.jpg",
+          "w425": "https://c.428.ua/img/1544114/425/319/.jpg",
+          "w480": "https://c.428.ua/img/1544114/480/360/.jpg",
+          "w640": "https://c.428.ua/img/1544114/640/480/.jpg",
+          "original": "https://c.428.ua/img/1544114/3000/2000/ua_videokarta_palit_pci-e_geforce_rtx2080_ti_11gb_ddr6_gamingpro_oc_ne6208ts20lc-150a_videokarta_palit_pci-e_geforce_rtx2080_ti_11gb_ddr6_gamingpro_oc_ne6208ts20lc-150a~870~167.jpg",
+          "thumbnail": "https://c.428.ua/img/1544114/50/40/i.jpg"
+        },
+        {
+          "id": 5,
+          "w240": "https://c.428.ua/img/1544115/240/180/.jpg",
+          "w320": "https://c.428.ua/img/1544115/320/240/.jpg",
+          "w425": "https://c.428.ua/img/1544115/425/319/.jpg",
+          "w480": "https://c.428.ua/img/1544115/480/360/.jpg",
+          "w640": "https://c.428.ua/img/1544115/640/480/.jpg",
+          "original": "https://d.428.ua/img/1544115/3000/2000/ua_videokarta_palit_pci-e_geforce_rtx2080_ti_11gb_ddr6_gamingpro_oc_ne6208ts20lc-150a_videokarta_palit_pci-e_geforce_rtx2080_ti_11gb_ddr6_gamingpro_oc_ne6208ts20lc-150a~995~421.jpg",
+          "thumbnail": "https://c.428.ua/img/1544115/50/40/i.jpg"
+        },
+        {
+          "id": 6,
+          "w240": "https://c.428.ua/img/1544116/240/180/.jpg",
+          "w320": "https://c.428.ua/img/1544116/320/240/.jpg",
+          "w425": "https://c.428.ua/img/1544116/425/319/.jpg",
+          "w480": "https://c.428.ua/img/1544116/480/360/.jpg",
+          "w640": "https://c.428.ua/img/1544116/640/480/.jpg",
+          "original": "https://e.428.ua/img/1544116/3000/2000/ua_videokarta_palit_pci-e_geforce_rtx2080_ti_11gb_ddr6_gamingpro_oc_ne6208ts20lc-150a_videokarta_palit_pci-e_geforce_rtx2080_ti_11gb_ddr6_gamingpro_oc_ne6208ts20lc-150a~969~442.jpg",
+          "thumbnail": "https://c.428.ua/img/1544116/50/40/i.jpg"
+        },
+        {
+          "id": 7,
+          "w240": "https://c.428.ua/img/1544117/240/180/.jpg",
+          "w320": "https://c.428.ua/img/1544117/320/240/.jpg",
+          "w425": "https://c.428.ua/img/1544117/425/319/.jpg",
+          "w480": "https://c.428.ua/img/1544117/480/360/.jpg",
+          "w640": "https://c.428.ua/img/1544117/640/480/.jpg",
+          "original": "https://f.428.ua/img/1544117/3000/2000/ua_videokarta_palit_pci-e_geforce_rtx2080_ti_11gb_ddr6_gamingpro_oc_ne6208ts20lc-150a_videokarta_palit_pci-e_geforce_rtx2080_ti_11gb_ddr6_gamingpro_oc_ne6208ts20lc-150a~761~612.jpg",
+          "thumbnail": "https://c.428.ua/img/1544117/50/40/i.jpg"
+        }
+      ]
+    },
+    {
+      "id": 27,
+      "sku": 885214,
+      "category": "video_cards",
+      "inventory": [
+        1,
+        0,
+        0
+      ],
+      "link": "graphics_card_inno3d_pci-e_geforce_rtx2080_8gb_ddr6_gaming_oc_x3_n20803-08d6x-1180va24",
+      "status": "доступно под заказ (1-5 дней)",
+      "name": "Видеокарта Inno3D PCI-E GeForce RTX2080 8GB DDR6 Gaming OC X3 (N20803-08D6X-1180VA24)",
+      "description": "RTX 2080 / 8 ГБ / GDDR-6 / 256 бит / DX-12 / Частота ядра - 1830 МГц / Частота памяти - 14000 МГц / поддержка VR, подключение более 3 мониторов / HDMI - 1 шт. / DisplayPort - 3 шт. / Блок питания - 650 Вт / 272x118 мм",
+      "poster": "https://d.428.ua/img/1749723/320/240/.jpg",
+      "preview": "https://c.428.ua/img/1749723/500/400/.jpg",
+      "photoInOrder": "https://elmir.ua/img/1749723/100/100/.jpg",
+      "price": 26020,
+      "warranty": 24,
+      "reviewsCount": 0,
+      "ratingsCount": 0,
+      "totalRating": 0,
+      "isHit": false,
+      "isNew": false,
+      "specifications": [
+        {
+          "brand": {
+            "id": 1,
+            "property": "Производитель",
+            "value": "Inno3D"
+          }
+        },
+        {
+          "series": {
+            "id": 2,
+            "property": "Серия",
+            "value": "GeForce RTX 2000"
+          }
+        },
+        {
+          "chip_maker": {
+            "id": 3,
+            "property": "Производитель чипа",
+            "value": "NVIDIA"
+          }
+        },
+        {
+          "lineup": {
+            "id": 4,
+            "property": "Модельный ряд",
+            "value": "RTX 2080"
+          }
+        },
+        {
+          "professional": {
+            "id": 5,
+            "property": "Профессиональная",
+            "value": "нет"
+          }
+        },
+        {
+          "condition": {
+            "id": 6,
+            "property": "Состояние",
+            "value": "новая"
+          }
+        },
+        {
+          "memory_size": {
+            "id": 7,
+            "property": "Объем памяти",
+            "value": "8 ГБ"
+          }
+        },
+        {
+          "memory_type": {
+            "id": 8,
+            "property": "Тип памяти",
+            "value": "GDDR-6"
+          }
+        },
+        {
+          "memory_bus": {
+            "id": 9,
+            "property": "Шина памяти",
+            "value": "256 бит"
+          }
+        },
+        {
+          "directX": {
+            "id": 10,
+            "property": "DirectX",
+            "value": "DX-12"
+          }
+        },
+        {
+          "engine_clock": {
+            "id": 11,
+            "property": "Частота ядра",
+            "value": "1830 МГц"
+          }
+        },
+        {
+          "memory_clock": {
+            "id": 12,
+            "property": "Частота памяти",
+            "value": "14000 МГц"
+          }
+        },
+        {
+          "power_connectors": {
+            "id": 13,
+            "property": "Дополнительное питание",
+            "value": "6+8 pin"
+          }
+        },
+        {
+          "interface": {
+            "id": 14,
+            "property": "Интерфейс подключения",
+            "value": "PCI-E х16 3.0"
+          }
+        },
+        {
+          "d-sub": {
+            "id": 15,
+            "property": "D-Sub (VGA)",
+            "value": "нет",
+            "hide": true
+          }
+        },
+        {
+          "dvi": {
+            "id": 16,
+            "property": "DVI",
+            "value": "нет",
+            "hide": true
+          }
+        },
+        {
+          "hdmi": {
+            "id": 17,
+            "property": "HDMI",
+            "value": "1 шт.",
+            "hide": true
+          }
+        },
+        {
+          "displayPort": {
+            "id": 18,
+            "property": "DisplayPort",
+            "value": "3 шт.",
+            "hide": true
+          }
+        },
+        {
+          "output": {
+            "id": 19,
+            "property": "Разъёмы подключения",
+            "value": "HDMI 2.0b, 3хDisplayPort 1.4, USB-C and Virtual-link"
+          }
+        },
+        {
+          "spu": {
+            "id": 20,
+            "property": "Число универсальных процессоров (SPU)",
+            "value": 2944
+          }
+        },
+        {
+          "tmu": {
+            "id": 21,
+            "property": "Число текстурных блоков (TMU)",
+            "value": 184
+          }
+        },
+        {
+          "rop": {
+            "id": 22,
+            "property": "Число блоков растеризации (ROP)",
+            "value": 64
+          }
+        },
+        {
+          "process_technology": {
+            "id": 23,
+            "property": "Техпроцесс",
+            "value": "12 нм"
+          }
+        },
+        {
+          "power_consumption": {
+            "id": 24,
+            "property": "Энергопотребление",
+            "value": "230 Вт"
+          }
+        },
+        {
+          "recommended_psu": {
+            "id": 25,
+            "property": "Блок питания",
+            "value": "650 Вт"
+          }
+        },
+        {
+          "cooling_type": {
+            "id": 26,
+            "property": "Тип охлаждения",
+            "value": "активное"
+          }
+        },
+        {
+          "features": {
+            "id": 27,
+            "property": "Особенности",
+            "value": "поддержка VR"
+          }
+        },
+        {
+          "slot_type": {
+            "id": 28,
+            "property": "Исполнение",
+            "value": "двухслотовое"
+          }
+        },
+        {
+          "dimensions": {
+            "id": 29,
+            "property": "Габариты",
+            "value": "272x118 мм"
+          }
+        },
+        {
+          "products_web_page": {
+            "id": 30,
+            "property": "Сайт производителя",
+            "value": "http://www.inno3d.com/products_detail.php?refid=400"
+          }
+        }
+      ],
+      "photos": [
+        {
+          "id": 1,
+          "w240": "https://b.428.ua/img/1749723/240/180/.jpg",
+          "w320": "https://b.428.ua/img/1749723/320/240/.jpg",
+          "w425": "https://b.428.ua/img/1749723/425/319/.jpg",
+          "w480": "https://b.428.ua/img/1749723/480/360/.jpg",
+          "w640": "https://b.428.ua/img/1749723/640/480/.jpg",
+          "original": "https://d.428.ua/img/1749723/3000/2000/ua_videokarta_inno3d_pci-e_geforce_rtx2080_8gb_ddr6_gaming_oc_x3_n20803-08d6x-1180va24_videokarta_inno3d_pci-e_geforce_rtx2080_8gb_ddr6_gaming_oc_x3_n20803-08d6x-1180va24~3000~1406.jpg",
+          "thumbnail": "https://b.428.ua/img/1749723/50/40/i.jpg"
+        },
+        {
+          "id": 2,
+          "w240": "https://c.428.ua/img/1749724/240/180/.jpg",
+          "w320": "https://c.428.ua/img/1749724/320/240/.jpg",
+          "w425": "https://c.428.ua/img/1749724/425/319/.jpg",
+          "w480": "https://c.428.ua/img/1749724/480/360/.jpg",
+          "w640": "https://c.428.ua/img/1749724/640/480/.jpg",
+          "original": "https://e.428.ua/img/1749724/3000/2000/ua_videokarta_inno3d_pci-e_geforce_rtx2080_8gb_ddr6_gaming_oc_x3_n20803-08d6x-1180va24_videokarta_inno3d_pci-e_geforce_rtx2080_8gb_ddr6_gaming_oc_x3_n20803-08d6x-1180va24~3000~1894.jpg",
+          "thumbnail": "https://c.428.ua/img/1749724/50/40/i.jpg"
+        },
+        {
+          "id": 3,
+          "w240": "https://c.428.ua/img/1749725/240/180/.jpg",
+          "w320": "https://c.428.ua/img/1749725/320/240/.jpg",
+          "w425": "https://c.428.ua/img/1749725/425/319/.jpg",
+          "w480": "https://c.428.ua/img/1749725/480/360/.jpg",
+          "w640": "https://c.428.ua/img/1749725/640/480/.jpg",
+          "original": "https://f.428.ua/img/1749725/3000/2000/ua_videokarta_inno3d_pci-e_geforce_rtx2080_8gb_ddr6_gaming_oc_x3_n20803-08d6x-1180va24_videokarta_inno3d_pci-e_geforce_rtx2080_8gb_ddr6_gaming_oc_x3_n20803-08d6x-1180va24~3000~1510.jpg",
+          "thumbnail": "https://c.428.ua/img/1749725/50/40/i.jpg"
+        },
+        {
+          "id": 4,
+          "w240": "https://c.428.ua/img/1749726/240/180/.jpg",
+          "w320": "https://c.428.ua/img/1749726/320/240/.jpg",
+          "w425": "https://c.428.ua/img/1749726/425/319/.jpg",
+          "w480": "https://c.428.ua/img/1749726/480/360/.jpg",
+          "w640": "https://c.428.ua/img/1749726/640/480/.jpg",
+          "original": "https://a.428.ua/img/1749726/3000/2000/ua_videokarta_inno3d_pci-e_geforce_rtx2080_8gb_ddr6_gaming_oc_x3_n20803-08d6x-1180va24_videokarta_inno3d_pci-e_geforce_rtx2080_8gb_ddr6_gaming_oc_x3_n20803-08d6x-1180va24~2998~1569.jpg",
+          "thumbnail": "https://c.428.ua/img/1749726/50/40/i.jpg"
+        },
+        {
+          "id": 5,
+          "w240": "https://c.428.ua/img/1749727/240/180/.jpg",
+          "w320": "https://c.428.ua/img/1749727/320/240/.jpg",
+          "w425": "https://c.428.ua/img/1749727/425/319/.jpg",
+          "w480": "https://c.428.ua/img/1749727/480/360/.jpg",
+          "w640": "https://c.428.ua/img/1749727/640/480/.jpg",
+          "original": "https://b.428.ua/img/1749727/3000/2000/ua_videokarta_inno3d_pci-e_geforce_rtx2080_8gb_ddr6_gaming_oc_x3_n20803-08d6x-1180va24_videokarta_inno3d_pci-e_geforce_rtx2080_8gb_ddr6_gaming_oc_x3_n20803-08d6x-1180va24~990~692.jpg",
+          "thumbnail": "https://c.428.ua/img/1749727/50/40/i.jpg"
+        }
+      ]
+    },
+    {
+      "id": 28,
+      "sku": 958622,
+      "category": "video_cards",
+      "inventory": [
+        0,
+        0,
+        0
+      ],
+      "link": "graphics_card_inno3d_pci-e_geforce_rtx2080_super_8gb_ddr6_ichill_frostbite_c208sb-08d6x-1180fros",
+      "status": "доступно под заказ (1-5 дней)",
+      "name": "Видеокарта Inno3D PCI-E GeForce RTX2080 Super 8GB DDR6 iChill Frostbite (C208SB-08D6X-1180FROS)",
+      "description": "RTX 2080 Super / 8 ГБ / GDDR-6 / 256 бит / DX-12 / Частота ядра - 1845 МГц / Частота памяти - 15500 МГц / поддержка NVIDIA SLI, с подсветкой / HDMI - 1 шт. / DisplayPort - 3 шт. / Блок питания - 650 Вт / 265x135 мм",
+      "poster": "https://d.428.ua/img/1975333/320/240/.jpg",
+      "preview": "https://c.428.ua/img/1975333/500/400/.jpg",
+      "photoInOrder": "https://elmir.ua/img/1975333/100/100/.jpg",
+      "price": 25579,
+      "warranty": 24,
+      "reviewsCount": 0,
+      "ratingsCount": 0,
+      "totalRating": 0,
+      "isHit": false,
+      "isNew": false,
+      "specifications": [
+        {
+          "brand": {
+            "id": 1,
+            "property": "Производитель",
+            "value": "Inno3D"
+          }
+        },
+        {
+          "series": {
+            "id": 2,
+            "property": "Серия",
+            "value": "GeForce RTX 2000"
+          }
+        },
+        {
+          "chip_maker": {
+            "id": 3,
+            "property": "Производитель чипа",
+            "value": "NVIDIA"
+          }
+        },
+        {
+          "lineup": {
+            "id": 4,
+            "property": "Модельный ряд",
+            "value": "RTX 2080 Super"
+          }
+        },
+        {
+          "professional": {
+            "id": 5,
+            "property": "Профессиональная",
+            "value": "нет"
+          }
+        },
+        {
+          "condition": {
+            "id": 6,
+            "property": "Состояние",
+            "value": "новая"
+          }
+        },
+        {
+          "memory_size": {
+            "id": 7,
+            "property": "Объем памяти",
+            "value": "8 ГБ"
+          }
+        },
+        {
+          "memory_type": {
+            "id": 8,
+            "property": "Тип памяти",
+            "value": "GDDR-6"
+          }
+        },
+        {
+          "memory_bus": {
+            "id": 9,
+            "property": "Шина памяти",
+            "value": "256 бит"
+          }
+        },
+        {
+          "directX": {
+            "id": 10,
+            "property": "DirectX",
+            "value": "DX-12"
+          }
+        },
+        {
+          "engine_clock": {
+            "id": 11,
+            "property": "Частота ядра",
+            "value": "1845 МГц"
+          }
+        },
+        {
+          "memory_clock": {
+            "id": 12,
+            "property": "Частота памяти",
+            "value": "15500 МГц"
+          }
+        },
+        {
+          "power_connectors": {
+            "id": 13,
+            "property": "Дополнительное питание",
+            "value": "6+8 pin"
+          }
+        },
+        {
+          "interface": {
+            "id": 14,
+            "property": "Интерфейс подключения",
+            "value": "PCI-E х16 3.0"
+          }
+        },
+        {
+          "d-sub": {
+            "id": 15,
+            "property": "D-Sub (VGA)",
+            "value": "нет",
+            "hide": true
+          }
+        },
+        {
+          "dvi": {
+            "id": 16,
+            "property": "DVI",
+            "value": "нет",
+            "hide": true
+          }
+        },
+        {
+          "hdmi": {
+            "id": 17,
+            "property": "HDMI",
+            "value": "1 шт.",
+            "hide": true
+          }
+        },
+        {
+          "displayPort": {
+            "id": 18,
+            "property": "DisplayPort",
+            "value": "3 шт.",
+            "hide": true
+          }
+        },
+        {
+          "output": {
+            "id": 19,
+            "property": "Разъёмы подключения",
+            "value": "HDMI 2.0b, 3хDisplayPort 1.4a"
+          }
+        },
+        {
+          "spu": {
+            "id": 20,
+            "property": "Число универсальных процессоров (SPU)",
+            "value": 3072
+          }
+        },
+        {
+          "tmu": {
+            "id": 21,
+            "property": "Число текстурных блоков (TMU)",
+            "value": 192
+          }
+        },
+        {
+          "rop": {
+            "id": 22,
+            "property": "Число блоков растеризации (ROP)",
+            "value": 64
+          }
+        },
+        {
+          "process_technology": {
+            "id": 23,
+            "property": "Техпроцесс",
+            "value": "12 нм"
+          }
+        },
+        {
+          "power_consumption": {
+            "id": 24,
+            "property": "Энергопотребление",
+            "value": "250 Вт"
+          }
+        },
+        {
+          "recommended_psu": {
+            "id": 25,
+            "property": "Блок питания",
+            "value": "650 Вт"
+          }
+        },
+        {
+          "cooling_type": {
+            "id": 26,
+            "property": "Тип охлаждения",
+            "value": "водяное"
+          }
+        },
+        {
+          "slot_type": {
+            "id": 27,
+            "property": "Исполнение",
+            "value": "двухслотовое"
+          }
+        },
+        {
+          "dimensions": {
+            "id": 28,
+            "property": "Габариты",
+            "value": "265x135 мм"
+          }
+        },
+        {
+          "products_web_page": {
+            "id": 29,
+            "property": "Сайт производителя",
+            "value": "http://www.inno3d.com/products_detail.php?refid=495"
+          }
+        }
+      ],
+      "photos": [
+        {
+          "id": 1,
+          "w240": "https://b.428.ua/img/1975333/240/180/.jpg",
+          "w320": "https://b.428.ua/img/1975333/320/240/.jpg",
+          "w425": "https://b.428.ua/img/1975333/425/319/.jpg",
+          "w480": "https://b.428.ua/img/1975333/480/360/.jpg",
+          "w640": "https://b.428.ua/img/1975333/640/480/.jpg",
+          "original": "https://b.428.ua/img/1975333/3000/2000/ua_videokarta_inno3d_pci-e_geforce_rtx2080_super_8gb_ddr6_ichill_frostbite_c208sb-08d6x-1180fros_videokarta_inno3d_pci-e_geforce_rtx2080_super_8gb_ddr6_ichill_frostbite_c208sb-08d6x-1180fros~700~390.jpg",
+          "thumbnail": "https://b.428.ua/img/1975333/50/40/i.jpg"
+        },
+        {
+          "id": 2,
+          "w240": "https://c.428.ua/img/1975334/240/180/.jpg",
+          "w320": "https://c.428.ua/img/1975334/320/240/.jpg",
+          "w425": "https://c.428.ua/img/1975334/425/319/.jpg",
+          "w480": "https://c.428.ua/img/1975334/480/360/.jpg",
+          "w640": "https://c.428.ua/img/1975334/640/480/.jpg",
+          "original": "https://c.428.ua/img/1975334/3000/2000/ua_videokarta_inno3d_pci-e_geforce_rtx2080_super_8gb_ddr6_ichill_frostbite_c208sb-08d6x-1180fros_videokarta_inno3d_pci-e_geforce_rtx2080_super_8gb_ddr6_ichill_frostbite_c208sb-08d6x-1180fros~700~387.jpg",
+          "thumbnail": "https://c.428.ua/img/1975334/50/40/i.jpg"
+        },
+        {
+          "id": 3,
+          "w240": "https://c.428.ua/img/1975335/240/180/.jpg",
+          "w320": "https://c.428.ua/img/1975335/320/240/.jpg",
+          "w425": "https://c.428.ua/img/1975335/425/319/.jpg",
+          "w480": "https://c.428.ua/img/1975335/480/360/.jpg",
+          "w640": "https://c.428.ua/img/1975335/640/480/.jpg",
+          "original": "https://d.428.ua/img/1975335/3000/2000/ua_videokarta_inno3d_pci-e_geforce_rtx2080_super_8gb_ddr6_ichill_frostbite_c208sb-08d6x-1180fros_videokarta_inno3d_pci-e_geforce_rtx2080_super_8gb_ddr6_ichill_frostbite_c208sb-08d6x-1180fros~700~223.jpg",
+          "thumbnail": "https://c.428.ua/img/1975335/50/40/i.jpg"
+        },
+        {
+          "id": 4,
+          "w240": "https://c.428.ua/img/1975336/240/180/.jpg",
+          "w320": "https://c.428.ua/img/1975336/320/240/.jpg",
+          "w425": "https://c.428.ua/img/1975336/425/319/.jpg",
+          "w480": "https://c.428.ua/img/1975336/480/360/.jpg",
+          "w640": "https://c.428.ua/img/1975336/640/480/.jpg",
+          "original": "https://e.428.ua/img/1975336/3000/2000/ua_videokarta_inno3d_pci-e_geforce_rtx2080_super_8gb_ddr6_ichill_frostbite_c208sb-08d6x-1180fros_videokarta_inno3d_pci-e_geforce_rtx2080_super_8gb_ddr6_ichill_frostbite_c208sb-08d6x-1180fros~1533~1026.jpg",
+          "thumbnail": "https://c.428.ua/img/1975336/50/40/i.jpg"
+        }
+      ]
+    },
+    {
+      "id": 29,
+      "sku": 958611,
+      "category": "video_cards",
+      "inventory": [
+        0,
+        0,
+        0
+      ],
+      "link": "graphics_card_inno3d_pci-e_geforce_rtx2080_super_8gb_ddr6_twin_x2_oc_n208s2-08d6x-11801167",
+      "status": "доступно под заказ (1-5 дней)",
+      "name": "Видеокарта Inno3D PCI-E GeForce RTX2080 Super 8GB DDR6 Twin X2 OC (N208S2-08D6X-11801167)",
+      "description": "RTX 2080 Super / 8 ГБ / GDDR-6 / 256 бит / DX-12 / Частота ядра - 1830 МГц / Частота памяти - 15500 МГц / поддержка VR / HDMI - 1 шт. / DisplayPort - 3 шт. / Блок питания - 650 Вт / 268x113 мм",
+      "poster": "https://d.428.ua/img/1975321/320/240/.jpg",
+      "preview": "https://c.428.ua/img/1975321/500/400/.jpg",
+      "photoInOrder": "https://elmir.ua/img/1975321/100/100/.jpg",
+      "price": 24791,
+      "warranty": 24,
+      "reviewsCount": 0,
+      "ratingsCount": 0,
+      "totalRating": 0,
+      "isHit": false,
+      "isNew": false,
+      "specifications": [
+        {
+          "brand": {
+            "id": 1,
+            "property": "Производитель",
+            "value": "Inno3D"
+          }
+        },
+        {
+          "series": {
+            "id": 2,
+            "property": "Серия",
+            "value": "GeForce RTX 2000"
+          }
+        },
+        {
+          "chip_maker": {
+            "id": 3,
+            "property": "Производитель чипа",
+            "value": "NVIDIA"
+          }
+        },
+        {
+          "lineup": {
+            "id": 4,
+            "property": "Модельный ряд",
+            "value": "RTX 2080 Super"
+          }
+        },
+        {
+          "professional": {
+            "id": 5,
+            "property": "Профессиональная",
+            "value": "нет"
+          }
+        },
+        {
+          "condition": {
+            "id": 6,
+            "property": "Состояние",
+            "value": "новая"
+          }
+        },
+        {
+          "memory_size": {
+            "id": 7,
+            "property": "Объем памяти",
+            "value": "8 ГБ"
+          }
+        },
+        {
+          "memory_type": {
+            "id": 8,
+            "property": "Тип памяти",
+            "value": "GDDR-6"
+          }
+        },
+        {
+          "memory_bus": {
+            "id": 9,
+            "property": "Шина памяти",
+            "value": "256 бит"
+          }
+        },
+        {
+          "directX": {
+            "id": 10,
+            "property": "DirectX",
+            "value": "DX-12"
+          }
+        },
+        {
+          "engine_clock": {
+            "id": 11,
+            "property": "Частота ядра",
+            "value": "1830 МГц"
+          }
+        },
+        {
+          "memory_clock": {
+            "id": 12,
+            "property": "Частота памяти",
+            "value": "15500 МГц"
+          }
+        },
+        {
+          "power_connectors": {
+            "id": 13,
+            "property": "Дополнительное питание",
+            "value": "6+8 pin"
+          }
+        },
+        {
+          "interface": {
+            "id": 14,
+            "property": "Интерфейс подключения",
+            "value": "PCI-E х16 3.0"
+          }
+        },
+        {
+          "d-sub": {
+            "id": 15,
+            "property": "D-Sub (VGA)",
+            "value": "нет",
+            "hide": true
+          }
+        },
+        {
+          "dvi": {
+            "id": 16,
+            "property": "DVI",
+            "value": "нет",
+            "hide": true
+          }
+        },
+        {
+          "hdmi": {
+            "id": 17,
+            "property": "HDMI",
+            "value": "1 шт.",
+            "hide": true
+          }
+        },
+        {
+          "displayPort": {
+            "id": 18,
+            "property": "DisplayPort",
+            "value": "3 шт.",
+            "hide": true
+          }
+        },
+        {
+          "output": {
+            "id": 19,
+            "property": "Разъёмы подключения",
+            "value": "HDMI (2.0b), 3xDisplayPort (1.4)"
+          }
+        },
+        {
+          "spu": {
+            "id": 20,
+            "property": "Число универсальных процессоров (SPU)",
+            "value": 3072
+          }
+        },
+        {
+          "tmu": {
+            "id": 21,
+            "property": "Число текстурных блоков (TMU)",
+            "value": 192
+          }
+        },
+        {
+          "rop": {
+            "id": 22,
+            "property": "Число блоков растеризации (ROP)",
+            "value": 64
+          }
+        },
+        {
+          "process_technology": {
+            "id": 23,
+            "property": "Техпроцесс",
+            "value": "12 нм"
+          }
+        },
+        {
+          "power_consumption": {
+            "id": 24,
+            "property": "Энергопотребление",
+            "value": "250 Вт"
+          }
+        },
+        {
+          "recommended_psu": {
+            "id": 25,
+            "property": "Блок питания",
+            "value": "650 Вт"
+          }
+        },
+        {
+          "cooling_type": {
+            "id": 26,
+            "property": "Тип охлаждения",
+            "value": "активное"
+          }
+        },
+        {
+          "features": {
+            "id": 27,
+            "property": "Особенности",
+            "value": "поддержка VR"
+          }
+        },
+        {
+          "slot_type": {
+            "id": 28,
+            "property": "Исполнение",
+            "value": "двухслотовое"
+          }
+        },
+        {
+          "dimensions": {
+            "id": 29,
+            "property": "Габариты",
+            "value": "268x113 мм"
+          }
+        },
+        {
+          "products_web_page": {
+            "id": 30,
+            "property": "Сайт производителя",
+            "value": "http://www.inno3d.com/products_detail.php?refid=480"
+          }
+        }
+      ],
+      "photos": [
+        {
+          "id": 1,
+          "w240": "https://b.428.ua/img/1975321/240/180/.jpg",
+          "w320": "https://b.428.ua/img/1975321/320/240/.jpg",
+          "w425": "https://b.428.ua/img/1975321/425/319/.jpg",
+          "w480": "https://b.428.ua/img/1975321/480/360/.jpg",
+          "w640": "https://b.428.ua/img/1975321/640/480/.jpg",
+          "original": "https://b.428.ua/img/1975321/3000/2000/ua_videokarta_inno3d_pci-e_geforce_rtx2080_super_8gb_ddr6_twin_x2_oc_n208s2-08d6x-11801167_videokarta_inno3d_pci-e_geforce_rtx2080_super_8gb_ddr6_twin_x2_oc_n208s2-08d6x-11801167~1465~721.jpg",
+          "thumbnail": "https://b.428.ua/img/1975321/50/40/i.jpg"
+        },
+        {
+          "id": 2,
+          "w240": "https://c.428.ua/img/1975322/240/180/.jpg",
+          "w320": "https://c.428.ua/img/1975322/320/240/.jpg",
+          "w425": "https://c.428.ua/img/1975322/425/319/.jpg",
+          "w480": "https://c.428.ua/img/1975322/480/360/.jpg",
+          "w640": "https://c.428.ua/img/1975322/640/480/.jpg",
+          "original": "https://c.428.ua/img/1975322/3000/2000/ua_videokarta_inno3d_pci-e_geforce_rtx2080_super_8gb_ddr6_twin_x2_oc_n208s2-08d6x-11801167_videokarta_inno3d_pci-e_geforce_rtx2080_super_8gb_ddr6_twin_x2_oc_n208s2-08d6x-11801167~1478~880.jpg",
+          "thumbnail": "https://c.428.ua/img/1975322/50/40/i.jpg"
+        },
+        {
+          "id": 3,
+          "w240": "https://c.428.ua/img/1975323/240/180/.jpg",
+          "w320": "https://c.428.ua/img/1975323/320/240/.jpg",
+          "w425": "https://c.428.ua/img/1975323/425/319/.jpg",
+          "w480": "https://c.428.ua/img/1975323/480/360/.jpg",
+          "w640": "https://c.428.ua/img/1975323/640/480/.jpg",
+          "original": "https://d.428.ua/img/1975323/3000/2000/ua_videokarta_inno3d_pci-e_geforce_rtx2080_super_8gb_ddr6_twin_x2_oc_n208s2-08d6x-11801167_videokarta_inno3d_pci-e_geforce_rtx2080_super_8gb_ddr6_twin_x2_oc_n208s2-08d6x-11801167~1472~861.jpg",
+          "thumbnail": "https://c.428.ua/img/1975323/50/40/i.jpg"
+        },
+        {
+          "id": 4,
+          "w240": "https://c.428.ua/img/1975324/240/180/.jpg",
+          "w320": "https://c.428.ua/img/1975324/320/240/.jpg",
+          "w425": "https://c.428.ua/img/1975324/425/319/.jpg",
+          "w480": "https://c.428.ua/img/1975324/480/360/.jpg",
+          "w640": "https://c.428.ua/img/1975324/640/480/.jpg",
+          "original": "https://e.428.ua/img/1975324/3000/2000/ua_videokarta_inno3d_pci-e_geforce_rtx2080_super_8gb_ddr6_twin_x2_oc_n208s2-08d6x-11801167_videokarta_inno3d_pci-e_geforce_rtx2080_super_8gb_ddr6_twin_x2_oc_n208s2-08d6x-11801167~1478~1004.jpg",
+          "thumbnail": "https://c.428.ua/img/1975324/50/40/i.jpg"
+        }
+      ]
+    },
+    {
+      "id": 30,
+      "sku": 958604,
+      "category": "video_cards",
+      "inventory": [
+        0,
+        0,
+        0
+      ],
+      "link": "graphics_card_inno3d_pci-e_geforce_rtx2070_super_8gb_ddr6_ichill_black_c207sb-08d6x-11800004",
+      "status": "доступно под заказ (1-5 дней)",
+      "name": "Видеокарта Inno3D PCI-E GeForce RTX2070 Super 8GB DDR6 iChill Black (C207SB-08D6X-11800004)",
+      "description": "RTX 2070 Super / 8 ГБ / GDDR-6 / 256 бит / DX-12 / Частота ядра - 1815 МГц / Частота памяти - 14000 МГц / водяное охлаждение, поддержка VR, подключение более 3 мониторов, с подсветкой / HDMI - 1 шт. / DisplayPort - 3 шт. / Блок питания - 650 Вт / 272x112 мм",
+      "poster": "https://d.428.ua/img/1975356/320/240/.jpg",
+      "preview": "https://c.428.ua/img/1975356/500/400/.jpg",
+      "photoInOrder": "https://elmir.ua/img/1975356/100/100/.jpg",
+      "price": 20538,
+      "warranty": 24,
+      "reviewsCount": 0,
+      "ratingsCount": 0,
+      "totalRating": 0,
+      "isHit": false,
+      "isNew": false,
+      "specifications": [
+        {
+          "brand": {
+            "id": 1,
+            "property": "Производитель",
+            "value": "Inno3D"
+          }
+        },
+        {
+          "series": {
+            "id": 2,
+            "property": "Серия",
+            "value": "GeForce RTX 2000"
+          }
+        },
+        {
+          "chip_maker": {
+            "id": 3,
+            "property": "Производитель чипа",
+            "value": "NVIDIA"
+          }
+        },
+        {
+          "lineup": {
+            "id": 4,
+            "property": "Модельный ряд",
+            "value": "RTX 2070 Super"
+          }
+        },
+        {
+          "professional": {
+            "id": 5,
+            "property": "Профессиональная",
+            "value": "нет"
+          }
+        },
+        {
+          "condition": {
+            "id": 6,
+            "property": "Состояние",
+            "value": "новая"
+          }
+        },
+        {
+          "memory_size": {
+            "id": 7,
+            "property": "Объем памяти",
+            "value": "8 ГБ"
+          }
+        },
+        {
+          "memory_type": {
+            "id": 8,
+            "property": "Тип памяти",
+            "value": "GDDR-6"
+          }
+        },
+        {
+          "memory_bus": {
+            "id": 9,
+            "property": "Шина памяти",
+            "value": "256 бит"
+          }
+        },
+        {
+          "directX": {
+            "id": 10,
+            "property": "DirectX",
+            "value": "DX-12"
+          }
+        },
+        {
+          "engine_clock": {
+            "id": 11,
+            "property": "Частота ядра",
+            "value": "1815 МГц"
+          }
+        },
+        {
+          "memory_clock": {
+            "id": 12,
+            "property": "Частота памяти",
+            "value": "14000 МГц"
+          }
+        },
+        {
+          "power_connectors": {
+            "id": 13,
+            "property": "Дополнительное питание",
+            "value": "6+8 pin"
+          }
+        },
+        {
+          "interface": {
+            "id": 14,
+            "property": "Интерфейс подключения",
+            "value": "PCI-E х16 3.0"
+          }
+        },
+        {
+          "d-sub": {
+            "id": 15,
+            "property": "D-Sub (VGA)",
+            "value": "нет",
+            "hide": true
+          }
+        },
+        {
+          "dvi": {
+            "id": 16,
+            "property": "DVI",
+            "value": "нет",
+            "hide": true
+          }
+        },
+        {
+          "hdmi": {
+            "id": 17,
+            "property": "HDMI",
+            "value": "1 шт.",
+            "hide": true
+          }
+        },
+        {
+          "displayPort": {
+            "id": 18,
+            "property": "DisplayPort",
+            "value": "3 шт.",
+            "hide": true
+          }
+        },
+        {
+          "output": {
+            "id": 19,
+            "property": "Разъёмы подключения",
+            "value": "HDMI (2.0b), 3xDisplayPort (1.4)"
+          }
+        },
+        {
+          "spu": {
+            "id": 20,
+            "property": "Число универсальных процессоров (SPU)",
+            "value": 2560
+          }
+        },
+        {
+          "tmu": {
+            "id": 21,
+            "property": "Число текстурных блоков (TMU)",
+            "value": 160
+          }
+        },
+        {
+          "rop": {
+            "id": 22,
+            "property": "Число блоков растеризации (ROP)",
+            "value": 64
+          }
+        },
+        {
+          "process_technology": {
+            "id": 23,
+            "property": "Техпроцесс",
+            "value": "12 нм"
+          }
+        },
+        {
+          "power_consumption": {
+            "id": 24,
+            "property": "Энергопотребление",
+            "value": "255 Вт"
+          }
+        },
+        {
+          "recommended_psu": {
+            "id": 25,
+            "property": "Блок питания",
+            "value": "650 Вт"
+          }
+        },
+        {
+          "cooling_type": {
+            "id": 26,
+            "property": "Тип охлаждения",
+            "value": "водяное"
+          }
+        },
+        {
+          "features": {
+            "id": 27,
+            "property": "Особенности",
+            "value": "поддержка VR"
+          }
+        },
+        {
+          "slot_type": {
+            "id": 28,
+            "property": "Исполнение",
+            "value": "двухслотовое"
+          }
+        },
+        {
+          "dimensions": {
+            "id": 29,
+            "property": "Габариты",
+            "value": "272x112 мм"
+          }
+        },
+        {
+          "products_web_page": {
+            "id": 30,
+            "property": "Сайт производителя",
+            "value": "http://inno3d.com/products_detail.php?refid=492"
+          }
+        }
+      ],
+      "photos": [
+        {
+          "id": 1,
+          "w240": "https://b.428.ua/img/1975356/240/180/.jpg",
+          "w320": "https://b.428.ua/img/1975356/320/240/.jpg",
+          "w425": "https://b.428.ua/img/1975356/425/319/.jpg",
+          "w480": "https://b.428.ua/img/1975356/480/360/.jpg",
+          "w640": "https://b.428.ua/img/1975356/640/480/.jpg",
+          "original": "https://a.428.ua/img/1975356/3000/2000/ua_videokarta_inno3d_pci-e_geforce_rtx2070_super_8gb_ddr6_ichill_black_c207sb-08d6x-11800004_videokarta_inno3d_pci-e_geforce_rtx2070_super_8gb_ddr6_ichill_black_c207sb-08d6x-11800004~1095~687.jpg",
+          "thumbnail": "https://b.428.ua/img/1975356/50/40/i.jpg"
+        }
+      ]
+    },
+    {
+      "id": 31,
+      "sku": 1059085,
+      "category": "video_cards",
+      "inventory": [
+        0,
+        0,
+        0
+      ],
+      "link": "graphics_card_sapphire_pci-e_radeon_rx_580_4gb_ddr5_pulse_11265-10-20g",
+      "status": "доступно под заказ (1-5 дней)",
+      "name": "Видеокарта Sapphire PCI-E Radeon RX 580 4GB DDR5 Pulse (11265-10-20G)",
+      "description": "RX 580 / 4 ГБ / GDDR-5 / 256 бит / DX-12 / Частота ядра - 1366 МГц / Частота памяти - 7000 МГц / поддержка VR, с бэкплейтом / HDMI - 2 шт. / DisplayPort - 2 шт. / DVI - 1 шт. / Блок питания - 500 Вт / 230x125x40 мм",
+      "poster": "https://d.428.ua/img/2249661/320/240/.jpg",
+      "preview": "https://c.428.ua/img/2249661/500/400/.jpg",
+      "photoInOrder": "https://elmir.ua/img/2249661/100/100/.jpg",
+      "price": 6146,
+      "warranty": 24,
+      "reviewsCount": 0,
+      "ratingsCount": 0,
+      "totalRating": 0,
+      "isHit": false,
+      "isNew": false,
+      "specifications": [
+        {
+          "brand": {
+            "id": 1,
+            "property": "Производитель",
+            "value": "Sapphire"
+          }
+        },
+        {
+          "series": {
+            "id": 2,
+            "property": "Серия",
+            "value": "Radeon RX"
+          }
+        },
+        {
+          "chip_maker": {
+            "id": 3,
+            "property": "Производитель чипа",
+            "value": "AMD"
+          }
+        },
+        {
+          "lineup": {
+            "id": 4,
+            "property": "Модельный ряд",
+            "value": "RX 580"
+          }
+        },
+        {
+          "professional": {
+            "id": 5,
+            "property": "Профессиональная",
+            "value": "нет"
+          }
+        },
+        {
+          "condition": {
+            "id": 6,
+            "property": "Состояние",
+            "value": "новая"
+          }
+        },
+        {
+          "memory_size": {
+            "id": 7,
+            "property": "Объем памяти",
+            "value": "4 ГБ"
+          }
+        },
+        {
+          "memory_type": {
+            "id": 8,
+            "property": "Тип памяти",
+            "value": "GDDR-5"
+          }
+        },
+        {
+          "memory_bus": {
+            "id": 9,
+            "property": "Шина памяти",
+            "value": "256 бит"
+          }
+        },
+        {
+          "directX": {
+            "id": 10,
+            "property": "DirectX",
+            "value": "DX-12"
+          }
+        },
+        {
+          "engine_clock": {
+            "id": 11,
+            "property": "Частота ядра",
+            "value": "1366 МГц"
+          }
+        },
+        {
+          "memory_clock": {
+            "id": 12,
+            "property": "Частота памяти",
+            "value": "7000 МГц"
+          }
+        },
+        {
+          "power_connectors": {
+            "id": 13,
+            "property": "Дополнительное питание",
+            "value": "8-pin"
+          }
+        },
+        {
+          "interface": {
+            "id": 14,
+            "property": "Интерфейс подключения",
+            "value": "PCI-E х16 3.0"
+          }
+        },
+        {
+          "d-sub": {
+            "id": 15,
+            "property": "D-Sub (VGA)",
+            "value": "нет",
+            "hide": true
+          }
+        },
+        {
+          "dvi": {
+            "id": 16,
+            "property": "DVI",
+            "value": "1 шт.",
+            "hide": true
+          }
+        },
+        {
+          "hdmi": {
+            "id": 17,
+            "property": "HDMI",
+            "value": "2 шт.",
+            "hide": true
+          }
+        },
+        {
+          "displayPort": {
+            "id": 18,
+            "property": "DisplayPort",
+            "value": "2 шт.",
+            "hide": true
+          }
+        },
+        {
+          "output": {
+            "id": 19,
+            "property": "Разъёмы подключения",
+            "value": "DVI-D, 2xHDMI, 2xDisplayPort (1.4)"
+          }
+        },
+        {
+          "spu": {
+            "id": 20,
+            "property": "Число универсальных процессоров (SPU)",
+            "value": 2304
+          }
+        },
+        {
+          "tmu": {
+            "id": 21,
+            "property": "Число текстурных блоков (TMU)",
+            "value": 144
+          }
+        },
+        {
+          "rop": {
+            "id": 22,
+            "property": "Число блоков растеризации (ROP)",
+            "value": 32
+          }
+        },
+        {
+          "process_technology": {
+            "id": 23,
+            "property": "Техпроцесс",
+            "value": "14 нм"
+          }
+        },
+        {
+          "power_consumption": {
+            "id": 24,
+            "property": "Энергопотребление",
+            "value": "225 Вт"
+          }
+        },
+        {
+          "recommended_psu": {
+            "id": 25,
+            "property": "Блок питания",
+            "value": "500 Вт"
+          }
+        },
+        {
+          "cooling_type": {
+            "id": 26,
+            "property": "Тип охлаждения",
+            "value": "активное"
+          }
+        },
+        {
+          "features": {
+            "id": 27,
+            "property": "Особенности",
+            "value": "поддержка VR"
+          }
+        },
+        {
+          "slot_type": {
+            "id": 28,
+            "property": "Исполнение",
+            "value": "двухслотовое"
+          }
+        },
+        {
+          "dimensions": {
+            "id": 29,
+            "property": "Габариты",
+            "value": "230x125x40 мм"
+          }
+        },
+        {
+          "products_web_page": {
+            "id": 30,
+            "property": "Сайт производителя",
+            "value": "https://www.sapphiretech.com/ru-ru/consumer/pulse-rx-580-4g-g5"
+          }
+        }
+      ],
+      "photos": [
+        {
+          "id": 1,
+          "w240": "https://b.428.ua/img/2249661/240/180/.jpg",
+          "w320": "https://b.428.ua/img/2249661/320/240/.jpg",
+          "w425": "https://b.428.ua/img/2249661/425/319/.jpg",
+          "w480": "https://b.428.ua/img/2249661/480/360/.jpg",
+          "w640": "https://b.428.ua/img/2249661/640/480/.jpg",
+          "original": "https://d.428.ua/img/2249661/3000/2000/ua_videokarta_sapphire_pci-e_radeon_rx_580_4gb_ddr5_pulse_11265-10-20g_videokarta_sapphire_pci-e_radeon_rx_580_4gb_ddr5_pulse_11265-10-20g~1880~1086.jpg",
+          "thumbnail": "https://b.428.ua/img/2249661/50/40/i.jpg"
+        },
+        {
+          "id": 2,
+          "w240": "https://b.428.ua/img/2249662/240/180/.jpg",
+          "w320": "https://b.428.ua/img/2249662/320/240/.jpg",
+          "w425": "https://b.428.ua/img/2249662/425/319/.jpg",
+          "w480": "https://b.428.ua/img/2249662/480/360/.jpg",
+          "w640": "https://b.428.ua/img/2249662/640/480/.jpg",
+          "original": "https://e.428.ua/img/2249662/3000/2000/ua_videokarta_sapphire_pci-e_radeon_rx_580_4gb_ddr5_pulse_11265-10-20g_videokarta_sapphire_pci-e_radeon_rx_580_4gb_ddr5_pulse_11265-10-20g~1880~1348.jpg",
+          "thumbnail": "https://b.428.ua/img/2249662/50/40/i.jpg"
+        }
+      ]
+    },
+    {
+      "id": 32,
+      "sku": 769506,
+      "category": "video_cards",
+      "inventory": [
+        0,
+        0,
+        0
+      ],
+      "link": "graphics_card_gigabyte_pci-e_radeon_rx_570_8gb_ddr5_gv-rx570gaming-8gd",
+      "status": "доступно под заказ (1-5 дней)",
+      "name": "Видеокарта GigaByte PCI-E Radeon RX 570 8GB DDR5 (GV-RX570GAMING-8GD)",
+      "description": "RX 570 / 8 ГБ / GDDR-5 / 256 бит / DX-12 / Частота ядра - 1255 МГц / Частота памяти - 7000 МГц / поддержка VR, подключение более 3 мониторов, с бэкплейтом, с подсветкой / HDMI - 1 шт. / DisplayPort - 3 шт. / DVI - 1 шт. / Блок питания - 450 Вт / Gigabyte RGB Fusion / 232x116 мм",
+      "poster": "https://d.428.ua/img/1434605/320/240/.jpg",
+      "preview": "https://c.428.ua/img/1434605/500/400/.jpg",
+      "photoInOrder": "https://elmir.ua/img/1434605/100/100/.jpg",
+      "price": 6626,
+      "warranty": 36,
+      "reviewsCount": 1,
+      "ratingsCount": 1,
+      "totalRating": 5,
+      "isHit": false,
+      "isNew": false,
+      "specifications": [
+        {
+          "brand": {
+            "id": 1,
+            "property": "Производитель",
+            "value": "GigaByte"
+          }
+        },
+        {
+          "series": {
+            "id": 2,
+            "property": "Серия",
+            "value": "Radeon RX"
+          }
+        },
+        {
+          "chip_maker": {
+            "id": 3,
+            "property": "Производитель чипа",
+            "value": "AMD"
+          }
+        },
+        {
+          "lineup": {
+            "id": 4,
+            "property": "Модельный ряд",
+            "value": "RX 570"
+          }
+        },
+        {
+          "professional": {
+            "id": 5,
+            "property": "Профессиональная",
+            "value": "нет"
+          }
+        },
+        {
+          "condition": {
+            "id": 6,
+            "property": "Состояние",
+            "value": "новая"
+          }
+        },
+        {
+          "memory_size": {
+            "id": 7,
+            "property": "Объем памяти",
+            "value": "8 ГБ"
+          }
+        },
+        {
+          "memory_type": {
+            "id": 8,
+            "property": "Тип памяти",
+            "value": "GDDR-5"
+          }
+        },
+        {
+          "memory_bus": {
+            "id": 9,
+            "property": "Шина памяти",
+            "value": "256 бит"
+          }
+        },
+        {
+          "directX": {
+            "id": 10,
+            "property": "DirectX",
+            "value": "DX-12"
+          }
+        },
+        {
+          "engine_clock": {
+            "id": 11,
+            "property": "Частота ядра",
+            "value": "1255 МГц"
+          }
+        },
+        {
+          "memory_clock": {
+            "id": 12,
+            "property": "Частота памяти",
+            "value": "7000 МГц"
+          }
+        },
+        {
+          "power_connectors": {
+            "id": 13,
+            "property": "Дополнительное питание",
+            "value": "8-pin"
+          }
+        },
+        {
+          "interface": {
+            "id": 14,
+            "property": "Интерфейс подключения",
+            "value": "PCI-E х16 3.0"
+          }
+        },
+        {
+          "d-sub": {
+            "id": 15,
+            "property": "D-Sub (VGA)",
+            "value": "нет",
+            "hide": true
+          }
+        },
+        {
+          "dvi": {
+            "id": 16,
+            "property": "DVI",
+            "value": "1 шт.",
+            "hide": true
+          }
+        },
+        {
+          "hdmi": {
+            "id": 17,
+            "property": "HDMI",
+            "value": "1 шт.",
+            "hide": true
+          }
+        },
+        {
+          "displayPort": {
+            "id": 18,
+            "property": "DisplayPort",
+            "value": "3 шт.",
+            "hide": true
+          }
+        },
+        {
+          "output": {
+            "id": 19,
+            "property": "Разъёмы подключения",
+            "value": "DVI-D, HDMI, 3xDisplayPort"
+          }
+        },
+        {
+          "spu": {
+            "id": 20,
+            "property": "Число универсальных процессоров (SPU)",
+            "value": 2048
+          }
+        },
+        {
+          "tmu": {
+            "id": 21,
+            "property": "Число текстурных блоков (TMU)",
+            "value": 128
+          }
+        },
+        {
+          "rop": {
+            "id": 22,
+            "property": "Число блоков растеризации (ROP)",
+            "value": 32
+          }
+        },
+        {
+          "process_technology": {
+            "id": 23,
+            "property": "Техпроцесс",
+            "value": "14 нм"
+          }
+        },
+        {
+          "power_consumption": {
+            "id": 24,
+            "property": "Энергопотребление",
+            "value": "180 Вт"
+          }
+        },
+        {
+          "recommended_psu": {
+            "id": 25,
+            "property": "Блок питания",
+            "value": "450 Вт"
+          }
+        },
+        {
+          "cooling_type": {
+            "id": 26,
+            "property": "Тип охлаждения",
+            "value": "активное"
+          }
+        },
+        {
+          "features": {
+            "id": 27,
+            "property": "Особенности",
+            "value": "поддержка VR"
+          }
+        },
+        {
+          "slot_type": {
+            "id": 28,
+            "property": "Исполнение",
+            "value": "двухслотовое"
+          }
+        },
+        {
+          "dimensions": {
+            "id": 29,
+            "property": "Габариты",
+            "value": "232x116 мм"
+          }
+        },
+        {
+          "products_web_page": {
+            "id": 30,
+            "property": "Сайт производителя",
+            "value": "https://www.gigabyte.com/us/Graphics-Card/GV-RX570GAMING-8GD-rev-10-11#sp"
+          }
+        }
+      ],
+      "photos": [
+        {
+          "id": 1,
+          "w240": "https://b.428.ua/img/1434605/240/180/.jpg",
+          "w320": "https://b.428.ua/img/1434605/320/240/.jpg",
+          "w425": "https://b.428.ua/img/1434605/425/319/.jpg",
+          "w480": "https://b.428.ua/img/1434605/480/360/.jpg",
+          "w640": "https://b.428.ua/img/1434605/640/480/.jpg",
+          "original": "https://f.428.ua/img/1434605/3000/2000/ua_videokarta_gigabyte_pci-e_radeon_rx_570_8gb_ddr5_gv-rx570gaming-8gd_videokarta_gigabyte_pci-e_radeon_rx_570_8gb_ddr5_gv-rx570gaming-8gd~966~518.jpg",
+          "thumbnail": "https://b.428.ua/img/1434605/50/40/i.jpg"
+        },
+        {
+          "id": 2,
+          "w240": "https://b.428.ua/img/1434606/240/180/.jpg",
+          "w320": "https://b.428.ua/img/1434606/320/240/.jpg",
+          "w425": "https://b.428.ua/img/1434606/425/319/.jpg",
+          "w480": "https://b.428.ua/img/1434606/480/360/.jpg",
+          "w640": "https://b.428.ua/img/1434606/640/480/.jpg",
+          "original": "https://a.428.ua/img/1434606/3000/2000/ua_videokarta_gigabyte_pci-e_radeon_rx_570_8gb_ddr5_gv-rx570gaming-8gd_videokarta_gigabyte_pci-e_radeon_rx_570_8gb_ddr5_gv-rx570gaming-8gd~952~722.jpg",
+          "thumbnail": "https://b.428.ua/img/1434606/50/40/i.jpg"
+        },
+        {
+          "id": 3,
+          "w240": "https://b.428.ua/img/1434607/240/180/.jpg",
+          "w320": "https://b.428.ua/img/1434607/320/240/.jpg",
+          "w425": "https://b.428.ua/img/1434607/425/319/.jpg",
+          "w480": "https://b.428.ua/img/1434607/480/360/.jpg",
+          "w640": "https://b.428.ua/img/1434607/640/480/.jpg",
+          "original": "https://b.428.ua/img/1434607/3000/2000/ua_videokarta_gigabyte_pci-e_radeon_rx_570_8gb_ddr5_gv-rx570gaming-8gd_videokarta_gigabyte_pci-e_radeon_rx_570_8gb_ddr5_gv-rx570gaming-8gd~880~310.jpg",
+          "thumbnail": "https://b.428.ua/img/1434607/50/40/i.jpg"
+        },
+        {
+          "id": 4,
+          "w240": "https://b.428.ua/img/1434608/240/180/.jpg",
+          "w320": "https://b.428.ua/img/1434608/320/240/.jpg",
+          "w425": "https://b.428.ua/img/1434608/425/319/.jpg",
+          "w480": "https://b.428.ua/img/1434608/480/360/.jpg",
+          "w640": "https://b.428.ua/img/1434608/640/480/.jpg",
+          "original": "https://c.428.ua/img/1434608/3000/2000/ua_videokarta_gigabyte_pci-e_radeon_rx_570_8gb_ddr5_gv-rx570gaming-8gd_videokarta_gigabyte_pci-e_radeon_rx_570_8gb_ddr5_gv-rx570gaming-8gd~882~471.jpg",
+          "thumbnail": "https://b.428.ua/img/1434608/50/40/i.jpg"
+        },
+        {
+          "id": 5,
+          "w240": "https://b.428.ua/img/1434609/240/180/.jpg",
+          "w320": "https://b.428.ua/img/1434609/320/240/.jpg",
+          "w425": "https://b.428.ua/img/1434609/425/319/.jpg",
+          "w480": "https://b.428.ua/img/1434609/480/360/.jpg",
+          "w640": "https://b.428.ua/img/1434609/640/480/.jpg",
+          "original": "https://d.428.ua/img/1434609/3000/2000/ua_videokarta_gigabyte_pci-e_radeon_rx_570_8gb_ddr5_gv-rx570gaming-8gd_videokarta_gigabyte_pci-e_radeon_rx_570_8gb_ddr5_gv-rx570gaming-8gd~929~163.jpg",
+          "thumbnail": "https://b.428.ua/img/1434609/50/40/i.jpg"
+        },
+        {
+          "id": 6,
+          "w240": "https://b.428.ua/img/1434610/240/180/.jpg",
+          "w320": "https://b.428.ua/img/1434610/320/240/.jpg",
+          "w425": "https://b.428.ua/img/1434610/425/319/.jpg",
+          "w480": "https://b.428.ua/img/1434610/480/360/.jpg",
+          "w640": "https://b.428.ua/img/1434610/640/480/.jpg",
+          "original": "https://e.428.ua/img/1434610/3000/2000/ua_videokarta_gigabyte_pci-e_radeon_rx_570_8gb_ddr5_gv-rx570gaming-8gd_videokarta_gigabyte_pci-e_radeon_rx_570_8gb_ddr5_gv-rx570gaming-8gd~928~839.jpg",
+          "thumbnail": "https://b.428.ua/img/1434610/50/40/i.jpg"
+        }
+      ]
+    },
+    {
+      "id": 33,
+      "sku": 769506,
+      "category": "video_cards",
+      "inventory": [
+        0,
+        0,
+        0
+      ],
+      "link": "graphics_card_gigabyte_pci-e_radeon_rx_570_8gb_ddr5_gv-rx570gaming-8gd",
+      "status": "доступно под заказ (1-5 дней)",
+      "name": "Видеокарта GigaByte PCI-E Radeon RX 570 8GB DDR5 (GV-RX570GAMING-8GD)",
+      "description": "RX 570 / 8 ГБ / GDDR-5 / 256 бит / DX-12 / Частота ядра - 1255 МГц / Частота памяти - 7000 МГц / поддержка VR, подключение более 3 мониторов, с бэкплейтом, с подсветкой / HDMI - 1 шт. / DisplayPort - 3 шт. / DVI - 1 шт. / Блок питания - 450 Вт / Gigabyte RGB Fusion / 232x116 мм",
+      "poster": "https://d.428.ua/img/1434605/320/240/.jpg",
+      "preview": "https://c.428.ua/img/1434605/500/400/.jpg",
+      "photoInOrder": "https://elmir.ua/img/1434605/100/100/.jpg",
+      "price": 6626,
+      "warranty": 36,
+      "reviewsCount": 1,
+      "ratingsCount": 1,
+      "totalRating": 5,
+      "isHit": false,
+      "isNew": false,
+      "specifications": [
+        {
+          "brand": {
+            "id": 1,
+            "property": "Производитель",
+            "value": "GigaByte"
+          }
+        },
+        {
+          "series": {
+            "id": 2,
+            "property": "Серия",
+            "value": "Radeon RX"
+          }
+        },
+        {
+          "chip_maker": {
+            "id": 3,
+            "property": "Производитель чипа",
+            "value": "AMD"
+          }
+        },
+        {
+          "lineup": {
+            "id": 4,
+            "property": "Модельный ряд",
+            "value": "RX 570"
+          }
+        },
+        {
+          "professional": {
+            "id": 5,
+            "property": "Профессиональная",
+            "value": "нет"
+          }
+        },
+        {
+          "condition": {
+            "id": 6,
+            "property": "Состояние",
+            "value": "новая"
+          }
+        },
+        {
+          "memory_size": {
+            "id": 7,
+            "property": "Объем памяти",
+            "value": "8 ГБ"
+          }
+        },
+        {
+          "memory_type": {
+            "id": 8,
+            "property": "Тип памяти",
+            "value": "GDDR-5"
+          }
+        },
+        {
+          "memory_bus": {
+            "id": 9,
+            "property": "Шина памяти",
+            "value": "256 бит"
+          }
+        },
+        {
+          "directX": {
+            "id": 10,
+            "property": "DirectX",
+            "value": "DX-12"
+          }
+        },
+        {
+          "engine_clock": {
+            "id": 11,
+            "property": "Частота ядра",
+            "value": "1255 МГц"
+          }
+        },
+        {
+          "memory_clock": {
+            "id": 12,
+            "property": "Частота памяти",
+            "value": "7000 МГц"
+          }
+        },
+        {
+          "power_connectors": {
+            "id": 13,
+            "property": "Дополнительное питание",
+            "value": "8-pin"
+          }
+        },
+        {
+          "interface": {
+            "id": 14,
+            "property": "Интерфейс подключения",
+            "value": "PCI-E х16 3.0"
+          }
+        },
+        {
+          "d-sub": {
+            "id": 15,
+            "property": "D-Sub (VGA)",
+            "value": "нет",
+            "hide": true
+          }
+        },
+        {
+          "dvi": {
+            "id": 16,
+            "property": "DVI",
+            "value": "1 шт.",
+            "hide": true
+          }
+        },
+        {
+          "hdmi": {
+            "id": 17,
+            "property": "HDMI",
+            "value": "1 шт.",
+            "hide": true
+          }
+        },
+        {
+          "displayPort": {
+            "id": 18,
+            "property": "DisplayPort",
+            "value": "3 шт.",
+            "hide": true
+          }
+        },
+        {
+          "output": {
+            "id": 19,
+            "property": "Разъёмы подключения",
+            "value": "DVI-D, HDMI, 3xDisplayPort"
+          }
+        },
+        {
+          "spu": {
+            "id": 20,
+            "property": "Число универсальных процессоров (SPU)",
+            "value": 2048
+          }
+        },
+        {
+          "tmu": {
+            "id": 21,
+            "property": "Число текстурных блоков (TMU)",
+            "value": 128
+          }
+        },
+        {
+          "rop": {
+            "id": 22,
+            "property": "Число блоков растеризации (ROP)",
+            "value": 32
+          }
+        },
+        {
+          "process_technology": {
+            "id": 23,
+            "property": "Техпроцесс",
+            "value": "14 нм"
+          }
+        },
+        {
+          "power_consumption": {
+            "id": 24,
+            "property": "Энергопотребление",
+            "value": "180 Вт"
+          }
+        },
+        {
+          "recommended_psu": {
+            "id": 25,
+            "property": "Блок питания",
+            "value": "450 Вт"
+          }
+        },
+        {
+          "cooling_type": {
+            "id": 26,
+            "property": "Тип охлаждения",
+            "value": "активное"
+          }
+        },
+        {
+          "features": {
+            "id": 27,
+            "property": "Особенности",
+            "value": "поддержка VR"
+          }
+        },
+        {
+          "slot_type": {
+            "id": 28,
+            "property": "Исполнение",
+            "value": "двухслотовое"
+          }
+        },
+        {
+          "dimensions": {
+            "id": 29,
+            "property": "Габариты",
+            "value": "232x116 мм"
+          }
+        },
+        {
+          "products_web_page": {
+            "id": 30,
+            "property": "Сайт производителя",
+            "value": "https://www.gigabyte.com/us/Graphics-Card/GV-RX570GAMING-8GD-rev-10-11#sp"
+          }
+        }
+      ],
+      "photos": [
+        {
+          "id": 1,
+          "w240": "https://b.428.ua/img/1434605/240/180/.jpg",
+          "w320": "https://b.428.ua/img/1434605/320/240/.jpg",
+          "w425": "https://b.428.ua/img/1434605/425/319/.jpg",
+          "w480": "https://b.428.ua/img/1434605/480/360/.jpg",
+          "w640": "https://b.428.ua/img/1434605/640/480/.jpg",
+          "original": "https://f.428.ua/img/1434605/3000/2000/ua_videokarta_gigabyte_pci-e_radeon_rx_570_8gb_ddr5_gv-rx570gaming-8gd_videokarta_gigabyte_pci-e_radeon_rx_570_8gb_ddr5_gv-rx570gaming-8gd~966~518.jpg",
+          "thumbnail": "https://b.428.ua/img/1434605/50/40/i.jpg"
+        },
+        {
+          "id": 2,
+          "w240": "https://b.428.ua/img/1434606/240/180/.jpg",
+          "w320": "https://b.428.ua/img/1434606/320/240/.jpg",
+          "w425": "https://b.428.ua/img/1434606/425/319/.jpg",
+          "w480": "https://b.428.ua/img/1434606/480/360/.jpg",
+          "w640": "https://b.428.ua/img/1434606/640/480/.jpg",
+          "original": "https://a.428.ua/img/1434606/3000/2000/ua_videokarta_gigabyte_pci-e_radeon_rx_570_8gb_ddr5_gv-rx570gaming-8gd_videokarta_gigabyte_pci-e_radeon_rx_570_8gb_ddr5_gv-rx570gaming-8gd~952~722.jpg",
+          "thumbnail": "https://b.428.ua/img/1434606/50/40/i.jpg"
+        },
+        {
+          "id": 3,
+          "w240": "https://b.428.ua/img/1434607/240/180/.jpg",
+          "w320": "https://b.428.ua/img/1434607/320/240/.jpg",
+          "w425": "https://b.428.ua/img/1434607/425/319/.jpg",
+          "w480": "https://b.428.ua/img/1434607/480/360/.jpg",
+          "w640": "https://b.428.ua/img/1434607/640/480/.jpg",
+          "original": "https://b.428.ua/img/1434607/3000/2000/ua_videokarta_gigabyte_pci-e_radeon_rx_570_8gb_ddr5_gv-rx570gaming-8gd_videokarta_gigabyte_pci-e_radeon_rx_570_8gb_ddr5_gv-rx570gaming-8gd~880~310.jpg",
+          "thumbnail": "https://b.428.ua/img/1434607/50/40/i.jpg"
+        },
+        {
+          "id": 4,
+          "w240": "https://b.428.ua/img/1434608/240/180/.jpg",
+          "w320": "https://b.428.ua/img/1434608/320/240/.jpg",
+          "w425": "https://b.428.ua/img/1434608/425/319/.jpg",
+          "w480": "https://b.428.ua/img/1434608/480/360/.jpg",
+          "w640": "https://b.428.ua/img/1434608/640/480/.jpg",
+          "original": "https://c.428.ua/img/1434608/3000/2000/ua_videokarta_gigabyte_pci-e_radeon_rx_570_8gb_ddr5_gv-rx570gaming-8gd_videokarta_gigabyte_pci-e_radeon_rx_570_8gb_ddr5_gv-rx570gaming-8gd~882~471.jpg",
+          "thumbnail": "https://b.428.ua/img/1434608/50/40/i.jpg"
+        },
+        {
+          "id": 5,
+          "w240": "https://b.428.ua/img/1434609/240/180/.jpg",
+          "w320": "https://b.428.ua/img/1434609/320/240/.jpg",
+          "w425": "https://b.428.ua/img/1434609/425/319/.jpg",
+          "w480": "https://b.428.ua/img/1434609/480/360/.jpg",
+          "w640": "https://b.428.ua/img/1434609/640/480/.jpg",
+          "original": "https://d.428.ua/img/1434609/3000/2000/ua_videokarta_gigabyte_pci-e_radeon_rx_570_8gb_ddr5_gv-rx570gaming-8gd_videokarta_gigabyte_pci-e_radeon_rx_570_8gb_ddr5_gv-rx570gaming-8gd~929~163.jpg",
+          "thumbnail": "https://b.428.ua/img/1434609/50/40/i.jpg"
+        },
+        {
+          "id": 6,
+          "w240": "https://b.428.ua/img/1434610/240/180/.jpg",
+          "w320": "https://b.428.ua/img/1434610/320/240/.jpg",
+          "w425": "https://b.428.ua/img/1434610/425/319/.jpg",
+          "w480": "https://b.428.ua/img/1434610/480/360/.jpg",
+          "w640": "https://b.428.ua/img/1434610/640/480/.jpg",
+          "original": "https://e.428.ua/img/1434610/3000/2000/ua_videokarta_gigabyte_pci-e_radeon_rx_570_8gb_ddr5_gv-rx570gaming-8gd_videokarta_gigabyte_pci-e_radeon_rx_570_8gb_ddr5_gv-rx570gaming-8gd~928~839.jpg",
+          "thumbnail": "https://b.428.ua/img/1434610/50/40/i.jpg"
+        }
+      ]
+    },
+    {
+      "id": 34,
+      "sku": 899257,
+      "category": "video_cards",
+      "inventory": [
+        5,
+        3,
+        9
+      ],
+      "link": "graphics_card_msi_pci-e_geforce_gtx1650_4gb_ddr5_gtx_1650_gaming_x_4g",
+      "status": "есть в наличии",
+      "name": "Видеокарта MSI PCI-E GeForce GTX1650 4GB DDR5 (GTX 1650 GAMING X 4G)",
+      "description": "GTX 1650 / 4 ГБ / GDDR-5 / 128 бит / DX-12 / Частота ядра - 1860 МГц / Частота памяти - 8000 МГц / HDMI - 1 шт. / DisplayPort - 2 шт. / Блок питания - 300 Вт / 245x127x39 мм",
+      "poster": "https://d.428.ua/img/1796360/320/240/.jpg",
+      "preview": "https://c.428.ua/img/1796360/500/400/.jpg",
+      "photoInOrder": "https://elmir.ua/img/1796360/100/100/.jpg",
+      "price": 5252,
+      "warranty": 36,
+      "reviewsCount": 0,
+      "ratingsCount": 0,
+      "totalRating": 0,
+      "isHit": false,
+      "isNew": false,
+      "specifications": [
+        {
+          "brand": {
+            "id": 1,
+            "property": "Производитель",
+            "value": "MSI"
+          }
+        },
+        {
+          "series": {
+            "id": 2,
+            "property": "Серия",
+            "value": "GeForce 1600"
+          }
+        },
+        {
+          "chip_maker": {
+            "id": 3,
+            "property": "Производитель чипа",
+            "value": "NVIDIA"
+          }
+        },
+        {
+          "lineup": {
+            "id": 4,
+            "property": "Модельный ряд",
+            "value": "GTX 1650"
+          }
+        },
+        {
+          "professional": {
+            "id": 5,
+            "property": "Профессиональная",
+            "value": "нет"
+          }
+        },
+        {
+          "condition": {
+            "id": 6,
+            "property": "Состояние",
+            "value": "новая"
+          }
+        },
+        {
+          "memory_size": {
+            "id": 7,
+            "property": "Объем памяти",
+            "value": "4 ГБ"
+          }
+        },
+        {
+          "memory_type": {
+            "id": 8,
+            "property": "Тип памяти",
+            "value": "GDDR-5"
+          }
+        },
+        {
+          "memory_bus": {
+            "id": 9,
+            "property": "Шина памяти",
+            "value": "128 бит"
+          }
+        },
+        {
+          "directX": {
+            "id": 10,
+            "property": "DirectX",
+            "value": "DX-12"
+          }
+        },
+        {
+          "engine_clock": {
+            "id": 11,
+            "property": "Частота ядра",
+            "value": "1860 МГц"
+          }
+        },
+        {
+          "memory_clock": {
+            "id": 12,
+            "property": "Частота памяти",
+            "value": "8000 МГц"
+          }
+        },
+        {
+          "power_connectors": {
+            "id": 13,
+            "property": "Дополнительное питание",
+            "value": "6-pin"
+          }
+        },
+        {
+          "interface": {
+            "id": 14,
+            "property": "Интерфейс подключения",
+            "value": "PCI-E х16 3.0"
+          }
+        },
+        {
+          "d-sub": {
+            "id": 15,
+            "property": "D-Sub (VGA)",
+            "value": "нет",
+            "hide": true
+          }
+        },
+        {
+          "dvi": {
+            "id": 16,
+            "property": "DVI",
+            "value": "нет",
+            "hide": true
+          }
+        },
+        {
+          "hdmi": {
+            "id": 17,
+            "property": "HDMI",
+            "value": "1 шт.",
+            "hide": true
+          }
+        },
+        {
+          "displayPort": {
+            "id": 18,
+            "property": "DisplayPort",
+            "value": "2 шт.",
+            "hide": true
+          }
+        },
+        {
+          "output": {
+            "id": 19,
+            "property": "Разъёмы подключения",
+            "value": "HDMI (2.0b), 2хDisplayPort (v1.4)"
+          }
+        },
+        {
+          "spu": {
+            "id": 20,
+            "property": "Число универсальных процессоров (SPU)",
+            "value": 896
+          }
+        },
+        {
+          "tmu": {
+            "id": 21,
+            "property": "Число текстурных блоков (TMU)",
+            "value": 56
+          }
+        },
+        {
+          "rop": {
+            "id": 22,
+            "property": "Число блоков растеризации (ROP)",
+            "value": 32
+          }
+        },
+        {
+          "process_technology": {
+            "id": 23,
+            "property": "Техпроцесс",
+            "value": "12 нм"
+          }
+        },
+        {
+          "power_consumption": {
+            "id": 24,
+            "property": "Энергопотребление",
+            "value": "75 Вт"
+          }
+        },
+        {
+          "recommended_psu": {
+            "id": 25,
+            "property": "Блок питания",
+            "value": "300 Вт"
+          }
+        },
+        {
+          "cooling_type": {
+            "id": 26,
+            "property": "Тип охлаждения",
+            "value": "активное"
+          }
+        },
+        {
+          "slot_type": {
+            "id": 27,
+            "property": "Исполнение",
+            "value": "двухслотовое"
+          }
+        },
+        {
+          "dimensions": {
+            "id": 29,
+            "property": "Габариты",
+            "value": "245x127x39 мм"
+          }
+        },
+        {
+          "products_web_page": {
+            "id": 30,
+            "property": "Сайт производителя",
+            "value": "https://ua.msi.com/Graphics-card/GeForce-GTX-1650-GAMING-X-4G/Specification"
+          }
+        }
+      ],
+      "photos": [
+        {
+          "id": 1,
+          "w240": "https://b.428.ua/img/1796359/240/180/.jpg",
+          "w320": "https://b.428.ua/img/1796359/320/240/.jpg",
+          "w425": "https://b.428.ua/img/1796359/425/319/.jpg",
+          "w480": "https://b.428.ua/img/1796359/480/360/.jpg",
+          "w640": "https://b.428.ua/img/1796359/640/480/.jpg",
+          "original": "https://b.428.ua/img/1796359/3000/2000/ua_videokarta_msi_pci-e_geforce_gtx1650_4gb_ddr5_gtx_1650_gaming_x_4g_videokarta_msi_pci-e_geforce_gtx1650_4gb_ddr5_gtx_1650_gaming_x_4g~3000~2000.jpg",
+          "thumbnail": "https://b.428.ua/img/1796359/50/40/i.jpg"
+        },
+        {
+          "id": 2,
+          "w240": "https://b.428.ua/img/1796360/240/180/.jpg",
+          "w320": "https://b.428.ua/img/1796360/320/240/.jpg",
+          "w425": "https://b.428.ua/img/1796360/425/319/.jpg",
+          "w480": "https://b.428.ua/img/1796360/480/360/.jpg",
+          "w640": "https://b.428.ua/img/1796360/640/480/.jpg",
+          "original": "https://c.428.ua/img/1796360/3000/2000/ua_videokarta_msi_pci-e_geforce_gtx1650_4gb_ddr5_gtx_1650_gaming_x_4g_videokarta_msi_pci-e_geforce_gtx1650_4gb_ddr5_gtx_1650_gaming_x_4g~3000~2000.jpg",
+          "thumbnail": "https://b.428.ua/img/1796360/50/40/i.jpg"
+        },
+        {
+          "id": 3,
+          "w240": "https://b.428.ua/img/1796361/240/180/.jpg",
+          "w320": "https://b.428.ua/img/1796361/320/240/.jpg",
+          "w425": "https://b.428.ua/img/1796361/425/319/.jpg",
+          "w480": "https://b.428.ua/img/1796361/480/360/.jpg",
+          "w640": "https://b.428.ua/img/1796361/640/480/.jpg",
+          "original": "https://d.428.ua/img/1796361/3000/2000/ua_videokarta_msi_pci-e_geforce_gtx1650_4gb_ddr5_gtx_1650_gaming_x_4g_videokarta_msi_pci-e_geforce_gtx1650_4gb_ddr5_gtx_1650_gaming_x_4g~1563~1422.jpg",
+          "thumbnail": "https://b.428.ua/img/1796361/50/40/i.jpg"
+        }
+      ]
+    },
+    {
+      "id": 35,
+      "sku": 1101386,
+      "category": "video_cards",
+      "inventory": [
+        10,
+        4,
+        6
+      ],
+      "link": "graphics_card_palit_pci-e_geforce_gtx1650_4gb_ddr5_kalmx_ne5165001bg1-1170h",
+      "status": "есть в наличии",
+      "name": "Видеокарта Palit PCI-E GeForce GTX1650 4GB DDR5 KalmX (NE5165001BG1-1170H)",
+      "description": "GTX 1650 / 4 ГБ / GDDR-5 / 128 бит / DX-12 / Частота ядра - 1665 МГц / Частота памяти - 12000 МГц / пассивное охлаждение / HDMI - 1 шт. / DisplayPort - 2 шт. / Блок питания - 300 Вт / 178x138x38 мм",
+      "poster": "https://d.428.ua/img/2378445/320/240/.jpg",
+      "preview": "https://c.428.ua/img/2378445/500/400/.jpg",
+      "photoInOrder": "https://elmir.ua/img/2378445/100/100/.jpg",
+      "price": 4674,
+      "warranty": 24,
+      "reviewsCount": 0,
+      "ratingsCount": 0,
+      "totalRating": 0,
+      "isHit": false,
+      "isNew": false,
+      "specifications": [
+        {
+          "brand": {
+            "id": 1,
+            "property": "Производитель",
+            "value": "Palit"
+          }
+        },
+        {
+          "series": {
+            "id": 2,
+            "property": "Серия",
+            "value": "GeForce 1600"
+          }
+        },
+        {
+          "chip_maker": {
+            "id": 3,
+            "property": "Производитель чипа",
+            "value": "NVIDIA"
+          }
+        },
+        {
+          "lineup": {
+            "id": 4,
+            "property": "Модельный ряд",
+            "value": "GTX 1650"
+          }
+        },
+        {
+          "professional": {
+            "id": 5,
+            "property": "Профессиональная",
+            "value": "нет"
+          }
+        },
+        {
+          "condition": {
+            "id": 6,
+            "property": "Состояние",
+            "value": "новая"
+          }
+        },
+        {
+          "memory_size": {
+            "id": 7,
+            "property": "Объем памяти",
+            "value": "4 ГБ"
+          }
+        },
+        {
+          "memory_type": {
+            "id": 8,
+            "property": "Тип памяти",
+            "value": "GDDR-5"
+          }
+        },
+        {
+          "memory_bus": {
+            "id": 9,
+            "property": "Шина памяти",
+            "value": "128 бит"
+          }
+        },
+        {
+          "directX": {
+            "id": 10,
+            "property": "DirectX",
+            "value": "DX-12"
+          }
+        },
+        {
+          "engine_clock": {
+            "id": 11,
+            "property": "Частота ядра",
+            "value": "1665 МГц"
+          }
+        },
+        {
+          "memory_clock": {
+            "id": 12,
+            "property": "Частота памяти",
+            "value": "12000 МГц"
+          }
+        },
+        {
+          "power_connectors": {
+            "id": 13,
+            "property": "Дополнительное питание",
+            "value": "нет"
+          }
+        },
+        {
+          "interface": {
+            "id": 14,
+            "property": "Интерфейс подключения",
+            "value": "PCI-E х16 3.0"
+          }
+        },
+        {
+          "d-sub": {
+            "id": 15,
+            "property": "D-Sub (VGA)",
+            "value": "нет",
+            "hide": true
+          }
+        },
+        {
+          "dvi": {
+            "id": 16,
+            "property": "DVI",
+            "value": "1 шт.",
+            "hide": true
+          }
+        },
+        {
+          "hdmi": {
+            "id": 17,
+            "property": "HDMI",
+            "value": "1 шт.",
+            "hide": true
+          }
+        },
+        {
+          "displayPort": {
+            "id": 18,
+            "property": "DisplayPort",
+            "value": "2 шт.",
+            "hide": true
+          }
+        },
+        {
+          "output": {
+            "id": 19,
+            "property": "Разъёмы подключения",
+            "value": "DVI-D, 2хDisplayPort (v1.4), HDMI (2.0b)"
+          }
+        },
+        {
+          "spu": {
+            "id": 20,
+            "property": "Число универсальных процессоров (SPU)",
+            "value": 896
+          }
+        },
+        {
+          "tmu": {
+            "id": 21,
+            "property": "Число текстурных блоков (TMU)",
+            "value": 56
+          }
+        },
+        {
+          "rop": {
+            "id": 22,
+            "property": "Число блоков растеризации (ROP)",
+            "value": 32
+          }
+        },
+        {
+          "process_technology": {
+            "id": 23,
+            "property": "Техпроцесс",
+            "value": "12 нм"
+          }
+        },
+        {
+          "power_consumption": {
+            "id": 24,
+            "property": "Энергопотребление",
+            "value": "75 Вт"
+          }
+        },
+        {
+          "recommended_psu": {
+            "id": 25,
+            "property": "Блок питания",
+            "value": "300 Вт"
+          }
+        },
+        {
+          "cooling_type": {
+            "id": 26,
+            "property": "Тип охлаждения",
+            "value": "пассивное"
+          }
+        },
+        {
+          "slot_type": {
+            "id": 27,
+            "property": "Исполнение",
+            "value": "двухслотовое"
+          }
+        },
+        {
+          "dimensions": {
+            "id": 29,
+            "property": "Габариты",
+            "value": "178x138x38 мм"
+          }
+        },
+        {
+          "products_web_page": {
+            "id": 30,
+            "property": "Сайт производителя",
+            "value": "https://www.palit.com/palit/vgapro.php?id=3494&lang=en&pn=NE5165001BG1-1170H&tab=sp"
+          }
+        }
+      ],
+      "photos": [
+        {
+          "id": 1,
+          "w240": "https://b.428.ua/img/2378445/240/180/.jpg",
+          "w320": "https://b.428.ua/img/2378445/320/240/.jpg",
+          "w425": "https://b.428.ua/img/2378445/425/319/.jpg",
+          "w480": "https://b.428.ua/img/2378445/480/360/.jpg",
+          "w640": "https://b.428.ua/img/2378445/640/480/.jpg",
+          "original": "https://d.428.ua/img/2378445/3000/2000/ua_videokarta_palit_pci-e_geforce_gtx1650_4gb_ddr5_kalmx_ne5165001bg1-1170h_videokarta_palit_pci-e_geforce_gtx1650_4gb_ddr5_kalmx_ne5165001bg1-1170h~756~613.jpg",
+          "thumbnail": "https://b.428.ua/img/2378445/50/40/i.jpg"
+        },
+        {
+          "id": 2,
+          "w240": "https://b.428.ua/img/2378446/240/180/.jpg",
+          "w320": "https://b.428.ua/img/2378446/320/240/.jpg",
+          "w425": "https://b.428.ua/img/2378446/425/319/.jpg",
+          "w480": "https://b.428.ua/img/2378446/480/360/.jpg",
+          "w640": "https://b.428.ua/img/2378446/640/480/.jpg",
+          "original": "https://e.428.ua/img/2378446/3000/2000/ua_videokarta_palit_pci-e_geforce_gtx1650_4gb_ddr5_kalmx_ne5165001bg1-1170h_videokarta_palit_pci-e_geforce_gtx1650_4gb_ddr5_kalmx_ne5165001bg1-1170h~864~614.jpg",
+          "thumbnail": "https://b.428.ua/img/2378446/50/40/i.jpg"
+        },
+        {
+          "id": 3,
+          "w240": "https://b.428.ua/img/2378447/240/180/.jpg",
+          "w320": "https://b.428.ua/img/2378447/320/240/.jpg",
+          "w425": "https://b.428.ua/img/2378447/425/319/.jpg",
+          "w480": "https://b.428.ua/img/2378447/480/360/.jpg",
+          "w640": "https://b.428.ua/img/2378447/640/480/.jpg",
+          "original": "https://f.428.ua/img/2378447/3000/2000/ua_videokarta_palit_pci-e_geforce_gtx1650_4gb_ddr5_kalmx_ne5165001bg1-1170h_videokarta_palit_pci-e_geforce_gtx1650_4gb_ddr5_kalmx_ne5165001bg1-1170h~671~612.jpg",
+          "thumbnail": "https://b.428.ua/img/2378447/50/40/i.jpg"
+        },
+        {
+          "id": 4,
+          "w240": "https://b.428.ua/img/2378448/240/180/.jpg",
+          "w320": "https://b.428.ua/img/2378448/320/240/.jpg",
+          "w425": "https://b.428.ua/img/2378448/425/319/.jpg",
+          "w480": "https://b.428.ua/img/2378448/480/360/.jpg",
+          "w640": "https://b.428.ua/img/2378448/640/480/.jpg",
+          "original": "https://a.428.ua/img/2378448/3000/2000/ua_videokarta_palit_pci-e_geforce_gtx1650_4gb_ddr5_kalmx_ne5165001bg1-1170h_videokarta_palit_pci-e_geforce_gtx1650_4gb_ddr5_kalmx_ne5165001bg1-1170h~577~614.jpg",
+          "thumbnail": "https://b.428.ua/img/2378448/50/40/i.jpg"
+        },
+        {
+          "id": 5,
+          "w240": "https://b.428.ua/img/2378449/240/180/.jpg",
+          "w320": "https://b.428.ua/img/2378449/320/240/.jpg",
+          "w425": "https://b.428.ua/img/2378449/425/319/.jpg",
+          "w480": "https://b.428.ua/img/2378449/480/360/.jpg",
+          "w640": "https://b.428.ua/img/2378449/640/480/.jpg",
+          "original": "https://b.428.ua/img/2378449/3000/2000/ua_videokarta_palit_pci-e_geforce_gtx1650_4gb_ddr5_kalmx_ne5165001bg1-1170h_videokarta_palit_pci-e_geforce_gtx1650_4gb_ddr5_kalmx_ne5165001bg1-1170h~1089~312.jpg",
+          "thumbnail": "https://b.428.ua/img/2378449/50/40/i.jpg"
+        },
+        {
+          "id": 6,
+          "w240": "https://b.428.ua/img/2378450/240/180/.jpg",
+          "w320": "https://b.428.ua/img/2378450/320/240/.jpg",
+          "w425": "https://b.428.ua/img/2378450/425/319/.jpg",
+          "w480": "https://b.428.ua/img/2378450/480/360/.jpg",
+          "w640": "https://b.428.ua/img/2378450/640/480/.jpg",
+          "original": "https://c.428.ua/img/2378450/3000/2000/ua_videokarta_palit_pci-e_geforce_gtx1650_4gb_ddr5_kalmx_ne5165001bg1-1170h_videokarta_palit_pci-e_geforce_gtx1650_4gb_ddr5_kalmx_ne5165001bg1-1170h~780~612.jpg",
+          "thumbnail": "https://b.428.ua/img/2378450/50/40/i.jpg"
+        },
+        {
+          "id": 7,
+          "w240": "https://b.428.ua/img/2378451/240/180/.jpg",
+          "w320": "https://b.428.ua/img/2378451/320/240/.jpg",
+          "w425": "https://b.428.ua/img/2378451/425/319/.jpg",
+          "w480": "https://b.428.ua/img/2378451/480/360/.jpg",
+          "w640": "https://b.428.ua/img/2378451/640/480/.jpg",
+          "original": "https://d.428.ua/img/2378451/3000/2000/ua_videokarta_palit_pci-e_geforce_gtx1650_4gb_ddr5_kalmx_ne5165001bg1-1170h_videokarta_palit_pci-e_geforce_gtx1650_4gb_ddr5_kalmx_ne5165001bg1-1170h~666~612.jpg",
+          "thumbnail": "https://b.428.ua/img/2378451/50/40/i.jpg"
+        }
+      ]
+    },
+    {
+      "id": 36,
+      "sku": 669306,
+      "category": "video_cards",
+      "inventory": [
+        7,
+        4,
+        3
+      ],
+      "link": "graphics_card_asus_pci-e_geforce_gtx1050_ti_4gb_ddr5_cerberus-gtx1050ti-a4g",
+      "status": "есть в наличии",
+      "name": "Видеокарта Asus PCI-E GeForce GTX1050 Ti 4GB DDR5 (CERBERUS-GTX1050TI-A4G)",
+      "description": "GTX 1050 Ti / 4 ГБ / GDDR-5 / 128 бит / DX-12 / Частота ядра - 1442 МГц / Частота памяти - 7008 МГц / HDMI - 1 шт. / DisplayPort - 1 шт. / DVI - 1 шт. / Блок питания - 300 Вт / 203x115x38 мм",
+      "poster": "https://d.428.ua/img/1212325/320/240/.jpg",
+      "preview": "https://c.428.ua/img/1212325/500/400/.jpg",
+      "photoInOrder": "https://elmir.ua/img/1212325/100/100/.jpg",
+      "price": 4499,
+      "warranty": 36,
+      "reviewsCount": 0,
+      "ratingsCount": 0,
+      "totalRating": 0,
+      "isHit": false,
+      "isNew": false,
+      "specifications": [
+        {
+          "brand": {
+            "id": 1,
+            "property": "Производитель",
+            "value": "Asus"
+          }
+        },
+        {
+          "series": {
+            "id": 2,
+            "property": "Серия",
+            "value": "GeForce 1000"
+          }
+        },
+        {
+          "chip_maker": {
+            "id": 3,
+            "property": "Производитель чипа",
+            "value": "NVIDIA"
+          }
+        },
+        {
+          "lineup": {
+            "id": 4,
+            "property": "Модельный ряд",
+            "value": "GTX 1050 Ti"
+          }
+        },
+        {
+          "professional": {
+            "id": 5,
+            "property": "Профессиональная",
+            "value": "нет"
+          }
+        },
+        {
+          "condition": {
+            "id": 6,
+            "property": "Состояние",
+            "value": "новая"
+          }
+        },
+        {
+          "memory_size": {
+            "id": 7,
+            "property": "Объем памяти",
+            "value": "4 ГБ"
+          }
+        },
+        {
+          "memory_type": {
+            "id": 8,
+            "property": "Тип памяти",
+            "value": "GDDR-5"
+          }
+        },
+        {
+          "memory_bus": {
+            "id": 9,
+            "property": "Шина памяти",
+            "value": "128 бит"
+          }
+        },
+        {
+          "directX": {
+            "id": 10,
+            "property": "DirectX",
+            "value": "DX-12"
+          }
+        },
+        {
+          "engine_clock": {
+            "id": 11,
+            "property": "Частота ядра",
+            "value": "1442 МГц"
+          }
+        },
+        {
+          "memory_clock": {
+            "id": 12,
+            "property": "Частота памяти",
+            "value": "7008 МГц"
+          }
+        },
+        {
+          "power_connectors": {
+            "id": 13,
+            "property": "Дополнительное питание",
+            "value": "нет"
+          }
+        },
+        {
+          "interface": {
+            "id": 14,
+            "property": "Интерфейс подключения",
+            "value": "PCI-E х16 3.0"
+          }
+        },
+        {
+          "d-sub": {
+            "id": 15,
+            "property": "D-Sub (VGA)",
+            "value": "нет",
+            "hide": true
+          }
+        },
+        {
+          "dvi": {
+            "id": 16,
+            "property": "DVI",
+            "value": "1 шт.",
+            "hide": true
+          }
+        },
+        {
+          "hdmi": {
+            "id": 17,
+            "property": "HDMI",
+            "value": "1 шт.",
+            "hide": true
+          }
+        },
+        {
+          "displayPort": {
+            "id": 18,
+            "property": "DisplayPort",
+            "value": "1 шт.",
+            "hide": true
+          }
+        },
+        {
+          "output": {
+            "id": 19,
+            "property": "Разъёмы подключения",
+            "value": "DVI-D, HDMI, DisplayPort"
+          }
+        },
+        {
+          "spu": {
+            "id": 20,
+            "property": "Число универсальных процессоров (SPU)",
+            "value": 768
+          }
+        },
+        {
+          "tmu": {
+            "id": 21,
+            "property": "Число текстурных блоков (TMU)",
+            "value": 48
+          }
+        },
+        {
+          "rop": {
+            "id": 22,
+            "property": "Число блоков растеризации (ROP)",
+            "value": 32
+          }
+        },
+        {
+          "process_technology": {
+            "id": 23,
+            "property": "Техпроцесс",
+            "value": "14 нм"
+          }
+        },
+        {
+          "power_consumption": {
+            "id": 24,
+            "property": "Энергопотребление",
+            "value": "75 Вт"
+          }
+        },
+        {
+          "recommended_psu": {
+            "id": 25,
+            "property": "Блок питания",
+            "value": "300 Вт"
+          }
+        },
+        {
+          "cooling_type": {
+            "id": 26,
+            "property": "Тип охлаждения",
+            "value": "активное"
+          }
+        },
+        {
+          "slot_type": {
+            "id": 27,
+            "property": "Исполнение",
+            "value": "двухслотовое"
+          }
+        },
+        {
+          "dimensions": {
+            "id": 29,
+            "property": "Габариты",
+            "value": "203x115x38 мм"
+          }
+        },
+        {
+          "products_web_page": {
+            "id": 30,
+            "property": "Сайт производителя",
+            "value": "https://www.asus.com/Graphics-Cards/CERBERUS-GTX1050TI-A4G/"
+          }
+        }
+      ],
+      "photos": [
+        {
+          "id": 1,
+          "w240": "https://b.428.ua/img/1212325/240/180/.jpg",
+          "w320": "https://b.428.ua/img/1212325/320/240/.jpg",
+          "w425": "https://b.428.ua/img/1212325/425/319/.jpg",
+          "w480": "https://b.428.ua/img/1212325/480/360/.jpg",
+          "w640": "https://b.428.ua/img/1212325/640/480/.jpg",
+          "original": "https://b.428.ua/img/1212325/3000/2000/ua_videokarta_asus_pci-e_geforce_gtx1050_ti_4gb_ddr5_cerberus-gtx1050ti-a4g_videokarta_asus_pci-e_geforce_gtx1050_ti_4gb_ddr5_cerberus-gtx1050ti-a4g~863~526.jpg",
+          "thumbnail": "https://b.428.ua/img/1212325/50/40/i.jpg"
+        },
+        {
+          "id": 2,
+          "w240": "https://b.428.ua/img/1212327/240/180/.jpg",
+          "w320": "https://b.428.ua/img/1212327/320/240/.jpg",
+          "w425": "https://b.428.ua/img/1212327/425/319/.jpg",
+          "w480": "https://b.428.ua/img/1212327/480/360/.jpg",
+          "w640": "https://b.428.ua/img/1212327/640/480/.jpg",
+          "original": "https://d.428.ua/img/1212327/3000/2000/ua_videokarta_asus_pci-e_geforce_gtx1050_ti_4gb_ddr5_cerberus-gtx1050ti-a4g_videokarta_asus_pci-e_geforce_gtx1050_ti_4gb_ddr5_cerberus-gtx1050ti-a4g~893~775.jpg",
+          "thumbnail": "https://b.428.ua/img/1212327/50/40/i.jpg"
+        },
+        {
+          "id": 3,
+          "w240": "https://b.428.ua/img/1212328/240/180/.jpg",
+          "w320": "https://b.428.ua/img/1212328/320/240/.jpg",
+          "w425": "https://b.428.ua/img/1212328/425/319/.jpg",
+          "w480": "https://b.428.ua/img/1212328/480/360/.jpg",
+          "w640": "https://b.428.ua/img/1212328/640/480/.jpg",
+          "original": "https://e.428.ua/img/1212328/3000/2000/ua_videokarta_asus_pci-e_geforce_gtx1050_ti_4gb_ddr5_cerberus-gtx1050ti-a4g_videokarta_asus_pci-e_geforce_gtx1050_ti_4gb_ddr5_cerberus-gtx1050ti-a4g~800~559.jpg",
+          "thumbnail": "https://b.428.ua/img/1212328/50/40/i.jpg"
+        },
+        {
+          "id": 4,
+          "w240": "https://b.428.ua/img/1212330/240/180/.jpg",
+          "w320": "https://b.428.ua/img/1212330/320/240/.jpg",
+          "w425": "https://b.428.ua/img/1212330/425/319/.jpg",
+          "w480": "https://b.428.ua/img/1212330/480/360/.jpg",
+          "w640": "https://b.428.ua/img/1212330/640/480/.jpg",
+          "original": "https://a.428.ua/img/1212330/3000/2000/ua_videokarta_asus_pci-e_geforce_gtx1050_ti_4gb_ddr5_cerberus-gtx1050ti-a4g_videokarta_asus_pci-e_geforce_gtx1050_ti_4gb_ddr5_cerberus-gtx1050ti-a4g~890~842.jpg",
+          "thumbnail": "https://b.428.ua/img/1212330/50/40/i.jpg"
+        },
+        {
+          "id": 5,
+          "w240": "https://b.428.ua/img/1212331/240/180/.jpg",
+          "w320": "https://b.428.ua/img/1212331/320/240/.jpg",
+          "w425": "https://b.428.ua/img/1212331/425/319/.jpg",
+          "w480": "https://b.428.ua/img/1212331/480/360/.jpg",
+          "w640": "https://b.428.ua/img/1212331/640/480/.jpg",
+          "original": "https://b.428.ua/img/1212331/3000/2000/ua_videokarta_asus_pci-e_geforce_gtx1050_ti_4gb_ddr5_cerberus-gtx1050ti-a4g_videokarta_asus_pci-e_geforce_gtx1050_ti_4gb_ddr5_cerberus-gtx1050ti-a4g~853~509.jpg",
+          "thumbnail": "https://b.428.ua/img/1212331/50/40/i.jpg"
+        }
+      ]
     }
   ],
   "reviews": [
@@ -7245,6 +10664,18 @@
       "comment": "нормальная видеокарта у меня игры тянет на ура. не знаю как у других но мне понравилось...."
     },
     {
+      "id": 1545262140000,
+      "reviewTo": 33,
+      "author": "Nama123",
+      "date": "20.12.2018",
+      "time": "01:29",
+      "rating": 5,
+      "buyType": "1",
+      "advantages": "Цена (5100грн), Производительность",
+      "disadvantages": "Гарантия 3 мес. =)",
+      "comment": "Брал тут, доволен полностью, спасибо эл. мир\nВ паре с монитором 2к, freesync и ЦП 1600x она позволяет комфортно играть на ультра во всех играх. В HOTS выдала 90-130fps и фишка в том, что у соседа 1070ti, но из за вертикальной синхронизации у него всегда 60 fps ))\nЛучшее что можно было найти за эту цену, по тестам равна или лучше 1060 3gb и хуже 1060 6gb, которые стоят дороже и желательно будет включать В. синх.\nКак вариант сейчас вот эта будет еще лучше но чуть дороже"
+    },
+    {
       "id": 1552555920000,
       "reviewTo": 9,
       "author": "User_85035",
@@ -7381,6 +10812,16 @@
       "advantages": "мощная, тихая, хорошее охлаждение проца, прикольная подсветка",
       "disadvantages": "температура памяти при постоянной нагрузке держится в районе 92-106градусов",
       "comment": "для игр отличное решение, память греется 60-70градусов. в работе температура памяти напрягает"
+    },
+    {
+      "id": 1603124340000,
+      "reviewTo": 25,
+      "author": "sashasoft",
+      "date": "19.10.2020",
+      "time": "19:19",
+      "rating": 5,
+      "buyType": "1",
+      "advantages": "Прошу посоветовать материнскую плату под эту видеокарту, но без фанатизма))\nПокупал на замену старой, но видимо дело не в ней, не работает.\nК сожалению модель материнки, которая в наличии, сказать не могу..."
     }
   ],
   "answers": [

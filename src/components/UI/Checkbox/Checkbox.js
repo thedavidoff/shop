@@ -27,6 +27,9 @@ const useStyles = makeStyles((theme) => ({
   checkbox: {
     marginRight: 5,
     padding: 3,
+  },
+  label: {
+    fontSize: 12
   }
 }));
 
@@ -38,6 +41,9 @@ export const FilterCheckbox = (props) => {
       control={<GrayColorCheckbox className={classes.checkbox} {...props} />}
       label={props.label}
       className={classes.controlLabel}
+      classes={{
+        label: classes.label,
+      }}
     />
   );
 };

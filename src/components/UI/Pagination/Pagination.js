@@ -1,14 +1,8 @@
 import React from "react";
 import { connectPagination } from "react-instantsearch-dom";
-import { withStyles } from "@material-ui/core";
 import MuiPagination from "@material-ui/lab/Pagination/Pagination";
 
-const Pagination = withStyles({
-  root: {
-    width: "100%",
-    marginTop: 30
-  },
-})((props) => {
+const Pagination = (props) => {
   return (
     <MuiPagination
       classes={props.classes}
@@ -19,6 +13,6 @@ const Pagination = withStyles({
       color="primary"
     />
   );
-});
+};
 
 export default connectPagination(Pagination);

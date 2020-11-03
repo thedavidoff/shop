@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import SlickSlider from "react-slick";
 import * as PropTypes from "prop-types";
 
 import styles from "./Slider.module.css";
@@ -125,9 +126,12 @@ const Slider = ({ product }) => {
       cCenterCursor.left = Math.floor(cPhoto.left + wCursor / 2);
 
       if (cMouse.left > cCenterCursor.left)
-        y = Math.min(Math.ceil(320 - wCursor), Math.floor(
-          cCursor.left - wCursor / 2 < 0 ? 0 : cCursor.left - wCursor / 2
-        ));
+        y = Math.min(
+          Math.ceil(320 - wCursor),
+          Math.floor(
+            cCursor.left - wCursor / 2 < 0 ? 0 : cCursor.left - wCursor / 2
+          )
+        );
       if (cMouse.left > cCenterCursor.right) y = Math.ceil(320 - wCursor);
 
       if (cCenterCursor.top > cCenterCursor.bottom) {
@@ -136,9 +140,10 @@ const Slider = ({ product }) => {
         }
       } else {
         if (cMouse.top > cCenterCursor.top) {
-          x = Math.max(startPosX, Math.floor(
-            cCursor.top - hCursor / 2 - difHeight / 2
-          ));
+          x = Math.max(
+            startPosX,
+            Math.floor(cCursor.top - hCursor / 2 - difHeight / 2)
+          );
           //console.log(x)
         }
         if (cMouse.top > cCenterCursor.bottom)
@@ -174,6 +179,14 @@ const Slider = ({ product }) => {
 
   //console.log(-(x - difHeight / 2) * (352 / hCursor));
   //console.log(-(y - difWidth / 2) * (502 / wCursor));
+
+  const settings = {
+    dots: false,
+    infinite: false,
+    speed: 500,
+    slidesToShow: 6,
+    slidesToScroll: 1,
+  };
 
   return (
     <div className={styles.photoBlock}>
@@ -227,10 +240,13 @@ const Slider = ({ product }) => {
           )}
         </div>
       )}
+
       <ul className={styles.photoSlider}>
-        {product.photos.map((photo) => (
-          <li key={photo.id}>
+        <SlickSlider {...settings}>
+          {product.photos.map((photo) => (
+            <div>
             <img
+              key={photo.id}
               src={photo.thumbnail}
               alt={product.name}
               className={
@@ -238,8 +254,9 @@ const Slider = ({ product }) => {
               }
               onMouseOver={() => setSelectedPhoto(photo.id)}
             />
-          </li>
-        ))}
+            </div>
+          ))}
+        </SlickSlider>
       </ul>
     </div>
   );

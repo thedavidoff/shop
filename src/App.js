@@ -10,8 +10,8 @@ import Notice from "./components/UI/Notice/Notice";
 
 const useStyles = makeStyles(() => ({
   sidebar: {
-    minWidth: 220,
-    flexBasis: 220,
+    minWidth: 240,
+    flexBasis: 240,
   },
 }));
 
