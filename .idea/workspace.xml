@@ -2,17 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="d838e675-2b75-4462-b131-7ac443757c74" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/components/UI/SVG/AlgoliaSVG.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dictionaries/Eugene.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dictionaries/Eugene.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/db.json" beforeDir="false" afterPath="$PROJECT_DIR$/db.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/Products/Product/ProductPage/Slider/Slider.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Products/Product/ProductPage/Slider/Slider.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Products/ProductsContainer.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Products/ProductsContainer.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/UI/Checkbox/Checkbox.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/UI/Checkbox/Checkbox.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/UI/Pagination/Pagination.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/UI/Pagination/Pagination.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Products/Product/ProductPage/Slider/Slider.module.css" beforeDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -238,7 +232,8 @@
       <workItem from="1604170538798" duration="7943000" />
       <workItem from="1604219677145" duration="29785000" />
       <workItem from="1604313074399" duration="26146000" />
-      <workItem from="1604392173396" duration="17674000" />
+      <workItem from="1604392173396" duration="17786000" />
+      <workItem from="1604497225510" duration="4725000" />
     </task>
     <servers />
   </component>

@@ -1,11 +1,79 @@
 import React, { useState } from "react";
 import SlickSlider from "react-slick";
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
 import * as PropTypes from "prop-types";
 
-import styles from "./Slider.module.css";
 import Preloader from "../../../../UI/Preloader/Preloader";
+import { makeStyles } from "@material-ui/core/styles";
+
+const settings = {
+  dots: false,
+  infinite: false,
+  speed: 500,
+  slidesToShow: 5,
+  slidesToScroll: 4,
+  swipe: false
+};
+
+const useStyles = makeStyles((theme) => ({
+  photoBlock: {
+    width: 380,
+    height: 342,
+    position: "relative",
+    padding: "30px 30px 0 30px",
+    "& img": {
+      position: "relative",
+    },
+  },
+  slickSlider: {
+    width: "100%",
+    "& .slick-track": {
+      display: "flex",
+    },
+    "& .slick-prev:before": {
+      color: theme.palette.primary.main,
+    },
+    "& .slick-next:before": {
+      color: theme.palette.primary.main,
+    },
+  },
+  photoSlider: {
+    marginTop: 15,
+    "& .slick-active": {
+      border: "1px solid transparent",
+      "&:hover": {
+        border: "1px dashed #000",
+      },
+    },
+  },
+  cursor: {
+    position: "absolute",
+    background: "rgba(0, 0, 0, .5)",
+  },
+  zoom: {
+    display: "flex",
+    alignItems: "center",
+    justifyContent: "center",
+    position: "absolute",
+    top: 0,
+    left: 380,
+    height: 350,
+    width: 500,
+    border: "1px solid #000",
+    background: "#fff",
+    overflow: "hidden",
+    zIndex: 1000,
+    "& img": {
+      position: "absolute",
+      top: 0,
+      left: 0,
+    },
+  },
+}));
 
 const Slider = ({ product }) => {
+  const classes = useStyles();
   const [selectedPhoto, setSelectedPhoto] = useState(1);
   const [zoomShow, setZoomShow] = useState(false);
   const [cPhoto, setCPhoto] = useState({
@@ -180,16 +248,8 @@ const Slider = ({ product }) => {
   //console.log(-(x - difHeight / 2) * (352 / hCursor));
   //console.log(-(y - difWidth / 2) * (502 / wCursor));
 
-  const settings = {
-    dots: false,
-    infinite: false,
-    speed: 500,
-    slidesToShow: 6,
-    slidesToScroll: 1,
-  };
-
   return (
-    <div className={styles.photoBlock}>
+    <div className={classes.photoBlock}>
       <div
         onMouseEnter={zoomActivate}
         onMouseMove={mouseMove}
@@ -206,7 +266,7 @@ const Slider = ({ product }) => {
         />
         {zoomShow && isLoaded && (
           <div
-            className={styles.cursor}
+            className={classes.cursor}
             style={{
               width: wCursor + "px",
               height: hCursor + "px",
@@ -219,7 +279,7 @@ const Slider = ({ product }) => {
         )}
       </div>
       {zoomShow && (
-        <div className={styles.zoom}>
+        <div className={classes.zoom}>
           {product.photos.find((photo) => photo.id === selectedPhoto) && (
             <>
               {!isLoaded && <Preloader />}
@@ -229,7 +289,7 @@ const Slider = ({ product }) => {
                   top: Math.ceil(-(x - difHeight / 2) * (352 / hCursor)) + "px",
                   left: Math.ceil(-(y - difWidth / 2) * (502 / wCursor)) + "px",
                 }}
-                className={styles.img}
+                className={classes.img}
                 src={
                   product.photos.find((photo) => photo.id === selectedPhoto)
                     .original
@@ -241,23 +301,21 @@ const Slider = ({ product }) => {
         </div>
       )}
 
-      <ul className={styles.photoSlider}>
-        <SlickSlider {...settings}>
+      <div className={classes.photoSlider}>
+        <SlickSlider {...settings} className={classes.slickSlider}>
           {product.photos.map((photo) => (
-            <div>
             <img
               key={photo.id}
               src={photo.thumbnail}
               alt={product.name}
               className={
-                selectedPhoto === photo.id ? styles.selectedPhoto : null
+                selectedPhoto === photo.id ? classes.selectedPhoto : null
               }
               onMouseOver={() => setSelectedPhoto(photo.id)}
             />
-            </div>
           ))}
         </SlickSlider>
-      </ul>
+      </div>
     </div>
   );
 };
