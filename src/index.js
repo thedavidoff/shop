@@ -20,14 +20,6 @@ import "firebase/auth";
 import "firebase/database";
 import theme from "./theme";
 
-import algoliasearch from "algoliasearch";
-import { InstantSearch } from "react-instantsearch-dom";
-
-const searchClient = algoliasearch(
-  "I21C32G5C2",
-  "85a7081843a79618290d2c0a18ddf6af"
-);
-
 firebase.initializeApp(fbConfig);
 
 ReactDOM.render(
@@ -41,9 +33,7 @@ ReactDOM.render(
         >
           <ThemeProvider theme={theme}>
             <ScrollToTop>
-              <InstantSearch indexName="dev_NAME" searchClient={searchClient}>
-                <App />
-              </InstantSearch>
+              <App />
             </ScrollToTop>
           </ThemeProvider>
         </ReactReduxFirebaseProvider>

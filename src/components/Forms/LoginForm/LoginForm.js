@@ -6,7 +6,7 @@ import { email, minLength6 } from "../validate";
 import { checkbox, input } from "../renderFields";
 
 const useStyles = makeStyles((theme) => ({
-  root: {
+  loginForm: {
     maxWidth: 250,
     padding: "20px 24px 24px",
   },
@@ -35,7 +35,7 @@ let LoginForm = ({ error, pristine, submitting, handleSubmit }) => {
   const classes = useStyles();
 
   return (
-    <form onSubmit={handleSubmit} className={classes.root}>
+    <form onSubmit={handleSubmit} className={classes.loginForm}>
       <Typography className={classes.typography}>
         Вход в личный кабинет:
       </Typography>
