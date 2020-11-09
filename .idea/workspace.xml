@@ -2,8 +2,14 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="d838e675-2b75-4462-b131-7ac443757c74" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/src/components/UI/SkeletonFilterCheckbox/SkeletonFilterCheckbox.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/UI/Autocomplete/Autocomplete.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/UI/Autocomplete/Autocomplete.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Header/Cart/Cart.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Header/Cart/Cart.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Products/ProductsContainer.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Products/ProductsContainer.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Sidebar/Sidebar.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Sidebar/Sidebar.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/UI/Hit/Hits.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/UI/Hit/Hits.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/UI/SkeletonCard/SkeletonCard.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/UI/SkeletonCard/SkeletonCard.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/redux/homeReducer.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/redux/homeReducer.js" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -232,7 +238,7 @@
       <workItem from="1604392173396" duration="17786000" />
       <workItem from="1604497225510" duration="5643000" />
       <workItem from="1604830563580" duration="32525000" />
-      <workItem from="1604924909169" duration="1135000" />
+      <workItem from="1604924909169" duration="7052000" />
     </task>
     <servers />
   </component>

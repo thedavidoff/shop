@@ -1,11 +1,12 @@
 import React from "react";
 import { connect } from "react-redux";
-import { makeStyles } from "@material-ui/core/styles";
+import { makeStyles } from "@material-ui/core";
 import "rc-slider/assets/index.css";
 
+import { setCurrentRefinement } from "../../redux/homeReducer";
 import FilterCheckboxList from "../UI/FilterCheckboxList/FilterCheckboxList";
 import FilterAccordion from "../UI/FilterAccordion/FilterAccordion";
-import { setCurrentRefinement } from "../../redux/homeReducer";
+import SkeletonFilterCheckbox from "../UI/SkeletonFilterCheckbox/SkeletonFilterCheckbox";
 
 const useStyles = makeStyles(() => ({
   sidebar: {
@@ -25,30 +26,30 @@ const Sidebar = ({
 
   return (
     <div className={classes.sidebar}>
-      {isFetchingFilterFields ? (
-        <div>Loading...</div>
-      ) : (
-        Object.keys(currentRefinement).length > 0 &&
-        filterFields.map(({ name, field, isOpen }) => {
-          return (
-            <FilterAccordion
-              key={field}
-              id={field}
-              heading={name}
-              isOpen={isOpen}
-            >
-              <FilterCheckboxList
-                attribute={`specifications.${field}.value`}
-                fields={initialFacets[field]}
-                field={field}
-                currentRefinement={currentRefinement[field]}
-                setCurrentRefinement={setCurrentRefinement}
-                limit={100}
-              />
-            </FilterAccordion>
-          );
-        })
-      )}
+      {isFetchingFilterFields
+        ? Array(19)
+            .fill(undefined, undefined, undefined)
+            .map((item, index) => <SkeletonFilterCheckbox />)
+        : Object.keys(currentRefinement).length > 0 &&
+          filterFields.map(({ name, field, isOpen }) => {
+            return (
+              <FilterAccordion
+                key={field}
+                id={field}
+                heading={name}
+                isOpen={isOpen}
+              >
+                <FilterCheckboxList
+                  attribute={`specifications.${field}.value`}
+                  fields={initialFacets[field]}
+                  field={field}
+                  currentRefinement={currentRefinement[field]}
+                  setCurrentRefinement={setCurrentRefinement}
+                  limit={100}
+                />
+              </FilterAccordion>
+            );
+          })}
     </div>
   );
 };

@@ -121,7 +121,7 @@ export const productsRequest = () => {
     const products = await productAPI.getProductsAPI();
     dispatch({ type: SET_PRODUCTS, payload: products });
     //dispatch({ type: SET_RANGE_PRICES });
-    dispatch({ type: TOGGLE_IS_LOADED, payload: true });
+    //dispatch({ type: TOGGLE_IS_LOADED, payload: true });
 
     dispatch({ type: TOGGLE_IS_FETCHING_FILTER_FIELDS, payload: true });
     const filterFields = await productAPI.getFilterFieldsAPI();

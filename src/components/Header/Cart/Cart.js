@@ -5,6 +5,7 @@ import * as PropTypes from "prop-types";
 
 const useStyles = makeStyles((theme) => ({
   root: {
+    flexShrink: 0,
     width: "231px",
     height: "70px",
     textTransform: "inherit",

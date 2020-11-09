@@ -5,7 +5,6 @@ import { makeStyles, Grid } from "@material-ui/core";
 import * as PropTypes from "prop-types";
 
 import { getIsLoaded, getProducts } from "../../redux/selectors";
-import SkeletonCard from "../UI/SkeletonCard/SkeletonCard";
 import Hits from "../UI/Hit/Hits";
 import Stats from "../UI/Stats/Stats";
 import AlgoliaSVG from "../UI/SVG/AlgoliaSVG";
@@ -19,8 +18,8 @@ const useStyles = makeStyles(() => ({
   },
   grid: {
     alignItems: "center",
-    marginTop: 30
-  }
+    marginTop: 30,
+  },
 }));
 
 const ProductsContainer = (props) => {
@@ -36,19 +35,15 @@ const ProductsContainer = (props) => {
         </Helmet>
         <Stats />
         <Grid container>
-          {props.isLoaded ? (
-            <>
-              <Hits />
-              <Grid container className={classes.grid}>
-                <Grid item xs><Pagination /></Grid>
-                <Grid item><AlgoliaSVG /></Grid>
-              </Grid>
-            </>
-          ) : (
-            Array(36)
-              .fill(undefined, undefined, undefined)
-              .map((item, index) => <SkeletonCard key={index} />)
-          )}
+          <Hits isLoaded={props.isLoaded} />
+          <Grid container className={classes.grid}>
+            <Grid item xs>
+              <Pagination />
+            </Grid>
+            <Grid item>
+              <AlgoliaSVG />
+            </Grid>
+          </Grid>
         </Grid>
       </div>
     </>

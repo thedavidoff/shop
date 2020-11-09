@@ -46,7 +46,7 @@ const SkeletonCard = ({ id }) => {
   const StyledSkeleton = (props) => {
     return (
       <Skeleton
-        animation={false}
+        animation="wave"
         variant={props.variant || "text"}
         {...props}
         className={classes.skeleton}
