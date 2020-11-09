@@ -2,17 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="d838e675-2b75-4462-b131-7ac443757c74" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/components/UI/Autocomplete/Autocomplete.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/UI/SearchBox/SearchBox.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/db.json" beforeDir="false" afterPath="$PROJECT_DIR$/db.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Forms/LoginForm/LoginForm.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Forms/LoginForm/LoginForm.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Header/Search/Search.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Header/Search/Search.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Header/Search/Search.module.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/UI/Autocomplete/Autocomplete.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/UI/Autocomplete/Autocomplete.js" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -240,7 +231,8 @@
       <workItem from="1604313074399" duration="26146000" />
       <workItem from="1604392173396" duration="17786000" />
       <workItem from="1604497225510" duration="5643000" />
-      <workItem from="1604830563580" duration="29605000" />
+      <workItem from="1604830563580" duration="32525000" />
+      <workItem from="1604924909169" duration="1135000" />
     </task>
     <servers />
   </component>

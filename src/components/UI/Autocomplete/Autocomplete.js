@@ -122,6 +122,7 @@ const Autocomplete = (props) => {
         input: classes.input,
       }}
       {...inputProps}
+      type="search"
     />
   );
 
