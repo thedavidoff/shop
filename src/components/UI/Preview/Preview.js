@@ -14,7 +14,7 @@ const useStyles = makeStyles(() => ({
     height: 432,
     padding: 15,
     border: "1px solid #ccc",
-    zIndex: 1000
+    zIndex: 1203
   },
 }));
 

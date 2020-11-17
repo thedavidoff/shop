@@ -120,6 +120,7 @@ const Login = ({
             anchorEl={loginAnchor}
             placement="bottom-start"
             transition
+            style={{ zIndex: 1202 }}
           >
             {({ TransitionProps }) => (
               <ClickAwayListener onClickAway={handleClickAwayLoginForm}>
@@ -147,6 +148,7 @@ const Login = ({
             anchorEl={regAnchor}
             placement="bottom-end"
             transition
+            style={{ zIndex: 1202 }}
           >
             {({ TransitionProps }) => (
               <ClickAwayListener onClickAway={handleClickAwayRegForm}>
