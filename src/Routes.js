@@ -12,8 +12,8 @@ const Routes = () => {
   const query = useQuery();
   const tab = query.get("tab");
 
-  const min = +query.get("minPrice");
-  const max = +query.get("maxPrice");
+  // const min = +query.get("minPrice");
+  // const max = +query.get("maxPrice");
 
   let index;
   if (tab === "regdata") index = 0;
@@ -23,7 +23,7 @@ const Routes = () => {
     <Switch>
       <Redirect exact path="/" to="/shop" />
       <Route exact path="/login" render={() => <Login />} />
-      <Route exact path="/shop" render={() => <ProductsContainer min={min} max={max} />} />
+      <Route exact path="/shop" render={() => <ProductsContainer />} />
       <Route path="/shop/video_cards/:id" render={() => <ProductPage />} />
       <Route exact path="/order" render={() => <Order />} />
       {/*<PrivateRoute auth={auth} path="/profile" component={() => <Profile />} />*/}

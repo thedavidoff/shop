@@ -10,6 +10,7 @@ import Sidebar from "./components/Sidebar/Sidebar";
 import Routes from "./Routes";
 import Notice from "./components/UI/Notice/Notice";
 import HeaderBox from "./components/UI/HeaderBox/HeaderBox";
+import {HashRouter} from "react-router-dom";
 
 const searchClient = algoliasearch(
   "I21C32G5C2",
@@ -63,6 +64,7 @@ const App = ({
     window !== undefined ? () => window().document.body : undefined;
 
   return (
+    <HashRouter basename='/'>
     <Container maxWidth="xl" disableGutters>
       <InstantSearch indexName="dev_NAME" searchClient={searchClient}>
         <HeaderContainer />
@@ -108,6 +110,7 @@ const App = ({
         </Grid>
       </InstantSearch>
     </Container>
+    </HashRouter>
   );
 };
 
