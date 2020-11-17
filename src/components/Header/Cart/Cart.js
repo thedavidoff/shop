@@ -6,10 +6,10 @@ import * as PropTypes from "prop-types";
 const useStyles = makeStyles((theme) => ({
   root: {
     flexShrink: 0,
-    width: "231px",
-    height: "70px",
+    width: 205,
+    height: 70,
     textTransform: "inherit",
-    borderRadius: "4px",
+    borderRadius: 4,
     backgroundColor: theme.palette.primary.main,
     "&:hover": {
       backgroundColor: theme.palette.primary.dark,
@@ -24,7 +24,7 @@ const useStyles = makeStyles((theme) => ({
     flexDirection: "column",
   },
   paragraph: {
-    fontSize: "14px",
+    fontSize: 14,
     color: "#fff",
   },
 }));
@@ -52,7 +52,7 @@ const Cart = ({ countOfProductsInCart, totalCost }) => {
             {countOfProductsInCart > 4 && " товаров"}
           </Typography>
           <Typography className={classes.paragraph} style={totalCostStyle}>
-            <u>{`Общая стоимость: ${totalCost} грн`}</u>
+            <u>{`Общая сумма: ${totalCost} грн`}</u>
           </Typography>
         </div>
       ) : (

@@ -29,7 +29,7 @@ const Sidebar = ({
       {isFetchingFilterFields
         ? Array(19)
             .fill(undefined, undefined, undefined)
-            .map((item, index) => <SkeletonFilterCheckbox />)
+            .map((_, index) => <SkeletonFilterCheckbox key={index} />)
         : Object.keys(currentRefinement).length > 0 &&
           filterFields.map(({ name, field, isOpen }) => {
             return (

@@ -10,6 +10,7 @@ import ExpandMoreIcon from "@material-ui/icons/ExpandMore";
 
 const useStyles = makeStyles((theme) => ({
   accordion: {
+    width: 189,
     margin: "8px 0 !important",
     minHeight: "auto",
     backgroundColor: "transparent",

@@ -35,7 +35,7 @@ const useStyles = makeStyles((theme) => ({
     display: "flex",
     flexDirection: "column",
     paddingTop: 0,
-    paddingBottom: 16,
+    paddingBottom: 15,
     "& p": {
       fontSize: 12,
     },
@@ -59,7 +59,7 @@ const useStyles = makeStyles((theme) => ({
 const styles = (theme) => ({
   root: {
     margin: 0,
-    padding: "16px 24px",
+    padding: "15px 24px",
   },
   title: {
     paddingRight: 40,

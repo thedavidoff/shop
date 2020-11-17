@@ -29,7 +29,7 @@ const useStyles = makeStyles((theme) => ({
   },
   info: {
     margin: "30px 15px",
-    padding: 16,
+    padding: 15,
     background: "#fff6c6",
     border: "1px solid #d2ddec",
     "& p": {

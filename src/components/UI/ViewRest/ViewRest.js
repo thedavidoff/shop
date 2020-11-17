@@ -27,7 +27,7 @@ import { getProducts } from "../../../redux/selectors";
 const styles = (theme) => ({
   root: {
     margin: 0,
-    padding: "16px 24px",
+    padding: "15px 24px",
   },
   closeButton: {
     position: "absolute",
@@ -76,7 +76,7 @@ const useStyles = makeStyles((theme) => ({
     alignItems: "center",
     flexDirection: "column",
     paddingTop: 0,
-    paddingBottom: 16,
+    paddingBottom: 15,
   },
   empty: {
     backgroundColor: theme.palette.error.light,

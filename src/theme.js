@@ -1,4 +1,4 @@
-import { unstable_createMuiStrictModeTheme as createMuiTheme } from "@material-ui/core/styles";
+import { unstable_createMuiStrictModeTheme as createMuiTheme } from "@material-ui/core";
 import { blue, green, red } from "@material-ui/core/colors";
 
 const theme = createMuiTheme({

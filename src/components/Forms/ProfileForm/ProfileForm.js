@@ -22,7 +22,7 @@ import City from "../../Profile/SearchCity/City";
 const useStyles = makeStyles((theme) => ({
   root: {},
   title: {
-    marginBottom: 16,
+    marginBottom: 15,
     fontSize: 18,
     textAlign: "center",
   },

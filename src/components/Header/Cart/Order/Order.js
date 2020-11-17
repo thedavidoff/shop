@@ -30,7 +30,7 @@ const useStyles = makeStyles((theme) => ({
     padding: "0 30px",
   },
   title: {
-    marginTop: 16,
+    marginTop: 15,
     fontSize: 18,
     textAlign: "center",
   },
@@ -42,7 +42,7 @@ const useStyles = makeStyles((theme) => ({
   totalRow: {
     backgroundColor: "#fff9bb",
     "& td": {
-      padding: "8px 16px",
+      padding: "8px 15px",
       borderBottom: "1px solid #bfbfbf",
     },
   },

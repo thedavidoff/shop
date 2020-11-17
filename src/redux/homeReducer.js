@@ -16,6 +16,8 @@ const SET_INITIAL_FACETS = "homeReducer/SET_INITIAL_FACETS";
 
 const SET_CURRENT_REFINEMENTS = "homeReducer/SET_CURRENT_REFINEMENTS";
 
+const TOGGLE_IS_OPEN_SIDEBAR = "homeReducer/TOGGLE_IS_OPEN_SIDEBAR";
+
 const initialState = {
   isLoaded: false,
   products: [],
@@ -28,6 +30,7 @@ const initialState = {
   updateFilterFieldsValues: [],
   initialFacets: {},
   currentRefinement: {},
+  isOpenSidebar: false
 };
 
 const sortFunc = (a, b) => {
@@ -103,9 +106,18 @@ const homeReducer = (state = initialState, { type, payload }) => {
         ...state,
         currentRefinement: payload,
       };
+    case TOGGLE_IS_OPEN_SIDEBAR:
+      return {
+        ...state,
+        isOpenSidebar: payload
+      };
     default:
       return state;
   }
+};
+
+export const toggleIsOpenSidebar = (isOpen) => {
+  return (dispatch) => dispatch({type: TOGGLE_IS_OPEN_SIDEBAR, payload: isOpen})
 };
 
 export const setCurrentRefinement = (field, refinement) => {

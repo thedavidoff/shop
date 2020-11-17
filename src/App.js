@@ -1,43 +1,105 @@
 import React, { useEffect } from "react";
-import { makeStyles, Grid, Container } from "@material-ui/core";
+import { makeStyles, Grid, Container, Hidden, Drawer } from "@material-ui/core";
 import { InstantSearch } from "react-instantsearch-dom";
 import algoliasearch from "algoliasearch";
 import { connect } from "react-redux";
 
-import { productsRequest } from "./redux/homeReducer";
+import { productsRequest, toggleIsOpenSidebar } from "./redux/homeReducer";
 import HeaderContainer from "./components/Header/HeaderContainer";
 import Sidebar from "./components/Sidebar/Sidebar";
 import Routes from "./Routes";
 import Notice from "./components/UI/Notice/Notice";
+import HeaderBox from "./components/UI/HeaderBox/HeaderBox";
 
 const searchClient = algoliasearch(
   "I21C32G5C2",
   "85a7081843a79618290d2c0a18ddf6af"
 );
 
-const useStyles = makeStyles(() => ({
+const useStyles = makeStyles((theme) => ({
+  headerBoxWrapper: {
+    padding: 15,
+    color: "#fff",
+    backgroundColor: theme.palette.primary.light
+  },
   sidebar: {
     minWidth: 220,
     flexBasis: 220,
   },
+  drawer: {
+    flexShrink: 0,
+  },
+  drawerPaper: {
+    position: "relative",
+  },
+  drawerContainer: {
+    overflow: "auto",
+  },
+  button: {
+    "&:hover": { backgroundColor: "rgba(0, 0, 0, .1)" },
+  },
+  home: {
+    color: theme.palette.primary.dark,
+  },
 }));
 
-const App = ({ productsRequest }) => {
+const App = ({
+  isOpenSidebar,
+  productsRequest,
+  toggleIsOpenSidebar,
+  window,
+}) => {
+  const classes = useStyles();
+
   useEffect(() => {
     productsRequest();
   }, [productsRequest]);
 
-  const classes = useStyles();
+  const toggleDrawer = (open) => () => {
+    toggleIsOpenSidebar(open);
+  };
+
+  const container =
+    window !== undefined ? () => window().document.body : undefined;
 
   return (
     <Container maxWidth="xl" disableGutters>
       <InstantSearch indexName="dev_NAME" searchClient={searchClient}>
         <HeaderContainer />
-      </InstantSearch>
-      <InstantSearch indexName="dev_NAME" searchClient={searchClient}>
         <Grid container>
           <Grid item className={classes.sidebar}>
-            <Sidebar />
+            <Hidden smUp implementation="css">
+              <Drawer
+                container={container}
+                anchor="left"
+                open={isOpenSidebar}
+                onClose={toggleDrawer(false)}
+                variant="temporary"
+                ModalProps={{ keepMounted: true }}
+                className={classes.drawer}
+                classes={{ paper: classes.drawerPaper }}
+              >
+                <div className={classes.drawerContainer}>
+                  <div className={classes.headerBoxWrapper}>
+                    <HeaderBox />
+                  </div>
+                  <Sidebar />
+                </div>
+              </Drawer>
+            </Hidden>
+            <Hidden xsDown implementation="css">
+              <Drawer
+                open
+                onClose={toggleDrawer(false)}
+                variant="permanent"
+                className={classes.drawer}
+                classes={{ paper: classes.drawerPaper }}
+              >
+                <div className={classes.drawerContainer}>
+                  <Sidebar />
+                </div>
+              </Drawer>
+            </Hidden>
           </Grid>
           <Grid item xs>
             <Notice type="warning" />
@@ -49,4 +111,14 @@ const App = ({ productsRequest }) => {
   );
 };
 
-export default connect(null, { productsRequest })(App);
+const mapStateToProps = (state) => {
+  return {
+
+    isOpenSidebar: state.homePage.isOpenSidebar,
+  };
+};
+
+export default connect(mapStateToProps, {
+  productsRequest,
+  toggleIsOpenSidebar,
+})(App);

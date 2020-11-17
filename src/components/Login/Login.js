@@ -25,8 +25,8 @@ const useStyles = makeStyles((theme) => ({
     display: "flex",
     alignItems: "flex-start",
     justifyContent: "space-between",
-    flexBasis: 311,
-    paddingBottom: 16,
+    flexBasis: 290,
+    paddingBottom: 15,
   },
   button: {
     backgroundColor: theme.palette.primary.main,
@@ -88,7 +88,7 @@ const Login = ({
           <DarkTooltip title={userName} placement="bottom">
             <Typography className={classes.displayName}>
               {userName && userName.length > 19
-                ? userName.slice(0, 19) + "..."
+                ? userName.slice(0, 15) + "..."
                 : userName}
             </Typography>
           </DarkTooltip>

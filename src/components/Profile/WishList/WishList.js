@@ -25,7 +25,7 @@ import WishListItem from "./WishListItem/WishListItem";
 
 const useStyles = makeStyles((theme) => ({
   title: {
-    marginBottom: 16,
+    marginBottom: 15,
     fontSize: 18,
     textAlign: "center",
   },

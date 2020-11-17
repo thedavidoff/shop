@@ -2,14 +2,28 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="d838e675-2b75-4462-b131-7ac443757c74" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/components/UI/SkeletonFilterCheckbox/SkeletonFilterCheckbox.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/UI/HeaderBox/HeaderBox.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Forms/ProfileForm/ProfileForm.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Forms/ProfileForm/ProfileForm.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Forms/ReviewAnswerForm/ReviewAnswerForm.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Forms/ReviewAnswerForm/ReviewAnswerForm.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Forms/ReviewForm/ReviewForm.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Forms/ReviewForm/ReviewForm.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/Header/Cart/Cart.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Header/Cart/Cart.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Products/ProductsContainer.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Products/ProductsContainer.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Header/Cart/Order/Order.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Header/Cart/Order/Order.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Header/HeaderContainer.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Header/HeaderContainer.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Header/Search/Search.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Header/Search/Search.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Login/Login.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Login/Login.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Products/Product/ProductPage/DeliveryPayBlock/DeliveryPayBlock.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Products/Product/ProductPage/DeliveryPayBlock/DeliveryPayBlock.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Products/Product/ProductPage/SpecificationsBlock/SpecificationsBlock.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Products/Product/ProductPage/SpecificationsBlock/SpecificationsBlock.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Profile/SearchCity/City.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Profile/SearchCity/City.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Profile/WishList/WishList.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Profile/WishList/WishList.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/Sidebar/Sidebar.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Sidebar/Sidebar.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/UI/Hit/Hits.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/UI/Hit/Hits.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/UI/SkeletonCard/SkeletonCard.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/UI/SkeletonCard/SkeletonCard.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/UI/FilterAccordion/FilterAccordion.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/UI/FilterAccordion/FilterAccordion.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/UI/SearchBox/SearchBox.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/UI/SearchBox/SearchBox.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/UI/SubmitFilterBlock/SubmitFilterBlock.module.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/UI/SubmitFilterBlock/SubmitFilterBlock.module.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/UI/ViewRest/ViewRest.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/UI/ViewRest/ViewRest.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/redux/homeReducer.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/redux/homeReducer.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/theme.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/theme.js" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -238,7 +252,9 @@
       <workItem from="1604392173396" duration="17786000" />
       <workItem from="1604497225510" duration="5643000" />
       <workItem from="1604830563580" duration="32525000" />
-      <workItem from="1604924909169" duration="7052000" />
+      <workItem from="1604924909169" duration="18505000" />
+      <workItem from="1605016352099" duration="21703000" />
+      <workItem from="1605179335762" duration="8013000" />
     </task>
     <servers />
   </component>

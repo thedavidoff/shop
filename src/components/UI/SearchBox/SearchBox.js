@@ -1,14 +1,13 @@
 import React from "react";
 import { connectStats, connectSearchBox } from "react-instantsearch-dom";
-import TextField from "@material-ui/core/TextField";
-import {makeStyles} from "@material-ui/core/styles";
+import { makeStyles, TextField } from "@material-ui/core";
 
-const useStyles = makeStyles((theme) => ({
+const useStyles = makeStyles(() => ({
   search: {
     "& input": {
       backgroundColor: "#fff",
-      borderRadius: 4
-    }
+      borderRadius: 4,
+    },
   },
 }));
 

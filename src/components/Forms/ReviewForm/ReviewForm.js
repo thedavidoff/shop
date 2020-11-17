@@ -42,7 +42,7 @@ const useStyles = makeStyles((theme) => ({
   },
   tr: {
     "& td": {
-      padding: "8px 16px",
+      padding: "8px 15px",
     },
   },
   button: {

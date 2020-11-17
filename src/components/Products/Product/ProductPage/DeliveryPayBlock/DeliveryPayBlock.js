@@ -17,7 +17,7 @@ const useStyles = makeStyles(() => ({
     },
   },
   gridItem: {
-    padding: "16px 32px",
+    padding: "15px 32px",
   },
   title: {
     fontSize: 15,
