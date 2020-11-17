@@ -45,7 +45,7 @@
     "eject": "react-scripts eject",
     "predeploy": "npm run build",
     "deploy": "gh-pages -d build",
-    "server": "node server.js"
+    "server": "npm json-server --watch db.json"
   },
   "eslintConfig": {
     "extends": "react-app"
