@@ -118,7 +118,7 @@ const ProductPage = ({ product }) => {
         <title>{`${product && product.name} | купить`}</title>
         <link
           rel="canonical"
-          href={`http://localhost:3000/shop/video_cards/${
+          href={`http://localhost:3000/video_cards/${
             product && product.id
           }`}
         />

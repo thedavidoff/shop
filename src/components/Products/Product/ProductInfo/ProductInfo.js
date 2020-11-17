@@ -131,7 +131,7 @@ const ProductInfo = ({
             <Link
               component={ForwardLink}
               smooth
-              to={`/shop/video_cards/${id}#reviews`}
+              to={`/video_cards/${id}#reviews`}
               className={classes.reviews}
             >{`Отзывы (${reviewsCount})`}</Link>
           </ListItem>

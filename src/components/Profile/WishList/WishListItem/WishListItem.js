@@ -181,7 +181,7 @@ const WishListItem = ({
       <TableCell>
         <Link
           component={NavLink}
-          to={`/shop/video_cards/${id}`}
+          to={`/video_cards/${id}`}
           className={classes.photoLink}
         >
           <img
@@ -210,7 +210,7 @@ const WishListItem = ({
         </Link>
       </TableCell>
       <TableCell className={classes.descBlock}>
-        <Link component={NavLink} to={`/shop/video_cards/${id}`}>
+        <Link component={NavLink} to={`/video_cards/${id}`}>
           <b>{name}</b>
         </Link>
         <Typography className={classes.desc}>{description}</Typography>
@@ -226,7 +226,7 @@ const WishListItem = ({
           <Link
             component={ForwardLink}
             smooth
-            to={`/shop/video_cards/${id}#reviews`}
+            to={`/video_cards/${id}#reviews`}
             className={classes.reviews}
           >{`Отзывы (${reviewsCount})`}</Link>
         </Box>

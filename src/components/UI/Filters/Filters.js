@@ -64,7 +64,7 @@ const Filters = ({
       );
     sliderValues[0] === rangePrices[0] &&
       sliderValues[1] === rangePrices[1] &&
-      history.push("/shop");
+      history.push("/");
     filterProductsByPriceRequest(sliderValues);
   };
 
@@ -97,7 +97,7 @@ const Filters = ({
     <div className={styles.filters}>
       <h4>Фильтры</h4>
       {minPrice || maxPrice ? (
-        <NavLink className={styles.clearFilters} to="/shop">
+        <NavLink className={styles.clearFilters} to="/">
           <span onClick={handleClearFilters}>Сбросить фильтры</span>
         </NavLink>
       ) : null}

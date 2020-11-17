@@ -21,10 +21,9 @@ const Routes = () => {
 
   return (
     <Switch>
-      <Redirect exact path="/" to="/shop" />
       <Route exact path="/login" render={() => <Login />} />
-      <Route exact path="/shop" render={() => <ProductsContainer />} />
-      <Route path="/shop/video_cards/:id" render={() => <ProductPage />} />
+      <Route exact path="/" render={() => <ProductsContainer />} />
+      <Route path="/video_cards/:id" render={() => <ProductPage />} />
       <Route exact path="/order" render={() => <Order />} />
       {/*<PrivateRoute auth={auth} path="/profile" component={() => <Profile />} />*/}
       <Route exact path="/profile" render={() => <Profile index={index} />} />

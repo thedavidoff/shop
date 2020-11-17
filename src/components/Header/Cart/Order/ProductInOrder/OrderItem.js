@@ -72,14 +72,14 @@ const OrderItem = ({
       <TableCell style={{ width: 150 }}>
         <Button
           component={NavLink}
-          to={`/shop/video_cards/${id}`}
+          to={`/video_cards/${id}`}
           className={classes.photoLink}
         >
           <img src={photoInOrder} alt={name} />
         </Button>
       </TableCell>
       <TableCell className={classes.nameLink}>
-        <Link component={NavLink} to={`/shop/video_cards/${id}`}>
+        <Link component={NavLink} to={`/video_cards/${id}`}>
           <b>{name}</b>
         </Link>
         <Box position="absolute" bottom={5}>

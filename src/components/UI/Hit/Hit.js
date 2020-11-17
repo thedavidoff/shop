@@ -114,7 +114,7 @@ const Hit = ({
         )}
         <Link
           component={NavLink}
-          to={`/shop/video_cards/${id}`}
+          to={`/video_cards/${id}`}
           className={classes.photoLink}
         >
           <CardMedia
@@ -140,7 +140,7 @@ const Hit = ({
         </Link>
         <Link
           component={NavLink}
-          to={`/shop/video_cards/${id}`}
+          to={`/video_cards/${id}`}
           className={classes.name}
         >
           {name}

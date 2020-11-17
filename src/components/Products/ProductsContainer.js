@@ -31,7 +31,7 @@ const ProductsContainer = (props) => {
         <Helmet>
           <meta charSet="utf-8" />
           <title>Видеокарты</title>
-          <link rel="canonical" href="http://localhost:3000/shop" />
+          <link rel="canonical" href="http://localhost:3000" />
         </Helmet>
         <Stats />
         <Grid container>

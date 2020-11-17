@@ -76,7 +76,7 @@ const Autocomplete = (props) => {
       <div>
         <Button
           component={NavLink}
-          to={`/shop/video_cards/${hit.id}`}
+          to={`/video_cards/${hit.id}`}
           className={classes.link}
         >
           <div className={`${classes.hitColumn} ${classes.leftHitColumn}`}>

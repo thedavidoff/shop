@@ -104,7 +104,7 @@ const HeaderContainer = (props) => {
                 <>
                 <Button
                   component={Link}
-                  to="/shop"
+                  to="/"
                   className={classes.button}
                   classes={{ root: classes.buttonRoot }}
                   style={{ order: 1 }}
@@ -123,7 +123,7 @@ const HeaderContainer = (props) => {
               ) : (
                 <Button
                   component={Link}
-                  to="/shop"
+                  to="/"
                   className={classes.button}
                   classes={{ root: classes.buttonRoot }}
                   style={w960 ? { order: 1 } : { margin: "0 55px" }}
