@@ -45,17 +45,17 @@
     <property name="ts.external.directory.path" value="C:\Program Files\JetBrains\WebStorm 2019.2.3\plugins\JavaScriptLanguage\jsLanguageServicesImpl\external" />
   </component>
   <component name="RecentsManager">
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="D:\shop\src\components\UI\SVG" />
-      <recent name="D:\shop\src\assets" />
-      <recent name="D:\shop\src\components\ProductCard" />
-    </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\shop\public" />
       <recent name="D:\shop\src\components\Profile\WishList\WishListItem" />
       <recent name="D:\shop\src\components\Forms" />
       <recent name="D:\shop\src\components\UI" />
       <recent name="D:\shop\src\components\Login\RegistrationForm" />
-      <recent name="D:\shop\src\components\Login\ProfileForm" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\shop\src\components\UI\SVG" />
+      <recent name="D:\shop\src\assets" />
+      <recent name="D:\shop\src\components\ProductCard" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -235,6 +235,7 @@
       <workItem from="1605016352099" duration="21703000" />
       <workItem from="1605179335762" duration="8013000" />
       <workItem from="1605630787686" duration="18387000" />
+      <workItem from="1605685672435" duration="720000" />
     </task>
     <servers />
   </component>

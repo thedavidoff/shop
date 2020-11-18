@@ -49,7 +49,7 @@ const SearchList = ({ handleSelectCity, filter }) => {
   const classes = useStyles();
   const [list, setList] = useState([]);
   const [filteredList, setFilteredList] = useState([]);
-  const url = "http://localhost:9200/cities";
+  const url = "http://localhost:3001/cities";
 
   useEffect(() => {
     fetchList(url).then((data) => {

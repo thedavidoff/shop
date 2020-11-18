@@ -47,9 +47,9 @@
     "predeploy": "npm run build",
     "deploy": "gh-pages -d build",
     "server": "node server.js",
-    "json-server": "npm json-server --watch public/db.json --port=9200"
+    "json-server": "npm json-server --watch public/db.json --port=3001"
   },
-  "proxy": "http://localhost:9200",
+  "proxy": "http://localhost:3001",
   "eslintConfig": {
     "extends": "react-app"
   },
