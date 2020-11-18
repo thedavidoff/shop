@@ -40,7 +40,7 @@
     "use-debounce": "^4.0.0"
   },
   "scripts": {
-    "start": "concurrently \"react-scripts start\" \"json-server --watch db.json\"",
+    "start": "concurrently \"react-scripts start\" \"json-server --watch public/db.json\"",
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
