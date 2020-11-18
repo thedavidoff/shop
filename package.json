@@ -40,14 +40,14 @@
     "use-debounce": "^4.0.0"
   },
   "scripts": {
-    "start": "concurrently \"react-scripts start\" \"json-server --watch public/db.json\"",
+    "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
     "predeploy": "npm run build",
     "deploy": "gh-pages -d build",
     "server": "node server.js",
-    "json-server": "npm json-server --watch public/db.json --port=3001"
+    "json-server": "json-server --watch public/db.json --port=3001"
   },
   "proxy": "http://localhost:3001",
   "eslintConfig": {
