@@ -24,6 +24,7 @@ import { toggleIsOpenSidebar } from "../../redux/homeReducer";
 import { getCountInCart } from "../../redux/selectors";
 import Search from "./Search/Search";
 import HeaderBox from "../UI/HeaderBox/HeaderBox";
+import Login from "../Login/Login";
 
 const searchClient = algoliasearch(
   "I21C32G5C2",
@@ -87,10 +88,26 @@ const HeaderContainer = (props) => {
     <AppBar position="static" className={classes.root}>
       <Toolbar className={classes.header}>
         <Grid container>
+          {w960 && ! w600 ? (
+            <Grid
+              item
+              xs={12}
+              style={{
+                display: "flex",
+                flexDirection: "row-reverse",
+              }}
+            >
+              <Login />
+            </Grid>
+          ) : null}
           <Grid
             item
             xs={12}
-            style={{ display: "flex", alignItems: "flex-end", flexDirection: w600 ? "column-reverse" : "inherit" }}
+            style={{
+              display: "flex",
+              alignItems: "flex-end",
+              flexDirection: w600 ? "column-reverse" : "inherit",
+            }}
           >
             <InstantSearch indexName="dev_NAME" searchClient={searchClient}>
               <Search />
@@ -102,23 +119,23 @@ const HeaderContainer = (props) => {
             >
               {w600 ? (
                 <>
-                <Button
-                  component={Link}
-                  to="/"
-                  className={classes.button}
-                  classes={{ root: classes.buttonRoot }}
-                  style={{ order: 1 }}
-                >
-                  <HomeIcon className={classes.buttonIcon} />
-                </Button>
-                <Button
-                  className={classes.button}
-                  classes={{ root: classes.buttonRoot }}
-                  onClick={toggleDrawer(true)}
-                  style={{ order: 0 }}
-                >
-                  <MenuIcon className={classes.buttonIcon} />
-                </Button>
+                  <Button
+                    component={Link}
+                    to="/"
+                    className={classes.button}
+                    classes={{ root: classes.buttonRoot }}
+                    style={{ order: 1 }}
+                  >
+                    <HomeIcon className={classes.buttonIcon} />
+                  </Button>
+                  <Button
+                    className={classes.button}
+                    classes={{ root: classes.buttonRoot }}
+                    onClick={toggleDrawer(true)}
+                    style={{ order: 0 }}
+                  >
+                    <MenuIcon className={classes.buttonIcon} />
+                  </Button>
                 </>
               ) : (
                 <Button

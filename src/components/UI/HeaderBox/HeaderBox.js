@@ -1,7 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import { connect } from "react-redux";
-import { makeStyles, Button, Grid } from "@material-ui/core";
+import { makeStyles, Button, Grid, useMediaQuery } from "@material-ui/core";
 import FavoriteIcon from "@material-ui/icons/Favorite";
 import * as PropTypes from "prop-types";
 
@@ -12,6 +12,12 @@ import DarkTooltip from "../Tooltip/DarkTooltip";
 import Login from "../../Login/Login";
 
 const useStyles = makeStyles((theme) => ({
+  headerBoxContainer: {
+    width: 290,
+    [theme.breakpoints.down("xs")]: {
+      width: "100%",
+    },
+  },
   gridItem: {
     display: "flex",
     flexBasis: 290,
@@ -34,23 +40,34 @@ const useStyles = makeStyles((theme) => ({
 
 const HeaderBox = (props) => {
   const classes = useStyles();
+  const w390 = useMediaQuery("(max-width: 389px)");
+
+  const handleCloseSidebar = () => props.toggleIsOpenSidebar(false);
 
   return (
-    <Grid container justify="flex-start" style={{ width: 290 }}>
+    <Grid
+      container
+      justify="flex-start"
+      className={classes.headerBoxContainer}
+      style={w390 ? { marginTop: 52 } : null}
+    >
       <Grid item className={classes.gridItem}>
         <Login />
       </Grid>
       <Grid item xs={12} className={classes.gridItem}>
-        <Cart
-          countOfProductsInCart={props.countOfProductsInCart}
-          totalCost={props.totalCost}
-        />
+        <div onClick={handleCloseSidebar}>
+          <Cart
+            countOfProductsInCart={props.countOfProductsInCart}
+            totalCost={props.totalCost}
+          />
+        </div>
         <DarkTooltip title="Список желаний" placement="bottom">
           <Button
             component={Link}
             to="/profile?tab=wishlist"
             className={classes.button}
             classes={{ root: classes.buttonRoot }}
+            onClick={handleCloseSidebar}
           >
             <FavoriteIcon
               className={classes.wishList}

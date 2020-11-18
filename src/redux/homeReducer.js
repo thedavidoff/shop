@@ -30,7 +30,7 @@ const initialState = {
   updateFilterFieldsValues: [],
   initialFacets: {},
   currentRefinement: {},
-  isOpenSidebar: false
+  isOpenSidebar: false,
 };
 
 const sortFunc = (a, b) => {
@@ -109,7 +109,7 @@ const homeReducer = (state = initialState, { type, payload }) => {
     case TOGGLE_IS_OPEN_SIDEBAR:
       return {
         ...state,
-        isOpenSidebar: payload
+        isOpenSidebar: payload,
       };
     default:
       return state;
@@ -117,13 +117,20 @@ const homeReducer = (state = initialState, { type, payload }) => {
 };
 
 export const toggleIsOpenSidebar = (isOpen) => {
-  return (dispatch) => dispatch({type: TOGGLE_IS_OPEN_SIDEBAR, payload: isOpen})
+  return (dispatch) =>
+    dispatch({ type: TOGGLE_IS_OPEN_SIDEBAR, payload: isOpen });
 };
 
 export const setCurrentRefinement = (field, refinement) => {
   return async (dispatch, getState) => {
-    let currentRefinement = [...getState().homePage.currentRefinement[field], refinement];
-    const refinements = {...getState().homePage.currentRefinement, [field]: [...new Set(currentRefinement)]};
+    let currentRefinement = [
+      ...getState().homePage.currentRefinement[field],
+      refinement,
+    ];
+    const refinements = {
+      ...getState().homePage.currentRefinement,
+      [field]: [...new Set(currentRefinement)],
+    };
     dispatch({ type: SET_CURRENT_REFINEMENTS, payload: refinements });
   };
 };
@@ -237,7 +244,6 @@ export const filterRequest = (e) => {
 
   return async (dispatch, getState) => {
     filterProd = getState().homePage.products.filter((product) => {
-
       return Object.keys(r).find((key) =>
         product.specifications.find((spec) => {
           return Object.keys(spec).find(
@@ -273,7 +279,6 @@ export const filterRequest = (e) => {
           )
         );
       });
-
     } else if (
       getState().homePage.selectedFilters.length &&
       getState().homePage.selectedFilters.indexOf(el.name) > 0
@@ -290,7 +295,6 @@ export const filterRequest = (e) => {
         }
       );
     } else {
-
       filteredProducts = getState().homePage.products.filter((product) => {
         return result.find((field) =>
           product.specifications.find((spec) =>

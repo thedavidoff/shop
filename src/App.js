@@ -1,16 +1,24 @@
 import React, { useEffect } from "react";
-import { makeStyles, Grid, Container, Hidden, Drawer } from "@material-ui/core";
+import { HashRouter } from "react-router-dom";
+import { connect } from "react-redux";
+import {
+  makeStyles,
+  Grid,
+  Container,
+  Hidden,
+  Drawer,
+  Button,
+} from "@material-ui/core";
+import CloseIcon from "@material-ui/icons/Close";
 import { InstantSearch } from "react-instantsearch-dom";
 import algoliasearch from "algoliasearch";
-import { connect } from "react-redux";
 
 import { productsRequest, toggleIsOpenSidebar } from "./redux/homeReducer";
 import HeaderContainer from "./components/Header/HeaderContainer";
 import Sidebar from "./components/Sidebar/Sidebar";
-import Routes from "./Routes";
 import Notice from "./components/UI/Notice/Notice";
 import HeaderBox from "./components/UI/HeaderBox/HeaderBox";
-import {HashRouter} from "react-router-dom";
+import Routes from "./Routes";
 
 const searchClient = algoliasearch(
   "I21C32G5C2",
@@ -21,7 +29,7 @@ const useStyles = makeStyles((theme) => ({
   headerBoxWrapper: {
     padding: 15,
     color: "#fff",
-    backgroundColor: theme.palette.primary.light
+    backgroundColor: theme.palette.primary.light,
   },
   sidebar: {
     minWidth: 220,
@@ -36,8 +44,18 @@ const useStyles = makeStyles((theme) => ({
   drawerContainer: {
     overflow: "auto",
   },
-  button: {
+  closeButton: {
     "&:hover": { backgroundColor: "rgba(0, 0, 0, .1)" },
+  },
+  closeButtonRoot: {
+    minWidth: 50,
+    position: "absolute",
+    top: 0,
+    right: 10,
+  },
+  closeButtonIcon: {
+    fontSize: 40,
+    color: theme.palette.primary.dark,
   },
   home: {
     color: theme.palette.primary.dark,
@@ -64,59 +82,65 @@ const App = ({
     window !== undefined ? () => window().document.body : undefined;
 
   return (
-    <HashRouter basename='/'>
-    <Container maxWidth="xl" disableGutters>
-      <InstantSearch indexName="dev_NAME" searchClient={searchClient}>
-        <HeaderContainer />
-        <Grid container>
-          <Grid item className={classes.sidebar}>
-            <Hidden smUp implementation="css">
-              <Drawer
-                container={container}
-                anchor="left"
-                open={isOpenSidebar}
-                onClose={toggleDrawer(false)}
-                variant="temporary"
-                ModalProps={{ keepMounted: true }}
-                className={classes.drawer}
-                classes={{ paper: classes.drawerPaper }}
-              >
-                <div className={classes.drawerContainer}>
-                  <div className={classes.headerBoxWrapper}>
-                    <HeaderBox />
+    <HashRouter basename="/">
+      <Container maxWidth="xl" disableGutters>
+        <InstantSearch indexName="dev_NAME" searchClient={searchClient}>
+          <HeaderContainer />
+          <Grid container>
+            <Grid item className={classes.sidebar}>
+              <Hidden smUp implementation="css">
+                <Drawer
+                  container={container}
+                  anchor="left"
+                  open={isOpenSidebar}
+                  onClose={toggleDrawer(false)}
+                  variant="temporary"
+                  ModalProps={{ keepMounted: true }}
+                  className={classes.drawer}
+                  classes={{ paper: classes.drawerPaper }}
+                >
+                  <div className={classes.drawerContainer}>
+                    <div className={classes.headerBoxWrapper}>
+                      <HeaderBox />
+                      <Button
+                        className={classes.closeButton}
+                        classes={{ root: classes.closeButtonRoot }}
+                        onClick={toggleDrawer(false)}
+                      >
+                        <CloseIcon className={classes.closeButtonIcon} />
+                      </Button>
+                    </div>
+                    <Sidebar />
                   </div>
-                  <Sidebar />
-                </div>
-              </Drawer>
-            </Hidden>
-            <Hidden xsDown implementation="css">
-              <Drawer
-                open
-                onClose={toggleDrawer(false)}
-                variant="permanent"
-                className={classes.drawer}
-                classes={{ paper: classes.drawerPaper }}
-              >
-                <div className={classes.drawerContainer}>
-                  <Sidebar />
-                </div>
-              </Drawer>
-            </Hidden>
+                </Drawer>
+              </Hidden>
+              <Hidden xsDown implementation="css">
+                <Drawer
+                  open
+                  onClose={toggleDrawer(false)}
+                  variant="permanent"
+                  className={classes.drawer}
+                  classes={{ paper: classes.drawerPaper }}
+                >
+                  <div className={classes.drawerContainer}>
+                    <Sidebar />
+                  </div>
+                </Drawer>
+              </Hidden>
+            </Grid>
+            <Grid item xs>
+              <Notice type="warning" />
+              <Routes />
+            </Grid>
           </Grid>
-          <Grid item xs>
-            <Notice type="warning" />
-            <Routes />
-          </Grid>
-        </Grid>
-      </InstantSearch>
-    </Container>
+        </InstantSearch>
+      </Container>
     </HashRouter>
   );
 };
 
 const mapStateToProps = (state) => {
   return {
-
     isOpenSidebar: state.homePage.isOpenSidebar,
   };
 };

@@ -1,5 +1,5 @@
 import React from "react";
-import { Redirect, Route, Switch, useLocation } from "react-router-dom";
+import { Route, Switch, useLocation } from "react-router-dom";
 
 import Login from "./components/Login/Login";
 import ProductsContainer from "./components/Products/ProductsContainer";
@@ -12,9 +12,6 @@ const Routes = () => {
   const query = useQuery();
   const tab = query.get("tab");
 
-  // const min = +query.get("minPrice");
-  // const max = +query.get("maxPrice");
-
   let index;
   if (tab === "regdata") index = 0;
   if (tab === "wishlist") index = 1;
@@ -25,7 +22,6 @@ const Routes = () => {
       <Route exact path="/" render={() => <ProductsContainer />} />
       <Route path="/video_cards/:id" render={() => <ProductPage />} />
       <Route exact path="/order" render={() => <Order />} />
-      {/*<PrivateRoute auth={auth} path="/profile" component={() => <Profile />} />*/}
       <Route exact path="/profile" render={() => <Profile index={index} />} />
     </Switch>
   );

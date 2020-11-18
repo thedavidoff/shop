@@ -10,12 +10,14 @@ import {
   ClickAwayListener,
   Paper,
   Fade,
+  useMediaQuery,
 } from "@material-ui/core";
 import * as PropTypes from "prop-types";
 
 import LoginForm from "../Forms/LoginForm/LoginForm";
 import RegForm from "../Forms/RegForm/RegForm";
 import { login, logout, registration } from "../../redux/authReducer";
+import { toggleIsOpenSidebar } from "../../redux/homeReducer";
 import { getIsAnonymous, getIsAuth, getUserName } from "../../redux/selectors";
 import DarkTooltip from "../UI/Tooltip/DarkTooltip";
 
@@ -50,8 +52,10 @@ const Login = ({
   login,
   logout,
   registration,
+  toggleIsOpenSidebar,
 }) => {
   const classes = useStyles();
+  const w600 = useMediaQuery("(max-width: 599px)");
 
   const [loginAnchor, setLoginAnchor] = React.useState(null);
   const [regAnchor, setRegAnchor] = React.useState(null);
@@ -72,6 +76,7 @@ const Login = ({
   const handleClickAwayRegForm = () => {
     setRegAnchor(null);
   };
+  const handleCloseSidebar = () => toggleIsOpenSidebar(false);
 
   return (
     <div className={classes.root}>
@@ -98,6 +103,7 @@ const Login = ({
             component={Link}
             to="/profile?tab=regdata"
             className={classes.button}
+            onClick={handleCloseSidebar}
           >
             Профиль
           </Button>
@@ -120,7 +126,7 @@ const Login = ({
             anchorEl={loginAnchor}
             placement="bottom-start"
             transition
-            style={{ zIndex: 1202 }}
+            style={{ zIndex: w600 ? 1301 : 1202 }}
           >
             {({ TransitionProps }) => (
               <ClickAwayListener onClickAway={handleClickAwayLoginForm}>
@@ -148,7 +154,7 @@ const Login = ({
             anchorEl={regAnchor}
             placement="bottom-end"
             transition
-            style={{ zIndex: 1202 }}
+            style={{ zIndex: w600 ? 1301 : 1202 }}
           >
             {({ TransitionProps }) => (
               <ClickAwayListener onClickAway={handleClickAwayRegForm}>
@@ -187,4 +193,5 @@ export default connect(mapStateToProps, {
   login,
   logout,
   registration,
+  toggleIsOpenSidebar,
 })(Login);
