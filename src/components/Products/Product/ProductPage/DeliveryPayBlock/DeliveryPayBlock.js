@@ -14,10 +14,13 @@ const useStyles = makeStyles(() => ({
       paddingTop: 2,
       paddingBottom: 2,
       fontSize: 14,
+      "&:nth-child(even)": {
+        backgroundColor: "#d3e2f0"
+      }
     },
   },
   gridItem: {
-    padding: "15px 32px",
+    padding: 15,
   },
   title: {
     fontSize: 15,

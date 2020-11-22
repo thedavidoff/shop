@@ -8,7 +8,7 @@ const useStyles = makeStyles(() => ({
   root: {
     display: "flex",
     alignItems: "center",
-    margin: "30px 60px 0",
+    margin: "15px 30px 0",
     fontSize: 14,
     lineHeight: 1,
     "& svg": {

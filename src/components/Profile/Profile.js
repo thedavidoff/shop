@@ -26,7 +26,7 @@ import TabPanel from "../UI/TabPanel/TabPanel";
 
 const useStyles = makeStyles(() => ({
   root: {
-    padding: 30,
+    padding: 15,
   },
   header: {
     borderRadius: "4px 4px 0 0",
@@ -76,7 +76,7 @@ const Profile = ({
         <title>Общие | Профиль</title>
         <link
           rel="canonical"
-          href="http://localhost:3000/profile?tab=regdata"
+          href="/profile?tab=regdata"
         />
       </Helmet>
       {noticeType && <Snackbar type={noticeType} />}

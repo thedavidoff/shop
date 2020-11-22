@@ -63,7 +63,7 @@ const Order = (props) => {
       <Helmet>
         <meta charSet="utf-8" />
         <title>Корзина / Оформление заказа</title>
-        <link rel="canonical" href="http://localhost:3000/order" />
+        <link rel="canonical" href="/order" />
       </Helmet>
       <div className={classes.root}>
         <Typography component="h2" className={classes.title}>

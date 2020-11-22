@@ -9,12 +9,13 @@ import { getIsFetchingProduct, getProduct } from "../../../../redux/selectors";
 import { productRequest } from "../../../../redux/productReducer";
 import ProductPage from "./ProductPage";
 import Preloader from "../../../UI/Preloader/Preloader";
+import { useMediaQuery } from "@material-ui/core";
 
-const useStyles = makeStyles((theme) => ({
+const useStyles = makeStyles(() => ({
   root: {
     display: "flex",
     flexWrap: "wrap",
-    padding: 30,
+    padding: 15,
   },
 }));
 
@@ -25,12 +26,17 @@ const ProductPageContainer = ({
   match,
 }) => {
   const classes = useStyles();
+  const w400 = useMediaQuery("(max-width: 399px)");
+
   useEffect(() => {
     productRequest(+match.params.id);
   }, [productRequest, match]);
 
   return (
-    <div className={classes.root}>
+    <div
+      className={classes.root}
+      style={w400 ? { padding: "15px 0 0 0" } : null}
+    >
       <div>
         {isFetchingProduct ? (
           <Preloader type="productPage" />

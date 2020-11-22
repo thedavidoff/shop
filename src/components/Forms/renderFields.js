@@ -1,8 +1,6 @@
 import React from "react";
 import {
   withStyles,
-  TextareaAutosize,
-  Typography,
   TextField,
   FormControl,
   RadioGroup,
@@ -26,6 +24,37 @@ const ProfileTextField = withStyles({
   },
 })(TextField);
 
+const ReviewTextField = withStyles({
+  root: {
+    "& input": {
+      paddingTop: 5,
+      paddingBottom: 5,
+    },
+  },
+})(TextField);
+
+const ReviewTextarea = withStyles((props) => {
+  console.log(props);
+
+  return {
+    root: {
+      "& .MuiOutlinedInput-multiline": {
+        paddingTop: 5,
+        paddingBottom: 5,
+      },
+      "&.errors_textarea__2dVhy:hover fieldset": {
+        borderColor: "rgba(255, 0, 0, 0.87)"
+      },
+      "&.errors_textarea__2dVhy .Mui-focused fieldset": {
+        borderColor: "rgba(255, 0, 0, 0.87)"
+      },
+      "& p": {
+        color: "#f00"
+      }
+    },
+  };
+})(TextField);
+
 export const textarea = ({
   input,
   placeholder,
@@ -36,32 +65,19 @@ export const textarea = ({
 
   return (
     <>
-      <TextareaAutosize
-        className={hasError || hasWarning ? styles.textarea : ""}
+      <ReviewTextarea
         {...input}
+        classes={{ root: hasError || hasWarning ? styles.textarea : "" }}
         placeholder={placeholder}
         aria-label="Textarea"
-        rowsMin={3}
+        variant="outlined"
+        helperText={touched && error}
+        multiline
         style={{
           width: "100%",
-          padding: "5px 10px",
           fontSize: 16,
-          borderRadius: 4,
-          resize: "vertical",
-          borderColor: "#c4c4c4"
         }}
       />
-      {touched &&
-        ((error && (
-          <Typography className={styles.textareaMessage}>
-            <span>{error}</span>
-          </Typography>
-        )) ||
-          (warning && (
-            <Typography className={styles.textareaMessage}>
-              <span>{warning}</span>
-            </Typography>
-          )))}
     </>
   );
 };
@@ -69,10 +85,7 @@ export const textarea = ({
 export const radio = ({ input, ...props }) => {
   return (
     <FormControl>
-      <RadioGroup
-        {...input}
-        {...props}
-      >
+      <RadioGroup {...input} {...props}>
         <FormControlLabel
           value="1"
           control={<RadioButton />}
@@ -107,6 +120,31 @@ export const input = ({
 }) => {
   return (
     <TextField
+      id={id}
+      name={name}
+      type={type}
+      label={label}
+      error={touched && invalid}
+      helperText={touched && error}
+      size="small"
+      variant="outlined"
+      style={style || { marginTop: 24 }}
+      {...input}
+    />
+  );
+};
+
+export const reviewInput = ({
+  id,
+  name,
+  type,
+  label,
+  meta: { touched, invalid, error },
+  input,
+  style,
+}) => {
+  return (
+    <ReviewTextField
       id={id}
       name={name}
       type={type}

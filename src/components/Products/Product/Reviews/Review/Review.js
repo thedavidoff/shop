@@ -91,7 +91,7 @@ const Review = ({
             {buyType === "2" && "Купил(а) этот товар в другом магазине"}
             {buyType === "3" && "Не покупал(а), но хочу поделиться мнением"}
           </Typography>
-          <div>
+          <div style={{display: "flex", justifyContent: "flex-end", flexBasis: 95}}>
             {rating > 0 ? (
               <StarRatingComponent
                 name="rateReview"

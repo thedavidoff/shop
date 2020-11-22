@@ -1,7 +1,13 @@
-.textarea {
-  border: 1px solid red !important;
+.textarea fieldset {
+  border: 1px solid red;
   border-radius: 4px;
 }
+/*.textarea:hover fieldset {*/
+/*  border: 1px solid red;*/
+/*}*/
+/*.textarea .Mui-focused fieldset {*/
+/*  border: 2px solid red !important;*/
+/*}*/
 .textareaMessage {
   position: absolute;
   bottom: 25px;

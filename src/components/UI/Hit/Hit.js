@@ -7,6 +7,7 @@ import {
   CardMedia,
   Typography,
   Link,
+  useMediaQuery,
 } from "@material-ui/core";
 import * as PropTypes from "prop-types";
 
@@ -83,6 +84,8 @@ const Hit = ({
   },
 }) => {
   const classes = useStyles();
+  const w400 = useMediaQuery("(max-width: 399px)");
+
   const [isShow, setIsShow] = useState(false);
   const loadSuccess = () => setIsShow(true);
 
@@ -91,7 +94,7 @@ const Hit = ({
   const [isShowPreview, setIsShowPreview] = useState(false);
   const [coordsPreview, setCoordsPreview] = useState();
   const showPreview = (e) => {
-    setPositionStyle({ position: "relative" });
+    setPositionStyle(true);
     setPreviewSrc(preview);
     setCoordsPreview(previewMethods.showProduct(e));
     setIsShowPreview(true);
@@ -102,11 +105,14 @@ const Hit = ({
   };
 
   return (
-    <Grid item style={{ margin: 10 }}>
+    <Grid item style={{ margin: w400 ? 0 : 10 }}>
       <Card
         className={classes.root}
         id={id}
-        style={positionStyle}
+        style={{
+          position: positionStyle ? "relative" : "inherit",
+          padding: 10,
+        }}
         elevation={15}
       >
         {isShowPreview && (

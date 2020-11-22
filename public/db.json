@@ -10858,6 +10858,39 @@
       "rating": 5,
       "buyType": "1",
       "advantages": "Прошу посоветовать материнскую плату под эту видеокарту, но без фанатизма))\nПокупал на замену старой, но видимо дело не в ней, не работает.\nК сожалению модель материнки, которая в наличии, сказать не могу..."
+    },
+    {
+      "id": 1605985113665,
+      "reviewTo": 10,
+      "author": "111222333",
+      "date": "21.11.2020",
+      "time": "20:58",
+      "rating": 5,
+      "buyType": "3",
+      "name": "111222333",
+      "advantages": "ggg"
+    },
+    {
+      "id": 1606048351852,
+      "reviewTo": 3,
+      "author": "aaa",
+      "date": "22.11.2020",
+      "time": "14:32",
+      "rating": 1,
+      "buyType": "3",
+      "name": "aaa",
+      "advantages": "as"
+    },
+    {
+      "id": 1606062264403,
+      "reviewTo": 3,
+      "author": "asd",
+      "date": "22.11.2020",
+      "time": "18:24",
+      "rating": 0,
+      "buyType": "2",
+      "name": "asd",
+      "advantages": "asdad"
     }
   ],
   "answers": [
@@ -11140,6 +11173,17 @@
       "time": "13:55",
       "buyType": "1",
       "comment": "5"
+    },
+    {
+      "id": 1606065530282,
+      "answerTo": 3,
+      "answerToReview": 1606048351852,
+      "author": "hjh",
+      "date": "22.11.2020",
+      "time": "19:18",
+      "buyType": "3",
+      "name": "hjh",
+      "comment": "nm"
     }
   ],
   "cities": [

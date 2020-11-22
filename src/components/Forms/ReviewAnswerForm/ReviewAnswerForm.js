@@ -8,30 +8,35 @@ import {
   TableBody,
   TableRow,
   TableCell,
-  Typography,
   Button,
+  useMediaQuery,
 } from "@material-ui/core";
 
 import { getIsAnonymous, getReviews } from "../../../redux/selectors";
 import { required } from "../validate";
-import { input, radio, textarea } from "../renderFields";
+import { radio, reviewInput, textarea } from "../renderFields";
 
 const useStyles = makeStyles((theme) => ({
   root: {
     marginBottom: 15,
     marginLeft: 30,
+    "& p": {
+      fontSize: 12,
+    },
   },
   form: {
     padding: "15px 30px",
   },
   tr: {
+    [theme.breakpoints.down("xs")]: {
+      marginBottom: 8,
+    },
     "& td": {
       padding: "8px 15px",
+      [theme.breakpoints.down("xs")]: {
+        padding: 0,
+      },
     },
-  },
-  p: {
-    margin: "15px 0",
-    fontSize: 12,
   },
   button: {
     backgroundColor: theme.palette.primary.main,
@@ -49,13 +54,25 @@ let ReviewAnswerForm = ({
   handleSubmit,
 }) => {
   const classes = useStyles();
+  const w400 = useMediaQuery("(max-width: 399px)");
+  const w750 = useMediaQuery("(max-width: 749px)");
+
   return (
     <Paper elevation={15} className={classes.root}>
-      <form onSubmit={handleSubmit} className={classes.form}>
+      <form
+        onSubmit={handleSubmit}
+        className={classes.form}
+        style={w400 ? { padding: 15 } : null}
+      >
         <Table>
           <TableBody>
             {isAnonymous && (
-              <TableRow>
+              <TableRow
+                className={w750 ? classes.tr : null}
+                style={
+                  w750 ? { display: "flex", flexDirection: "column" } : null
+                }
+              >
                 <TableCell>
                   <b>Ваше Имя:</b>
                 </TableCell>
@@ -65,18 +82,21 @@ let ReviewAnswerForm = ({
                     name="name"
                     type="text"
                     label={null}
-                    component={input}
+                    component={reviewInput}
                     validate={required}
-                    style={{ marginTop: 0 }}
+                    style={{ width: "100%", marginTop: 0 }}
                   />
                 </TableCell>
               </TableRow>
             )}
-            <TableRow className={classes.tr}>
+            <TableRow
+              className={classes.tr}
+              style={w750 ? { display: "flex", flexDirection: "column" } : null}
+            >
               <TableCell>
                 <b>Комментарий:</b>
               </TableCell>
-              <TableCell style={{ position: "relative" }}>
+              <TableCell>
                 <Field
                   name="comment"
                   placeholder="Укажите Ваш ответ"
@@ -85,7 +105,10 @@ let ReviewAnswerForm = ({
                 />
               </TableCell>
             </TableRow>
-            <TableRow className={classes.tr}>
+            <TableRow
+              className={classes.tr}
+              style={w750 ? { display: "flex", flexDirection: "column" } : null}
+            >
               <TableCell>
                 <b>Место покупки:</b>
               </TableCell>
@@ -93,13 +116,12 @@ let ReviewAnswerForm = ({
                 <Field name="buyType" component={radio} />
               </TableCell>
             </TableRow>
-            <TableRow>
-              <TableCell />
+            <TableRow
+              className={classes.tr}
+              style={w750 ? { display: "flex", flexDirection: "column" } : null}
+            >
+              {w750 ? null : <TableCell />}
               <TableCell>
-                <Typography className={classes.p}>
-                  Перед публикацией комментария рекомендуем ознакомиться с
-                  правилами размещения отзывов и комментариев.
-                </Typography>
                 <Button
                   variant="contained"
                   size="small"

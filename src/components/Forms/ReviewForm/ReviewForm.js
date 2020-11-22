@@ -10,14 +10,14 @@ import {
   TableCell,
   FormControlLabel,
   Box,
-  Typography,
   Button,
+  useMediaQuery,
 } from "@material-ui/core";
 import Rating from "@material-ui/lab/Rating";
 
 import { getIsAnonymous, getRating } from "../../../redux/selectors";
 import { setRating } from "../../../redux/reviewsReducer";
-import { input, radio, textarea } from "../renderFields";
+import { input, radio, reviewInput, textarea } from "../renderFields";
 import { required } from "../validate";
 import Snackbar from "../../UI/Snackbar/Snackbar";
 
@@ -33,16 +33,21 @@ const useStyles = makeStyles((theme) => ({
   root: {
     marginBottom: 15,
     "& p": {
-      margin: "15px 0",
       fontSize: 12,
-    }
+    },
   },
   form: {
     padding: "15px 30px",
   },
   tr: {
+    [theme.breakpoints.down("xs")]: {
+      marginBottom: 8,
+    },
     "& td": {
       padding: "8px 15px",
+      [theme.breakpoints.down("xs")]: {
+        padding: 0,
+      },
     },
   },
   button: {
@@ -64,16 +69,28 @@ let ReviewForm = ({
   sendReviewFailed,
 }) => {
   const classes = useStyles();
+  const w400 = useMediaQuery("(max-width: 399px)");
+  const w750 = useMediaQuery("(max-width: 749px)");
+
   const [hover, setHover] = useState(-1);
 
   return (
     <Paper elevation={15} className={classes.root}>
       {sendReviewFailed && <Snackbar type="sendReviewFailed" />}
-      <form onSubmit={handleSubmit} className={classes.form}>
+      <form
+        onSubmit={handleSubmit}
+        className={classes.form}
+        style={w400 ? { padding: 15 } : null}
+      >
         <Table>
           <TableBody>
             {isAnonymous && (
-              <TableRow>
+              <TableRow
+                className={w750 ? classes.tr : null}
+                style={
+                  w750 ? { display: "flex", flexDirection: "column" } : null
+                }
+              >
                 <TableCell>
                   <b>Ваше Имя:</b>
                 </TableCell>
@@ -83,14 +100,17 @@ let ReviewForm = ({
                     name="name"
                     type="text"
                     label={null}
-                    component={input}
+                    component={reviewInput}
                     validate={required}
-                    style={{ marginTop: 0 }}
+                    style={{ width: "100%", marginTop: 0 }}
                   />
                 </TableCell>
               </TableRow>
             )}
-            <TableRow className={classes.tr}>
+            <TableRow
+              className={classes.tr}
+              style={w750 ? { display: "flex", flexDirection: "column" } : null}
+            >
               <TableCell>
                 <b>Выберите оценку:</b>
               </TableCell>
@@ -110,24 +130,31 @@ let ReviewForm = ({
                         name="rating"
                         value={rating}
                         onChange={(_, value) => {
-                          setRating(value || 0);
+                          setRating(value !== null ? value : 0);
                         }}
-                        onChangeActive={(event, newHover) => {
+                        onChangeActive={(_, newHover) => {
                           setHover(newHover);
                         }}
                       />
-                      <Box ml={2}>{labels[hover !== -1 ? hover : rating]}</Box>
+                      {rating !== 0 && (
+                        <Box ml={2}>
+                          {labels[hover !== -1 ? hover : rating]}
+                        </Box>
+                      )}
                     </>
                   }
                   label={null}
                 />
               </TableCell>
             </TableRow>
-            <TableRow className={classes.tr}>
+            <TableRow
+              className={classes.tr}
+              style={w750 ? { display: "flex", flexDirection: "column" } : null}
+            >
               <TableCell>
                 <b>Достоинства:</b>
               </TableCell>
-              <TableCell style={{ position: "relative" }}>
+              <TableCell>
                 <Field
                   id="advantages"
                   name="advantages"
@@ -136,11 +163,14 @@ let ReviewForm = ({
                 />
               </TableCell>
             </TableRow>
-            <TableRow className={classes.tr}>
+            <TableRow
+              className={classes.tr}
+              style={w750 ? { display: "flex", flexDirection: "column" } : null}
+            >
               <TableCell>
                 <b>Недостатки:</b>
               </TableCell>
-              <TableCell style={{ position: "relative" }}>
+              <TableCell>
                 <Field
                   id="disadvantages"
                   name="disadvantages"
@@ -149,11 +179,14 @@ let ReviewForm = ({
                 />
               </TableCell>
             </TableRow>
-            <TableRow className={classes.tr}>
+            <TableRow
+              className={classes.tr}
+              style={w750 ? { display: "flex", flexDirection: "column" } : null}
+            >
               <TableCell>
                 <b>Комментарий:</b>
               </TableCell>
-              <TableCell style={{ position: "relative" }}>
+              <TableCell>
                 <Field
                   id="comment"
                   name="comment"
@@ -162,7 +195,10 @@ let ReviewForm = ({
                 />
               </TableCell>
             </TableRow>
-            <TableRow className={classes.tr}>
+            <TableRow
+              className={classes.tr}
+              style={w750 ? { display: "flex", flexDirection: "column" } : null}
+            >
               <TableCell>
                 <b>Место покупки:</b>
               </TableCell>
@@ -170,13 +206,12 @@ let ReviewForm = ({
                 <Field name="buyType" component={radio} />
               </TableCell>
             </TableRow>
-            <TableRow className={classes.tr}>
-              <TableCell />
+            <TableRow
+              className={classes.tr}
+              style={w750 ? { display: "flex", flexDirection: "column" } : null}
+            >
+              {w750 ? null : <TableCell />}
               <TableCell>
-                <Typography>
-                  Перед публикацией отзыва рекомендуем ознакомиться с правилами
-                  размещения отзывов и комментариев.
-                </Typography>
                 <Button
                   variant="contained"
                   size="small"

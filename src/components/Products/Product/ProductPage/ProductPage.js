@@ -1,5 +1,4 @@
 import React, { useState } from "react";
-import Helmet from "react-helmet";
 import ReactTooltip from "react-tooltip";
 import {
   List,
@@ -10,6 +9,7 @@ import {
   AppBar,
   Tabs,
   Tab,
+  useMediaQuery,
 } from "@material-ui/core";
 import * as PropTypes from "prop-types";
 
@@ -24,19 +24,18 @@ import Rating from "../../../UI/Rating/Rating";
 import AddToWishListButton from "../../../UI/AddToWishListButton/AddToWishListButton";
 import ViewRest from "../../../UI/ViewRest/ViewRest";
 import ForwardLink from "../../../UI/ForwardLink/ForwardLink";
+import Helmet from "react-helmet";
 
 const useStyles = makeStyles((theme) => ({
   title: {
     padding: "0 15px",
-    height: 30,
     fontSize: 16,
-    lineHeight: "30px",
     color: "#fff",
     background: theme.palette.primary.light,
     borderRadius: "4px 4px 0 0",
   },
   slider: {
-    marginBottom: 8,
+    marginTop: 15,
   },
   productInfo: {
     padding: "15px 15px 15px 30px",
@@ -101,6 +100,8 @@ const LinkTab = (props) => {
 
 const ProductPage = ({ product }) => {
   const classes = useStyles();
+  const w600 = useMediaQuery("(max-width: 599px)");
+
   const handleClick = () => {
     ReactTooltip.hide();
   };
@@ -116,12 +117,7 @@ const ProductPage = ({ product }) => {
       <Helmet>
         <meta charSet="utf-8" />
         <title>{`${product && product.name} | купить`}</title>
-        <link
-          rel="canonical"
-          href={`http://localhost:3000/video_cards/${
-            product && product.id
-          }`}
-        />
+        <link rel="canonical" href={`/video_cards/${product && product.id}`} />
       </Helmet>
       <ReactTooltip className={stylesTooltip.tooltip} />
       {product ? (
@@ -129,7 +125,7 @@ const ProductPage = ({ product }) => {
           <Typography component="h1" className={classes.title}>
             {product.name}
           </Typography>
-          <Grid container>
+          <Grid style={w600 ? { justifyContent: "center" } : null} container>
             <Grid item className={classes.slider}>
               <Slider product={product} />
             </Grid>

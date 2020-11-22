@@ -2,8 +2,6 @@ import { productAPI } from "../api/api";
 
 const TOGGLE_IS_LOADED = "homeReducer/TOGGLE_IS_LOADED";
 const SET_PRODUCTS = "homeReducer/SET_PRODUCTS";
-//const SET_RANGE_PRICES = "homeReducer/SET_RANGE_PRICES";
-//const SET_FILTERED_PRODUCTS = "homeReducer/SET_FILTERED_PRODUCTS";
 const TOGGLE_IS_FETCHING_FILTER_FIELDS =
   "homeReducer/TOGGLE_IS_FETCHING_FILTER_FIELDS";
 const SET_FILTER_FIELDS = "homeReducer/SET_FILTER_FIELDS";
@@ -21,8 +19,6 @@ const TOGGLE_IS_OPEN_SIDEBAR = "homeReducer/TOGGLE_IS_OPEN_SIDEBAR";
 const initialState = {
   isLoaded: false,
   products: [],
-  //rangePrices: [0, 0],
-  //filteredProducts: [],
   isFetchingFilterFields: false,
   filterFields: [],
   filterFieldsValues: [],
@@ -57,20 +53,6 @@ const homeReducer = (state = initialState, { type, payload }) => {
         ...state,
         products: [...payload],
       };
-    // case SET_RANGE_PRICES:
-    //   const products = (state.filteredProducts.length
-    //     ? state.filteredProducts
-    //     : state.products
-    //   ).map((product) => +product.price);
-    //   return {
-    //     ...state,
-    //     rangePrices: [Math.min(...products), Math.max(...products)],
-    //   };
-    // case SET_FILTERED_PRODUCTS:
-    //   return {
-    //     ...state,
-    //     filteredProducts: [...payload],
-    //   };
     case TOGGLE_IS_FETCHING_FILTER_FIELDS:
       return {
         ...state,
@@ -139,8 +121,6 @@ export const productsRequest = () => {
   return async (dispatch) => {
     const products = await productAPI.getProductsAPI();
     dispatch({ type: SET_PRODUCTS, payload: products });
-    //dispatch({ type: SET_RANGE_PRICES });
-    //dispatch({ type: TOGGLE_IS_LOADED, payload: true });
 
     dispatch({ type: TOGGLE_IS_FETCHING_FILTER_FIELDS, payload: true });
     const filterFields = await productAPI.getFilterFieldsAPI();
@@ -208,17 +188,6 @@ export const productsRequest = () => {
     });
   };
 };
-
-// export const filterProductsByPriceRequest = ([min, max]) => {
-//   return (dispatch, getState) => {
-//     dispatch({
-//       type: SET_FILTERED_PRODUCTS,
-//       payload: getState().homePage.products.filter(
-//         (product) => product.price >= min && product.price <= max
-//       ),
-//     });
-//   };
-// };
 
 let result = []; // [{brand: "Asus"}, {brand: "MSI"}]
 let r = {};

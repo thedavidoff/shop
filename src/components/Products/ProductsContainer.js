@@ -1,7 +1,7 @@
 import React from "react";
 import { connect } from "react-redux";
 import Helmet from "react-helmet";
-import { makeStyles, Grid } from "@material-ui/core";
+import {makeStyles, Grid, useMediaQuery} from "@material-ui/core";
 import * as PropTypes from "prop-types";
 
 import { getIsLoaded, getProducts } from "../../redux/selectors";
@@ -14,7 +14,7 @@ const useStyles = makeStyles(() => ({
   productsContainer: {
     display: "flex",
     flexWrap: "wrap",
-    padding: 30,
+    padding: 15,
   },
   grid: {
     alignItems: "center",
@@ -24,20 +24,22 @@ const useStyles = makeStyles(() => ({
 
 const ProductsContainer = (props) => {
   const classes = useStyles();
+  const w600 = useMediaQuery("(max-width: 599px)");
+  const w400 = useMediaQuery("(max-width: 399px)");
 
   return (
     <>
-      <div className={classes.productsContainer}>
+      <div className={classes.productsContainer} style={w400 ? { padding: "15px 0 0 0" } : null}>
         <Helmet>
           <meta charSet="utf-8" />
           <title>Видеокарты</title>
-          <link rel="canonical" href="http://localhost:3000" />
+          <link rel="canonical" href="/" />
         </Helmet>
         <Stats />
-        <Grid container>
+        <Grid container style={w600 ? { justifyContent: "center" } : null}>
           <Hits isLoaded={props.isLoaded} />
-          <Grid container className={classes.grid}>
-            <Grid item xs>
+          <Grid container className={classes.grid} style={w600 ? { flexDirection: "column" } : null}>
+            <Grid item xs style={w600 ? { marginBottom: 30 } : null}>
               <Pagination />
             </Grid>
             <Grid item>

@@ -128,7 +128,7 @@ const WishList = ({
         <title>Список желаний | Профиль</title>
         <link
           rel="canonical"
-          href="http://localhost:3000/profile?tab=wishlist"
+          href="/profile?tab=wishlist"
         />
       </Helmet>
       <Typography component="h2" className={classes.title}>

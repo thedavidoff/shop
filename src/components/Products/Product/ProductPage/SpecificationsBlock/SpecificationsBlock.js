@@ -7,6 +7,7 @@ import {
   TableRow,
   TableCell,
   Paper,
+  useMediaQuery,
 } from "@material-ui/core";
 import * as PropTypes from "prop-types";
 
@@ -20,11 +21,12 @@ const useStyles = makeStyles((theme) => ({
   },
   tableRow: {
     "&:nth-child(odd)": {
-      background: "#d3e2f0"
+      background: "#d3e2f0",
     },
     "& td": {
       fontSize: 13,
       lineHeight: 1,
+      wordBreak: "break-all",
     },
   },
   info: {
@@ -42,10 +44,16 @@ const useStyles = makeStyles((theme) => ({
 
 const SpecificationsBlock = ({ product }) => {
   const classes = useStyles();
+  const w400 = useMediaQuery("(max-width: 399px)");
 
   return (
     <div className={classes.root}>
-      <Typography component="h2" id="specs" className={classes.title}>
+      <Typography
+        component="h2"
+        id="specs"
+        className={classes.title}
+        style={w400 ? { margin: "0 15px" } : null}
+      >
         <b>{`Технические характеристики* ${product.name}:`}</b>
       </Typography>
       <Table size="small">

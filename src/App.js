@@ -34,6 +34,10 @@ const useStyles = makeStyles((theme) => ({
   sidebar: {
     minWidth: 220,
     flexBasis: 220,
+    [theme.breakpoints.down("xs")]: {
+      minWidth: "auto",
+      flexBasis: "auto",
+    },
   },
   drawer: {
     flexShrink: 0,

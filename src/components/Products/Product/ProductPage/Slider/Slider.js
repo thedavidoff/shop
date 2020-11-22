@@ -18,10 +18,8 @@ const settings = {
 
 const useStyles = makeStyles((theme) => ({
   photoBlock: {
-    width: 380,
-    height: 342,
+    width: 320,
     position: "relative",
-    padding: "30px 30px 0 30px",
     "& img": {
       position: "relative",
     },
@@ -40,6 +38,8 @@ const useStyles = makeStyles((theme) => ({
   },
   photoSlider: {
     marginTop: 15,
+    marginBottom: 15,
+    padding: "0 30px",
     "& .slick-active": {
       border: "1px solid transparent",
       "&:hover": {
@@ -56,8 +56,8 @@ const useStyles = makeStyles((theme) => ({
     alignItems: "center",
     justifyContent: "center",
     position: "absolute",
-    top: 0,
-    left: 380,
+    top: -15,
+    left: 350,
     height: 350,
     width: 500,
     border: "1px solid #000",
