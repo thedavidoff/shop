@@ -77,10 +77,4 @@ export const productAPI = {
         return fields;
       });
   },
-
-  // getProductsFilteredByPriceAPI(min, max) {
-  //   return fetch(`/products?price_gte=${min}&price_lte=${max}`)
-  //     .then((response) => response.json())
-  //     .catch((err) => console.error(err));
-  // },
 };
