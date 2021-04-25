@@ -7,15 +7,18 @@ import {
   Table,
   TableHead,
   TableBody,
-  TableCell,
+  TableCell as TableCellMui,
   TableContainer,
   TableRow,
   Typography,
   Box,
+  useMediaQuery,
+  withStyles,
 } from "@material-ui/core";
 import * as PropTypes from "prop-types";
 
 import OrderItem from "./ProductInOrder/OrderItem";
+import OrderItemMobile from "./ProductInOrder/OrderItemMobile";
 import { changeQuantity, deleteCartItem } from "../../../../redux/cartReducer";
 import {
   getProducts,
@@ -24,10 +27,30 @@ import {
 } from "../../../../redux/selectors";
 import AddToWishListButton from "../../../UI/AddToWishListButton/AddToWishListButton";
 
+const styles = () => ({
+  tableCell: {
+    whiteSpace: "nowrap",
+  },
+});
+
+const TableCell = withStyles(styles)((props) => {
+  const { children, classes, ...other } = props;
+  const w400 = useMediaQuery("(max-width: 399px)");
+
+  return (
+    <TableCellMui
+      className={classes.tableCell}
+      {...other}
+      style={w400 ? { padding: 10 } : null}
+    >
+      {children}
+    </TableCellMui>
+  );
+});
+
 const useStyles = makeStyles((theme) => ({
-  root: {
+  order: {
     width: "100%",
-    padding: "0 30px",
   },
   title: {
     marginTop: 15,
@@ -38,6 +61,10 @@ const useStyles = makeStyles((theme) => ({
     "& th": {
       borderBottom: "1px solid #bfbfbf",
     },
+  },
+  emptyCart: {
+    display: "flex",
+    justifyContent: "center",
   },
   totalRow: {
     backgroundColor: "#fff9bb",
@@ -53,6 +80,8 @@ const useStyles = makeStyles((theme) => ({
 
 const Order = (props) => {
   const classes = useStyles();
+  const w1000 = useMediaQuery("(max-width: 999px)");
+  const w400 = useMediaQuery("(max-width: 399px)");
 
   const productIds = [];
   props.productsInCart &&
@@ -65,7 +94,10 @@ const Order = (props) => {
         <title>Корзина / Оформление заказа</title>
         <link rel="canonical" href="/order" />
       </Helmet>
-      <div className={classes.root}>
+      <div
+        className={classes.order}
+        style={w400 ? { padding: "0 15px" } : { padding: "0 30px" }}
+      >
         <Typography component="h2" className={classes.title}>
           Ваша корзина:
         </Typography>
@@ -74,24 +106,38 @@ const Order = (props) => {
             component={Paper}
             elevation={15}
             className={classes.tableContainer}
+            style={w1000 ? { padding: "0 15px" } : null}
           >
             <Table className={classes.table} aria-label="Order table">
-              <TableHead>
-                <TableRow className={classes.row}>
-                  <TableCell />
-                  <TableCell />
-                  <TableCell align="center">Кол-во</TableCell>
-                  <TableCell align="center">Цена</TableCell>
-                  <TableCell align="center">Сумма</TableCell>
-                  <TableCell />
-                </TableRow>
-              </TableHead>
-              <TableBody>
+              {w1000 ? null : (
+                <TableHead>
+                  <TableRow className={classes.row}>
+                    <TableCell />
+                    <TableCell />
+                    <TableCell align="center">Кол-во</TableCell>
+                    <TableCell align="center">Цена</TableCell>
+                    <TableCell align="center">Сумма</TableCell>
+                    <TableCell />
+                  </TableRow>
+                </TableHead>
+              )}
+              <TableBody style={w1000 ? { display: "block" } : null}>
                 {props.productsInCart &&
                 Object.values(props.productsInCart).length > 0 ? (
                   Object.values(props.productsInCart).map(
                     ({ id, quantity }) => {
-                      return (
+                      return w1000 ? (
+                        <OrderItemMobile
+                          key={id}
+                          id={id}
+                          product={props.products.find(
+                            (product) => product.id === id
+                          )}
+                          quantity={quantity}
+                          changeQuantity={props.changeQuantity}
+                          deleteCartItem={props.deleteCartItem}
+                        />
+                      ) : (
                         <OrderItem
                           key={id}
                           id={id}
@@ -106,21 +152,30 @@ const Order = (props) => {
                     }
                   )
                 ) : (
-                  <TableRow>
+                  <TableRow className={w1000 ? classes.emptyCart : null}>
                     <TableCell align="center" colSpan="6">
                       <b>Ваша корзина пуста</b>
                     </TableCell>
                   </TableRow>
                 )}
-                <TableRow className={classes.totalRow}>
-                  <TableCell />
-                  <TableCell />
-                  <TableCell align="center" className={classes.price}>
+                <TableRow
+                  className={classes.totalRow}
+                  style={
+                    w1000
+                      ? { display: "flex", justifyContent: "flex-end" }
+                      : null
+                  }
+                >
+                  <TableCell style={w1000 ? {borderBottom: "none"} : null} />
+                  <TableCell style={w1000 ? {borderBottom: "none"} : null} />
+                  <TableCell style={w1000 ? {borderBottom: "none"} : null} />
+                  <TableCell style={w1000 ? {borderBottom: "none"} : null} align="center" className={classes.price}>
                     <b>К оплате:</b>
                   </TableCell>
                   <TableCell
+                    style={w1000 ? {borderBottom: "none"} : null}
                     align="center"
-                    colSpan="3"
+                    colSpan="2"
                     className={classes.price}
                   >
                     <b>{`${props.totalCost || 0} грн`}</b>

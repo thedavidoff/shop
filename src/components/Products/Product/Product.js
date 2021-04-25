@@ -6,7 +6,7 @@ import {
   Card,
   CardMedia,
   Typography,
-  Link,
+  Link, useMediaQuery,
 } from "@material-ui/core";
 import * as PropTypes from "prop-types";
 
@@ -16,8 +16,8 @@ import HitSVG from "../../UI/SVG/HitSVG";
 import NewSVG from "../../UI/SVG/NewSVG";
 
 const useStyles = makeStyles((theme) => ({
-  root: {
-    width: 300,
+  card: {
+    width: 3000,
     padding: 15,
     textAlign: "left",
     overflow: "visible",
@@ -83,6 +83,7 @@ const Product = ({
   },
 }) => {
   const classes = useStyles();
+  const w400 = useMediaQuery("(max-width: 399px)");
   const [isShow, setIsShow] = useState(false);
   const loadSuccess = () => setIsShow(true);
 
@@ -102,8 +103,13 @@ const Product = ({
   };
 
   return (
-    <Grid item style={{ margin: 10 }}>
-      <Card className={classes.root} id={id} style={positionStyle} elevation={15}>
+    <Grid item>
+      <Card
+        className={classes.card}
+        id={id}
+        style={positionStyle}
+        elevation={15}
+      >
         {isShowPreview && (
           <Preview style={coordsPreview} name={name} previewSrc={previewSrc} />
         )}

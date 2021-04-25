@@ -40,6 +40,7 @@ const styles = (theme) => ({
 
 const DialogTitle = withStyles(styles)((props) => {
   const { children, classes, onClose, ...other } = props;
+
   return (
     <MuiDialogTitle disableTypography className={classes.root} {...other}>
       <Typography style={{ textAlign: "center", width: "calc(100% - 40px)" }}>

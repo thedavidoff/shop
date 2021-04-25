@@ -84,7 +84,6 @@ const Hit = ({
   },
 }) => {
   const classes = useStyles();
-  const w400 = useMediaQuery("(max-width: 399px)");
 
   const [isShow, setIsShow] = useState(false);
   const loadSuccess = () => setIsShow(true);
@@ -105,7 +104,7 @@ const Hit = ({
   };
 
   return (
-    <Grid item style={{ margin: w400 ? 0 : 10 }}>
+    <Grid item style={{ margin: 10 }}>
       <Card
         className={classes.root}
         id={id}

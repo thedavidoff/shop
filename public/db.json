@@ -11184,6 +11184,26 @@
       "buyType": "3",
       "name": "hjh",
       "comment": "nm"
+    },
+    {
+      "id": 1619362707739,
+      "answerTo": 14,
+      "answerToReview": 1580564940000,
+      "author": "User_0",
+      "date": "25.04.2021",
+      "time": "17:58",
+      "buyType": "3",
+      "comment": "sdfds"
+    },
+    {
+      "id": 1619362717755,
+      "answerTo": 14,
+      "answerToReview": 1580564940000,
+      "author": "User_0",
+      "date": "25.04.2021",
+      "time": "17:58",
+      "buyType": "1",
+      "comment": "asdasda"
     }
   ],
   "cities": [

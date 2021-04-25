@@ -2,9 +2,17 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="d838e675-2b75-4462-b131-7ac443757c74" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/src/components/Header/Cart/Order/ProductInOrder/OrderItemMobile.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Routes.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Routes.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/db.json" beforeDir="false" afterPath="$PROJECT_DIR$/public/db.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/api/api.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/api/api.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Header/Cart/Order/Order.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Header/Cart/Order/Order.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Header/Cart/Order/ProductInOrder/OrderItem.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Header/Cart/Order/ProductInOrder/OrderItem.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Products/Product/Product.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Products/Product/Product.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/UI/Hit/Hit.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/UI/Hit/Hit.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/UI/ViewRest/ViewRest.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/UI/ViewRest/ViewRest.js" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -33,7 +41,7 @@
     <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/components/UI/SVG" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.standard" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
@@ -248,7 +256,16 @@
       <workItem from="1606156491889" duration="367000" />
       <workItem from="1606220922661" duration="16000" />
       <workItem from="1606843984974" duration="14000" />
-      <workItem from="1608549714458" duration="2906000" />
+      <workItem from="1608549714458" duration="3568000" />
+      <workItem from="1608554546151" duration="1340000" />
+      <workItem from="1608555907310" duration="19353000" />
+      <workItem from="1609185645565" duration="641000" />
+      <workItem from="1610903527614" duration="1479000" />
+      <workItem from="1614262778867" duration="696000" />
+      <workItem from="1616346883146" duration="21000" />
+      <workItem from="1616347177511" duration="62000" />
+      <workItem from="1618138830556" duration="81000" />
+      <workItem from="1619358314387" duration="5547000" />
     </task>
     <servers />
   </component>

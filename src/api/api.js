@@ -52,10 +52,10 @@ export const productAPI = {
   },
 
   getInitialFacetsAPI(attribute) {
-    return algoliasearch("I21C32G5C2", "85a7081843a79618290d2c0a18ddf6af")
+    return algoliasearch("US0VQUY41A", "2b31cc8833e2307117c0616ae917810b")
       .searchForFacetValues([
         {
-          indexName: "dev_NAME",
+          indexName: "shop",
           params: {
             facetName: attribute,
             facetQuery: "",

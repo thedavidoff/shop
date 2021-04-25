@@ -6,7 +6,6 @@ import {
   TableCell,
   Button,
   Link,
-  Box,
   TextField,
   IconButton,
 } from "@material-ui/core";
@@ -19,6 +18,7 @@ import DarkTooltip from "../../../../UI/Tooltip/DarkTooltip";
 const useStyles = makeStyles((theme) => ({
   row: {
     "& td": {
+      minHeight: 112,
       borderBottom: "1px solid #bfbfbf",
     },
     "&:last-child td": {
@@ -33,7 +33,6 @@ const useStyles = makeStyles((theme) => ({
     },
   },
   nameLink: {
-    position: "relative",
     "& a": {
       fontSize: 14,
       color: "#000",
@@ -43,14 +42,15 @@ const useStyles = makeStyles((theme) => ({
     },
   },
   quantity: {
-    width: 100
+    width: 100,
   },
   price: {
+    width: 100,
     textAlign: "center",
     color: theme.palette.secondary.dark,
   },
   delete: {
-    width: 80,
+    width: 100,
     textAlign: "center",
     "& button:hover": { backgroundColor: "rgba(0, 0, 0, .2)" },
   },
@@ -69,7 +69,7 @@ const OrderItem = ({
 
   return (
     <TableRow id={id} className={classes.row}>
-      <TableCell style={{ width: 150 }}>
+      <TableCell>
         <Button
           component={NavLink}
           to={`/video_cards/${id}`}
@@ -79,12 +79,12 @@ const OrderItem = ({
         </Button>
       </TableCell>
       <TableCell className={classes.nameLink}>
-        <Link component={NavLink} to={`/video_cards/${id}`}>
-          <b>{name}</b>
-        </Link>
-        <Box position="absolute" bottom={5}>
+        <div style={{ display: "flex", flexDirection: "column", justifyContent: "space-around", }}>
+          <Link component={NavLink} to={`/video_cards/${id}`}>
+            <b>{name}</b>
+          </Link>
           <AddToWishListButton id={id} />
-        </Box>
+        </div>
       </TableCell>
       <TableCell className={classes.quantity}>
         <TextField
