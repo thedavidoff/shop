@@ -51,30 +51,30 @@ export const productAPI = {
       .catch((err) => console.error("getFilterFieldsAPI:", err));
   },
 
-  getInitialFacetsAPI(attribute) {
-    return algoliasearch("US0VQUY41A", "2b31cc8833e2307117c0616ae917810b")
-      .searchForFacetValues([
-        {
-          indexName: "shop",
-          params: {
-            facetName: attribute,
-            facetQuery: "",
-            maxFacetHits: 100,
-          },
-        },
-      ])
-      .then(([{ facetHits }]) => {
-        const fields = [];
-        fields.push(
-          ...facetHits.map((facet) => ({
-            ...facet,
-            label: facet.value,
-            value: facet.value,
-            isRefined: false,
-            count: 0,
-          }))
-        );
-        return fields;
-      });
-  },
+  // getInitialFacetsAPI(attribute) {
+  //   return algoliasearch("US0VQUY41A", "2b31cc8833e2307117c0616ae917810b")
+  //     .searchForFacetValues([
+  //       {
+  //         indexName: "shop",
+  //         params: {
+  //           facetName: attribute,
+  //           facetQuery: "",
+  //           maxFacetHits: 100,
+  //         },
+  //       },
+  //     ])
+  //     .then(([{ facetHits }]) => {
+  //       const fields = [];
+  //       fields.push(
+  //         ...facetHits.map((facet) => ({
+  //           ...facet,
+  //           label: facet.value,
+  //           value: facet.value,
+  //           isRefined: false,
+  //           count: 0,
+  //         }))
+  //       );
+  //       return fields;
+  //     });
+  // },
 };

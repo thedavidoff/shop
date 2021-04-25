@@ -21,8 +21,8 @@ import HeaderBox from "./components/UI/HeaderBox/HeaderBox";
 import Routes from "./Routes";
 
 const searchClient = algoliasearch(
-  "I21C32G5C2",
-  "85a7081843a79618290d2c0a18ddf6af"
+  "US0VQUY41A",
+  "2b31cc8833e2307117c0616ae917810b"
 );
 
 const useStyles = makeStyles((theme) => ({
@@ -88,7 +88,7 @@ const App = ({
   return (
     <HashRouter basename="/">
       <Container maxWidth="xl" disableGutters>
-        <InstantSearch indexName="dev_NAME" searchClient={searchClient}>
+        <InstantSearch indexName="shop" searchClient={searchClient}>
           <HeaderContainer />
           <Grid container>
             <Grid item className={classes.sidebar}>
