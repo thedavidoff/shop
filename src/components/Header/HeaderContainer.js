@@ -27,8 +27,8 @@ import HeaderBox from "../UI/HeaderBox/HeaderBox";
 import Login from "../Login/Login";
 
 const searchClient = algoliasearch(
-  "I21C32G5C2",
-  "85a7081843a79618290d2c0a18ddf6af"
+  "US0VQUY41A",
+  "2b31cc8833e2307117c0616ae917810b"
 );
 
 const useStyles = makeStyles((theme) => ({
@@ -109,7 +109,7 @@ const HeaderContainer = (props) => {
               flexDirection: w600 ? "column-reverse" : "inherit",
             }}
           >
-            <InstantSearch indexName="dev_NAME" searchClient={searchClient}>
+            <InstantSearch indexName="shop" searchClient={searchClient}>
               <Search />
             </InstantSearch>
 

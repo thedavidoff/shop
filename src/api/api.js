@@ -1,4 +1,4 @@
-import algoliasearch from "algoliasearch";
+//import algoliasearch from "algoliasearch";
 
 export const productAPI = {
   getProductsAPI() {

@@ -53,6 +53,8 @@ const useStyles = makeStyles((theme) => ({
 const Autocomplete = (props) => {
   const classes = useStyles();
 
+  const searchInputRef = React.useRef(null);
+
   let [value, setValue] = useState(props.currentRefinement);
 
   const onChange = (event, { newValue }) => {
@@ -69,6 +71,12 @@ const Autocomplete = (props) => {
 
   const getSuggestionValue = (hit) => {
     return hit.name;
+  };
+
+  const clearInput = () => {
+    setValue("");
+    searchInputRef.current.input.value = '';
+    searchInputRef.current.props.inputProps.value = "";
   };
 
   const renderSuggestion = (hit) => {
@@ -114,6 +122,7 @@ const Autocomplete = (props) => {
   const renderInputComponent = (inputProps) => (
     <InputBase
       id="search"
+      type="search"
       label="Поиск"
       variant="outlined"
       placeholder="Начните вводить Ваш запрос..."
@@ -122,7 +131,6 @@ const Autocomplete = (props) => {
         input: classes.input,
       }}
       {...inputProps}
-      type="search"
     />
   );
 
@@ -136,11 +144,13 @@ const Autocomplete = (props) => {
       suggestions={props.hits}
       onSuggestionsFetchRequested={onSuggestionsFetchRequested}
       onSuggestionsClearRequested={onSuggestionsClearRequested}
+      onSuggestionSelected={clearInput}
       getSuggestionValue={getSuggestionValue}
       renderSuggestion={renderSuggestion}
       renderSuggestionsContainer={renderSuggestionsContainer}
       renderInputComponent={renderInputComponent}
       inputProps={inputProps}
+      ref={searchInputRef}
     />
   );
 };
